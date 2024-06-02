@@ -29,3 +29,17 @@ font-size: 30px;
   color: white;
   
 }
+
+.navlist{
+  display: flex;
+  
+}
+
+.navlist a{
+  color: #0328ff;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparant;
+  transition: all .55s ease;
+}
