@@ -15,13 +15,12 @@ header{
   align-items: center;
   justify-content: space-between;
   padding: 33px 9%;
-  background: red;
+  background: #06c46f;
   
 }
 
 body{
   background: #57d8ff;
-  color: #06c46f;
 }
 
 .logo{
