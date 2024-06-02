@@ -23,6 +23,12 @@ body{
   background: #57d8ff;
 }
 
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
 .logo{
 font-size: 30px;
   font-weight: 70;
@@ -50,13 +56,13 @@ font-size: 30px;
   text-align: center; 
 }
 
-.navlist a.img{
+/*.navlist a.img{
   margin: 0 0 45px;
   width: 5px;
   height: 2px;
   max-width: 100%;
   display: block;
-}
+}*/
 
 .navlist a:hover{
   border-bottom: 2px solid #0328ff;
@@ -107,7 +113,7 @@ height: 100%;
 }
 
 
-.front-img {
+/*.front-img {
   width: 100%;
   text-align: center; 
 }
@@ -119,7 +125,7 @@ front-img img{
   max-width: 100%;
   display: block;
   
-}
+}*/
 
 front-text a{
   display: inline-block;
