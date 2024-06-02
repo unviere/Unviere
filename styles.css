@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  lidt-style: nons;
+  lidt-style: none;
 }
 
 header{
@@ -15,7 +15,7 @@ header{
   align-items: center;
   justify-content: space-between;
   padding: 33px 9%;
-  background: #06c46f;
+  background: transparent;
   
 }
 
@@ -32,7 +32,7 @@ font-size: 30px;
 
 .navlist{
   display: flex;
-  color: #06c46f;
+  background: #06c46f;
 }
 
 .navlist a{
