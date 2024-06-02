@@ -25,8 +25,9 @@ body{
 
 .logo{
 font-size: 30px;
-  font-weight: 700;
+  font-weight: 70;
   color: #0328ff;
+  display: flex;
   
 }
 
