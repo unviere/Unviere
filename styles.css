@@ -46,6 +46,8 @@ font-size: 30px;
   border-bottom: 2px solid transparent;
   transition: all .55s ease;
   text-decoration: none;
+  width: 100%;
+  text-align: center; 
 }
 
 .navlist a.img{
@@ -102,6 +104,12 @@ height: 100%;
   line-height: 1;
   color: white;
   margin: 0 0 45px;
+}
+
+
+.front-img {
+  width: 100%;
+  text-align: center; 
 }
 
 front-img img{
