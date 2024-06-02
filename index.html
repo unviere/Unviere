@@ -1,39 +1,25 @@
 <!DOCKTYPE html>
-
 <html>
-<head>
+  <head></head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <title>unviere</title>
+  <link rel ="stylesheet" type = "text/css" href ="styles.css">
 </head>
-<body>
+  <body>
+    <header>
+      <a href="index.html" class="logo"></a>
 
-<div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">games</a>
-  <a href="#contact">Contact</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">games</a></li>
+        <li><a href="#">store</a></li>
+        <li><a href="#">support</a></li>
+        <li><a href="#">about</a></li>
+        
+      </ul>
 
-  <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-</body>
-
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+  </body>
+</html>
