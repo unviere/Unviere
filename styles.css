@@ -52,6 +52,8 @@ font-size: 30px;
   margin: 0 0 45px;
   width: 10px;
   height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .navlist a:hover{
@@ -106,7 +108,8 @@ front-img img{
   margin: 0 0 45px;
   width: 10px;
   height: auto;
-  
+  max-width: 100%;
+  display: block;
   
 }
 
