@@ -92,6 +92,36 @@ height: 100%;
   margin: 0 0 45px;
 }
 
+front-img img{
+  width: 700px;
+  height: auto;
+  
+  
+}
+
+front-text a{
+  display: inline-block;
+  color: white;
+  background: #06c46f;
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .55s ease
+  
+  
+  
+}
+
+front-text a:hover{
+  background: transparent;
+  border: 1px solid #06c46f;
+  transform: translateX(8px);
+}
+
 .section{
   padding: 0.19%;
   
