@@ -126,6 +126,12 @@ front-text a:hover{
   transform: translateX(8px);
 }
 
+  front-text a.ctaa{
+    background: transparent;
+    border: 1px solid #06c46f;
+    margin-left:  20px;
+  }
+
 .section{
   padding: 0.19%;
   
