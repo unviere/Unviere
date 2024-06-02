@@ -50,8 +50,8 @@ font-size: 30px;
 
 .navlist a.img{
   margin: 0 0 45px;
-  width: 10px;
-  height: auto;
+  width: 5px;
+  height: 2px;
   max-width: 100%;
   display: block;
 }
