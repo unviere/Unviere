@@ -69,3 +69,31 @@ height: 100%;
   gap:2rem;
   
 }
+
+.front-text h4{
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+  
+}
+
+.front-text p{
+  color: white;
+  font-size: 15px
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.front-text h1{
+  font-size: 90px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
+.section{
+  padding: 0.19%;
+  
+}
+
