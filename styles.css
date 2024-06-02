@@ -48,6 +48,12 @@ font-size: 30px;
   text-decoration: none;
 }
 
+.navlist a.img{
+  margin: 0 0 45px;
+  width: 10%;
+  height: auto;
+}
+
 .navlist a:hover{
   border-bottom: 2px solid #0328ff;
   
@@ -98,7 +104,7 @@ height: 100%;
 
 front-img img{
   margin: 0 0 45px;
-  width: 100%;
+  width: 10%;
   height: auto;
   
   
