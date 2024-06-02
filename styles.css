@@ -45,6 +45,7 @@ font-size: 30px;
   font-weight: 600;
   border-bottom: 2px solid transparent;
   transition: all .55s ease;
+  text-decoration: none;
 }
 
 .navlist a:hover{
@@ -115,6 +116,7 @@ front-text a{
   border-radius: 30px;
   text-transform: uppercase;
   transition: all .55s ease
+   text-decoration: none;
   
   
   
