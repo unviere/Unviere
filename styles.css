@@ -21,6 +21,7 @@ header{
 
 body{
   background: #57d8ff;
+  color: #06c46f;
 }
 
 .logo{
@@ -32,7 +33,7 @@ font-size: 30px;
 
 .navlist{
   display: flex;
-  
+  color: #06c46f;
 }
 
 .navlist a{
