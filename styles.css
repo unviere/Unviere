@@ -48,3 +48,11 @@ font-size: 30px;
   border-bottom: 2px solid #0328ff;
   
 }
+
+#menu-icon{
+color: #0328ff;
+  font-size: 35px;
+  z-index: 10001
+  cursor: pointer;
+  display: none;
+}
