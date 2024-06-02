@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  lidt-style: none;
+  list-style: none;
 }
 
 header{
@@ -55,4 +55,17 @@ color: #0328ff;
   z-index: 10001
   cursor: pointer;
   display: none;
+}
+
+.front{
+height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap:2rem;
+  
 }
