@@ -75,12 +75,16 @@ img {
   height: 100vh;
   width: 100%;
   background-image: url(./Img/Stars.png);
+  background-size: cover;
+	background-position: top center;
+	z-index: 1;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
   padding: 20px;
+  padding-top: 100px;
 }
 
 .hero-text {
