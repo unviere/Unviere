@@ -20,7 +20,7 @@ header {
 }
 
 body {
-  background: #57d8ff;
+  background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);
 }
 
 img {
@@ -46,7 +46,7 @@ img {
 .navlist a {
   background: #0328ff;
   color: white;
-  margin-left: 60px;
+  margin-left: 5px;
   font-size: 15px;
   font-weight: 600;
   border-bottom: 2px solid transparent;
@@ -74,7 +74,7 @@ img {
 .hero {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);
+  background: Img/Stars.png;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
