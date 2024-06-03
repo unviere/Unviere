@@ -74,7 +74,7 @@ img {
 .hero {
   height: 100vh;
   width: 100%;
-  background: Img/Stars.png;
+  background: url(Img/Stars.png);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
