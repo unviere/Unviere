@@ -11,6 +11,7 @@ header{
   top: 0;
   z-index: 1000;
   width: 100%;
+height: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,8 +31,8 @@ img {
 }
 
 .logo{
-font-size: 10px;
-  font-weight: 70;
+font-size: 5px;
+  font-weight: 700;
   color: #0328ff;
   display: flex;
   
@@ -119,8 +120,8 @@ height: 100%;
 }*/
 
 hero-img img{
-  margin: 0 0 45px;
-  width: 10px;
+  margin: 0 0 10px;
+  width: 5px;
   height: auto;
   max-width: 100%;
   display: block;
