@@ -14,7 +14,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 9%;
+  padding: 10px 9%;
   background: #06c46f;
   
 }
@@ -30,7 +30,7 @@ img {
 }
 
 .logo{
-font-size: 30px;
+font-size: 20px;
   font-weight: 70;
   color: #0328ff;
   display: flex;
