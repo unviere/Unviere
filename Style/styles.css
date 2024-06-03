@@ -15,7 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px 9%;
+  padding: 0px 2%;
   background: #06c46f;
 }
 
@@ -121,7 +121,9 @@ img {
 }
 
 .hero-text a {
-  display: inline-block;
+display: flex;
+  flex-direction: column;
+  gap: 10px;
   color: white;
   background: #06c46f;
   border: 1px solid transparent;
