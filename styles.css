@@ -32,8 +32,8 @@ img {
 
 .logo{
 font-size: 10px;
-	font-height: 10px;
-	font-width: 10px;
+	font-height: 5px;
+	font-width: 5px;
   font-weight: 700;
   color: #0328ff;
   display: flex;
@@ -83,7 +83,7 @@ color: #0328ff;
 .hero{
 height: 100%;
   width: 100%;
-  min-height: 50vh;
+  min-height: 10vh;
   background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);
   position: relative;
   display: grid;
@@ -122,9 +122,9 @@ height: 100%;
 }*/
 
 hero-img img{
-  margin: 0 0 10px;
-  width: 20px;
-  height: 20px;
+  margin: 0 0 0px;
+  font-width: 20px;
+  font-height: 20px;
   max-width: 100%;
   display: block;
   
