@@ -30,8 +30,9 @@ img {
 }
 
 .logo {
-  font-size: 10px;
+  font-size: 5px;
 	font-height: 10px;
+	font-width: 10px;
   font-weight: 700;
 	max-height: 10px;
   color: #0328ff;
@@ -78,7 +79,7 @@ img {
   width: 100%;
   background-image: url(../Img/Stars.png);
   background-size: cover;
-	background-position: top center;
+	background-position: relative;
 	z-index: 1;
   position: relative;
   display: grid;
