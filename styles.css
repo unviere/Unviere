@@ -24,7 +24,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -52,7 +52,7 @@ img {
   transition: all .55s ease;
   text-decoration: none;
   width: 100%;
-  text-align: center; 
+  text-align: center;
 }
 
 .navlist a:hover {
@@ -67,15 +67,18 @@ img {
 }
 
 .hero {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  min-height: 10vh;
   background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
+  padding: 20px;
+}
+
+.hero-text {
   padding: 20px;
 }
 
@@ -103,7 +106,6 @@ img {
 .hero-img img {
   width: 100%;
   height: auto;
-  display: block;
   object-fit: cover;
 }
 
