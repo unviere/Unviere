@@ -15,7 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 9%;
+  padding: 10px 9%;
   background: #06c46f;
 }
 
@@ -56,7 +56,7 @@ img {
 }
 
 .navlist img {
-  max-height: 40px; /* Adjust the height as necessary */
+  max-height: 20px; /* Adjust the height as necessary */
   margin: auto;
 }
 
@@ -83,7 +83,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
-  padding: 20px;
+  padding: 100px;
   padding-top: 100px;
 }
 
@@ -136,11 +136,11 @@ display: inline-block;
   line-height: 1.4;
   font-size: 14px;
   font-weight: 500;
-  border-radius: 30px;
+  border-radius: 10px;
   text-transform: uppercase;
   transition: all .55s ease;
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .hero-text a:hover {
