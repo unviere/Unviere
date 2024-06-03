@@ -150,6 +150,11 @@ display: flex;
   margin-left: 20px;
 }
 
+.hero-text a.ctaa i{
+  vertical-align: midle;
+  margin-right: 5px;
+}
+
 .section {
   padding: 2%;
 }
