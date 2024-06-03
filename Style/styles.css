@@ -15,7 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 9%;
+  padding: 2px 9%;
   background: #06c46f;
 }
 
@@ -52,7 +52,7 @@ img {
   border-bottom: 2px solid transparent;
   transition: all .55s ease;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .navlist img {
