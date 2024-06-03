@@ -30,10 +30,10 @@ img {
 }
 
 .logo {
-  font-size: 30px;
-	font-height: 30px;
+  font-size: 10px;
+	font-height: 10px;
   font-weight: 700;
-	max-height: 50px;
+	max-height: 10px;
   color: #0328ff;
   display: flex;
   align-items: center;
