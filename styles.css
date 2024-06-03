@@ -24,9 +24,9 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 .logo {
@@ -39,6 +39,7 @@ img {
 
 .navlist {
   display: flex;
+  align-items: center;
   background: #06c46f;
 }
 
@@ -55,8 +56,8 @@ img {
 }
 
 .navlist img {
-  max-height: 40px; /* Adjust as necessary */
-  margin: auto 0;
+  max-height: 50px; /* Adjust the height as necessary */
+  margin: auto;
 }
 
 .navlist a:hover {
@@ -106,9 +107,16 @@ img {
   margin: 0 0 45px;
 }
 
+.hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-img img {
   width: 100%;
   height: auto;
+  max-width: 100%;
   object-fit: contain; /* Adjust to 'cover' if you want the image to fill the container */
 }
 
@@ -142,4 +150,4 @@ img {
 
 .section {
   padding: 2%;
-  }
+}
