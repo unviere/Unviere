@@ -116,16 +116,16 @@ height: 100%;
 /*.front-img {
   width: 100%;
   text-align: center; 
-}
+}*/
 
 front-img img{
   margin: 0 0 45px;
-  width: 10px;
+  width: 50px;
   height: auto;
   max-width: 100%;
   display: block;
   
-}*/
+}
 
 front-text a{
   display: inline-block;
