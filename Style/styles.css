@@ -173,9 +173,9 @@ display: inline-block;
 
 .icons {
 	position: absolute;
-	top: 50%;
+	bottom: 0%;
 	padding: 0 9%;
-	transform: translateY(-50%);
+	transform: translateX(-50%);
 }
 
 .icons i {
@@ -185,4 +185,29 @@ display: inline-block;
 	color: #96c46f;
 	transition: all .50s ease;
 	text-decoration: none;
+}
+
+.icons i:hover{
+	color: #0328ff;
+	transform: translateX(-5%);
+}
+
+.scroll-down{
+	position: absolute;
+	bottom: 6%;
+	right: 9%;
+}
+
+.scroll-down i{
+	display: block;
+	padding: 12px;
+	font-size: 25px;
+	color: white;
+	background: #06c46f;
+	border-radius: 30px;
+	transition: all .50s ease;
+}
+
+.scroll-down i:hover{
+	transform: translateY(-5%)
 }
