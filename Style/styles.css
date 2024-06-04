@@ -30,7 +30,10 @@ img {
 }
 
 .logo {
-  font-size: 10px;
+	transition: all .55s ease;
+	  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 600;
   color: #0328ff;
   display: flex;
   align-items: center;
@@ -176,4 +179,5 @@ display: inline-block;
 	font-size: 24px;
 	color: #96c46f;
 	transition: all .50s ease;
+	text-decoration: none;
 }
