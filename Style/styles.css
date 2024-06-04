@@ -316,7 +316,7 @@ display: inline-block;
 		right: 0;
 	}
 }
-@media (max-width 1535px){
+@media (max-width 680px){
 .hero-img img{
 		width: 100%;
 		height: auto;
