@@ -30,14 +30,15 @@ img {
 }
 
 .logo {
+	z-index: 2000;
 	transition: all .55s ease;
 	  margin-left: 5px;
   font-size: 15px;
-	font-height: 10px;
-	font-width: 5px;
-	height: 10px;
-	width:5px;
-  font-weight: 600;
+	font-height: 100px;
+	font-width: 10px;
+	height: 100px;
+	width:10px;
+  font-weight: 60;
   color: #0328ff;
   display: flex;
   align-items: center;
