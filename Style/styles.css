@@ -174,9 +174,9 @@ display: inline-block;
 
 .icons {
 	position: absolute;
-	bottom: 0%;
+	top: 50%;
 	padding: 0 9%;
-	transform: translateX(-50%);
+	transform: translateY(-50%);
 }
 
 .icons i {
@@ -190,7 +190,7 @@ display: inline-block;
 
 .icons i:hover{
 	color: #0328ff;
-	transform: translateX(-5%);
+	transform: translateY(-5%);
 }
 
 .scroll-down{
