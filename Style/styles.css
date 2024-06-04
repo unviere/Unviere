@@ -311,4 +311,13 @@ display: inline-block;
 		margin-left: 0;
 		background: transparent;
 	}
+
+	.navlist-open{
+		right: 0;
+	}
 }
+@media (max-width 1535px){
+.hero-img img{
+		width: 100%;
+		height: auto;
+		}}
