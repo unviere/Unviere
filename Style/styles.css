@@ -168,6 +168,99 @@ display: inline-block;
   margin-right: 5px;
 }
 
+/*parallel section*/
+
+.parallel {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../Img/Stars.png);
+  background-size: cover;
+	background-position: relative;
+	z-index: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 100px;
+  padding-top: 100px;
+}
+
+.parallel-text {
+  padding: 20px;
+}
+
+.parallel-text h4 {
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.parallel-text p {
+	padding: 20px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.parallel-text h1 {
+  font-size: 80px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
+.parallel-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallel-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain; /* Adjust to 'cover' if you want the image to fill the container */
+}
+
+.parallel-text a {
+display: inline-block;
+  /*flex-direction: column;
+  gap: 10px;*/
+  color: white;
+  background: #06c46f;
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all .55s ease;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.parallel-text a:hover {
+  background: transparent;
+  border: 1px solid #06c46f;
+  transform: translateX(8px);
+}
+
+.parallel-text a.ctaa {
+  background: transparent;
+  border: 1px solid #06c46f;
+  margin-left: 20px;
+}
+
+.parallel-text a.ctaa i{
+  vertical-align: midle;
+  margin-right: 5px;
+}
+
+
 .section {
   padding: 0.19%;
 }
