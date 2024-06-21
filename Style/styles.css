@@ -101,11 +101,11 @@ img {
 }
 
 .hero-text {
-  padding: 20px;
+  padding: 5px;
 }
 
 .hero-text h4 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
   color: white;
   margin-bottom: 40px;
@@ -113,13 +113,13 @@ img {
 
 .hero-text p {
   color: white;
-  font-size: 5px;
+  font-size: 30px;
   line-height: 1.9;
   margin-bottom: 40px;
 }
 
 .hero-text h1 {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1;
   color: white;
   margin: 0 0 45px;
@@ -147,7 +147,7 @@ display: inline-block;
   border: 1px solid transparent;
   padding: 12px 30px;
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   border-radius: 10px;
   text-transform: uppercase;
@@ -166,6 +166,7 @@ display: inline-block;
   background: transparent;
   border: 1px solid #06c46f;
   margin-left: 20px;
+	margin-bottom: 30px;
 }
 
 .hero-text a.ctaa i{
@@ -230,65 +231,17 @@ display: inline-block;
 .parallel-img img {
   width: 100%;
   height: auto;
-.hero {
-  height: 100vh;
-  width: 100%;
-  max-width: 1200px; /* Added max-width */
-  margin: 0 auto; /* Center the hero section */
-  background-image: url(../Img/Stars.png);
-  background-size: cover;
-  background-position: center; /* Center the background image */
-  z-index: 1;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+
   gap: 2rem;
   padding: 100px 2%; /* Adjusted padding */
   overflow: hidden; /* Prevent overflow */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-.hero-text {
-  padding: 20px;
-}
-
-.hero-text h4 {
-  font-size: 30px; /* Adjusted font size */
-  font-weight: 400;
-  color: white;
-  margin-bottom: 20px; /* Reduced margin */
-}
-
-.hero-text p {
-  color: white;
-  font-size: 14px; /* Adjusted font size */
-  line-height: 1.6; /* Reduced line height */
-  margin-bottom: 20px; /* Reduced margin */
-}
-
-.hero-text h1 {
-  font-size: 50px; /* Adjusted font size */
-  line-height: 1.2; /* Adjusted line height */
-  color: white;
-  margin: 0 0 20px; /* Reduced margin */
-}
-
-.hero-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-img img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain; /* Adjust to 'cover' if you want the image to fill the container */
-}
-
-.hero-text a {
-  display: inline-block;
+.parallel-text a {
+display: inline-block;
+  /*flex-direction: column;
+  gap: 10px;*/
   color: white;
   background: #06c46f;
   border: 1px solid transparent;
@@ -303,84 +256,11 @@ display: inline-block;
   margin-right: 5px;
 }
 
-.hero-text a:hover {
+.parallel-text a:hover {
   background: transparent;
   border: 1px solid #06c46f;
   transform: translateX(8px);
 }
-
-.hero-text a.ctaa {
-  background: transparent;
-  border: 1px solid #06c46f;
-  margin-left: 20px;
-}
-
-.hero-text a.ctaa i {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-/*parallel section*/
-
-.parallel {
-  height: auto;
-  width: 100%;
-  max-width: 1200px; /* Added max-width */
-  margin: 0 auto; /* Center the parallel section */
-  background-image: url(../Img/Stars.png);
-  background-size: cover;
-  background-position: center; /* Center the background image */
-  z-index: 1;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2rem;
-  padding: 100px 2%; /* Adjusted padding */
-  overflow: hidden; /* Prevent overflow */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-.parallel-text {
-  padding: 20px;
-}
-
-.parallel-text h4 {
-  font-size: 30px; /* Adjusted font size */
-  font-weight: 400;
-  color: white;
-  margin-bottom: 20px; /* Reduced margin */
-}
-
-.parallel-text p {
-  padding: 20px;
-  color: white;
-  font-size: 14px; /* Adjusted font size */
-  line-height: 1.6; /* Reduced line height */
-  margin-bottom: 20px; /* Reduced margin */
-}
-
-.parallel-text h1 {
-  font-size: 50px; /* Adjusted font size */
-  line-height: 1.2; /* Adjusted line height */
-  color: white;
-  margin: 0 0 20px; /* Reduced margin */
-}
-
-.parallel-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.parallel-img img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain; /* Adjust to 'cover' if you want the image to fill the container */
-}
-
-
 
 .parallel-text a.ctaa {
   background: transparent;
