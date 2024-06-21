@@ -263,6 +263,11 @@ display: inline-block;
 
 .section {
   padding: 0.19%;
+	width: 100%;
+    position:absolute;
+    top: 30%;
+    transform: translateY(-10%);
+    text-align: center:
 }
 
 .icons {
