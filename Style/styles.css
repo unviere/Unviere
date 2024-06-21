@@ -348,6 +348,9 @@ display: inline-block;
 			right: 3%;
 			transition: .2s;
 		}
+		#menu-icon{
+		display: none;
+		}
 	}
 
 @media (max-width 1460px){
@@ -355,6 +358,9 @@ display: inline-block;
 		padding: 0 12%;
 		transition: .2s;
 		
+	}
+	#menu-icon{
+		display: none;
 	}
 }
 
@@ -371,6 +377,9 @@ display: inline-block;
 
 	.hero-text h4{
 		margin-bottom: 25px;
+	}
+	#menu-icon{
+		display: none;
 	}
 
 }
@@ -406,6 +415,13 @@ display: inline-block;
 	.scroll-down{
 		display: none;
 	}
+
+#menu-icon{
+		display: none;
+	}
+	
+
+	
 }
 
 @media (max-width 990px){
