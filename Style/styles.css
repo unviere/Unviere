@@ -57,6 +57,7 @@ img {
   margin-left: 5px;
   font-size: 15px;
   font-weight: 600;
+	border-radius: 50px;
   border-bottom: 2px solid transparent;
   transition: all .55s ease;
   text-decoration: none;
@@ -101,28 +102,28 @@ img {
 }
 
 .hero-text {
-  padding: 1px;
+  padding: 3px;
 }
 
 .hero-text h4 {
   font-size: 15px;
   font-weight: 400;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .hero-text p {
   color: white;
-  font-size: 10px;
+  font-size: 7px;
   line-height: 1.9;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .hero-text h1 {
-  font-size: 12px;
+  font-size: 20px;
   line-height: 1;
   color: white;
-  margin: 0 0 10px;
+  margin: 0 0 7px;
 }
 
 .hero-img {
@@ -201,25 +202,25 @@ display: inline-block;
 }
 
 .parallel-text h4 {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 400;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .parallel-text p {
-	padding: 10px;
+	padding: 7px;
   color: white;
   font-size: 15px;
   line-height: 1.9;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .parallel-text h1 {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1;
   color: white;
-  margin: 0 0 10px;
+  margin: 0 0 7px;
 }
 
 .parallel-img {
