@@ -84,14 +84,14 @@ img {
   width: 100%;
   background-image: url(../Img/Stars.png);
   background-size: cover;
-	background-position: relative;
+	background-position: center;
 	z-index: 1;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
-  padding: 100px;
+  padding: 100px 9%;
   padding-top: 100px;
 }
 
@@ -175,15 +175,15 @@ display: inline-block;
   width: 100%;
   background-image: url(../Img/Stars.png);
   background-size: cover;
-	background-position: relative;
+	background-position: center;
 	z-index: 1;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
-  padding: 100px;
-  padding-top: 100px;
+  padding: 100px 9%;
+  padding-top: 10px;
 }
 
 .parallel-text {
