@@ -104,7 +104,7 @@ img {
 }
 
 .hero-text h4 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   color: white;
   margin-bottom: 40px;
@@ -112,13 +112,13 @@ img {
 
 .hero-text p {
   color: white;
-  font-size: 15px;
+  font-size: 5px;
   line-height: 1.9;
   margin-bottom: 40px;
 }
 
 .hero-text h1 {
-  font-size: 80px;
+  font-size: 20px;
   line-height: 1;
   color: white;
   margin: 0 0 45px;
@@ -199,14 +199,14 @@ display: inline-block;
 }
 
 .parallel-text h4 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
-  color: red;
+  color: white;
   margin-bottom: 40px;
 }
 
 .parallel-text p {
-	padding: 20px;
+	padding: 5px;
   color: white;
   font-size: 15px;
   line-height: 1.9;
@@ -214,7 +214,7 @@ display: inline-block;
 }
 
 .parallel-text h1 {
-  font-size: 80px;
+  font-size: 20px;
   line-height: 1;
   color: white;
   margin: 0 0 45px;
