@@ -101,28 +101,28 @@ img {
 }
 
 .hero-text {
-  padding: 5px;
+  padding: 1px;
 }
 
 .hero-text h4 {
   font-size: 15px;
   font-weight: 400;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .hero-text p {
   color: white;
   font-size: 10px;
   line-height: 1.9;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .hero-text h1 {
   font-size: 12px;
   line-height: 1;
   color: white;
-  margin: 0 0 45px;
+  margin: 0 0 10px;
 }
 
 .hero-img {
@@ -149,7 +149,7 @@ display: inline-block;
   line-height: 1.4;
   font-size: 10px;
   font-weight: 500;
-  border-radius: 10px;
+  border-radius: 50px;
   text-transform: uppercase;
   transition: all .55s ease;
   text-decoration: none;
@@ -197,29 +197,29 @@ display: inline-block;
 }
 
 .parallel-text {
-  padding: 20px;
+  padding: 5px;
 }
 
 .parallel-text h4 {
   font-size: 25px;
   font-weight: 400;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .parallel-text p {
-	padding: 15px;
+	padding: 10px;
   color: white;
   font-size: 15px;
   line-height: 1.9;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .parallel-text h1 {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1;
   color: white;
-  margin: 0 0 45px;
+  margin: 0 0 10px;
 }
 
 .parallel-img {
@@ -249,7 +249,7 @@ display: inline-block;
   line-height: 1.4;
   font-size: 14px;
   font-weight: 500;
-  border-radius: 10px;
+  border-radius: 50px;
   text-transform: uppercase;
   transition: all .55s ease;
   text-decoration: none;
@@ -274,11 +274,11 @@ display: inline-block;
 }
 
 .parallel-text a.links {
-	padding: 15px;
+	padding: 10px;
   color: blue;
-  font-size: 15px;
+  font-size: 10px;
   line-height: 1.9;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 	text-decoration: underline;
 } 
 
