@@ -95,6 +95,7 @@ img {
   gap: 2rem;
   padding: 100px 2%;
   padding-top: 100px;
+	padding-bottom: 50px;
 	overflow: hidden;
 	box-sizing: border-box
 }
@@ -175,7 +176,7 @@ display: inline-block;
 /*parallel section*/
 
 .parallel {
-  height: 100vh;
+  height: auto;
   width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -322,7 +323,7 @@ display: inline-block;
 /*parallel section*/
 
 .parallel {
-  height: 100vh;
+  height: auto;
   width: 100%;
   max-width: 1200px; /* Added max-width */
   margin: 0 auto; /* Center the parallel section */
@@ -379,27 +380,7 @@ display: inline-block;
   object-fit: contain; /* Adjust to 'cover' if you want the image to fill the container */
 }
 
-.parallel-text a {
-  display: inline-block;
-  color: white;
-  background: #06c46f;
-  border: 1px solid transparent;
-  padding: 12px 30px;
-  line-height: 1.4;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 10px;
-  text-transform: uppercase;
-  transition: all .55s ease;
-  text-decoration: none;
-  margin-right: 5px;
-}
 
-.parallel-text a:hover {
-  background: transparent;
-  border: 1px solid #06c46f;
-  transform: translateX(8px);
-}
 
 .parallel-text a.ctaa {
   background: transparent;
