@@ -445,3 +445,27 @@ display: inline-block;
 #menu-icon{
 		display: block;
 		}
+
+.navlist{
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 300px;
+		background: #06c46f;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 50px 20px;
+		transition: all .55s ease;
+	}
+
+	.navlist a{
+		display: block;
+		margin: 30px 0;
+		margin-left: 0;
+		background: transparent;
+	}
+
+	.navlist-open{
+		right: 0;
+		}
