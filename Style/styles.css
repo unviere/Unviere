@@ -98,7 +98,7 @@ img {
   padding-top: 100px;
 	padding-bottom: 50px;
 	overflow: hidden;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 .hero-text {
@@ -108,7 +108,7 @@ img {
 .hero-text h4 {
   font-size: 15px;
   font-weight: 400;
-  color: white;
+  color: red;
   margin-bottom: 7px;
 }
 
