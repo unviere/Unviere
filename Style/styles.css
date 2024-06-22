@@ -83,7 +83,7 @@ img {
 .hero {
   height: 100vh;
   width: 100%;
-	max-width: 1200px;
+	max-width: 2000px;
 	margin: 0 auto;
   background-image: url(../Img/Stars.png);
   background-size: cover;
@@ -180,7 +180,7 @@ display: inline-block;
 .parallel {
   height: auto;
   width: 100%;
-	max-width: 1200px;
+	max-width: 2000px;
 	margin: 0 auto;
   background-image: url(../Img/Stars.png);
   background-size: cover;
@@ -456,7 +456,7 @@ display: inline-block;
 .hero-img img{
 		width: 100%;
 		height: auto;
-		}}
+}
 
 #menu-icon{
 		display: block;
@@ -484,4 +484,5 @@ display: inline-block;
 
 	.navlist-open{
 		right: 0;
+		}
 		}
