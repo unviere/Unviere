@@ -141,10 +141,15 @@ img {
   object-fit: contain; /* Adjust to 'cover' if you want the image to fill the container */
 }
 
-.hero-text a {
-display: inline-block;
-  /*flex-direction: column;
-  gap: 10px;*/
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Add some space above the buttons */
+}
+
+.hero-buttons a {
+  display: inline-block;
   color: white;
   background: #06c46f;
   border: 1px solid transparent;
@@ -156,24 +161,21 @@ display: inline-block;
   text-transform: uppercase;
   transition: all .55s ease;
   text-decoration: none;
-  margin-right: 5px;
 }
 
-.hero-text a:hover {
+.hero-buttons a:hover {
   background: transparent;
   border: 1px solid #06c46f;
   transform: translateX(8px);
 }
 
-.hero-text a.ctaa {
+.hero-buttons .ctaa {
   background: transparent;
   border: 1px solid #06c46f;
-  margin-left: 20px;
-	margin-bottom: 30px;
 }
 
-.hero-text a.ctaa i{
-  vertical-align: midle;
+.hero-buttons .ctaa i {
+  vertical-align: middle;
   margin-right: 5px;
 }
 
