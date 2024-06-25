@@ -95,7 +95,7 @@ img {
   align-items: center;
   gap: 2rem;
   padding: 100px 2%;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
 	padding-bottom: 50px;
 	overflow: hidden;
 	box-sizing: border-box;
