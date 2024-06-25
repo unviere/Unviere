@@ -92,7 +92,7 @@ img {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+ /* align-items: center;*/
   /*gap: 2rem;*/
 /* padding: 7px 2%;*/
   /*padding-top: 100px;*/
@@ -112,7 +112,7 @@ img {
 .hero-text h4 {
   font-size: 25px;
   font-weight: 400;
-  color: green;
+  color: white;
   margin-bottom: 27px;
 }
 
