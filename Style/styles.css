@@ -134,6 +134,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
 }
 
 .hero-img img {
@@ -159,6 +161,8 @@ display: inline-block;
   transition: all .55s ease;
   text-decoration: none;
   margin-right: 5px;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-text a:hover {
