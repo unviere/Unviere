@@ -93,10 +93,10 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 2rem;
-  padding: 7px 2%;
+  /*gap: 2rem;*/
+ /* padding: 7px 2%;*/
   /*padding-top: 100px;*/
-	padding-bottom: 50px;
+	/*padding-bottom: 7px;*/
 	overflow: hidden;
 	box-sizing: border-box;
 }
