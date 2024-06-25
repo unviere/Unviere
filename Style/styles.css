@@ -424,7 +424,7 @@ display: inline-block;
 	
 }
 
-@media (max-width: 990px){
+@media (max-width: 900px){
 	#menu-icon{
 		display: block;
 	}
