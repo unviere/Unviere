@@ -200,6 +200,7 @@ img {
 
 .parallel-top{
 	display: flex;
+	flex-direction: row;
   justify-content: center;
 }
 
