@@ -191,14 +191,21 @@ img {
 	background-position: center;
 	z-index: 1;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
-  gap: 2rem;
-  padding: 100px 2%;
-  padding-top: 100px;
+  justify-content: center;
 	overflow: hidden;
 	box-sizing: border-box
+}
+
+.parallel-top{
+	display: flex;
+  justify-content: center;
+}
+
+.dev{
+	display: flex;
+	flex-direction: column;
 }
 
 .parallel-text {
