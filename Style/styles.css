@@ -440,7 +440,7 @@ display: inline-block;
 	.navlist{
 		position: absolute;
 		top: 100%;
-		right: 0;
+		right: -100%;
 		width: 300px;
 		background: #06c46f;
 		display: flex;
@@ -495,7 +495,7 @@ display: inline-block;
 .navlist{
 		position: absolute;
 		top: 100%;
-		right: 0;
+		right: -100%;
 		width: 300px;
 		background: #06c46f;
 		display: flex;
