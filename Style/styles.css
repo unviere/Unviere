@@ -186,7 +186,7 @@ img {
   width: 100%;
 	max-width: 2000px;
 	margin: 0 auto;
-  background-image: url(../Img/Stars.png);
+  /*background-image: url(../Img/Stars.png);*/
   background-size: cover;
 	background-position: center;
 	z-index: 1;
