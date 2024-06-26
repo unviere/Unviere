@@ -203,6 +203,19 @@ img {
 	display: flex;
 	flex-direction: row;
   justify-content: center;
+	align-items: center;
+}
+
+.parallel-top h1{
+	font-size: 50px;
+	color: white;
+	margin: 10px;
+}
+
+.parallel-top h2{
+	font-size 40px;
+	color: white;
+	margin: 10px;
 }
 
 .parallel-dev{
@@ -210,13 +223,12 @@ img {
 	flex-direction: column;
 }
 
-.parallel-dev dev-icon{
-	width: 10px;
-	height: 10px;
+.dev-icon img{
+	width: 50px;
+	height: auto;
 }
-
 .parallel-dev h4{
-	font-size: 5px;
+	font-size: 10px;
   font-weight: 400;
   color: white;
   margin-bottom: 7px;
