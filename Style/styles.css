@@ -205,14 +205,14 @@ img {
   justify-content: center;
 }
 
-.dev{
+.parallel-top .dev{
 	display: flex;
 	flex-direction: column;
 }
 
-.dev dev-icon{
-	width: 20px;
-	height: 20px;
+.parallel-top .dev dev-icon{
+	width: 2px;
+	height: 2px;
 }
 
 .parallel-text {
