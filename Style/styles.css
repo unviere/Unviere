@@ -221,6 +221,7 @@ img {
 .parallel-dev{
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .dev-icon img{
@@ -276,35 +277,68 @@ img {
 	 /*position: fixed;*/
   right: 0;
   top: 0;
-  z-index: 19999000;
+  z-index: 1000;
   width: 100%;
   height: 50px;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 33px 9%;
+justify-content: space-between;
+ padding: 5px 9%;
   background: #06c46f;
+    border-radius: 5px;
 }
 
-.parallel-buttons-bar buttons-bar {
+.parallel-buttons-bar > * {
+  flex: 1; /* Ensures that children take up equal space */
+  text-align: center; /* Centers text/content within each child */
+   min-width: 100px; /* Adjust this value as needed */
+}
+
+/*
+.buttons-bar {
   display: flex;
+  flex-direction: row;
   align-items: center;
   background: transparent;
-}
+}*/
 
-.parallel-buttons-bar buttons-bar a {
+.parallel-buttons-bar button{
   background: transparent;
   color: white;
-  margin-left: 5px;
-  font-size: 15px;
+  margin-left: 0px;
+  font-size: 30;
+  width: auto;
+  height: auto;
   font-weight: 600;
-	border-radius: 50px;
+/*	border-radius: 50px;*/
   border-bottom: 2px solid transparent;
-  transition: all .55s ease;
-  text-decoration: underline;
-  padding: 5px 5px;
+/*  transition: all .55s ease*/
+  text-decoration: none;
+/*  padding: 5px 5px;*/
+border: none;
+outline: none;
 }
 
+.parallel-buttons-bar button:hover {
+  border-bottom: 5px solid #03c8ff;
+}
+
+.parallel-buttons-bar button.active {
+  border-bottom: 5px solid #03c8ff;
+}
+
+.tabs-parallel{
+  display: none;
+}
+
+#descriptionpar {
+  display: blocks;
+}
+
+#descriptionpar h1 {
+  color: white;
+}
 
 .parallel-text {
   padding: 5px;
