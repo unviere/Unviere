@@ -309,7 +309,7 @@ outline: none;
 
 .parallel-stats h1{
   color: black;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 5 5px;
 }
 
@@ -320,6 +320,7 @@ outline: none;
 
 .parallel-stats-under{
   color: black ;
+	font-size: 5px;
   margin-bottom: 4px;
 }
 
