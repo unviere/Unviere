@@ -20,7 +20,8 @@ header {
 }
 
 body {
-  background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);
+ /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
+ background: #ffffff;
 }
 
 img {
@@ -52,12 +53,12 @@ img {
 }
 
 .navlist a {
-  background: #0328ff;
-  color: white;
+  background: transparent;
+  color: black;
   margin-left: 5px;
   font-size: 15px;
   font-weight: 600;
-	border-radius: 50px;
+/*	border-radius: 50px;*/
   border-bottom: 2px solid transparent;
   transition: all .55s ease;
   text-decoration: none;
@@ -70,9 +71,24 @@ img {
 }/*/
 
 .navlist a:hover {
-  border-bottom: 2px solid #06c36f;
+  border-bottom: 5px solid #03c8ff;
 }
 
+ #dark-mode-toggle{
+  background: white;
+  color: black;
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 600;
+border-radius: 50px;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+  text-decoration: none;
+  padding: 5px 5px;
+  border: none;
+outline: none;
+ }
+  
 #menu-icon {
   color: #0328ff;
   font-size: 35px;
@@ -150,7 +166,7 @@ img {
 
 .hero-buttons a {
   display: inline-block;
-  color: white;
+  color: #0328ff;
   background: #06c46f;
   border: 1px solid transparent;
   padding: 12px 30px;
@@ -171,6 +187,7 @@ img {
 
 .hero-buttons .ctaa {
   background: transparent;
+  color: white;
   border: 1px solid #06c46f;
 }
 
@@ -196,7 +213,8 @@ img {
   align-items: center;
   justify-content: center;
 	overflow: hidden;
-	box-sizing: border-box
+	box-sizing: border-box;
+	margin-bottom: 10px;
 }
 
 .parallel-top{
@@ -204,17 +222,18 @@ img {
 	flex-direction: row;
   justify-content: center;
 	align-items: center;
+	margin-bottom: 10px;
 }
 
 .parallel-top h1{
 	font-size: 50px;
-	color: white;
+	color: black;
 	margin: 10px;
 }
 
 .parallel-top h2{
 	font-size 40px;
-	color: white;
+	color: black;
 	margin: 10px;
 }
 
@@ -231,8 +250,13 @@ img {
 .parallel-dev h4{
 	font-size: 10px;
   font-weight: 400;
-  color: white;
+  color: black;
   margin-bottom: 7px;
+}
+
+.parallel-img img{
+  width: 100%;
+  height: auto;
 }
 
 .parallel-playbar {
@@ -240,11 +264,12 @@ img {
   justify-content: center;
   gap: 10px; /* Space between buttons */
   margin-top: 20px; /* Add some space above the buttons */
+  margin-bottom: 10px;
 }
 
 .parallel-playbar a {
   display: inline-block;
-  color: white;
+  color: #0328ff;
   background: #06c46f;
   border: 1px solid transparent;
   padding: 12px 30px;
@@ -265,12 +290,37 @@ img {
 
 .parallel-playbar .ctaa {
   background: transparent;
+  color: black;
   border: 1px solid #06c46f;
 }
 
 .parallel-playbar .ctaa i {
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.parallel-stats{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.parallel-stats h1{
+  color: black;
+  font-size: 14px;
+  margin: 0 5 5px;
+}
+
+.parallel-stats a{
+  color: #0328ff;
+  text-decoration: underline;
+}
+
+.parallel-stats-under{
+  color: black ;
+  margin-bottom: 4px;
 }
 
 .parallel-buttons-bar{
@@ -287,6 +337,7 @@ justify-content: space-between;
  padding: 5px 9%;
   background: #06c46f;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .parallel-buttons-bar > * {
@@ -305,7 +356,7 @@ justify-content: space-between;
 
 .parallel-buttons-bar button{
   background: transparent;
-  color: white;
+  color: black;
   margin-left: 0px;
   font-size: 30;
   width: auto;
@@ -321,11 +372,11 @@ outline: none;
 }
 
 .parallel-buttons-bar button:hover {
-  border-bottom: 5px solid #03c8ff;
+  border-bottom: 5px solid #0328ff;
 }
 
 .parallel-buttons-bar button.active {
-  border-bottom: 5px solid #03c8ff;
+  border-bottom: 5px solid #0328ff;
 }
 
 .tabs-parallel{
@@ -336,8 +387,21 @@ outline: none;
   display: blocks;
 }
 
-#descriptionpar h1 {
-  color: white;
+#descriptionpar h4 {
+  color: black;
+  font-size: 30px;
+}
+
+#descriptionpar p {
+  color: black;
+  font-size: 27px;
+  padding: 10px;
+}
+
+#descriptionpar .links{
+  color: #0328ff;
+  font-size:27px;
+  text-decoration: underline;
 }
 
 .parallel-text {
@@ -434,6 +498,12 @@ display: inline-block;
   transform: translateY(-10%);
   text-align: center;
 }
+
+hr{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 
 .icons {
 	position: absolute;
@@ -672,3 +742,112 @@ display: inline-block;
   margin: 0 0 7px;
 }
 		}
+		
+	/*	dark mode properties*/
+	
+	
+		  body.dark-mode {
+  background: #1a1a1a;
+}
+
+body.dark-mode header{
+  background: #024a2a;
+}
+
+body.dark-mode .navlist{
+  background: #024a2a;
+}
+
+body.dark-mode .navlist a {
+  color: white;
+}
+
+body.dark-mode #dark-mode-toggle{
+  background: black;
+  color: white;
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid #0328ff;
+}
+		
+		body.dark-mode .hero-buttons a{
+		  background: #024a2a;
+		  color: white;
+		  
+		}
+		
+		body.dark-mode .hero-buttons a:hover {
+  background: transparent;
+  color: white;
+		}
+		
+		body.dark-mode .hero-buttons .ctaa {
+  background: transparent;
+  border: 1px solid #024a2a;
+}
+
+body.dark-mode .parallel {
+  background: #0d0d0d;
+}
+body.dark-mode .parallel-top h1{
+	color: white;
+}
+
+body.dark-mode .parallel-top h2{
+	color: white;
+}
+
+body.dark-mode .parallel-dev h4{
+  color: white;
+}
+
+body.dark-mode .parallel-stats h1{
+  color: white;
+}
+
+body.dark-mode .parallel-stats a{
+  color: #03c8ff;
+}
+
+body.dark-mode .parallel-playbar a {
+  color: white;
+  background: #024a2a;
+}
+
+body.dark-mode .parallel-playbar a:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid #024a2a;
+}
+
+body.dark-mode .parallel-playbar .ctaa {
+  background: transparent;
+  border: 1px solid #024a2a;
+}
+
+body.dark-mode .parallel-buttons-bar{
+  background: #024a2a;
+}
+
+
+body.dark-mode .parallel-buttons-bar button{
+  background: transparent;
+  color: white;
+}
+
+body.dark-mode #descriptionpar h4 {
+  color: white;
+}
+
+body.dark-mode #descriptionpar p {
+  color: white;
+}
+
+body.dark-mode #descriptionpar .links{
+  color: #03c8ff;
+}
+
+body.dark-mode .parallel-stats-under{
+  color: white;
+	}
