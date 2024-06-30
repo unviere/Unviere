@@ -309,7 +309,7 @@ outline: none;
 
 .parallel-stats h1{
   color: black;
-  font-size: 12px;
+  font-size: 15px;
   margin: 0 5 5px;
 }
 
@@ -585,12 +585,18 @@ hr{
 	}
 
 	.hero-text h1{
-		font-size: 60px;
+		font-size: 50px;
 		margin: 0 0 30;
 	}
 
 	.hero-text h4{
+	  font-size: 45;
 		margin-bottom: 25px;
+	}
+	
+	.hero-text p{
+	  font-size: 30px;
+	  margin-bottom: 25px;
 	}
 	#menu-icon{
 		display: none;
