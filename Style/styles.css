@@ -218,6 +218,7 @@ outline: none;
 }
 
 .parallel-top{
+  width:100%;
 	display: flex;
 	flex-direction: row;
   justify-content: center;
@@ -300,6 +301,7 @@ outline: none;
 }
 
 .parallel-stats{
+  width:100%;
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -585,17 +587,17 @@ hr{
 	}
 
 	.hero-text h1{
-		font-size: 50px;
+		font-size: 30px;
 		margin: 0 0 30;
 	}
 
 	.hero-text h4{
-	  font-size: 45;
+	  font-size: 25;
 		margin-bottom: 25px;
 	}
 	
 	.hero-text p{
-	  font-size: 30px;
+	  font-size: 15px;
 	  margin-bottom: 25px;
 	}
 	#menu-icon{
