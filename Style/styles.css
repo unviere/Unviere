@@ -493,6 +493,43 @@ display: inline-block;
 	text-decoration: underline;
 } 
 
+/* groups*/
+
+.groups{
+  display: flex;
+  flex-direction: column;
+}
+
+.groups-partners p{
+  color: black;
+  font-size: 50px;
+}
+
+.partners-inf-scrolling{
+  display: flex;
+  flex-direction: row;
+}
+
+.partners-inf-scrolling a{
+  background-color: #06c46f;
+  height: 200px;
+  width: 500px;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+
+  
+}
+
+.partners-inf-scrolling a.img{
+  height:auto;
+  width:200px;
+  box-sizing: border-box;
+  display: flex;
+  
+}
+
+
 .section {
   padding: 0.19%;
   width: 100%;
