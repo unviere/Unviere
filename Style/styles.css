@@ -233,7 +233,7 @@ outline: none;
 }
 
 .parallel-top h2{
-	font-size 40px;
+	font-size: 40px;
 	color: black;
 	margin: 10px;
 }
@@ -631,8 +631,8 @@ hr{
 
 	.hero{
 		height: 100%
-		gap: 1rem;
-		grid-template-columns: 1fr;
+	/*	gap: 1rem;*/
+	/*	grid-template-columns: 1fr;*/
 	}
 
 	.icons {
@@ -954,3 +954,4 @@ body.dark-mode #descriptionpar .links{
 body.dark-mode .parallel-stats-under{
   color: white;
 	}
+	
