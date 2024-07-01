@@ -813,11 +813,11 @@ hr{
 }*/
 
 .parallel-stats h1 {
-  font-size: 5px; /* Corrected the font-size syntax */
+  font-size: 7px; /* Corrected the font-size syntax */
 }
 
 .parallel-stats-under {
-  font-size: 1px;
+  font-size: 5px;
 }
 
 .parallel-top{
