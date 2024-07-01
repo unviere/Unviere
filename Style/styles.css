@@ -587,21 +587,26 @@ hr{
 	}
 
 	.hero-text h1{
-		font-size: 30px;
-		margin: 0 0 30;
+		font-size: 20px;
+		margin: 0 0 25;
 	}
 
 	.hero-text h4{
-	  font-size: 25;
+	  font-size: 15;
 		margin-bottom: 25px;
 	}
 	
 	.hero-text p{
-	  font-size: 15px;
+	  font-size: 10px;
 	  margin-bottom: 25px;
 	}
 	#menu-icon{
 		display: none;
+	}
+	
+	.parallel-stats h1{
+  font-size: 10px;
+  margin: 0 5 5px;
 	}
 
 }
@@ -695,6 +700,42 @@ hr{
   line-height: 1;
   margin: 0 0 7px;
 		}
+		
+			.parallel-stats h1{
+  font-size: 7px;
+  margin: 0 3 3px;
+	
+}
+
+.parallel-stats-under {
+  font-size: 2px;
+}
+
+.parallel-top{
+  width:100%;
+	margin-bottom: 10px;
+}
+
+.parallel-top h1{
+	font-size: 35px;
+	margin: 10px;
+}
+
+.parallel-top h2{
+	font-size:20px;
+	margin: 10px;
+}
+
+
+.dev-icon img{
+	width: 45px;
+	height: auto;
+}
+.parallel-dev h4{
+	font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
 }
 @media (max-width: 680px){
 
@@ -709,6 +750,7 @@ hr{
 #menu-icon{
 		display: block;
 		}
+		
 
 .navlist{
 		position: absolute;
@@ -750,7 +792,59 @@ hr{
   line-height: 1;
   margin: 0 0 7px;
 }
-		}
+
+/*/.parallel-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.parallel-stats > * {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: center; 
+}
+
+.parallel-stats > :last-child {
+  margin-left: 80px; 
+  text-align: left;  
+}*/
+
+.parallel-stats h1 {
+  font-size: 5px; /* Corrected the font-size syntax */
+}
+
+.parallel-stats-under {
+  font-size: 1px;
+}
+
+.parallel-top{
+  width:100%;
+	margin-bottom: 10px;
+}
+
+.parallel-top h1{
+	font-size: 30px;
+	margin: 10px;
+}
+
+.parallel-top h2{
+	font-size:15px;
+	margin: 10px;
+}
+
+
+.dev-icon img{
+	width: 40px;
+	height: auto;
+}
+.parallel-dev h4{
+	font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
 		
 	/*	dark mode properties*/
 	
