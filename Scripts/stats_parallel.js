@@ -1,26 +1,24 @@
-// Replace 'YOUR_GAME_ID' with your actual Roblox game ID
-const gameId = '14229107623';
-
-// Function to fetch and display stats
 async function fetchAndDisplayStats() {
   try {
-    const response = await fetch(`https://api.roblox.com/games/${gameId}`);
+    const response = await fetch(`https://games.roblox.com/v1/games?universeIds=4922186765`);
     if (!response.ok) {
-      throw new Error('Failed to fetch data');
+      throw new Error(`Failed to fetch data. Status: ${response.status} - ${response.statusText}`);
     }
-    const data = await response.json();
+    const jsonData = await response.json();
+    console.log('Fetched data:', jsonData); // Log fetched data for debugging
 
-    // Update HTML with fetched data
-    document.getElementById('likes').textContent = `Likes: ${data.likes}`;
-    document.getElementById('server-size').textContent = `Server Size: ${data.maxPlayers}`;
-    document.getElementById('favorites').textContent = `Favorites: ${data.favoritesCount}`;
-    document.getElementById('created-date').textContent = `Created: ${data.created}`;
-    document.getElementById('last-updated').href = data.updated;
-  //  document.getElementById('last-updated').innerHTML = `Last Updated: <a href="${data.updated}">See here</a>`;//
+    // Update HTML elements with fetched data
+    //document.getElementById('likes').textContent = `Likes: ${jsonData.data[0].favoritedCount}`;
+    document.getElementById('server-size').textContent = `Server Size: ${jsonData.data[0].maxPlayers}`;
+    document.getElementById('favorites').textContent = `Favorites: ${jsonData.data[0].favoritedCount}`;
+    document.getElementById('created-date').textContent = `Created: ${new Date(jsonData.data[0].created).toLocaleDateString()}`;
+    document.getElementById('last-updated').textContent = `Last Updated: ${new Date(jsonData.data[0].updated).toLocaleDateString()}`;
+  //  document.getElementById('genre').textContent = `Genre: ${jsonData.data[0].genre}`;
+    //document.getElementById('other-genres').textContent = `Allowed Genres: ${jsonData.data[0].allowedGearGenres.join(', ')}`;
   } catch (error) {
     console.error('Error fetching and displaying stats:', error);
   }
 }
 
-// Call the function to fetch and display stats when the page loads
+// Call the function to fetch and display stats when the page loads 
 document.addEventListener('DOMContentLoaded', fetchAndDisplayStats);
