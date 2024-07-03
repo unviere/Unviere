@@ -204,6 +204,7 @@ outline: none;
 	max-width: 2000px;
 	margin: 0 auto;
   /*background-image: url(../Img/Stars.png);*/
+  background-color: whitesmoke;
   background-size: cover;
 	background-position: center;
 	z-index: 1;
@@ -496,16 +497,25 @@ display: inline-block;
 /* groups*/
 
 .groups{
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   overflow: hidden;
-  white-space: nowrap;
   padding: 10px 0;
+  width: 100%;
 }
 
-.groups-partners p{
+/*.groups-partners{
+  
+}*/
+
+.groups-partners h1{
   color: black;
   font-size: 50px;
+  
+}
+.groups-partners p{
+  color: black;
+  font-size: 30px;
 }
 
 @keyframes slide{
@@ -518,11 +528,44 @@ display: inline-block;
   }
 }
 
+.partners-container{
+  overflow: hidden;
+  padding: 20px 0;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.partners-container:before,
+.partners-container:after {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.partners-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
+}
+
+.partners-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
+}
+
+.partner-holder{
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
 
 .partners-inf-scrolling{
-  display: inline-block;
-  white-space: nowrap;
-  animation: 5s slide infinite linear;
+  display: flex;
+  animation: 35s slide infinite linear;
+  width: 100%;
   
 }
 
@@ -538,8 +581,7 @@ display: inline-block;
   color: black;
   text-decoration: none;
   border-radius: 10px;
-  display: flex;
-  flex-direction: row; 
+  display: inline-block;
   margin-right: 10px;
   
 }
@@ -551,8 +593,6 @@ display: inline-block;
   color: black;
   text-decoration: none;
   border-radius: 5px;
-  display: flex;
-  flex-direction: row;
 
   
 }
@@ -562,7 +602,12 @@ display: inline-block;
   width:200px;
   box-sizing: border-box;
   display: flex;
-  
+  border-radius: 10px;
+}
+
+.partner-holder{
+  display: flex;
+  flex-direction: row;
 }
 
 .partner-info {
@@ -845,6 +890,14 @@ hr{
   margin-bottom: 7px;
 }
 
+.groups-partners h1{
+  font-size: 35px;
+  
+}
+.groups-partners p{
+  font-size: 15px;
+}
+
 .partners-inf-scrolling a {
   height: 100px;
   width: 300px;
@@ -1001,6 +1054,14 @@ hr{
   margin-bottom: 7px;
 }
 
+.groups-partners h1{
+  font-size: 35px;
+  
+}
+.groups-partners p{
+  font-size: 15px;
+}
+
 .partners-inf-scrolling a{
   height: 100px;
   width: 300px;
@@ -1046,6 +1107,15 @@ hr{
   white-space: normal;
   margin: 0 2 2px;
   color: #0328ff;
+}
+
+
+
+.partners-container:before,
+.partners-container:after {
+  width: 50px;
+}
+
 }
 		
 	/*	dark mode properties*/
@@ -1157,3 +1227,47 @@ body.dark-mode .parallel-stats-under{
   color: white;
 	}
 	
+body.dark-mode .groups-partners h1{
+  color: white;
+  
+}
+body.dark-mode .groups-partners p{
+  color: white;
+}
+	
+body.dark-mode .partners-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), #1a1a1a);
+}
+
+body.dark-mode .partners-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), #1a1a1a);
+}
+	
+body.dark-mode .partners-inf-scrolling a{
+  background-color: #024a2a;
+  color: black;
+}
+
+body.dark-mode .partners-inf-scrolling a:hover{
+  background-color: #02311c;
+  color: black;
+  
+}
+
+
+
+body.dark-mode .partner-info h1 {
+  color: white;
+}
+
+body.dark-mode .partner-info p{
+  color: white;
+}
+
+
+
+body.dark-mode .stats-group h1{
+  color: #03c8ff;
+}
