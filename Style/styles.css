@@ -5,7 +5,22 @@
   list-style: none;
 }
 
-header {
+#headerv{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+}
+
+
+
+/*header {
   position: fixed;
   right: 0;
   top: 0;
@@ -17,7 +32,7 @@ header {
   justify-content: space-between;
   padding: 33px 9%;
   background: #06c46f;
-}
+}*/
 
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
@@ -30,7 +45,7 @@ img {
   height: auto;
 }
 
-.logo {
+/*.logo {
 	z-index: 200000;
 	transition: all .55s ease;
 	  margin-left: 5px;
@@ -58,17 +73,13 @@ img {
   margin-left: 5px;
   font-size: 15px;
   font-weight: 600;
-/*	border-radius: 50px;*/
   border-bottom: 2px solid transparent;
   transition: all .55s ease;
   text-decoration: none;
   padding: 5px 5px;
 }
 
-/*.navlist img {
-  max-height: 20px; /* Adjust the height as necessary 
-  margin: auto;
-}/*/
+
 
 .navlist a:hover {
   border-bottom: 5px solid #03c8ff;
@@ -94,7 +105,7 @@ outline: none;
   font-size: 35px;
   cursor: pointer;
   display: none;
-}
+}*/
 
 .hero {
   height: 100vh;
@@ -703,7 +714,7 @@ hr{
 }
 
 	@media (max-width: 1535px){
-		header{
+	/*	header{
 			padding: 15px 3%;
 			transition: .2s;
 		}
@@ -719,7 +730,7 @@ hr{
 		}
 		#menu-icon{
 		display: none;
-		}
+		}*/
 	}
 
 @media (max-width: 1460px){
@@ -728,9 +739,9 @@ hr{
 		transition: .2s;
 		
 	}
-	#menu-icon{
+/*	#menu-icon{
 		display: none;
-	}
+	}*/
 }
 
 @media (max-width: 1340px){
@@ -753,9 +764,9 @@ hr{
 	  font-size: 10px;
 	  margin-bottom: 25px;
 	}
-	#menu-icon{
+/*	#menu-icon{
 		display: none;
-	}
+	}*/
 	
 	.parallel-stats h1{
   font-size: 10px;
@@ -796,9 +807,9 @@ hr{
 		display: none;
 	}
 
-#menu-icon{
+/*#menu-icon{
 		display: none;
-	}
+	}*/
 	
 
 	
@@ -810,7 +821,7 @@ hr{
 		flex-direction: column;
 	}
 	
-	#menu-icon{
+/*	#menu-icon{
 		display: block;
 	}
 	.navlist{
@@ -835,7 +846,7 @@ hr{
 
 	.navlist-open{
 		right: 0;
-	}
+	}*/
 	.hero-text h4 {
   font-size: 15px;
   font-weight: 400;
@@ -955,7 +966,7 @@ hr{
 		height: auto;
 }
 
-#menu-icon{
+/*#menu-icon{
 		display: block;
 		}
 		
@@ -982,7 +993,7 @@ hr{
 
 	.navlist-open{
 		right: 0;
-		}
+		}*/
 		.hero-text h4 {
   font-size: 15px;
   font-weight: 400;
@@ -1125,7 +1136,7 @@ hr{
   background: #1a1a1a;
 }
 
-body.dark-mode header{
+/*body.dark-mode header{
   background: #024a2a;
 }
 
@@ -1144,7 +1155,7 @@ body.dark-mode #dark-mode-toggle{
 
 .navlist a:hover {
   border-bottom: 2px solid #0328ff;
-}
+}*/
 		
 		body.dark-mode .hero-buttons a{
 		  background: #024a2a;
