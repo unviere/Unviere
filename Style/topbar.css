@@ -17,6 +17,7 @@ header {
   justify-content: space-between;
   padding: 33px 9%;
   background: #06c46f;
+  box-shadow: 1px 1px 9px grey;
 }
 
 body {
@@ -50,6 +51,7 @@ img {
   display: flex;
   align-items: center;
   background: #06c46f;
+  
 }
 
 .navlist a {
@@ -220,6 +222,7 @@ outline: none;
 		padding: 5px 5px;
 		margin: 0px;
 		transition: all .55s ease;
+		border-bottom-left-radius: 10px;
 	}
 
 	.navlist a{
@@ -285,6 +288,7 @@ outline: none;
 		flex-direction: column;
 		padding: 5px 5px;
 		transition: all .55s ease;
+		border-bottom-left-radius: 10px;
 	}
 
 	.navlist a{
@@ -305,10 +309,12 @@ body.dark-mode {
 
 body.dark-mode header{
   background: #024a2a;
+  box-shadow: 1px 1px 9px black;
 }
 
 body.dark-mode .navlist{
   background: #024a2a;
+  
 }
 
 body.dark-mode .navlist a {
