@@ -326,8 +326,8 @@ body.dark-mode #dark-mode-toggle{
   color: white;
 }
 
-.navlist a:hover {
-  border-bottom: 2px solid #0328ff;
+body.dark-mode .navlist a:hover {
+  border-bottom: 2px solid #03c8ff;
 }
 
 body.dark-mode .more-drop{

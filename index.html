@@ -6,6 +6,7 @@
   <title>unviere</title>
   <link rel ="stylesheet" type = "text/css" href ="Style/styles.css">
       <link rel ="stylesheet" type = "text/css" href ="Style/topbar.css">
+      <link rel ="stylesheet" type = "text/css" href ="Style/sidebar.css">
   <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet"
@@ -30,10 +31,28 @@
     
    <!-- index.html -->
     <div id="header"></div>
-   
     
+    <input type="checkbox" id="check">
+    <label class="sidebar-toggle" for="check"><i class="ri-menu-line" id="btn"></i>
+    <i class="ri-close-line" id="cancel"></i>
+    </label>
+   
+    <div class="sidebar">
+      <div class="sidebar-header">on this page</div>
+      <div class="sidebar-scroll">
+      <ul>
+                <li><a class="navigate" href="#landing">landings page</a></a></li>
+        <li><a class="navigate" href="#paralleized engineers">Parallelized engineers</a></li>
+         <li><a class="navigate" href="#groups">groups</a></li>
+      </ul>
+      <h1>also checkout</h1>
+        <ul>
+        <li><a class="navigate" href="#">games</a></li>
+      </ul>
+      </div>
+    </div>
 
-    <section class ="hero">
+    <section class ="hero"><a name="landing"></a>
       <div class ="hero-text">
         <h1>unviere</h1>
         <h4>play our games and be happy</h4>
