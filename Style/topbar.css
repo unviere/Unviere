@@ -98,6 +98,12 @@ outline: none;
   display: none;
 }
 
+.settings a{
+  text-decoration: none;
+  color: #0328ff;
+  font-size: 35;
+}
+
 .community-drop li{
   display: block;
 }
