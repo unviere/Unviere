@@ -1,2 +1,4 @@
 # _config.yml
 permalink: /:basename/
+
+include: Scripts/topbar.js
