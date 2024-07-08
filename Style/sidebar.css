@@ -284,7 +284,7 @@ body.dark-mode .sidebar .tabs-navigation.active {
 
 }
 
-/* dark mode*/
+/* unviere dark mode*/
 body.dark-mode .sidebar{
   background: #024a2a;
 }
@@ -352,5 +352,76 @@ body.dark-mode .sidebar-toggle #cancel{
   
   background: #024a2a;
   color: white;
+  
+}
+
+/* unviere light mode*/
+body.light-mode .sidebar{
+  background: #06c46f;
+}
+
+body.light-mode .sidebar-scroll{
+  background: #06c46f;
+}
+
+body.light-mode .sidebar .sidebar-header{
+  
+  color: white;
+  background: #0328ff;
+  border-bottom: 1px solid rgba(255,255,255,1);
+}
+body.light-mode .sidebar .navigate {
+  color: black;
+  
+}
+
+body.light-mode .sidebar .navigate:hover {
+  
+  border-bottom: 2px solid  #0328ff;
+  
+  
+}
+
+body.light-mode .sidebar .tabs-navigation {
+  color: black;
+  
+}
+
+body.light-mode .sidebar .tabs-navigation:hover {
+  
+  border-bottom: 2px solid  #0328ff;
+  
+  
+}
+
+body.light-mode .sidebar .tabs-navigation.active {
+  
+  border-bottom: 2px solid  #0328ff;
+  
+  
+}
+
+body.light-mode .sidebar h1{
+  background: #0328ff;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid rgba(255,255,255,1);
+}
+
+
+
+
+
+body.light-mode .sidebar-toggle #btn{
+  
+  background: #06c46f;
+  color: black;
+  
+}
+
+body.light-mode .sidebar-toggle #cancel{
+  
+  background: #06c46f;
+  color: black;
   
 }

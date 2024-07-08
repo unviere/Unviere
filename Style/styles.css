@@ -1254,7 +1254,7 @@ hr{
 
 }
 		
-	/*	dark mode properties*/
+	/*	unviere dark mode properties*/
 	
 	
 		  body.dark-mode {
@@ -1414,4 +1414,147 @@ body.dark-mode .partner-info p{
 
 body.dark-mode .stats-group h1{
   color: #03c8ff;
+}
+
+	/*	unviere light mode properties*/
+	
+	
+		  body.light-mode {
+  background: #ffffff;
+}
+		
+		body.light-mode .hero-buttons a{
+		  background: #06c46f;
+		  color: #0328ff;
+		  
+		}
+		
+		body.light-mode .hero-buttons a:hover {
+  background: transparent;
+  color: white;
+		}
+		
+		body.light-mode .hero-buttons .ctaa {
+  background: transparent;
+  border: 1px solid #06c46f;
+  color: white;
+}
+
+body.light-mode .parallel {
+  background: whitesmoke;
+}
+body.light-mode .parallel-top h1{
+	color: black;
+}
+
+body.light-mode .parallel-top h2{
+	color: black;
+}
+
+body.light-mode .parallel-dev h4{
+  color: black;
+}
+
+body.light-mode .parallel-stats h1{
+  color: black;
+}
+
+body.light-mode .parallel-stats a{
+  color: #0328ff;
+}
+
+body.light-mode .parallel-playbar a {
+  color: black;
+  background: #06c46f;
+}
+
+body.light-mode .parallel-playbar a:hover {
+  background: transparent;
+  color: black;
+  border: 1px solid #06c46f;
+}
+
+body.light-mode .parallel-playbar .ctaa {
+  background: transparent;
+  border: 1px solid #06c46f;
+  color: black;
+}
+
+body.light-mode .parallel-buttons-bar{
+  background: #06c46f;
+}
+
+
+body.light-mode .parallel-buttons-bar button{
+  background: transparent;
+  color: black;
+}
+
+body.light-mode .parallel-buttons-bar button:hover {
+  border-bottom: 5px solid #0328ff;
+}
+
+body.light-mode .parallel-buttons-bar button.active {
+  border-bottom: 5px solid #0328ff;
+}
+
+body.light-mode #descriptionpar h4 {
+  color: black;
+}
+
+body.light-mode #descriptionpar p {
+  color: black;
+}
+
+body.light-mode #descriptionpar .links{
+  color: #0328ff;
+}
+
+body.light-mode .parallel-stats-under{
+  color: black;
+	}
+	
+body.light-mode .groups-partners h1{
+  color: black;
+  
+}
+body.light-mode .groups-partners p{
+  color: black;
+}
+	
+body.light-mode .partners-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
+}
+
+body.light-mode .partners-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
+}
+	
+body.light-mode .partners-inf-scrolling a{
+  background-color: #06c46f;
+  color: black;
+}
+
+body.light-mode .partners-inf-scrolling a:hover{
+  background-color: #08f78b;
+  color: black;
+  
+}
+
+
+
+body.light-mode .partner-info h1 {
+  color: black;
+}
+
+body.light-mode .partner-info p{
+  color: black;
+}
+
+
+
+body.light-mode .stats-group h1{
+  color: #0328ff;
 }

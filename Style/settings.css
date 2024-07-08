@@ -1,3 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+
 #header{
   position: fixed;
   right: 0;
@@ -29,28 +37,37 @@
   padding: 20px;
 }
 
-#style{
-  display: block;
+.tabs-settings{
+  display: none;
 }
 
-#style .styles{
+#style{
+  display: block;
+  width: 100%;
+}
+
+#style .settings-site-styles{
   border: 1px solid rgba(0,0,0,1);
   margin-top: 170px;
   border-radius: 10px;
-  margin-left: 50px;
-  margin-right: 20px;
-  width: 50vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 98%;
   height: auto;
   position: relative;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  left: -2;
 }
 
 #style .styles-list{
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  overflow: hidden;
-  max-width: 50vh;
+/*  overflow: hidden;*/
+  max-width: 98%;
 }
 
 #style .buttons-styles{
@@ -114,10 +131,35 @@
   background: #08f78b;
 }
 
+#unviere-dark-green{
+  background: #024a2a;
+}
+
+#unviere-dark-green-hover{
+  background: #02311c;
+}
+
+#unviere-dark-blue{
+  background: #03c8ff;
+}
+
+#unviere-dark-white{
+  background: black;
+}
+
+#unviere-dark-gray{
+  background: #0d0d0d;
+}
+
+#unviere-dark-black{
+  background: #ffffff;
+}
+
 .color-dot::after {
   content: attr(data-tooltip); /* Use data-tooltip attribute to define the text */
   position: absolute;
-  bottom: -30px;
+  z-index: 50098600;
+  bottom: 560px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.75);
@@ -135,11 +177,16 @@
 .color-dot:hover::after {
   opacity: 1;
   visibility: visible;
+  z-index: 600000;
 }
 
 #container{
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,1);
+  overflow: hidden;
+  padding: 0px;
+margin: 0px;
+justify-content: none;
 }
 .header1{
   font-size: 30px;
@@ -173,4 +220,80 @@
   transform: translateY(-10%);
   text-align: center;
   transition: all .5s;
+  margin-left: 0px;
+}
+
+/* unviere dark*/
+body.dark-mode #style .settings-site-styles{
+  border: 1px solid rgba(255,255,255,1);
+}
+
+body.dark-mode #style .buttons-styles{
+  background: #024a2a;
+}
+
+body.dark-mode #style .buttons-styles:hover{
+  background: #02311c;
+}
+
+
+body.dark-mode #style .color-dot {
+  border: 1px solid rgba(255,255,255,1);
+}
+
+
+
+body.dark-mode .color-dot::after {
+  background: rgba(255, 255, 255, 0.75);
+  color: black;
+}
+
+body.dark-mode #container{
+  border: 1px solid rgba(255,255,255,1);
+}
+body.dark-mode .header1{
+  color: white;
+}
+
+
+body.dark-mode .title h1{
+  background: #1a1a1a; /* Ensure the heading's background is also white */
+  color: white;
+}
+
+/* unviere light*/
+body.dark-mode #style .settings-site-styles{
+  border: 1px solid rgba(0,0,0,1);
+}
+
+body.light-mode #style .buttons-styles{
+  background: #06c46f;
+}
+
+body.light-mode #style .buttons-styles:hover{
+  background: #08f78b;
+}
+
+
+body.light-mode #style .color-dot {
+  border: 1px solid rgba(0,0,0,1);
+}
+
+
+
+body.light-mode .color-dot::after {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+body.light-mode #container{
+  border: 1px solid rgba(0,0,0,1);
+}
+body.light-mode .header1{
+  color: black;
+}
+
+
+body.light-mode .title h1{
+  background: white; /* Ensure the heading's background is also white */
 }

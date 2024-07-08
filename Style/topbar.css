@@ -73,7 +73,7 @@ img {
 }/*/
 
 .navlist a:hover {
-  border-bottom: 5px solid #03c8ff;
+  border-bottom: 5px solid #0328ff;
 }
 
  #dark-mode-toggle{
@@ -89,6 +89,7 @@ border-radius: 50px;
   padding: 5px 5px;
   border: none;
 outline: none;
+display: none;
  }
   
 #menu-icon {
@@ -309,6 +310,7 @@ outline: none;
 		}
 }
 
+/* unviere dark*/
 body.dark-mode {
   background: #1a1a1a;
 }
@@ -342,4 +344,40 @@ body.dark-mode .more-drop{
 
 body.dark-mode .community-drop{
   background: #024a2a;
+}
+
+/* unviere light*/
+body.light-mode {
+  background: #ffffff;
+}
+
+body.light-mode header{
+  background: #06c46f;
+  box-shadow: 1px 1px 9px grey;
+}
+
+body.light-mode .navlist{
+  background: #06c46f;
+  
+}
+
+body.light-mode .navlist a {
+  color: black;
+}
+
+body.light-mode #dark-mode-toggle{
+  background: white;
+  color: black;
+}
+
+body.light-mode .navlist a:hover {
+  border-bottom: 2px solid #0328ff;
+}
+
+body.light-mode .more-drop{
+  background: #06c46f;
+}
+
+body.light-mode .community-drop{
+  background: #06c46f;
 }
