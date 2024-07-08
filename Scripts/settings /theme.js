@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentTheme !== defaultTheme) {
         document.body.classList.add(currentTheme);
     }
+    
+    const iframe = document.getElementById('embedded-site');
 
     document.getElementById('unviere-light').addEventListener('click', () => {
         switchTheme(defaultTheme);
@@ -28,5 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add(theme);
         }
         localStorage.setItem('theme', theme);
-    }
+    
+    
+    iframe.contentWindow.postMessage({ theme }, '*'); // Send message to iframe
+            }
 });
