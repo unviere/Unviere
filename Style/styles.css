@@ -1558,3 +1558,28 @@ body.light-mode .partner-info p{
 body.light-mode .stats-group h1{
   color: #0328ff;
 }
+
+/* modern light*/
+
+body.modern-light {
+  background: whitesmoke;
+}
+
+
+		
+		body.modern-light .hero-buttons a{
+		  background: #06c46f;
+		  color: 0328ff;
+		  border-radius: 10px;
+		  }
+		  
+		  body.modern-light .hero-buttons a:hover {
+  background: whitesmoke;
+  color: black;
+		}
+		
+		body.modern-light .hero-buttons .ctaa {
+  background: whitesmoke;
+  border: 1px solid #06c46f;
+  color: black;
+}

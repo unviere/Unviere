@@ -50,7 +50,7 @@ img {
 .navlist {
   display: flex;
   align-items: center;
-  background: #06c46f;
+  background: transparent;
   
 }
 
@@ -231,6 +231,8 @@ display: none;
 		transition: all .55s ease;
 		border-bottom-left-radius: 10px;
 	}
+	
+	
 
 	.navlist a{
 		display: block;
@@ -242,6 +244,8 @@ display: none;
 	.navlist-open{
 		right: 0;
 	}
+  
+
 	
 	.community-drop li{
   display: block;
@@ -297,6 +301,8 @@ display: none;
 		transition: all .55s ease;
 		border-bottom-left-radius: 10px;
 	}
+	
+	
 
 	.navlist a{
 		display: block;
@@ -307,7 +313,9 @@ display: none;
 
 	.navlist-open{
 		right: 0;
-		}
+		
+  
+}
 }
 
 /* unviere dark*/
@@ -346,6 +354,13 @@ body.dark-mode .community-drop{
   background: #024a2a;
 }
 
+body.dark-mode #menu-icon{
+    color: #03c8ff;
+}
+body.dark-mode .settings a{
+  color: #03c8ff;
+}
+
 /* unviere light*/
 body.light-mode {
   background: #ffffff;
@@ -380,4 +395,53 @@ body.light-mode .more-drop{
 
 body.light-mode .community-drop{
   background: #06c46f;
+}
+
+
+body.light-mode #menu-icon{
+    color: #0328ff;
+}
+
+body.light-mode .settings a{
+  color: #0328ff;
+}
+
+/* modern light*/
+body.modern-light {
+  background: whitesmoke;
+}
+
+body.modern-light header{
+  background: whitesmoke;
+  box-shadow: 1px 1px 9px grey;
+}
+
+body.modern-light .navlist-open{
+  background: #06c46f;
+  
+}
+
+body.modern-light .navlist a {
+  color: black;
+}
+
+
+
+body.modern-light #menu-icon{
+  color: #0328ff;
+}
+body.modern-light .settings a{
+  color: #0328ff;
+}
+
+body.modern-light .navlist a:hover {
+  border-bottom: 2px solid #0328ff;
+}
+
+body.modern-light .more-drop{
+  background: whitesmoke;
+}
+
+body.modern-light .community-drop{
+  background: whitesmoke;
 }

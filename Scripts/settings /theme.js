@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         switchTheme('light-mode');
     });
 
+document.getElementById('modern-light').addEventListener('click', () => {
+        switchTheme('modern-light');
+    });
     
 
     function switchTheme(theme) {
