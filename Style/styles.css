@@ -331,6 +331,88 @@ outline: none;
   margin-right: 5px;
 }
 
+/**/
+
+.masages{
+  height: auto;
+  width: 100%;
+	max-width: 2000px;
+	margin: 0 auto;
+  /*background-image: url(../Img/Stars.png);*/
+  background-color: white;
+  background-size: cover;
+	background-position: center;
+	z-index: 1;
+  position: relative;
+  display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-bottom: 0px;
+}
+
+.title{
+  padding-left: 20px;
+  margin-top: -15px; /* Adjust the value to control how much the title overlaps */
+  position: relative;
+  z-index: 1;
+  background: transparent; /* Ensure background is white so it cuts through the border */
+  width: fit-content; /* Adjust as needed */
+}
+
+
+.title h1{
+  font-size: 20px;
+  color: black;
+  margin: 0; /* Remove any default margin */
+  padding: 0 10px; /* Adjust padding as needed */
+  background: white; /* Ensure the heading's background is also white */
+}
+
+.dissmiss{
+  padding-right: 20px;
+  margin-top: -15px; /* Adjust the value to control how much the title overlaps */
+  position: absolute;
+  z-index: 1;
+  background: transparent; /* Ensure background is white so it cuts through the border */
+  width: fit-content; /* Adjust as needed */
+  right: -27;
+  top: 10;
+  color: red;
+  background: white;
+}
+
+.tip{
+  border: 1px solid rgba(6,196,111,1);
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 98%;
+  height: auto;
+  position: relative;
+  padding: 5px;
+  right: 0;
+  left: -2;
+}
+
+.content-masages{
+  padding: 10px;
+  margin: 10px;
+}
+
+.content-masages p{
+  font-size: 20px;
+  color: black;
+}
+
+.content-masages a{
+  font-size: 20px;
+  color: #0328ff;
+}
 /*parallel section*/
 
 .parallel {
@@ -1298,6 +1380,38 @@ body.dark-mode #dark-mode-toggle{
   border: 1px solid #024a2a;
 }
 
+body.dark-mode .masages{
+  
+  background-color: #1a1a1a;
+}
+
+
+
+
+body.dark-mode .title h1{
+  color: white;
+  background: #1a1a1a; /* Ensure the heading's background is also white */
+}
+
+body.dark-mode .dissmiss{
+  background: #1a1a1a;
+}
+
+body.dark-mode .tip{
+  border: 1px solid rgba(2,74,42,1);
+}
+
+
+body.dark-mode .content-masages p{
+  font-size: 20px;
+  color: white;
+}
+
+body.dark-mode .content-masages a{
+  font-size: 20px;
+  color: #03c8ff;
+}
+
 body.dark-mode .parallel {
   background: #0d0d0d;
 }
@@ -1438,6 +1552,38 @@ body.dark-mode .stats-group h1{
   background: transparent;
   border: 1px solid #06c46f;
   color: white;
+}
+
+body.light-mode .masages{
+  
+  background-color: #ffffff;
+}
+
+
+
+
+body.light-mode .title h1{
+  color: black;
+  background: #ffffff; /* Ensure the heading's background is also white */
+}
+
+body.light-mode .dissmiss{
+  background: #ffffff;
+}
+
+body.light-mode .tip{
+  border: 1px solid rgba(6,196,111,1);
+}
+
+
+body.light-mode .content-masages p{
+  font-size: 20px;
+  color: black;
+}
+
+body.light-mode .content-masages a{
+  font-size: 20px;
+  color: #0328ff;
 }
 
 body.light-mode .parallel {
