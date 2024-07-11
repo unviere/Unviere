@@ -90,10 +90,6 @@
   width: auto;
 }
 
-#modern-light h1{
-  font-size: 10px;
-}
-
 #style .palate{
   overflow: hidden;
   display: flex;
@@ -164,8 +160,28 @@
   background: #06c46f;
 }
 
+#modern-light-bleu{
+  background: #0238ff;
+}
+
 #modern-light-smoke{
   background: whitesmoke;
+}
+
+#modern-light-white{
+  background: #ffffff;
+}
+
+#modern-light-lightgray{
+  background: lightgray;
+}
+
+#modern-light-gray{
+  background: gray;
+}
+
+#modern-dark-gray{
+  background: darkgray;
 }
 
 .color-dot::after {
@@ -275,7 +291,7 @@ body.dark-mode .title h1{
 }
 
 /* unviere light*/
-body.dark-mode #style .settings-site-styles{
+body.light-mode #style .settings-site-styles{
   border: 1px solid rgba(0,0,0,1);
 }
 
@@ -308,5 +324,42 @@ body.light-mode .header1{
 
 
 body.light-mode .title h1{
+  background: white; /* Ensure the heading's background is also white */
+}
+
+/* modern light*/
+body.modern-light #style .settings-site-styles{
+  border: 1px solid rgba(0,0,0,1);
+}
+
+body.modern-light #style .buttons-styles{
+  background: lightgray;
+}
+
+body.modern-light #style .buttons-styles:hover{
+  background: gray;
+}
+
+
+body.modern-light #style .color-dot {
+  border: 1px solid rgba(0,0,0,1);
+}
+
+
+
+body.modern-light .color-dot::after {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+body.modern-light #container{
+  border: 1px solid rgba(0,0,0,1);
+}
+body.modern-light .header1{
+  color: black;
+}
+
+
+body.modern-light .title h1{
   background: white; /* Ensure the heading's background is also white */
 }

@@ -129,7 +129,7 @@ display: none;
   margin-bottom: 15px;
 }
 
-.navlist li:hover .community-drop{
+.community-drop:hover, .navlist li:hover .community-drop{
   display: block;
 }
 
@@ -161,7 +161,7 @@ display: none;
   margin-bottom: 15px;
 }
 
-.navlist li:hover .more-drop{
+.more-drop:hover, .navlist li:hover .more-drop{
   display: block;
 }
 

@@ -435,6 +435,22 @@ outline: none;
 	margin-bottom: 10px;
 }
 
+.front-parallel{
+  border: 2px solid rgba(6,196,111,1);
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 98%;
+  height: auto;
+  position: relative;
+  padding: 5px;
+  right: 0;
+  left: -2;
+}
+
 .parallel-top{
   width:100%;
 	display: flex;
@@ -480,10 +496,31 @@ outline: none;
 
 .parallel-playbar {
   display: flex;
+  white-space: nowrap;
   justify-content: center;
+  position: absolute;
+  align-items: center;
+  align-content: center;
   gap: 10px; /* Space between buttons */
   margin-top: 20px; /* Add some space above the buttons */
   margin-bottom: 10px;
+  bottom: -40;
+  background: whitesmoke;
+  z-index: 20;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 15px;
+  left: 100;
+}
+
+.onrbx{
+  font-size: 20px;
+  color: black;
+  margin: 0; /* Remove any default margin */
+  padding: 0 10px; /* Adjust padding as needed */
+  background: whitesmoke; /* Ensure the heading's background is also white */
+  position: absolute;
+  top:-10;
 }
 
 .parallel-playbar a {
@@ -493,12 +530,14 @@ outline: none;
   border: 1px solid transparent;
   padding: 12px 30px;
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 25px;
   font-weight: 500;
   border-radius: 50px;
   text-transform: uppercase;
   transition: all .55s ease;
   text-decoration: none;
+    margin-right: 5px;
+  margin-left: 5px;
 }
 
 .parallel-playbar a:hover {
@@ -511,6 +550,101 @@ outline: none;
   background: transparent;
   color: black;
   border: 1px solid #06c46f;
+}
+
+#toggle-instalrbx{
+  display:none;
+}
+
+.instalf{
+  display: none;
+  background: #06c46f;
+  position: fixed;
+  width: 97%;
+  height: auto;
+  z-index: 20;
+  margin: 0 auto;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-top: 550px;
+	max-width: 2000px;
+	margin-right: 1%;
+	margin-left: 1%;
+	border-radius: 10px;
+}
+
+
+
+.instal #instalrbxopen{
+  display: block;
+  font-size: 3650px;
+  background: red;
+  color: black;
+  border-radius: 50px;
+  z-index: 89800;
+  transition: all .5s;
+  opacity: 100;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.instalf #closeinstalrbx{
+  display: block;
+  right: 30px;
+  top: 3px;
+  font-size: 20px;
+  background: red;
+  color: black;
+  padding: 6px 6px;
+  border-radius: 50px;
+  z-index: 990;
+  margin-top: 550px;
+  position: fixed;
+  transition: all .5s ease;
+  
+}
+
+#toggle-instalrbx:checked ~ .instalf{
+  display: flex;
+}
+
+#toggle-instalrbx:checked ~ .instalf #closeinstslrbx{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ .instalf{
+  width: 75%;
+  left: 40;
+  
+}
+
+.game-drop-down{
+  position: absolute;
+  width: 100px;
+  height: auto;
+  background: transparent;
+  z-index: 60;
+  white-space: nowrap;
+  display: none;
+  margin-top: 10px;
+  margin-left: 5px;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  left:-20;
+  bottom: 90;
+}
+
+.parallel-drop-down{
+  cursor: pointer;
+}
+
+
+.game-drop-down.game-drop-down:hover, .parallel-playbar .parallel-drop-down:hover + .game-drop-down {
+  display: block;
 }
 
 .parallel-playbar .ctaa i {
@@ -1072,6 +1206,69 @@ hr{
   margin: 0 0 7px;
 		}
 		
+		.parallel-playbar {
+  margin-top: 20px; /* Add some space above the buttons */
+  margin-bottom: 10px;
+  bottom: -30;
+  z-index: 20;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 5px;
+  left: 5;
+}
+
+.onrbx{
+  font-size: 25px;
+  margin: 0; /* Remove any default margin */
+  padding: 0 10px; /* Adjust padding as needed */
+  top:-10;
+}
+
+
+
+
+.instalf{
+  display: none;
+  background: #06c46f;
+  position: fixed;
+  width: 97%;
+  height: auto;
+  z-index: 20;
+  margin: 0 auto;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-top: 190px;
+	max-width: 2000px;
+	margin-right: 1%;
+	margin-left: 1%;
+	border-radius: 10px;
+}
+
+.instalf #closeinstalrbx{
+  right: 30px;
+  top: 3px;
+  font-size: 20px;
+  padding: 6px 6px;
+  z-index: 990;
+  margin-top: 200px;
+}
+
+
+#check:checked ~ .instalf{
+  width: 50%;
+  left: 40;
+  
+}
+		
+		.game-drop-down{
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 5px;
+  left:-20;
+  bottom: 70;
+}
+
 			.parallel-stats h1{
   font-size: 7px;
   margin: 0 3 3px;
@@ -1106,6 +1303,18 @@ hr{
 	font-size: 15px;
   font-weight: 400;
   margin-bottom: 7px;
+}
+
+
+.parallel-playbar a {
+  border: 1px solid transparent;
+  padding: 6px 7px;
+  line-height: 1.2;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .55s ease;
+  text-decoration: none;
 }
 
 .groups-partners h1{
@@ -1367,17 +1576,20 @@ body.dark-mode #dark-mode-toggle{
 		body.dark-mode .hero-buttons a{
 		  background: #024a2a;
 		  color: white;
+		  border-radius: 50px;
 		  
 		}
 		
 		body.dark-mode .hero-buttons a:hover {
   background: transparent;
   color: white;
+  border: 1px solid #024a2a;
 		}
 		
 		body.dark-mode .hero-buttons .ctaa {
   background: transparent;
   border: 1px solid #024a2a;
+  
 }
 
 body.dark-mode .masages{
@@ -1415,6 +1627,24 @@ body.dark-mode .content-masages a{
 body.dark-mode .parallel {
   background: #0d0d0d;
 }
+
+body.dark-mode .front-parallel{
+  border: 2px solid rgba(2,74,42,1);
+}
+
+body.dark-mode .parallel-playbar {
+  background: #0d0d0d;
+}
+
+body.dark-mode .onrbx{
+  color: white;
+  background: #0d0d0d;
+}
+
+body.dark-mode .instalf{
+  background: #024a2a;
+}
+
 body.dark-mode .parallel-top h1{
 	color: white;
 }
@@ -1438,6 +1668,7 @@ body.dark-mode .parallel-stats a{
 body.dark-mode .parallel-playbar a {
   color: white;
   background: #024a2a;
+  border-radius: 50px;
 }
 
 body.dark-mode .parallel-playbar a:hover {
@@ -1540,12 +1771,13 @@ body.dark-mode .stats-group h1{
 		body.light-mode .hero-buttons a{
 		  background: #06c46f;
 		  color: #0328ff;
-		  
+		  border-radius: 50px;
 		}
 		
 		body.light-mode .hero-buttons a:hover {
   background: transparent;
   color: white;
+  border: 1px solid #06c46f;
 		}
 		
 		body.light-mode .hero-buttons .ctaa {
@@ -1589,6 +1821,23 @@ body.light-mode .content-masages a{
 body.light-mode .parallel {
   background: whitesmoke;
 }
+body.light-mode .front-parallel{
+  border: 2px solid rgba(6,196,111,1);
+}
+
+body.light-mode .parallel-playbar {
+  background: whitesmoke;
+}
+
+body.light-mode .onrbx{
+  color: black;
+  background: whitesmoke;
+}
+
+body.light-mode .instalf{
+  background: #06c46f;
+}
+
 body.light-mode .parallel-top h1{
 	color: black;
 }
@@ -1618,6 +1867,7 @@ body.light-mode .parallel-playbar a:hover {
   background: transparent;
   color: black;
   border: 1px solid #06c46f;
+  border-radius: 50px;
 }
 
 body.light-mode .parallel-playbar .ctaa {
@@ -1714,18 +1964,188 @@ body.modern-light {
 
 		
 		body.modern-light .hero-buttons a{
-		  background: #06c46f;
-		  color: 0328ff;
+		  background: whitesmoke;
+		  color: #0328ff;
 		  border-radius: 10px;
 		  }
 		  
 		  body.modern-light .hero-buttons a:hover {
-  background: whitesmoke;
+  background: #06c46f;
   color: black;
+  border: 1px solid transparent;
 		}
 		
 		body.modern-light .hero-buttons .ctaa {
-  background: whitesmoke;
-  border: 1px solid #06c46f;
+  background: #06c46f;
+  border: 1px solid transparent;
   color: black;
+}
+
+body.modern-light .masages{
+  
+  background-color: #ffffff;
+}
+
+
+
+
+body.modern-light .title h1{
+  color: black;
+  background: #ffffff; /* Ensure the heading's background is also white */
+}
+
+body.modern-light .dissmiss{
+  background: #ffffff;
+}
+
+body.modern-light .tip{
+  border: 1px solid rgba(6,196,111,1);
+}
+
+
+body.modern-light .content-masages p{
+  font-size: 20px;
+  color: black;
+}
+
+body.modern-light .content-masages a{
+  font-size: 20px;
+  color: #0328ff;
+}
+
+body.modern-light .parallel {
+  background: whitesmoke;
+}
+
+body.modern-light .front-parallel{
+  border: 2px solid rgba(6,196,111,1);
+}
+
+body.modern-light .parallel-playbar {
+  background: whitesmoke;
+}
+
+body.modern-light .onrbx{
+  color: black;
+  background: whitesmoke;
+}
+
+body.modern-light .instalf{
+  background: #06c46f;
+}
+body.modern-light .parallel-top h1{
+	color: black;
+}
+
+body.modern-light .parallel-top h2{
+	color: black;
+}
+
+body.modern-light .parallel-dev h4{
+  color: black;
+}
+
+body.modern-light .parallel-stats h1{
+  color: black;
+}
+
+body.modern-light .parallel-stats a{
+  color: #0328ff;
+}
+
+body.modern-light .parallel-playbar a {
+  background: #06c46f;
+  color: black;
+  border-radius: 7px;
+}
+
+body.modern-light .parallel-playbar a:hover {
+  background: black;
+  color: white;
+  border: 1px solid transparent;
+}
+
+body.modern-light .parallel-playbar .ctaa {
+  background: black;
+  border: 1px solid transparent;
+  color: white;
+}
+
+body.modern-light .parallel-buttons-bar{
+  background: lightgray;
+}
+
+
+body.modern-light .parallel-buttons-bar button{
+  background: transparent;
+  color: black;
+}
+
+body.modern-light .parallel-buttons-bar button:hover {
+  border-bottom: 5px solid #0328ff;
+}
+
+body.modern-light .parallel-buttons-bar button.active {
+  border-bottom: 5px solid #0328ff;
+}
+
+body.modern-light #descriptionpar h4 {
+  color: black;
+}
+
+body.modern-light #descriptionpar p {
+  color: black;
+}
+
+body.modern-light #descriptionpar .links{
+  color: #0328ff;
+}
+
+body.modern-light .parallel-stats-under{
+  color: black;
+	}
+	
+body.modern-light .groups-partners h1{
+  color: black;
+  
+}
+body.modern-light .groups-partners p{
+  color: black;
+}
+	
+body.modern-light .partners-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
+}
+
+body.modern-light .partners-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
+}
+	
+body.modern-light .partners-inf-scrolling a{
+  background-color: lightgray;
+  color: black;
+}
+
+body.modern-light .partners-inf-scrolling a:hover{
+  background-color: gray;
+  color: black;
+  
+}
+
+
+
+body.modern-light .partner-info h1 {
+  color: black;
+}
+
+body.modern-light .partner-info p{
+  color: black;
+}
+
+
+
+body.modern-light .stats-group h1{
+  color: #0328ff;
 }

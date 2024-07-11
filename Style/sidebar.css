@@ -425,3 +425,74 @@ body.light-mode .sidebar-toggle #cancel{
   color: black;
   
 }
+
+/* modern light mode*/
+body.modern-light .sidebar{
+  background: lightgray;
+}
+
+body.modern-light .sidebar-scroll{
+  background: lightgray;
+}
+
+body.modern-light .sidebar .sidebar-header{
+  
+  color: black;
+  background: darkgray;
+  border-bottom: 1px solid rgba(255,255,255,1);
+}
+body.modern-light .sidebar .navigate {
+  color: black;
+  
+}
+
+body.modern-light .sidebar .navigate:hover {
+  
+  border-bottom: 2px solid  #0328ff;
+  
+  
+}
+
+body.modern-light .sidebar .tabs-navigation {
+  color: black;
+  
+}
+
+body.modern-light .sidebar .tabs-navigation:hover {
+  
+  border-bottom: 2px solid  #0328ff;
+  
+  
+}
+
+body.modern-light .sidebar .tabs-navigation.active {
+  
+  border-bottom: 2px solid  #0328ff;
+  
+  
+}
+
+body.modern-light .sidebar h1{
+  background: darkgray;
+  color: black;
+  border-top: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid rgba(255,255,255,1);
+}
+
+
+
+
+
+body.light-mode .sidebar-toggle #btn{
+  
+  background: #06c46f;
+  color: black;
+  
+}
+
+body.light-mode .sidebar-toggle #cancel{
+  
+  background: #06c46f;
+  color: black;
+  
+}
