@@ -727,11 +727,15 @@ outline: none;
 }
 
 .parallel-buttons-bar button:hover {
-  border-bottom: 5px solid #0328ff;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #0328ff;
 }
 
 .parallel-buttons-bar button.active {
-  border-bottom: 5px solid #0328ff;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #0328ff;
 }
 
 .tabs-parallel{
@@ -1207,7 +1211,7 @@ hr{
 		}
 		
 		.parallel-playbar {
-  margin-top: 20px; /* Add some space above the buttons */
+  margin-top: 0px; /* Add some space above the buttons */
   margin-bottom: 10px;
   bottom: -30;
   z-index: 20;
@@ -1218,7 +1222,7 @@ hr{
 }
 
 .onrbx{
-  font-size: 25px;
+  font-size: 15px;
   margin: 0; /* Remove any default margin */
   padding: 0 10px; /* Adjust padding as needed */
   top:-10;
@@ -1281,22 +1285,22 @@ hr{
 
 .parallel-top{
   width:100%;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .parallel-top h1{
-	font-size: 35px;
+	font-size: 17px;
 	margin: 10px;
 }
 
 .parallel-top h2{
-	font-size:20px;
+	font-size:12px;
 	margin: 10px;
 }
 
 
 .dev-icon img{
-	width: 45px;
+	width: 40px;
 	height: auto;
 }
 .parallel-dev h4{
@@ -1315,6 +1319,50 @@ hr{
   text-transform: uppercase;
   transition: all .55s ease;
   text-decoration: none;
+}
+
+.parallel-buttons-bar{
+	 /*position: fixed;*/
+  height: 20px;
+ padding: 5px 9%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.parallel-buttons-bar button{
+  margin-left: 0px;
+  font-size: 10;
+  font-weight: 600;
+}
+
+.parallel-buttons-bar button:hover {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+.parallel-buttons-bar button.active {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+#descriptionpar h4 {
+  color: black;
+  font-size: 15px;
+}
+
+#descriptionpar p {
+  color: black;
+  font-size: 7px;
+  padding: 10px;
+}
+
+#descriptionpar .links{
+  color: #0328ff;
+  font-size:7px;
+  text-decoration: underline;
+  margin-left: 12px;
 }
 
 .groups-partners h1{
@@ -1457,26 +1505,26 @@ hr{
 
 .parallel-top{
   width:100%;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .parallel-top h1{
-	font-size: 30px;
+	font-size: 17px;
 	margin: 10px;
 }
 
 .parallel-top h2{
-	font-size:15px;
+	font-size:12px;
 	margin: 10px;
 }
 
 
 .dev-icon img{
-	width: 40px;
+	width: 35px;
 	height: auto;
 }
 .parallel-dev h4{
-	font-size: 10px;
+	font-size: 7px;
   font-weight: 400;
   margin-bottom: 7px;
 }
@@ -1693,11 +1741,11 @@ body.dark-mode .parallel-buttons-bar button{
 }
 
 body.dark-mode .parallel-buttons-bar button:hover {
-  border-bottom: 5px solid #03c8ff;
+border-bottom-color: #03c8ff;
 }
 
 body.dark-mode .parallel-buttons-bar button.active {
-  border-bottom: 5px solid #03c8ff;
+  border-bottom-color: #03c8ff;
 }
 
 body.dark-mode #descriptionpar h4 {
@@ -1887,11 +1935,11 @@ body.light-mode .parallel-buttons-bar button{
 }
 
 body.light-mode .parallel-buttons-bar button:hover {
-  border-bottom: 5px solid #0328ff;
+  border-bottom-color: #0328ff;
 }
 
 body.light-mode .parallel-buttons-bar button.active {
-  border-bottom: 5px solid #0328ff;
+  border-bottom-color: #0328ff;
 }
 
 body.light-mode #descriptionpar h4 {
@@ -2082,11 +2130,11 @@ body.modern-light .parallel-buttons-bar button{
 }
 
 body.modern-light .parallel-buttons-bar button:hover {
-  border-bottom: 5px solid #0328ff;
+  border-bottom-color: #0328ff;
 }
 
 body.modern-light .parallel-buttons-bar button.active {
-  border-bottom: 5px solid #0328ff;
+  border-bottom-color: #0328ff;
 }
 
 body.modern-light #descriptionpar h4 {

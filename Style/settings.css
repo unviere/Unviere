@@ -252,6 +252,21 @@ justify-content: none;
   margin-left: 0px;
 }
 
+@media (max-width: 700px) {
+  .header1{
+  font-size: 10px;
+  margin: 5px;
+}
+
+.settings-site{
+  width: 100%;
+  height: auto;
+    max-width: 700px;
+  margin: 0 auto;
+  padding: 5px;
+}
+}
+
 /* unviere dark*/
 body.dark-mode #style .settings-site-styles{
   border: 1px solid rgba(255,255,255,1);
@@ -361,5 +376,5 @@ body.modern-light .header1{
 
 
 body.modern-light .title h1{
-  background: white; /* Ensure the heading's background is also white */
+  background: whitesmoke; /* Ensure the heading's background is also white */
 }
