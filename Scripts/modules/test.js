@@ -8,9 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to fetch and display game data for a single universe ID
   const fetchAndDisplayGame = (universeId) => {
     const apiUrl = `https://games.roblox.com/v1/games?universeIds=${universeId}`;
-    console.log('Fetching data from API URL:', apiUrl);
+    const proxyUrl = `https://cors-anywhere.herokuapp.com/${apiUrl}`;
+    console.log('Fetching data from API URL via proxy:', proxyUrl);
 
-    fetch(apiUrl)
+    fetch(proxyUrl)
       .then(response => {
         if (!response.ok) {
           throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => {
         console.error('Error fetching the game data:', error);
         const errorMessage = document.createElement('p');
-        errorMessage.textContent = 'Error fetching the game data. Please try again later.';
+        errorMessage.textContent = `Error fetching the game data: ${error.message}`;
         gameContainer.appendChild(errorMessage);
       });
   };
