@@ -506,3 +506,149 @@ body.dark-mode .game-info .game-desc {
 body.dark-mode .stats-game h1{
   color: #03c8ff;
 }
+
+		/* light mode unviere*/
+		body.light-mode {
+		  background: whitesmoke;
+		}
+		body.light-mode .game-jams{
+  background: whitesmoke;
+}
+
+body.light-mode .games h1{
+  color: black;
+}
+body.light-mode .games p{
+  color: black;
+}
+
+
+body.light-mode .all-games{
+  background-color: #06c46f;
+  color: black;
+}
+
+body.light-mode .all-games:hover{
+  background-color: #08f78b;
+}
+
+
+body.light-mode .all-games i{
+  color: #0328ff;
+}
+
+
+
+body.light-mode .games-container:before {
+  background: linear-gradient(to left, rgba(255,255,255,0), whitesmoke);
+}
+
+body.light-mode .games-container:after {
+  background: linear-gradient(to right, rgba(255,255,255,0), whitesmoke);
+}
+
+
+body.light-mode .game-inf-scrolling a{
+  background-color: transparent;
+  
+  color: black;
+  border-color: #06c46f;
+}
+
+body.light-mode .game-inf-scrolling a:hover{
+  color: black;
+border-color: #08f78b;
+  
+}
+
+
+
+
+body.light-mode .game-info .game-title {
+  color: black;
+  
+  
+}
+
+body.light-mode .game-info .game-desc {
+  color: black;
+}
+
+
+
+body.light-mode .stats-game h1{
+  color: #0328ff;
+}
+
+		/* light modern y*/
+		body.modern-light {
+		  background: whitesmoke;
+		}
+		body.modern-light .game-jams{
+  background: whitesmoke;
+}
+
+body.modern-light .games h1{
+  color: black;
+}
+body.modern-light .games p{
+  color: black;
+}
+
+
+body.modern-light .all-games{
+  background-color: lightgray;
+  color: black;
+}
+
+body.modern-light .all-games:hover{
+  background-color: gray;
+}
+
+
+body.modern-light .all-games i{
+  color: #0328ff;
+}
+
+
+
+body.modern-light .games-container:before {
+  background: linear-gradient(to left, rgba(255,255,255,0), whitesmoke);
+}
+
+body.modern-light .games-container:after {
+  background: linear-gradient(to right, rgba(255,255,255,0), whitesmoke);
+}
+
+
+body.modern-light .game-inf-scrolling a{
+  background-color: transparent;
+  
+  color: black;
+  border-color: #06c46f;
+}
+
+body.modern-light .game-inf-scrolling a:hover{
+  color: black;
+border-color: #08f78b;
+  
+}
+
+
+
+
+body.modern-light .game-info .game-title {
+  color: black;
+  
+  
+}
+
+body.modern-light .game-info .game-desc {
+  color: black;
+}
+
+
+
+body.modern-light .stats-game h1{
+  color: #0328ff;
+}
