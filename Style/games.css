@@ -434,4 +434,75 @@ hr{
 
 }
 		
-		
+		/* dark mode unviere*/
+		body.dark-mode {
+		  background: #1a1a1a;
+		}
+		body.dark-mode .game-jams{
+  background: #1a1a1a;
+}
+
+body.dark-mode .games h1{
+  color: white;
+}
+body.dark-mode .games p{
+  color: white;
+}
+
+
+body.dark-mode .all-games{
+  background-color: #024a2a;
+  color: white;
+}
+
+body.dark-mode .all-games:hover{
+  background-color: #02311c;
+}
+
+
+body.dark-mode .all-games i{
+  color: #03c8ff;
+}
+
+
+
+body.dark-mode .games-container:before {
+  background: linear-gradient(to left, rgba(255,255,255,0), #1a1a1a);
+}
+
+body.dark-mode .games-container:after {
+  background: linear-gradient(to right, rgba(255,255,255,0), #1a1a1a);
+}
+
+
+body.dark-mode .game-inf-scrolling a{
+  background-color: transparent;
+  
+  color: white;
+  border-color: #024a2a;
+}
+
+body.dark-mode .game-inf-scrolling a:hover{
+  color: white;
+border-color: #02311c;
+  
+}
+
+
+
+
+body.dark-mode .game-info .game-title {
+  color: white;
+  
+  
+}
+
+body.dark-mode .game-info .game-desc {
+  color: white;
+}
+
+
+
+body.dark-mode .stats-game h1{
+  color: #03c8ff;
+}

@@ -860,9 +860,9 @@ display: inline-block;
   background: white;
 }
 
-/*.groups-partners{
-  
-}*/
+.groups-partners{
+  background: transparent;
+}
 
 .groups-partners h1{
   color: black;
@@ -1379,7 +1379,7 @@ hr{
 }
 
 .groups-partners h1{
-  font-size: 35px;
+  font-size: 25px;
   
 }
 .groups-partners p{
@@ -1550,7 +1550,7 @@ hr{
 }
 
 .groups-partners h1{
-  font-size: 35px;
+  font-size: 25px;
   
 }
 .groups-partners p{
@@ -1784,12 +1784,23 @@ body.dark-mode .parallel-stats-under{
   color: white;
 	}
 	
+	body.dark-mode .groups{
+	  background: #1a1a1a;
+	}
+	
+	body.dark-mode .groups-partners{
+	  background: #1a1a1a;
+	}
 body.dark-mode .groups-partners h1{
   color: white;
   
 }
 body.dark-mode .groups-partners p{
   color: white;
+}
+
+body.dark-mode .partners-container{
+  background: #1a1a1a;
 }
 	
 body.dark-mode .partners-container:before {
@@ -1976,6 +1987,10 @@ body.light-mode #descriptionpar .links{
 
 body.light-mode .parallel-stats-under{
   color: black;
+	}
+	
+	body.light-mode .groups{
+	  background: white;
 	}
 	
 body.light-mode .groups-partners h1{
@@ -2171,6 +2186,10 @@ body.modern-light #descriptionpar .links{
 
 body.modern-light .parallel-stats-under{
   color: black;
+	}
+	
+	body.modern-light .groups{
+	  background: white;
 	}
 	
 body.modern-light .groups-partners h1{
