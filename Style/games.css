@@ -436,12 +436,16 @@ hr{
 		
 		/* dark mode unviere*/
 		body.dark-mode {
-		  background: #1a1a1a;
+		  background: #0d0d0d;
 		}
-		body.dark-mode .game-jams{
-  background: #1a1a1a;
+		
+		
+		body.dark-mode .head,
+		body.dark-mode .game-jams, 
+		body.dark-mode .unviere, 
+		body.dark-mode .test {
+  background: #0d0d0d;
 }
-
 body.dark-mode .games h1{
   color: white;
 }
@@ -467,11 +471,11 @@ body.dark-mode .all-games i{
 
 
 body.dark-mode .games-container:before {
-  background: linear-gradient(to left, rgba(255,255,255,0), #1a1a1a);
+  background: linear-gradient(to left, rgba(255,255,255,0), #0d0d0d);
 }
 
 body.dark-mode .games-container:after {
-  background: linear-gradient(to right, rgba(255,255,255,0), #1a1a1a);
+  background: linear-gradient(to right, rgba(255,255,255,0), #0d0d0d);
 }
 
 
@@ -507,11 +511,18 @@ body.dark-mode .stats-game h1{
   color: #03c8ff;
 }
 
+body.dark-mode .section{
+  background: #0d0d0d;
+}
+
 		/* light mode unviere*/
 		body.light-mode {
 		  background: whitesmoke;
 		}
-		body.light-mode .game-jams{
+		body.light-mode .game-jams,
+		body.light-mode .head,
+		body.light-mode .unviere,
+		body.light-mode .test {
   background: whitesmoke;
 }
 
@@ -580,11 +591,18 @@ body.light-mode .stats-game h1{
   color: #0328ff;
 }
 
+body.light-mode .section{
+  background: whitesmoke;
+}
+
 		/* light modern y*/
 		body.modern-light {
 		  background: whitesmoke;
 		}
-		body.modern-light .game-jams{
+		body.modern-light .game-jams,
+		body.modern-light .head,
+		body.modern-light .unviere,
+		body.modern-light .test{
   background: whitesmoke;
 }
 
@@ -651,4 +669,8 @@ body.modern-light .game-info .game-desc {
 
 body.modern-light .stats-game h1{
   color: #0328ff;
+}
+
+body.modern-light .section {
+  background: whitesmoke;
 }
