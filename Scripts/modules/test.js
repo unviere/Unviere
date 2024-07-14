@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Array of game universe IDs
   const universeIds = ['4922186765', 'anotherUniverseId', 'anotherUniverseId2'];
 
-  // Function to fetch and display game data
-  const fetchAndDisplayGames = (universeIds) => {
-    const apiUrl = `https://games.roblox.com/v1/games?universeIds=${universeIds.join(',')}`;
+  // Function to fetch and display game data for a single universe ID
+  const fetchAndDisplayGame = (universeId) => {
+    const apiUrl = `https://games.roblox.com/v1/games?universeIds=${universeId}`;
     console.log('Fetching data from API URL:', apiUrl);
 
     fetch(apiUrl)
@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  // Fetch and display games for all universe IDs
-  fetchAndDisplayGames(universeIds);
+  // Fetch and display games for each universe ID sequentially
+  universeIds.forEach(universeId => {
+    fetchAndDisplayGame(universeId);
+  });
 });
