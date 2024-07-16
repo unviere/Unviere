@@ -70,25 +70,39 @@ img {
   padding: 5px;
   background: transparent;
   color: black;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding-bottom: 30px;
+  font-size: 20px;
 }
 
 .button{
-  width: 30%;
+  width: 20%;
   height: auto;
   font-size: 40px;
-  margin-left: 45%;
+  margin-left: 40%;
   background: #0328ff;
   color: white;
   border: none;
   border-radius: 50px;
   color: black;
+  text-decoration: none;
 }
 
 .form-title{
   width: 100%;
   color: black;
+}
+
+.desc-input{
+  width: 100%;
+  height: auto;
+  margin-right: 5px;
+  padding: 5px;
+  background: transparent;
+  color: black;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
 }
 
 .form-split{
@@ -110,6 +124,12 @@ padding-left: 2px;
   margin-left: 5px;
   padding-top: 5px;
   color: black;
+}
+
+.recured{
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
 }
 
 label {
@@ -172,6 +192,13 @@ label {
     user-select: none;
 }
 
+.checkbox {
+  display: grid;
+  
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 5px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
 .custom-checkmark-multiple {
     width: 20px;
     height: 20px;
@@ -253,6 +280,7 @@ label {
   border: none;
   border-radius: 50px;
   color: black;
+  text-decoration: none;
 }
 
 @media (max-width: 700px){  
@@ -291,14 +319,26 @@ label {
   color: black;
   margin-bottom: 10px;
   padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.desc-input{
+  width: 100%;
+  height: auto;
+  margin-right: 5px;
+  padding: 5px;
+  background: transparent;
+  color: black;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+  font-size: 20px;
 }
 
 .button{
   width: 40%;
   height: auto;
-  font-size: 20px;
+  font-size: 25px;
   margin-left: 30%;
-  padding: 5px;
 }
 
 .form-split{
@@ -317,6 +357,13 @@ padding-left: 2px;
   margin-left: 5px;
   padding-top: 5px;
 }
+
+.recured{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
 
 .form-input{
   width: 100%;
@@ -381,6 +428,10 @@ body.dark-mode .content{
   color: white;
 }
 
+body.dark-mode .desc-input{
+  background: transparent;
+  color: white;
+}
 body.dark-mode .button{
   background: #03c8ff;
   color: black;
@@ -396,6 +447,10 @@ body.dark-mode .form-title{
 
 body.dark-mode .form-input-title{
   color: white;
+}
+
+body.dark-mode .recured{
+  color: orangered;
 }
 
 body.dark-mode label{
@@ -468,7 +523,7 @@ body.dark-mode .long-input{
 
 body.dark-mode .form-submit{
   background: #03c8ff;
-  color: white;
+  color: black;
   border-radius: 50px;
 }
 
@@ -502,6 +557,11 @@ body.light-mode .content{
   color: black;
 }
 
+body.light-mode .desc-input{
+  background: transparent;
+  color: black;
+}
+
 body.light-mode .button{
   background: #0328ff;
   color: white;
@@ -517,6 +577,10 @@ body.light-mode .form-title{
 
 body.light-mode .form-input-title{
   color: black;
+}
+
+body.light-mode .recured{
+  color: red;
 }
 
 body.light-mode label{
@@ -619,6 +683,11 @@ body.modern-light .title{
 }
 
 body.modern-light .content{
+  background: transparent;
+  color: black;
+}
+
+body.modern-light .desc-input{
   background: transparent;
   color: black;
 }

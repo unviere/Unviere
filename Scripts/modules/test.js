@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gameTemplate = document.getElementById('test').content;
-  const gameContainer = document.querySelector('.test-content');
+  const gameContainer = document.querySelector('.test-content'); // Ensure this selector matches your HTML
 
   // Array of game universe IDs
   const universeIds = ['4922186765', 'anotherUniverseId', 'anotherUniverseId2'];
@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to fetch and display game data for a single universe ID
   const fetchAndDisplayGame = (universeId) => {
     const apiUrl = `https://games.roblox.com/v1/games?universeIds=${universeId}`;
-    const proxyUrl = `https://cors-anywhere.herokuapp.com/${apiUrl}`;
-    console.log('Fetching data from API URL via proxy:', proxyUrl);
+    console.log('Fetching data from API URL:', apiUrl);
 
-    fetch(proxyUrl)
+    fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
           throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => {
         console.error('Error fetching the game data:', error);
         const errorMessage = document.createElement('p');
-        errorMessage.textContent = `Error fetching the game data: ${error.message}`;
+        errorMessage.textContent = 'Error fetching the game data. Please try again later.';
         gameContainer.appendChild(errorMessage);
       });
   };
