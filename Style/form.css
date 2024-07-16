@@ -195,7 +195,7 @@ label {
 .checkbox {
   display: grid;
   
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-columns: repeat(4, 1fr); /* Two columns */
   gap: 5px;
   box-sizing: border-box; /* Ensure padding and border are included in the width and height */
 }
@@ -363,7 +363,13 @@ padding-left: 2px;
   font-weight: 600;
 }
 
-
+.checkbox {
+  display: grid;
+  
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 5px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
 
 .form-input{
   width: 100%;
