@@ -2,22 +2,113 @@
 <html>
   <head>
     <title>Contact US</title>
-    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="Style/form.css">
   </head>
   <body>
-    <div class="bug-container">
+    
+      <div id="header"></div>
+      
+    <div class="form">
       <form action="https://api.web3forms.com/submit" method="POST"
-        class="contact-left">
-    <div class="contact-left-title">
+        class="form-p">
+    <div class="form-title">
       <h2>Contact Us</h2>
       <hr>
+      <p>take contact with us by submitting this form </p>
         </div>
-        <input type="hidden" name="access_key" value="8caad4e4-83a2-41e2-82d5-81166a548db4">
-        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-        <button type="submit">Submit<img src="https://raw.githubusercontent.com/Ultimatetinycellstuan/Ultimatetinycellstuan.github.io/main/arrow_icon.png" alt=""></button>
-      </form>
-    </div>
+        <!-- input type: name: placeholder:same class for input use textarea for long text field-->
+        <input type="hidden" name="access_key" value="032437ac-e754-4bb5-8636-471435c3c3e3"> 
+        <input type="hidden" name="redirect" value="https://unviere.github.io/Unviere"><!--important-->
+        <h1 class="form-input-title">username</h1>
+        <input type="text" name="username" placeholder="Your Roblox username" class="form-input" required>
+        <h1 class="form-input-title">email</h1>
+        <input type="email" name="email" placeholder="Your Email (prefer use another than your private email)" class="form-input" required>
+        
+        <div class="form-split">
+          <div class="split">
+           <h1 class="form-input-title">data</h1>
+          <input type="date" class="form-input">
+          </div>
+          <div class="split">
+             <h1 class="form-input-title">time</h1>
+          <input type="time" class="form-input">
+          </div>
+        </div>
+          <h1 class="form-input-title">select</h1>
+
+    <select id="drop" name="dropdown" class="form-input-drop" required>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    
+     <select id="drop2" name="dropdown" class="form-input-drop" required>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    
+    <h1 class="form-input-title">checkmarks</h1>
+   <label class="custom-checkbox-multiple">
+        <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="option1">
+        <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Option 1
+    </label><br>
+    <label class="custom-checkbox-multiple">
+        <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="option2">
+        <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Option 2
+    </label><br>
+    <label class="custom-checkbox-multiple">
+        <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="option3">
+        <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Option 3
+    </label><br>
+    
+    
+       <h1 class="form-input-title">description</h1>
+        <textarea name="message" placeholder="Your Message" class="long-input" required></textarea>
+        
+        
+<h1 class="form-input-title">Select one option from each group:</h1><br>
+    
+    <label class="custom-checkbox">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="option1">
+      <span class="custom-checkmark"></span> Option 1
+    </label><br>
+    <label class="custom-checkbox">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="option2">
+      <span class="custom-checkmark"></span> Option 2
+    </label><br>
+    <label class="custom-checkbox">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="option3">
+      <span class="custom-checkmark"></span> Option 3
+    </label><br>
+    
+    <h1 class="form-input-title">Select one option from each group:</h1><br>
+    
+    <label class="custom-checkbox">
+      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="option1">
+      <span class="custom-checkmark"></span> Option 1
+    </label><br>
+    <label class="custom-checkbox">
+      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="option2">
+      <span class="custom-checkmark"></span> Option 2
+    </label><br>
+    <label class="custom-checkbox">
+      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="option3">
+      <span class="custom-checkmark"></span> Option 3
+    </label><br>
+    
+    <button type="submit" class="form-submit">Submit<img src="" alt=""></button>
+    
+    <script>
+      function onlyOne(checkbox, groupName) {
+        var checkboxes = document.getElementsByName(groupName);
+        checkboxes.forEach((item) => {
+          if (item !== checkbox) item.checked = false;
+        });
+      }
+    </script>
+              <script src = "Scripts/topbar.js"></script>
+              
+                 <script src = "Scripts/settings/theme.js"></script>
   </body>
 </html>
