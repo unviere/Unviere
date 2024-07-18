@@ -22,10 +22,11 @@
 
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
- background: whitesmoke;
+ background: transparent;
  background-image: url(../Img/universe.png);
  background-size: cover;
   background-position: center;
+  background-color: whitesmoke;
 }
 
 img {
@@ -407,10 +408,8 @@ padding-left: 2px;
 /*un dark*/
 
 body.dark-mode {
- background: #1a1a1a;
- background-image: url(../Img/universe.png);
- background-size: cover;
-  background-position: center;
+ background: transparent;
+  background-color: #1a1a1a;
 }
 
 
@@ -536,10 +535,10 @@ body.dark-mode .form-submit{
 /*un light*/
 
 body.light-mode {
- background: whitesmoke;
- background-image: url(../Img/universe.png);
+ background: transparent;
  background-size: cover;
   background-position: center;
+  background-color: whitesmoke;
 }
 
 
@@ -666,8 +665,8 @@ body.light-mode .form-submit{
 /*modern light*/
 
 body.modern-light {
- background: whitesmoke;
- background-image: url(../Img/universe.png);
+ background: transparent;
+ background-color: whitesmoke;
  background-size: cover;
   background-position: center;
 }
