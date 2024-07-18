@@ -10,7 +10,7 @@
       
     <div class="form">
       <form action="https://api.web3forms.com/submit" method="POST"
-        class="form-p">
+        class="form-p" id="fpel-form">
     <div class="form-title">
       <h2>feedback ui v4</h2>
       <hr>
@@ -66,45 +66,46 @@
     
      <h1 class="form-input-title">rating <i class="recured">*</i></h1>
           <p class="desc-input">if you should give it a cijfer wich one</p>
-          <div class="checkbox">
+          <div class="checkbox" data-group-name="rating">
+          
            <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="1" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="1" required>
       <span class="custom-checkmark"></span> 1
     </label>
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="1,5" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="1,5" required >
       <span class="custom-checkmark"></span> 1,5
     </label>
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="2" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="2" required>
       <span class="custom-checkmark"></span> 2
     </label>
                <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="2,5" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="2,5" required>
       <span class="custom-checkmark"></span> 2,5
     </label>
                <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="3" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="3" required>
       <span class="custom-checkmark"></span> 3
     </label>
                <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="3,5" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="3,5" required >
       <span class="custom-checkmark"></span> 3,5
     </label>
                <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="4" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="4" required>
       <span class="custom-checkmark"></span> 4
     </label>
                <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="4,5" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="4,5" required >
       <span class="custom-checkmark"></span> 4,5
     </label>
                <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="5" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="5" required >
       <span class="custom-checkmark"></span> 5
     </label>
                <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="5,5" >
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="5,5" required >
       <span class="custom-checkmark"></span> 5,5
     </label>     
     <label class="custom-checkbox">
@@ -112,42 +113,43 @@
       <span class="custom-checkmark"></span> 6
     </label>       
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="6,5">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="6,5" required>
       <span class="custom-checkmark"></span> 6,5
     </label>
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="7">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="7" required>
       <span class="custom-checkmark"></span> 7
     </label>      
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="7,5">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="7,5" required>
       <span class="custom-checkmark"></span> 7,5
     </label>     
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="8">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="8" required>
       <span class="custom-checkmark"></span> 8
     </label>      
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="8,5">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="8,5" required>
       <span class="custom-checkmark"></span> 8,5
     </label>    
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="9">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="9" required>
       <span class="custom-checkmark"></span> 9
     </label>      
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="9,5">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="9,5" required>
       <span class="custom-checkmark"></span> 9,5
     </label>        
     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="10">
+      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="10" required>
       <span class="custom-checkmark"></span> 10
     </label>
+       </div>
     
      <h1 class="form-input-title"> your feedback<i class="recured">*</i></h1>
          <p class="desc-input">a description of your feedback you may be rude but don't say things like "pls remove this shot you calling games" or something that's not what feedback means bullying will be ignored</p>
      <textarea name="message" placeholder="Your Message" class="long-input" required></textarea>
-    </div>
+ 
     
      <button type="submit" class="form-submit">Submit<img src="" alt=""></button>
         <template>
@@ -234,7 +236,7 @@
       <span class="custom-checkmark"></span> Option 3
     </label><br>
     
-    <button type="submit" class="form-submit">Submit<img src="" alt=""></button></template>
+    <button type="" class="form-submit">Submit<img src="" alt=""></button></template>
     
     <script>
       function onlyOne(checkbox, groupName) {
@@ -243,6 +245,37 @@
           if (item !== checkbox) item.checked = false;
         });
       }
+      
+      function onlyOne(checkbox, name) {
+  var checkboxes = document.getElementsByName(name);
+  checkboxes.forEach((item) => {
+    item.required = false;
+    if (item !== checkbox) item.checked = false;
+  });
+  checkbox.required = true;
+}
+
+document.getElementById('fpel-form').addEventListener('submit', function(event) {
+  var groups = document.querySelectorAll('checkbox');
+  var isValid = true;
+
+  groups.forEach(function(group) {
+    var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+    var isChecked = Array.prototype.slice.call(checkboxes).some(function(checkbox) {
+      return checkbox.checked;
+    });
+
+    if (!isChecked) {
+      var groupName = group.getAttribute('data-group-name');
+      alert('Please select at least one option from ' + groupName + '.');
+      isValid = false;
+    }
+  });
+
+  if (!isValid) {
+    event.preventDefault(); // Prevent form submission if validation fails
+  }
+});
     </script>
               <script src = "../Scripts/topbar.js"></script>
               
