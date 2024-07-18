@@ -558,6 +558,18 @@ body.dark-mode .form-submit{
   border-radius: 50px;
 }
 
+body.dark-mode .invalid-feedback,
+body.dark-mode .empty-feedback {
+  color: orangered;
+}
+
+
+
+body.dark-mode .is-invalid,
+body.dark-mode .was-validated :invalid {
+  border-color: orangered;
+}
+
 /*un light*/
 
 body.light-mode {
@@ -688,6 +700,17 @@ body.light-mode .form-submit{
   border-radius: 50px;
 }
 
+body.light-mode .invalid-feedback,
+body.light-mode .empty-feedback {
+  color: red;
+}
+
+
+
+body.light-mode .is-invalid,
+body.light-mode .was-validated :invalid {
+  border-color: red;
+}
 /*modern light*/
 
 body.modern-light {
@@ -810,4 +833,16 @@ body.modern-light .form-submit{
   background: black;
   color: white;
   border-radius: 10px;
+}
+
+body.modern-light .invalid-feedback,
+body.modern-light .empty-feedback {
+  color: red;
+}
+
+
+
+body.modern-light .is-invalid,
+body.modern-light .was-validated :invalid {
+  border-color: red;
 }
