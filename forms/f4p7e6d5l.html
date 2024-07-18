@@ -11,7 +11,7 @@
       
     <div class="form">
       <form action="https://api.web3forms.com/submit" method="POST"
-        class="form-p" id="fpel-form">
+        class="form-p" id="fpel-form" novalidate>
     <div class="form-title">
       <h2>feedback ui v4</h2>
       <hr>
@@ -21,16 +21,22 @@
         <input type="hidden" name="redirect" value="https://unviere.github.io/Unviere/forms/f4p7e6d5l/succes"><!--important-->
         <h1 class="form-input-title"> your username<i class="recured">*</i></h1>
          <p class="desc-input">may only contains 1-0, a-z, A-Z, _ (1)</p>
-        <input type="text" name="username" placeholder="Your Roblox username" class="form-input" required>
+        <input type="text" name="username" placeholder="Your Roblox username" class="form-input" required pattern="^[a-zA-Z0-9_]{1,20}$">
         <div class="empty-feedback">
-          hi
+          pls fill in this field 
         </div>
         <div class="invalid-feedback">
-          lol
+          username may only contain 20 characters _ may be used once and no spaces
         </div>
         <h1 class="form-input-title">email<i class="recured">*</i></h1>
         <p class="desc-input">recured for contact</p>
         <input type="email" name="email" placeholder="Your Email (prefer use another than your private email)" class="form-input" required>
+            <div class="empty-feedback">
+          pls fill in this field 
+        </div>
+        <div class="invalid-feedback">
+          email need contain @ + domain name 
+        </div>
         
           <h1 class="form-input-title">data<i class="recured"></i></h1>
           <p class="desc-input">fill in the data when you filed in this form</p>
@@ -38,14 +44,32 @@
           <div class="split">
            <h1 class="form-input-title">date<i class="recured">*</i></h1>
           <input type="date" class="form-input" required>
+              <div class="empty-feedback">
+          no date filed in
+        </div>
+        <div class="invalid-feedback">
+          date only may contain dd-mm-yyyy
+        </div>
           </div>
           <div class="split">
              <h1 class="form-input-title">time<i class="recured">*</i></h1>
           <input type="time" class="form-input" required>
+              <p class="empty-feedback">
+          time is receured
+        </p>
+        <p class="invalid-feedback">
+          time is hh:mm
+        </p>
           </div>
             <div class="split">
               <h1 class="form-input-title">utc time<i class="recured">*</i></h1>
-          <input type="text" class="form-input" placeholder="UTC + 2" required>
+          <input type="text" class="form-input" placeholder="UTC + 2" required pattern="^(UTC|GMT)[+-][0-9]$">
+              <p class="empty-feedback">
+       your timezone is receured search Google if you don't know 
+        </p>
+        <p class="invalid-feedback">
+          only use UTC, GMT and +,- 
+        </p>
           </div>
         </div>
         
@@ -70,6 +94,12 @@
         <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> none 
     </label>
             </div>
+                <div class="empty-feedback">
+          select at least one skill
+        </div>
+        <div class="invalid-feedback">
+          
+        </div>
             
                   <h1 class="form-input-title">how did you found this form<i class="recured">*</i></h1>
           <p class="desc-input">what did you do before you came here where did you click</p>
@@ -79,6 +109,12 @@
         <option value="url">change the url</option>
         <option value="google">Google search</option>
     </select>
+        <div class="empty-feedback">
+          pls select what you did before you came here
+        </div>
+        <div class="invalid-feedback">
+          
+        </div>
         
          <h1 class="form-input-title">wich dev logs did you watch<i class="recured"></i></h1>
           <p class="desc-input"></p>
@@ -114,10 +150,22 @@
         <option value="bad">bad</option>
         <option value="improvments">can be improved</option>
     </select>
+        <div class="empty-feedback">
+          pls select your opinion 
+        </div>
+        <div class="invalid-feedback">
+        
+        </div>
     
          <h1 class="form-input-title">what can there be improved and how<i class="recured">*</i></h1>
           <p class="desc-input">if selected bad or can be improved if you seletrd good you may fill in skip</p>
            <input type="text" name="improvments" placeholder="what improvments" class="form-input" required>
+               <div class="empty-feedback">
+          what can we improve how can we improve it 
+        </div>
+        <div class="invalid-feedback">
+          
+        </div>
     
      <h1 class="form-input-title">rating <i class="recured">*</i></h1>
           <p class="desc-input">if you should give it a cijfer wich one</p>
@@ -200,10 +248,22 @@
       <span class="custom-checkmark"></span> 10
     </label>
        </div>
+           <div class="empty-feedback">
+          select one option 
+        </div>
+        <div class="invalid-feedback">
+          
+        </div>
     
      <h1 class="form-input-title"> your feedback<i class="recured">*</i></h1>
          <p class="desc-input">a description of your feedback you may be rude but don't say things like "pls remove this s[•••]t you calling games" or something that's not what feedback means bullying will be ignored</p>
      <textarea name="message" placeholder="Your Message" class="long-input" required></textarea>
+         <div class="empty-feedback">
+          what is your feedback 
+        </div>
+        <div class="invalid-feedback">
+          
+        </div>
      
         <h1 class="form-input-title">are the customalisation options good<i class="recured">*</i></h1>
           <p class="desc-input">are you happy with the customasation like disable elements and does it reduce the information?</p>
@@ -218,6 +278,12 @@
       <span class="custom-checkmark"></span> no
     </label>
           </div>
+              <div class="empty-feedback">
+          select one option 
+        </div>
+        <div class="invalid-feedback">
+          
+        </div>
  
      <h1 class="form-input-title">have you filled in all<i class="recured">?</i></h1>
           <p class="desc-input">make sure you filled in all fields with a * if not the form will not send</p>
@@ -307,7 +373,7 @@
     </label><br>
     
     <button type="" class="form-submit">Submit<img src="" alt=""></button></template>
-    
+    </body>
     <script>
       function onlyOne(checkbox, groupName) {
         var checkboxes = document.getElementsByName(groupName);
@@ -352,5 +418,5 @@ document.getElementById('fpel-form').addEventListener('submit', function(event) 
               <script src = "../Scripts/topbar.js"></script>
               
                  <script src = "../Scripts/settings/theme.js"></script>
-  </body>
+
 </html>

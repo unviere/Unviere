@@ -1,70 +1,73 @@
-(function () {
+(function() {
   "use strict";
-  /*
-   * Form Validation
-   */
 
   // Fetch all the forms we want to apply custom validation styles to
   const forms = document.querySelectorAll(".form-p");
   const result = document.getElementById("result");
+
   // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function (form) {
+  Array.prototype.slice.call(forms).forEach(function(form) {
     form.addEventListener(
       "submit",
-      function (event) {
+      function(event) {
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
 
+          // Focus on the first invalid input
           form.querySelectorAll(":invalid")[0].focus();
         } else {
-          /*
-           * Form Submission using fetch()
-           */
-
-          const formData = new FormData(form);
+          // Prevent default form submission
           event.preventDefault();
           event.stopPropagation();
+
+          // Serialize form data to JSON
+          const formData = new FormData(form);
           const object = {};
           formData.forEach((value, key) => {
             object[key] = value;
           });
           const json = JSON.stringify(object);
-          result.innerHTML = "Please wait...";
 
+          // Display "Please wait..." message
+          result.innerHTML = "Please wait...";
+          result.style.display = "block"; // Ensure result div is visible
+
+          // Submit form data using fetch
           fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json"
-            },
-            body: json
-          })
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: json,
+            })
             .then(async (response) => {
               let json = await response.json();
               if (response.status == 200) {
+                // Successful submission
                 result.innerHTML = json.message;
-                result.classList.remove("text-gray-500");
-                result.classList.add("text-green-500");
               } else {
+                // Error in submission
                 console.log(response);
                 result.innerHTML = json.message;
-                result.classList.remove("text-gray-500");
-                result.classList.add("text-red-500");
               }
             })
             .catch((error) => {
               console.log(error);
               result.innerHTML = "Something went wrong!";
             })
-            .then(function () {
+            .finally(() => {
+              // Reset form after submission attempt
               form.reset();
               form.classList.remove("was-validated");
               setTimeout(() => {
-                result.style.display = "none";
+                result.style.display = "none"; // Hide result div after 5 seconds
               }, 5000);
             });
         }
+
+        // Add 'was-validated' class to form to display validation styles
         form.classList.add("was-validated");
       },
       false

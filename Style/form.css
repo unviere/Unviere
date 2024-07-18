@@ -293,6 +293,7 @@ label {
   width: 100%;
   height: auto;
   color: red;
+  white-space: normal;
 }
 
 .was-validated :placeholder-shown:invalid ~ .empty-feedback {
