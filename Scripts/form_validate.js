@@ -42,19 +42,21 @@
               },
               body: json,
             })
-            .then(async (response) => {
+            .then(async(response) => {
+              console.log("Response received:", response); // Log the response object
               let json = await response.json();
+              console.log("Response JSON:", json); // Log the parsed JSON
               if (response.status == 200) {
                 // Successful submission
                 result.innerHTML = json.message;
               } else {
                 // Error in submission
-                console.log(response);
+                console.log("Error response:", response);
                 result.innerHTML = json.message;
               }
             })
             .catch((error) => {
-              console.log(error);
+              console.log("Fetch error:", error);
               result.innerHTML = "Something went wrong!";
             })
             .finally(() => {
@@ -73,4 +75,27 @@
       false
     );
   });
+
+  // Function to ensure only one checkbox is checked per group and manage 'required' attribute
+  function onlyOne(checkbox, groupName) {
+    console.log(`onlyOne called for checkbox: ${checkbox.name}, group: ${groupName}`); // Debugging log
+    const checkboxes = document.getElementsByName(groupName);
+    checkboxes.forEach(function(item) {
+      item.required = false; // Remove 'required' attribute from all checkboxes in the group
+      if (item !== checkbox) item.checked = false; // Uncheck other checkboxes
+    });
+    checkbox.required = true; // Set 'required' attribute only for the clicked checkbox
+  }
+
+  // Attach the onlyOne function to the global window object
+  window.onlyOne = onlyOne;
+
+  // Event listener for checkbox clicks to ensure only one option is checked per group
+  document.querySelectorAll('.checkbox-group input[type="checkbox"]').forEach(function(checkbox) {
+    checkbox.addEventListener('click', function() {
+      console.log(`Checkbox clicked: ${checkbox.name}`); // Debugging log
+      onlyOne(checkbox, checkbox.getAttribute('name'));
+    });
+  });
+
 })();

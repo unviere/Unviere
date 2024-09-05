@@ -343,76 +343,15 @@
         
         
 <h1 class="form-input-title">Select one option from each group:</h1><br>
-    
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="option1">
-      <span class="custom-checkmark"></span> Option 1
-    </label><br>
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="option2">
-      <span class="custom-checkmark"></span> Option 2
-    </label><br>
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="option3">
-      <span class="custom-checkmark"></span> Option 3
-    </label><br>
+   
     
     <h1 class="form-input-title">Select one option from each group:</h1><br>
     
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="option1">
-      <span class="custom-checkmark"></span> Option 1
-    </label><br>
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="option2">
-      <span class="custom-checkmark"></span> Option 2
-    </label><br>
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="option3">
-      <span class="custom-checkmark"></span> Option 3
-    </label><br>
+  
     
-    <button type="" class="form-submit">Submit<img src="" alt=""></button></template>
+   </template>
     </body>
-    <script>
-      function onlyOne(checkbox, groupName) {
-        var checkboxes = document.getElementsByName(groupName);
-        checkboxes.forEach((item) => {
-          if (item !== checkbox) item.checked = false;
-        });
-      }
-      
-      function onlyOne(checkbox, name) {
-  var checkboxes = document.getElementsByName(name);
-  checkboxes.forEach((item) => {
-    item.required = false;
-    if (item !== checkbox) item.checked = false;
-  });
-  checkbox.required = true;
-}
 
-document.getElementById('fpel-form').addEventListener('submit', function(event) {
-  var groups = document.querySelectorAll('checkbox');
-  var isValid = true;
-
-  groups.forEach(function(group) {
-    var checkboxes = group.querySelectorAll('input[type="checkbox"]');
-    var isChecked = Array.prototype.slice.call(checkboxes).some(function(checkbox) {
-      return checkbox.checked;
-    });
-
-    if (!isChecked) {
-      var groupName = group.getAttribute('data-group-name');
-      alert('Please select at least one option from ' + groupName + '.');
-      isValid = false;
-    }
-  });
-
-  if (!isValid) {
-    event.preventDefault(); // Prevent form submission if validation fails
-  }
-});
-    </script>
     
     <script src = "../Scripts/form_validate.js"> </script>
               <script src = "../Scripts/topbar.js"></script>
