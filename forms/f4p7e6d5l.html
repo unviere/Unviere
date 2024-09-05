@@ -43,7 +43,7 @@
            <div class="form-split">
           <div class="split">
            <h1 class="form-input-title">date<i class="recured">*</i></h1>
-          <input type="date" class="form-input" required>
+          <input id ="datum" type="date" class="form-input" required min="01-09-2024" max="">
               <div class="empty-feedback">
           no date filed in
         </div>
@@ -53,7 +53,7 @@
           </div>
           <div class="split">
              <h1 class="form-input-title">time<i class="recured">*</i></h1>
-          <input type="time" class="form-input" required>
+          <input id ="tijd" type="time" class="form-input" required max="">
               <p class="empty-feedback">
           time is receured
         </p>
@@ -63,7 +63,7 @@
           </div>
             <div class="split">
               <h1 class="form-input-title">utc time<i class="recured">*</i></h1>
-          <input type="text" class="form-input" placeholder="UTC + 2" required pattern="^(UTC|GMT)[+-][0-9]$">
+          <input type="text" class="form-input" placeholder="UTC + 2" required pattern="^(UTC|GMT)[+-](0[0-9]|1[0-2])$">
               <p class="empty-feedback">
        your timezone is receured search Google if you don't know 
         </p>
@@ -353,6 +353,33 @@
     
    </template>
     </body>
+    
+    <script>
+    // Set the max attribute to today's date
+    document.addEventListener('DOMContentLoaded', function() {
+      const today = new Date().toISOString().split('T')[0];
+    
+      function getTime() {
+        const tod = new Date();
+        var hours = String(tod.getHours()).padStart(2, '0');
+        var mins = String(tod.getMinutes()).padStart(2, '0');
+        return `${hours}:${mins}`;
+      }
+    
+      function updateTime() {
+        const time = getTime();
+       document.getElementById('tijd').setAttribute('max', time);
+        console.log('Updated time:', time);
+      }
+    
+      // Initial setup
+      document.getElementById('datum').setAttribute('max', today);
+      updateTime(); // Set initial time for max attribute
+    
+      // Update time every minute
+      setInterval(updateTime, 60000);
+    });
+  </script>
 
     
     <script src = "../Scripts/form_validate.js"> </script>
