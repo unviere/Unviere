@@ -555,6 +555,35 @@ body.dark-mode .form-input{
   color: white;
 }
 
+body.dark-mode textarea,
+body.dark-mode time,
+body.dark-mode data,
+body.dark-mode select,
+body.dark-mode input {
+ 
+ border-color: #03c8ff;
+  outline-color: #03c8ff;
+  caret-color: #024a2a;
+}
+body.dark-mode textarea:focus,
+body.dark-mode time:focus,
+body.dark-mode data:focus,
+body.dark-mode select:focus,
+body.dark-mode input:focus {
+ 
+ border-color: #03c8ff;
+  outline-color: #03c8ff;
+}
+
+body.dark-mode textarea:valid,
+body.dark-mode time:valid,
+body.dark-mode data:valid,
+body.dark-mode select:valid,
+body.dark-mode input:valid {
+  border-color: green;
+  outline-color: #03c8ff;
+}
+
 body.dark-mode .form-input-drop{
   border-radius: 50px;
   border-color: #03c8ff;
@@ -826,6 +855,35 @@ body.modern-light .form-input{
   border-color: #0328ff;
   background: white;
   color: black;
+}
+
+body.modern-light textarea,
+body.modern-light time,
+body.modern-light data,
+body.modern-light select,
+body.modern-light input {
+ 
+ border-color: #0328ff;
+  outline-color: #0328ff;
+  caret-color: #06c46f;
+}
+body.modern-light textarea:focus,
+body.modern-light time:focus,
+body.modern-light data:focus,
+body.modern-light select:focus,
+body.modern-light input:focus {
+ 
+ border-color: #0328ff;
+  outline-color: #0328ff;
+}
+
+body.modern-light textarea:valid,
+body.modern-light time:valid,
+body.modern-light data:valid,
+body.modern-light select:valid,
+body.modern-light input:valid {
+  border-color: #06c46f;
+  outline-color: #0328ff;
 }
 
 body.modern-light label{
