@@ -1,33 +1,76 @@
-(function() {
+(function () {
   "use strict";
 
   // Fetch all the forms we want to apply custom validation styles to
   const forms = document.querySelectorAll(".form-p");
   const result = document.getElementById("result");
 
+  // Function to ensure only one checkbox is checked per group and manage 'required' attribute
+  function manageCheckboxGroup(checkbox, groupName) {
+    const checkboxes = document.getElementsByName(groupName);
+    const isRequiredGroup = checkbox.closest('.checkbox-group').dataset.requiredGroup === "true"; // Check if group is required
+
+    // Uncheck all checkboxes in the group and remove 'required' attribute
+    checkboxes.forEach(function (item) {
+      item.checked = false;
+      item.required = false; 
+    });
+
+    // Check the clicked checkbox
+    checkbox.checked = true;
+
+    // If it's a required group, set the 'required' attribute on the checked checkbox
+    if (isRequiredGroup) {
+      checkbox.required = true;
+    }
+  }
+
+  // Attach the manageCheckboxGroup function to checkbox click events
+  document.querySelectorAll('.checkbox-group input[type="checkbox"]').forEach(function (checkbox) {
+    checkbox.addEventListener('click', function () {
+      manageCheckboxGroup(checkbox, checkbox.getAttribute('name'));
+    });
+  });
+
   // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function(form) {
+  Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener(
       "submit",
-      function(event) {
+      function (event) {
+        // Check if the form is valid
         if (!form.checkValidity()) {
+          console.log("Form is invalid"); // Debugging log
           event.preventDefault();
           event.stopPropagation();
 
-          // Focus on the first invalid input
-          form.querySelectorAll(":invalid")[0].focus();
+          // Focus on the first invalid input and show validation messages
+          const firstInvalidField = form.querySelector(":invalid");
+          if (firstInvalidField) {
+            firstInvalidField.focus();
+            console.log(`Invalid field: ${firstInvalidField.name}`); // Log which field is invalid
+          }
+
+          // Show custom validation feedback
+          form.querySelectorAll(":invalid").forEach(function (field) {
+            const feedback = field.nextElementSibling;
+            if (feedback && feedback.classList.contains("invalid-feedback")) {
+              feedback.style.display = "block";
+            }
+          });
         } else {
           // Prevent default form submission
           event.preventDefault();
           event.stopPropagation();
 
           // Serialize form data to JSON
-          const formData = new FormData(form);
-          const object = {};
+          var formData = new FormData(form);
+          var object = {};
           formData.forEach((value, key) => {
             object[key] = value;
           });
-          const json = JSON.stringify(object);
+          var json = JSON.stringify(object);
+
+          console.log("Form data ready for submission:", json); // Debugging log
 
           // Display "Please wait..." message
           result.innerHTML = "Please wait...";
@@ -35,20 +78,29 @@
 
           // Submit form data using fetch
           fetch("https://api.web3forms.com/submit", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
-              body: json,
-            })
-            .then(async(response) => {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: json,
+          })
+            .then(async (response) => {
               console.log("Response received:", response); // Log the response object
               let json = await response.json();
               console.log("Response JSON:", json); // Log the parsed JSON
               if (response.status == 200) {
                 // Successful submission
                 result.innerHTML = json.message;
+
+                // Get redirect URL from hidden input
+                const redirectUrl = form.querySelector('input[name="redirect"]').value;
+                console.log("Redirecting to:", redirectUrl); // Debugging log
+
+                // Redirect to success page after a short delay
+                setTimeout(() => {
+                  window.location.href = redirectUrl; // Redirect to the URL specified in the form
+                }, 2000); // Adjust the delay as needed
               } else {
                 // Error in submission
                 console.log("Error response:", response);
@@ -76,26 +128,22 @@
     );
   });
 
-  // Function to ensure only one checkbox is checked per group and manage 'required' attribute
-  function onlyOne(checkbox, groupName) {
-    console.log(`onlyOne called for checkbox: ${checkbox.name}, group: ${groupName}`); // Debugging log
-    const checkboxes = document.getElementsByName(groupName);
-    checkboxes.forEach(function(item) {
-      item.required = false; // Remove 'required' attribute from all checkboxes in the group
-      if (item !== checkbox) item.checked = false; // Uncheck other checkboxes
-    });
-    checkbox.required = true; // Set 'required' attribute only for the clicked checkbox
-  }
-
-  // Attach the onlyOne function to the global window object
-  window.onlyOne = onlyOne;
-
-  // Event listener for checkbox clicks to ensure only one option is checked per group
-  document.querySelectorAll('.checkbox-group input[type="checkbox"]').forEach(function(checkbox) {
-    checkbox.addEventListener('click', function() {
-      console.log(`Checkbox clicked: ${checkbox.name}`); // Debugging log
-      onlyOne(checkbox, checkbox.getAttribute('name'));
-    });
-  });
-
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form'); // Adjust if your form has a different selector
+    const checkboxGroup = document.querySelector('.checkbox');
+    const errorMessage = document.querySelector('.checkbox-error-message');
+
+    form.addEventListener('submit', function(event) {
+        const checkboxes = checkboxGroup.querySelectorAll('input[type="checkbox"]');
+        let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+        if (!isChecked) {
+            event.preventDefault(); // Prevent form submission
+            errorMessage.style.display = 'block'; // Show error message
+        } else {
+            errorMessage.style.display = 'none'; // Hide error message
+        }
+    });
+});

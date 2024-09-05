@@ -73,33 +73,27 @@
           </div>
         </div>
         
-        <h1 class="form-input-title">what are your skills <i class="recured">*</i></h1>
-          <p class="desc-input">we need this info to know or you know much about a skill or not</p>
-            <div class="checkbox">
-   <label class="custom-checkbox-multiple">
-        <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="pro ui" required>
-        <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> pro ui designer 
-    </label>
-     <label class="custom-checkbox-multiple">
-        <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="ui" required>
-        <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> ui designer 
-    </label>
-    
-     <label class="custom-checkbox-multiple">
-        <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="script" required>
-        <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> scripter 
-    </label>
-     <label class="custom-checkbox-multiple">
-        <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="none" required>
-        <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> none 
-    </label>
-            </div>
-                <div class="empty-feedback">
-          select at least one skill
+<h1 class="form-input-title">What are your skills</h1>
+        <p class="desc-input">We need this info to know if you know about a skill or not</p>
+        <div class="checkbox">
+          <label class="custom-checkbox-multiple">
+            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="pro ui">
+            <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Pro UI Designer
+          </label>
+          <label class="custom-checkbox-multiple">
+            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="ui">
+            <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> UI Designer
+          </label>
+          <label class="custom-checkbox-multiple">
+            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="script">
+            <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Scripter
+          </label>
+          <label class="custom-checkbox-multiple">
+            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="none">
+            <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> None
+          </label>
         </div>
-        <div class="invalid-feedback">
-          
-        </div>
+        <div class="checkbox-error-message" style="display: none; color: red;">Please select at least one skill.</div>
             
                   <h1 class="form-input-title">how did you found this form<i class="recured">*</i></h1>
           <p class="desc-input">what did you do before you came here where did you click</p>
@@ -166,128 +160,136 @@
         <div class="invalid-feedback">
           
         </div>
-    
-     <h1 class="form-input-title">rating <i class="recured">*</i></h1>
-          <p class="desc-input">if you should give it a cijfer wich one</p>
-          <div class="checkbox" data-group-name="rating">
+    <!-- Rating Input Group -->
+        <h1 class="form-input-title">rating <i class="recured">*</i></h1>
+        <p class="desc-input">if you should give it a cijfer wich one</p>
+        <div class="checkbox-group" data-required-group="true" data-group-name="rating"> <!-- Corrected group name and added data-required-group -->
+        
+          <!-- Checkbox Options -->
+          <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="1" required>
+            <span class="custom-checkmark"></span> 1
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="1,5" required>
+            <span class="custom-checkmark"></span> 1,5
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="2" required>
+            <span class="custom-checkmark"></span> 2
+          </label>
           
            <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="1" required>
-      <span class="custom-checkmark"></span> 1
-    </label>
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="1,5" required >
-      <span class="custom-checkmark"></span> 1,5
-    </label>
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="2" required>
-      <span class="custom-checkmark"></span> 2
-    </label>
-               <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="2,5" required>
-      <span class="custom-checkmark"></span> 2,5
-    </label>
-               <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="3" required>
-      <span class="custom-checkmark"></span> 3
-    </label>
-               <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="3,5" required >
-      <span class="custom-checkmark"></span> 3,5
-    </label>
-               <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="4" required>
-      <span class="custom-checkmark"></span> 4
-    </label>
-               <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="4,5" required >
-      <span class="custom-checkmark"></span> 4,5
-    </label>
-               <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="5" required >
-      <span class="custom-checkmark"></span> 5
-    </label>
-               <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="5,5" required >
-      <span class="custom-checkmark"></span> 5,5
-    </label>     
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="6" required>
-      <span class="custom-checkmark"></span> 6
-    </label>       
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="6,5" required>
-      <span class="custom-checkmark"></span> 6,5
-    </label>
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="7" required>
-      <span class="custom-checkmark"></span> 7
-    </label>      
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="7,5" required>
-      <span class="custom-checkmark"></span> 7,5
-    </label>     
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="8" required>
-      <span class="custom-checkmark"></span> 8
-    </label>      
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="8,5" required>
-      <span class="custom-checkmark"></span> 8,5
-    </label>    
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="9" required>
-      <span class="custom-checkmark"></span> 9
-    </label>      
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="9,5" required>
-      <span class="custom-checkmark"></span> 9,5
-    </label>        
-    <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-1" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-1')" value="10" required>
-      <span class="custom-checkmark"></span> 10
-    </label>
-       </div>
-           <div class="empty-feedback">
-          select one option 
-        </div>
-        <div class="invalid-feedback">
-          
-        </div>
-    
-     <h1 class="form-input-title"> your feedback<i class="recured">*</i></h1>
-         <p class="desc-input">a description of your feedback you may be rude but don't say things like "pls remove this s[•••]t you calling games" or something that's not what feedback means bullying will be ignored</p>
-     <textarea name="message" placeholder="Your Message" class="long-input" required></textarea>
-         <div class="empty-feedback">
-          what is your feedback 
-        </div>
-        <div class="invalid-feedback">
-          
-        </div>
-     
-        <h1 class="form-input-title">are the customalisation options good<i class="recured">*</i></h1>
-          <p class="desc-input">are you happy with the customasation like disable elements and does it reduce the information?</p>
-          <div class="checkbox" data-group-name="customise">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="2.5" required>
+            <span class="custom-checkmark"></span> 2.5
+          </label>
           
            <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="yes" required>
-      <span class="custom-checkmark"></span> yes
-    </label>
-     <label class="custom-checkbox">
-      <input type="checkbox" name="single-checkbox-2" class="hidden-checkbox" onclick="onlyOne(this, 'single-checkbox-2')" value="no" required>
-      <span class="custom-checkmark"></span> no
-    </label>
-          </div>
-              <div class="empty-feedback">
-          select one option 
-        </div>
-        <div class="invalid-feedback">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="3" required>
+            <span class="custom-checkmark"></span> 3
+          </label>
           
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="3.5" required>
+            <span class="custom-checkmark"></span> 3.5
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="4" required>
+            <span class="custom-checkmark"></span> 4
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="4.5" required>
+            <span class="custom-checkmark"></span> 4.5
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="5" required>
+            <span class="custom-checkmark"></span> 5
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="5.5" required>
+            <span class="custom-checkmark"></span> 5.5
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="6" required>
+            <span class="custom-checkmark"></span> 6
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="6.5" required>
+            <span class="custom-checkmark"></span> 6.5
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="7" required>
+            <span class="custom-checkmark"></span> 7
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="7.5" required>
+            <span class="custom-checkmark"></span> 7.5
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="8" required>
+            <span class="custom-checkmark"></span> 8
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="8.5" required>
+            <span class="custom-checkmark"></span> 8.5
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="9" required>
+            <span class="custom-checkmark"></span> 9
+          </label>
+          
+           <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="9.5" required>
+            <span class="custom-checkmark"></span> 9.5
+          </label>
+          <!-- ... Continue with the rest of your checkbox options ... -->
+          <label class="custom-checkbox">
+            <input type="checkbox" name="rating" class="hidden-checkbox" value="10" required>
+            <span class="custom-checkmark"></span> 10
+          </label>
         </div>
+        <div class="empty-feedback">Select one option</div>
+        <div class="invalid-feedback">Please choose an option for this group.</div>
+        
+        <!-- Feedback Input -->
+        <h1 class="form-input-title">your feedback<i class="recured">*</i></h1>
+        <p class="desc-input">a description of your feedback you may be rude but don't say things like "pls remove this s[•••]t you calling games" or something that's not what feedback means bullying will be ignored</p>
+        <textarea name="message" placeholder="Your Message" class="long-input" required></textarea>
+        <div class="empty-feedback">What is your feedback?</div>
+        <div class="invalid-feedback">Please provide feedback.</div>
+        
+        <!-- Customization Options Input Group -->
+        <h1 class="form-input-title">are the customization options good<i class="recured">*</i></h1>
+        <p class="desc-input">are you happy with the customization like disable elements and does it reduce the information?</p>
+        <div class="checkbox-group" data-required-group="true" data-group-name="customise"> <!-- Corrected group name and added data-required-group -->
+          <label class="custom-checkbox">
+            <input type="checkbox" name="customise" class="hidden-checkbox" value="yes" required>
+            <span class="custom-checkmark"></span> yes
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" name="customise" class="hidden-checkbox" value="no" required>
+            <span class="custom-checkmark"></span> no
+          </label>
+        </div>
+        <div class="empty-feedback">Select one option</div>
+        <div class="invalid-feedback">Please choose an option for this group.</div>
  
      <h1 class="form-input-title">have you filled in all<i class="recured">?</i></h1>
           <p class="desc-input">make sure you filled in all fields with a * if not the form will not send</p>
+          <div id = "result"></div>
      <button type="submit" class="form-submit">Submit<img src="" alt=""></button>
+     </div>
         <template>
         <!-- input type: name: placeholder:same class for input use textarea for long text field-->
         <input type="hidden" name="access_key" value="032437ac-e754-4bb5-8636-471435c3c3e3"> <!-- acces key-->

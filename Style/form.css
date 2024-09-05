@@ -22,11 +22,12 @@
 
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
- background: transparent;
- background-image: url(../Img/universe.png);
- background-size: cover;
-  background-position: center;
-  background-color: whitesmoke;
+ background-color: white;
+ background-image: url(../Img/universe.png) !important;
+ background-size: cover !important;
+  background-position: center !important;
+  z-index: 1;
+  
 }
 
 img {
@@ -193,7 +194,7 @@ label {
     user-select: none;
 }
 
-.checkbox {
+.checkbox-group {
   display: grid;
   
   grid-template-columns: repeat(4, 1fr); /* Two columns */
@@ -434,7 +435,6 @@ padding-left: 2px;
 /*un dark*/
 
 body.dark-mode {
- background: transparent;
   background-color: #1a1a1a;
 }
 
@@ -573,9 +573,7 @@ body.dark-mode .was-validated :invalid {
 /*un light*/
 
 body.light-mode {
- background: transparent;
- background-size: cover;
-  background-position: center;
+ 
   background-color: whitesmoke;
 }
 
@@ -714,10 +712,9 @@ body.light-mode .was-validated :invalid {
 /*modern light*/
 
 body.modern-light {
- background: transparent;
+ 
  background-color: whitesmoke;
- background-size: cover;
-  background-position: center;
+ 
 }
 
 
