@@ -153,12 +153,72 @@ label {
 .long-input{
   width: 100%;
   height: 200px;
-  margin-right: 15px;
+ margin-right: 15px;
   border-radius: 10px;
-  padding: 5px;
+ padding: 5px;
     border-color: #0328ff;
   border-style: solid;
   background: white;
+  max-width: 100%;
+  min-width: 100%;
+  
+}
+
+/*input {
+  border-color: #0328ff;
+}
+
+input:focus {
+ 
+ border-color: #0328ff;
+  outline: none;
+}
+
+input:invalid {
+  border-color: red;
+  outline: none;
+}
+
+input:placeholder {
+  border-color: #0328ff;
+  outline: none;
+}*/
+textarea,
+time,
+data,
+select,
+input {
+ 
+ border-color: #0328ff;
+  outline-style: solid;
+  outline-color: #0328ff;
+  outline-width: 1px;
+  border-width: 1px;
+  caret-color: #06c46f;
+}
+textarea:focus,
+time:focus,
+data:focus,
+select:focus,
+input:focus {
+ 
+ border-color: #0328ff;
+  outline-style: solid;
+  outline-color: #0328ff;
+  outline-width: 1px;
+  border-width: 1px;
+}
+
+textarea:valid,
+time:valid,
+data:valid,
+select:valid,
+input:valid {
+  border-color: #08f78b;
+  outline-style: solid;
+  outline-color: #0328ff;
+  outline-width: 1px;
+  border-width: 2px;
 }
 
 .form-input-drop{
@@ -308,6 +368,7 @@ label {
 .is-invalid,
 .was-validated :invalid {
   border-color: red;
+  border-width: 2px;
 }
 
 
