@@ -1,0 +1,505 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.desktop{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  
+}
+
+.up {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  
+}
+
+.left{
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 0;
+  margin-right: 10px;
+  
+}
+
+.right {
+  width: 40%;
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: flex-end;  
+  margin-right: 10px;
+  height: 100%; 
+  box-sizing: border-box;
+}
+
+.home{
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  overflow: hidden;
+}
+
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  background: #06c46f;
+  box-shadow: 1px 1px 9px grey;
+}
+
+body {
+ /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
+ background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+	z-index: 200000;
+	transition: all .55s ease;
+	  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+	
+  
+  color: #0328ff;
+    font-size: 35px;
+  cursor: pointer;
+  display: flex;
+}
+
+.navlist {
+  display: flex; /* Enables flexbox */
+  width: 100%; /* Full width */
+  height: 50%; /* Adjust height as needed */
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  background: transparent; /* Background for visualization */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  list-style: none; /* Removes bullet points */
+}
+
+.navlist li {
+  display: flex;
+  flex: 1; /* Distributes items equally */
+  margin: 0 10px; /* Adds spacing between items */
+  padding: 10px 0; /* Adds vertical padding */
+}
+
+.navlist a {
+  background: transparent; /* Background for links */
+  color: black; /* Text color */
+  font-size: 15px; /* Font size */
+  font-weight: 600; /* Font weight */
+  border-bottom: 2px solid transparent; /* Bottom border */
+  transition: all 0.55s ease; /* Smooth transition */
+  text-decoration: none; /* Removes underline */
+  text-align: center; /* Centers text within each item */
+  display: block; /* Makes anchor tags take full space of the li */
+  width: 100%; /* Ensures anchor takes full width */
+}
+
+/*.navlist img {
+  max-height: 20px; /* Adjust the height as necessary 
+  margin: auto;
+}/*/
+
+.navlist a:hover {
+  border-bottom: 5px solid #0328ff;
+}
+
+ #dark-mode-toggle{
+  background: white;
+  color: black;
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 600;
+border-radius: 50px;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+  text-decoration: none;
+  padding: 5px 5px;
+  border: none;
+outline: none;
+display: none;
+ }
+  
+#menu-icon {
+  color: #0328ff;
+  font-size: 35px;
+  cursor: pointer;
+  display: flex;
+}
+
+.logos{
+  display: flex;
+  text-decoration: none;
+  color: #0328ff;
+  font-size: 35;
+}
+
+.community-drop li{
+  display: block;
+}
+
+.community-drop{
+  
+  
+  width: 15%;
+  height: 110px;
+  background: #06c46f;
+  position: absolute;
+  z-index: 100005;
+  display: none;
+  
+  margin-top: 25px;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.community-drop li{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.community-drop:hover, .navlist li:hover .community-drop{
+  display: block;
+}
+
+.community-drop-button{
+  display: block;
+}
+
+.more-drop li{
+  display: block;
+}
+
+.more-drop{
+  width: 70px;
+  height: 80px;
+  background: #06c46f;
+  position:absolute;
+  z-index: 100005;
+  display: none;
+  white-space: nowrap;
+  margin-top: 10px;
+  margin-left: 5px;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.more-drop li{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.more-drop:hover, .navlist li:hover .more-drop{
+  display: block;
+}
+
+.more-drop-button{
+  display: block;
+}
+
+.mobile-button{
+  display: none;
+}
+
+@media (max-width: 1535px){
+		header{
+			
+			transition: .2s;
+		}
+
+		#menu-icon{
+		display: block;
+		}
+	}
+	
+	@media (max-width: 1460px){
+	#menu-icon{
+		display: block;
+	}
+}
+
+@media (max-width: 1340px){
+
+	#menu-icon{
+		display: block;
+	}
+
+}
+@media (max-width: 1195px){
+	
+
+#menu-icon{
+		display: block;
+	}
+	
+
+	
+}
+
+@media (max-width: 700px){
+
+	.hero{
+		flex-direction: column;
+	}
+	
+	#menu-icon{
+		display: block;
+	}
+	.navlist{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		width: 300px;
+		background: #06c46f;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 5px 5px;
+		margin: 0px;
+		transition: all .55s ease;
+		border-bottom-left-radius: 10px;
+	}
+	
+	
+
+	.navlist a{
+		display: block;
+		margin: 5px 0;
+		margin-left: 0;
+		background: transparent;
+	}
+
+	.navlist-open{
+		right: 0;
+	}
+  
+
+	
+	.community-drop li{
+  display: block;
+}
+
+.community-drop{
+  display: none;
+  
+}
+
+.navlist li .community-drop-button{
+  display: none;
+}
+
+.more-drop li{
+  display: block;
+}
+
+.more-drop{
+  display: none;
+}
+
+.navlist li:hover .more-drop{
+  display: none;
+}
+
+.navlist li .more-drop-button{
+  display: none;
+}
+.mobile-button{
+  display: block;
+}
+	
+}
+@media (max-width: 680px){
+
+
+#menu-icon{
+		display: block;
+		}
+		
+
+.navlist{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		width: 300px;
+		background: #06c46f;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 5px 5px;
+		transition: all .55s ease;
+		border-bottom-left-radius: 10px;
+	}
+	
+	
+
+	.navlist a{
+		display: block;
+		margin: 5px 0;
+		margin-left: 0;
+		background: transparent;
+	}
+
+	.navlist-open{
+		right: 0;
+		
+  
+}
+}
+
+/* unviere dark*/
+body.dark-mode {
+  background: #1a1a1a;
+}
+
+body.dark-mode header{
+  background: #024a2a;
+  box-shadow: 1px 1px 9px black;
+}
+
+body.dark-mode .navlist{
+  background: #024a2a;
+  
+}
+
+body.dark-mode .navlist a {
+  color: white;
+}
+
+body.dark-mode #dark-mode-toggle{
+  background: black;
+  color: white;
+}
+
+body.dark-mode .navlist a:hover {
+  border-bottom: 2px solid #03c8ff;
+}
+
+body.dark-mode .more-drop{
+  background: #024a2a;
+}
+
+body.dark-mode .community-drop{
+  background: #024a2a;
+}
+
+body.dark-mode #menu-icon{
+    color: #03c8ff;
+}
+body.dark-mode .settings a{
+  color: #03c8ff;
+}
+
+/* unviere light*/
+body.light-mode {
+  background: #ffffff;
+}
+
+body.light-mode header{
+  background: #06c46f;
+  box-shadow: 1px 1px 9px grey;
+}
+
+body.light-mode .navlist{
+  background: #06c46f;
+  
+}
+
+body.light-mode .navlist a {
+  color: black;
+}
+
+body.light-mode #dark-mode-toggle{
+  background: white;
+  color: black;
+}
+
+body.light-mode .navlist a:hover {
+  border-bottom: 2px solid #0328ff;
+}
+
+body.light-mode .more-drop{
+  background: #06c46f;
+}
+
+body.light-mode .community-drop{
+  background: #06c46f;
+}
+
+
+body.light-mode #menu-icon{
+    color: #0328ff;
+}
+
+body.light-mode .settings a{
+  color: #0328ff;
+}
+
+/* modern light*/
+body.modern-light {
+  background: whitesmoke;
+}
+
+body.modern-light header{
+  background: whitesmoke;
+  box-shadow: 1px 1px 9px grey;
+}
+
+body.modern-light .navlist-open{
+  background: #06c46f;
+  
+}
+
+body.modern-light .navlist a {
+  color: black;
+}
+
+
+
+body.modern-light #menu-icon{
+  color: #0328ff;
+}
+body.modern-light .settings a{
+  color: #0328ff;
+}
+
+body.modern-light .navlist a:hover {
+  border-bottom: 2px solid #0328ff;
+}
+
+body.modern-light .more-drop{
+  background: whitesmoke;
+}
+
+body.modern-light .community-drop{
+  background: whitesmoke;
+}
