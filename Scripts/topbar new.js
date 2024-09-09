@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.text())
     .then(data => {
       // Insert the fetched content into the header
-      document.getElementById('header').innerHTML == data;
+      document.getElementById('header').innerHTML = data;
 
       // Log to verify header content
       console.log('Header content inserted:', document.getElementById('header').innerHTML);
