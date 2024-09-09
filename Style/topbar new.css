@@ -26,7 +26,7 @@
   flex-direction: row;
   align-items: center;
   left: 0;
-  margin-right: 10px;
+  margin-left: 10px;
   
 }
 
@@ -42,9 +42,8 @@
 }
 
 .home{
-  width: 100px;
-  height: 50px;
-  background-color: red;
+  width: 120px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -77,7 +76,7 @@ img {
 	z-index: 200000;
 	transition: all .55s ease;
 	  width: 100%;
-  height: auto;
+  height: 100%;
   overflow: hidden;
 
 	
@@ -107,44 +106,53 @@ img {
   padding: 10px 0; /* Adds vertical padding */
 }
 
+.navlist {
+  display: flex; /* Display as a flex container */
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center; /* Aligns items vertically in the center */
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+}
+
+.navlist li {
+  margin: 0 10px; /* Reduced spacing between items */
+  padding: 0; /* No padding around the list items */
+}
+
 .navlist a {
   background: transparent; /* Background for links */
   color: black; /* Text color */
   font-size: 15px; /* Font size */
   font-weight: 600; /* Font weight */
-  border-bottom: 2px solid transparent; /* Bottom border */
-  transition: all 0.55s ease; /* Smooth transition */
+  position: relative; /* Needed for positioning the pseudo-element */
+  padding: 10px 0; /* Adds vertical padding to create space around the text */
+  margin: 0; /* Removes margin around the anchor */
+  transition: color 0.55s ease; /* Smooth transition for text color */
   text-decoration: none; /* Removes underline */
   text-align: center; /* Centers text within each item */
   display: block; /* Makes anchor tags take full space of the li */
   width: 100%; /* Ensures anchor takes full width */
 }
 
-/*.navlist img {
-  max-height: 20px; /* Adjust the height as necessary 
-  margin: auto;
-}/*/
-
-.navlist a:hover {
-  border-bottom: 5px solid #0328ff;
+.navlist a::after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute; /* Position it relative to the parent */
+  bottom: 0; /* Align to the bottom of the parent */
+  left: 50%; /* Center it horizontally */
+  width: 100%; /* Width of the underline */
+  height: 5px; /* Height of the underline */
+  background-color: #0328ff; /* Color of the underline */
+  border-radius: 5px; /* Rounded corners */
+  transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
+  transition: transform 0.55s ease; /* Smooth transition for hover effect */
 }
 
- #dark-mode-toggle{
-  background: white;
-  color: black;
-  margin-left: 5px;
-  font-size: 15px;
-  font-weight: 600;
-border-radius: 50px;
-  border-bottom: 2px solid transparent;
-  transition: all .55s ease;
-  text-decoration: none;
-  padding: 5px 5px;
-  border: none;
-outline: none;
-display: none;
- }
-  
+.navlist a:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Scale to full width on hover */
+}
+
+ 
 #menu-icon {
   color: #0328ff;
   font-size: 35px;
@@ -173,7 +181,7 @@ display: none;
   z-index: 100005;
   display: none;
   
-  margin-top: 25px;
+  margin-top: 40px;
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
@@ -200,15 +208,17 @@ display: none;
 }
 
 .more-drop{
-  width: 70px;
-  height: 80px;
+  width: 15%;
+  height: 110px;
   background: #06c46f;
-  position:absolute;
+  position: absolute;
   z-index: 100005;
   display: none;
-  white-space: nowrap;
-  margin-top: 10px;
-  margin-left: 5px;
+  
+  margin-top: 40px;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
   text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -227,9 +237,42 @@ display: none;
   display: block;
 }
 
-.mobile-button{
+.menu {
+  margin-top: 100px;
+  height: 100%;
+  width: 150px;
+  z-index: 1001;
+  background-color: #06c46f;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+}
+.sidebar-title {
+  background-color: #0328ff;
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.desc {
+  font-size: 10px;
+}
+
+.mobile-navlist{
   display: none;
 }
+
+.scroller{
+  overflow-y: scroll;
+}
+
+	.menu-open{
+	  display: flex;
+	}
+	
+	
 
 @media (max-width: 1535px){
 		header{
@@ -268,75 +311,113 @@ display: none;
 
 @media (max-width: 700px){
 
-	.hero{
-		flex-direction: column;
-	}
 	
-	#menu-icon{
-		display: block;
-	}
-	.navlist{
-		position: absolute;
-		top: 100%;
-		right: -100%;
-		width: 300px;
-		background: #06c46f;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		padding: 5px 5px;
-		margin: 0px;
-		transition: all .55s ease;
-		border-bottom-left-radius: 10px;
-	}
-	
-	
+/* General mobile navlist styles */
+.mobile-navlist {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  flex-direction: column; /* Keep items in a column */
+}
 
-	.navlist a{
-		display: block;
-		margin: 5px 0;
-		margin-left: 0;
-		background: transparent;
-	}
+.mobile-navlist li {
+  margin: 5px 0; /* Add spacing between main list items */
+  align-content: center;
+}
 
-	.navlist-open{
-		right: 0;
-	}
+.mobile-navlist li a {
+  margin: 0 5px; /* Reduced spacing between items */
   
-
-	
-	.community-drop li{
-  display: block;
+  width: 100%; /* Full width to align center */
+  align-content: center;
 }
 
-.community-drop{
-  display: none;
+.mobile-navlist a {
+  background: transparent;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+  padding: 5px 0; /* More padding to increase space */
+  transition: color 0.55s ease;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+}
+
+.mobile-navlist a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 90%;
+  height: 5px;
+  background-color: #0328ff;
+  border-radius: 5px;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.55s ease;
+}
+
+.mobile-navlist a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Community Dropdown styles */
+.mob-community-drop {
+  display: none; /* Hide the dropdown items initially */
+  position: relative; /* Keep position relative for consistent alignment */
+  z-index: 100000; /* Ensure they appear above other elements */
+  
+  margin-top: 5px; /* Add spacing above the dropdown items */
+  background: #f9f9f9; /* Light background for dropdown for better visibility */
+  border-radius: 4px; /* Rounded corners for dropdown items */
+}
+
+.mob-community-drop-parent {
+  position: relative; /* Make parent relative for child positioning */
+}
+
+.mob-community-drop-parent:hover .mob-community-drop {
+  display: block; /* Show the dropdown items when hovering over the parent */
+}
+
+.mob-community-drop-button {
+  display: inline-block; /* Display the button inline */
+  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+  margin-bottom: 5px; /* Add more spacing between the button and dropdown items */
   
 }
 
-.navlist li .community-drop-button{
-  display: none;
+/* More Dropdown styles */
+.mob-more-drop {
+  display: none; /* Hide the dropdown items initially */
+  position: relative; /* Keep position relative for consistent alignment */
+  z-index: 100000; /* Ensure they appear above other elements */
+  margin-top: 5px; /* Add spacing above the dropdown items */
+  background: #f9f9f9; /* Light background for dropdown for better visibility */
+  border-radius: 4px; /* Rounded corners for dropdown items */
 }
 
-.more-drop li{
-  display: block;
+.mob-more-drop-parent {
+  position: relative; /* Make parent relative for child positioning */
 }
 
-.more-drop{
-  display: none;
+.mob-more-drop-parent:hover .mob-more-drop {
+  display: block; /* Show the dropdown items when hovering over the parent */
 }
 
-.navlist li:hover .more-drop{
-  display: none;
-}
-
-.navlist li .more-drop-button{
-  display: none;
-}
-.mobile-button{
-  display: block;
-}
-	
+.mob-more-drop-button {
+  display: inline-block; /* Display the button inline */
+  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+  margin-bottom: 5px; /* Add more spacing between the button and dropdown items */
+  
 }
 @media (max-width: 680px){
 
@@ -355,7 +436,7 @@ display: none;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		padding: 5px 5px;
+		padding: 2px 2px;
 		transition: all .55s ease;
 		border-bottom-left-radius: 10px;
 	}
