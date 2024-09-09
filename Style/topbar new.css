@@ -238,8 +238,10 @@ img {
 }
 
 .menu {
-  margin-top: 100px;
+  
   height: 100%;
+  left: 0;
+  top: 100px;
   width: 150px;
   z-index: 1001;
   background-color: #06c46f;
@@ -271,6 +273,8 @@ img {
 	.menu-open{
 	  display: flex;
 	}
+	
+	
 	
 	
 
