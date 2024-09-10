@@ -410,28 +410,28 @@ img {
   align-content: center;
 }
 
-.mobile-navlist li a {
-  margin: 0 5px; /* Reduced spacing between items */
+
+#navh,
+#navb {
+  background: transparent; 
+  color: black; 
+  font-size: 15px; 
+  font-weight: 600; 
+  position: relative; 
+  padding: 10px 0; 
+  margin: 0; 
+  transition: color 0.55s ease; 
+  text-decoration: none; 
+  text-align: center; 
   
-  width: 100%; /* Full width to align center */
-  align-content: center;
+  width: 100%; 
 }
 
-.mobile-navlist a {
-  background: transparent;
-  color: black;
-  font-size: 15px;
-  font-weight: 600;
-  position: relative;
-  padding: 5px 0; /* More padding to increase space */
-  transition: color 0.55s ease;
-  text-decoration: none;
-  text-align: center;
-  
-  width: 100%;
+#navb {
+  display: block;
 }
-
-.mobile-navlist a::after {
+#navh::after,
+#navb::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -443,8 +443,8 @@ img {
   transform: translateX(-50%) scaleX(0);
   transition: transform 0.55s ease;
 }
-
-.mobile-navlist a:hover::after {
+#navh:hover::after,
+#navb:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
@@ -461,18 +461,14 @@ img {
 
 .mob-community-drop-parent {
   position: relative; /* Make parent relative for child positioning */
+  
 }
 
 .mob-community-drop-parent:hover .mob-community-drop {
   display: block; /* Show the dropdown items when hovering over the parent */
 }
 
-.mob-community-drop-button {
-  display: inline-block; /* Display the button inline */
-  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
-  margin-bottom: 5px; /* Add more spacing between the button and dropdown items */
-  
-}
+
 
 /* More Dropdown styles */
 .mob-more-drop {
@@ -492,12 +488,7 @@ img {
   display: block; /* Show the dropdown items when hovering over the parent */
 }
 
-.mob-more-drop-button {
-  display: inline-block; /* Display the button inline */
-  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
-  margin-bottom: 5px; /* Add more spacing between the button and dropdown items */
-  
-}
+
 @media (max-width: 680px){
 
 
