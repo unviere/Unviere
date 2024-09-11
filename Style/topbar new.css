@@ -246,7 +246,8 @@ img {
 }
 
 .menu {
-  
+  border-left-style: solid;
+  border-left-color: #20B2AA;
   height: 100%;
   left: 0;
   top: 100px;
