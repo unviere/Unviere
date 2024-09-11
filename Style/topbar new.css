@@ -286,10 +286,12 @@ img {
 
 .sidebar-title #pinned {
   display: none;
+  color: #06c46f;
 }
 
 .sidebar-title #unpinned {
   display: block;
+  color: #1B1F3B;
 }
 
 #check:checked ~ .sidebar-title #pinned{
