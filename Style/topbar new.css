@@ -264,25 +264,41 @@ img {
   font-size: 20px;
   font-weight: 600;
   color: #1B1F3B;
+  display: flex;
 }
 
 #check {
   display: none;
-  z-index: 8000;
 }
 
- #toggle{
+ #pinned,
+ #unpinned{
   cursor: pointer;
   
-  font-size: 30px;
+  font-size: 20px;
   
   color: black;
   padding: 6px 6px;
   border-radius: 50px;
   z-index: 800;
   transition: all .5s;
-  opacity: 100;
   
+}
+
+#pinned {
+  display: none;
+}
+
+#unpinned {
+  display: block;
+}
+
+#check:checked ~ #pinned{
+  display: block;
+}
+
+#check:checked ~ #unpinned{
+  display: none;
 }
 
 #check:checked ~ section{
