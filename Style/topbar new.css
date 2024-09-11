@@ -5,6 +5,14 @@
   list-style: none;
 }
 
+hr{
+  margin-left: 5px;
+  width: 90%;
+  height: 0.1px;
+  color: #20B2AA;
+  border-style: solid
+}
+
 .desktop{
   display: flex;
   flex-direction: column;
@@ -81,7 +89,7 @@ img {
 
 	
   
-  color: #0328ff;
+  color: #20B2AA;
     font-size: 35px;
   cursor: pointer;
   display: flex;
@@ -142,7 +150,7 @@ img {
   left: 50%; /* Center it horizontally */
   width: 100%; /* Width of the underline */
   height: 5px; /* Height of the underline */
-  background-color: #0328ff; /* Color of the underline */
+  background-color: #1B1F3B; /* Color of the underline */
   border-radius: 5px; /* Rounded corners */
   transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
   transition: transform 0.55s ease; /* Smooth transition for hover effect */
@@ -154,7 +162,7 @@ img {
 
  
 #menu-icon {
-  color: #0328ff;
+  color: #1B1F3B;
   font-size: 35px;
   cursor: pointer;
   display: flex;
@@ -163,7 +171,7 @@ img {
 .logos{
   display: flex;
   text-decoration: none;
-  color: #0328ff;
+  color: #1B1F3B;
   font-size: 35;
 }
 
@@ -250,14 +258,42 @@ img {
   flex-direction: column;
 }
 .sidebar-title {
-  background-color: #0328ff;
+  background-color: #20B2AA;
   width: 100%;
   height: 30px;
   font-size: 20px;
   font-weight: 600;
-  color: white;
+  color: #1B1F3B;
 }
 
+#check {
+  display: none;
+  z-index: 8000;
+}
+
+ #toggle{
+  cursor: pointer;
+  
+  font-size: 30px;
+  
+  color: black;
+  padding: 6px 6px;
+  border-radius: 50px;
+  z-index: 800;
+  transition: all .5s;
+  opacity: 100;
+  
+}
+
+#check:checked ~ section{
+  margin-left: 150px;
+  
+}
+
+#check:checked ~ #menu-icon{
+display: none;
+  
+}
 .desc {
   font-size: 10px;
 }
@@ -276,16 +312,12 @@ img {
   width: 100%;
 }
 
-	.menu-open{
-	  display: flex;
-	}
-	
+
 .sidebar-header{
-    font-size: 22px;
-  background: #0328ff;
-  color: white;
-  border-top: 1px solid rgba(255,255,255,1);
-  border-bottom: 1px solid rgba(255,255,255,1);
+    font-size: 10px;
+  
+  color: black;
+  
 
 }
 	
@@ -296,10 +328,10 @@ img {
   font-weight: 600; 
   position: relative; 
   padding: 10px 0; 
-  margin: 0; 
+  margin-left: 10px; 
   transition: color 0.55s ease; 
   text-decoration: none; 
-  text-align: center; 
+  text-align: left; 
   display: block; 
   width: 100%; 
 }
@@ -307,18 +339,19 @@ img {
 .navigate::after {
   content: ''; 
   position: absolute; 
-  bottom: 0; 
-  left: 50%; 
-  width: 90%; 
-  height: 5px; 
-  background-color: #0328ff; 
+  left: 1px;
+  top: 50%;
+  height: 90%;
+  width: 5px;
+  margin-left: -10px;
+  background-color:  #1B1F3B; 
   border-radius: 5px; 
-  transform: translateX(-50%) scaleX(0); 
+  transform: translateY(-50%) scaleY(0); 
   transition: transform 0.55s ease;
 }
 
 .navigate:hover::after {
-  transform: translateX(-50%) scaleX(1); /* Scale to full width on hover */
+  transform: translateY(-50%) scaleY(1); /* Scale to full width on hover */
 }
 
 .tabs-navigation {
@@ -340,13 +373,13 @@ img {
 
 .tabs-navigation:hover {
   
-  border-bottom: 2px solid #0328ff;
+  border-bottom: 2px solid #1B1F3B;
   
 }
 
 .tabs-navigation.active {
   
-  border-bottom: 2px solid #0328ff;
+  border-bottom: 2px solid #1B1F3B;
   
 }
 
@@ -390,7 +423,28 @@ img {
 
 @media (max-width: 700px){
 
-	
+.home{
+  width: 50px;
+  height: 60%;
+  overflow: hidden;
+}
+
+	header {
+  
+  
+  height: 50px;
+}
+
+.up {
+  height: 100%;
+  
+}
+
+.menu {
+  
+
+  top: 50px;
+}
 /* General mobile navlist styles */
 .mobile-navlist {
   display: flex;
@@ -424,12 +478,12 @@ img {
   font-weight: 600; 
   position: relative; 
   padding: 10px 0; 
-  margin: 0; 
+  margin-left: 10px; 
   transition: color 0.55s ease; 
   text-decoration: none; 
-  text-align: center; 
+  text-align: left; 
   
-  width: 100%; 
+  height: 100%; 
 }
 
 #navb {
@@ -439,18 +493,19 @@ img {
 #navb::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 90%;
-  height: 5px;
-  background-color: #0328ff;
+  left: 1px;
+  top: 50%;
+  height: 90%;
+  width: 5px;
+  margin-left: -10px;
+  background-color:  #1B1F3B;
   border-radius: 5px;
-  transform: translateX(-50%) scaleX(0);
+  transform: translateY(-50%) scaleY(0);
   transition: transform 0.55s ease;
 }
 #navh:hover::after,
 #navb:hover::after {
-  transform: translateX(-50%) scaleX(1);
+  transform: translateY(-50%) scaleY(1);
 }
 
 /* Community Dropdown styles */
