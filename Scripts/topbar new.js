@@ -52,6 +52,7 @@ function initializeMenu() {
   // Attach the event listener for the hamburger menu
   const menu = document.querySelector('#menu-icon');
   const menuf = document.querySelector('.menu');
+  const menupin = document.querySelector(".sidebar-toggle");
 
   // Log to check if menu elements are found
   console.log('Menu icon:', menu);
@@ -64,12 +65,14 @@ function initializeMenu() {
 
       // Get the computed display style of the menu element
       const currentDisplay = window.getComputedStyle(menuf).display;
-
+const currentpin = window.getComputedStyle(menupin).display;
       // Toggle display property between 'none' and 'flex'
       if (currentDisplay === 'none') {
         menuf.style.display = 'flex';
+        menupin.style.display = "flex";
       } else {
         menuf.style.display = 'none';
+        menupin.style.display = "none";
       }
     };
 
