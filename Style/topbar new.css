@@ -283,22 +283,22 @@ img {
   margin-left: 120px;
   font-size: 20px;
   position: fixed;
-  color: black;
   padding: 6px 6px;
   border-radius: 50px;
-  z-index: 999999999999;
   transition: all .5s;
   
 }
 
 .sidebar-toggle #pinned {
   display: none;
-  color: #06c46f;
+  color: #1B1F3B;
+  z-index: 90000;
 }
 
 .sidebar-toggle #unpinned {
   display: block;
   color: #1B1F3B;
+  z-index: 90000;
 }
 
 #check:checked ~ .sidebar-toggle #pinned{
@@ -309,7 +309,7 @@ img {
   display: none;
 }
 
-#check:checked ~ body .section{
+#check:checked ~ #sec{
   margin-left: 150px;
   
 }
@@ -468,6 +468,13 @@ display: none;
   
 
   top: 50px;
+}
+
+.sidebar-toggle #pinned, .sidebar-toggle #unpinned{
+  
+  margin-top: 50px;
+  margin-left: 120px;
+  
 }
 /* General mobile navlist styles */
 .mobile-navlist {
