@@ -271,8 +271,7 @@ img {
   display: none;
 }
 
- #pinned,
- #unpinned{
+.sidebar-title #pinned, .sidebar-title #unpinned{
   cursor: pointer;
   
   font-size: 20px;
@@ -285,19 +284,19 @@ img {
   
 }
 
-#pinned {
+.sidebar-title #pinned {
   display: none;
 }
 
-#unpinned {
+.sidebar-title #unpinned {
   display: block;
 }
 
-#check:checked ~ #pinned{
+#check:checked ~ .sidebar-title #pinned{
   display: block;
 }
 
-#check:checked ~ #unpinned{
+#check:checked ~ .sidebar-title #unpinned{
   display: none;
 }
 
