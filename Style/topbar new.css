@@ -309,7 +309,7 @@ img {
   display: none;
 }
 
-#check:checked ~ #sec{
+#check:checked ~ section {
   margin-left: 150px;
   margin-right: 0px;
   
