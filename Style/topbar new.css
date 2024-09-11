@@ -311,6 +311,7 @@ img {
 
 #check:checked ~ #sec{
   margin-left: 150px;
+  margin-right: 0px;
   
 }
 
