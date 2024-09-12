@@ -82,6 +82,7 @@ body.light-mode .community-drop{
   text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  box-shadow: none;
 }
 
 
@@ -90,6 +91,7 @@ body.light-mode .more-drop{
   background: #06c46f;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  box-shadow: none;
 }
 
 

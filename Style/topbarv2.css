@@ -196,6 +196,7 @@ img {
   text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  box-shadow: 5px 5px 9px -4px grey, -5px 5px 9px -4px grey;
 }
 
 .community-drop li{
@@ -230,6 +231,7 @@ img {
   text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  box-shadow: 5px 5px 9px -4px grey, -5px 5px 9px -4px grey;
 }
 
 .more-drop li{
@@ -253,12 +255,12 @@ img {
   left: 0;
   top: 100px;
   width: 150px;
-  z-index: 1001;
+  z-index: 1000;
   background-color: whitesmoke;
   position: fixed;
   display: none;
   flex-direction: column;
-  box-shadow: 1px 1px 9px grey;
+  box-shadow: 5px 0 5px -5px grey;
 }
 .sidebar-title {
   background-color: transparent;
