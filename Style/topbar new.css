@@ -248,6 +248,7 @@ img {
 .menu {
   border-right-style: solid;
   border-right-color: #20B2AA;
+  border-right-width: 2px;
   height: 100%;
   left: 0;
   top: 100px;
@@ -281,9 +282,9 @@ img {
   cursor: pointer;
   margin-top: 100px;
   margin-left: 120px;
-  font-size: 20px;
+  font-size: 17px;
   position: fixed;
-  padding: 6px 6px;
+  
   border-radius: 50px;
   transition: all .5s;
   
@@ -312,6 +313,7 @@ img {
 #check:checked ~ section {
   margin-left: 150px;
   margin-right: 0px;
+  width: 80%;
   
 }
 
@@ -447,7 +449,12 @@ display: none;
 }
 
 @media (max-width: 700px){
-
+#check:checked ~ section {
+  margin-left: 150px;
+  margin-right: 0px;
+  width: 60%;
+  
+}
 .home{
   width: 50px;
   height: 60%;
