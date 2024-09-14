@@ -23,7 +23,7 @@
 
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
- background: white;
+ background: whitesmoke;
 }
 
 img {
@@ -44,15 +44,15 @@ img {
   overflow: hidden;
   padding: 10px 0;
   width: 100%;
-  background: whitesmoke;
+  background: transparent;
 }
 
-.games h1{
+.sec-header{
   color: black;
   font-size: 50px;
   
 }
-.games p{
+.sec-desc{
   color: black;
   font-size: 30px;
 }
@@ -85,23 +85,12 @@ img {
   border-radius: 5px;
 }
 
-.all-games h1{
-  font-size: 25;
-  height: 25px;
-  width: 300px;
-}
 
-.all-games p{
-  white-space: normal;
-  font-size: 22px;
-  height: 500px;
-  width: 210px;
-}
 .all-games i{
   font-size: 80px;
   margin-left: 60px;
   margin-bottom: 20px;
-  color: #0328ff;
+  color:  #1B1F3B;
 }
 
 /*@keyframes slide{
@@ -115,8 +104,8 @@ img {
 }*/
 
 .games-container{
-  overflow: hidden;
-  padding: 20px 0;
+  
+  padding: 20px;
   white-space: nowrap;
   width: 100%;
   position: relative;
@@ -134,12 +123,12 @@ img {
 
 .games-container:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255,255,255,0), whitesmoke);
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
 }
 
 .games-container:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0), whitesmoke);
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
 }
 
 .game-holder{
@@ -162,29 +151,31 @@ img {
 }
 
 .game-inf-scrolling a{
-  background-color: transparent;
+  background-color: whitesmoke;
   height: 500px;
   width: 250px;
   color: black;
   text-decoration: none;
   border-radius: 10px;
   display: inline-block;
-  margin-right: 10px;
-  border-color: #06c46f;
-  border-width: 2px;
-  border-style: solid;
-  overflow: hidden;
   
+  border-color: transparent;
+  border-width: 0px;
+  border-style: none;
+  padding: 5px;
   align-items: center;
   align-content: center;
   align-self: center;
+    margin: 10px;
+  box-shadow: 
+  1px 1px 9px gray;
 }
 
 .game-inf-scrolling a:hover{
   color: black;
   text-decoration: none;
   border-radius: 5px;
-border-color: #08f78b;
+background: whitesmoke;
   
 }
 
@@ -199,11 +190,11 @@ border-color: #08f78b;
 
 
 .game-info {
-  height: auto;
+  height: 500px;
   width: 250px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -213,20 +204,21 @@ border-color: #08f78b;
   font-weight: 600;
   width: 100%;
   
-  height: 60px;
-  display: block;
+  height: 70px;
+  min-height: 70px;
   white-space: normal;
 }
 
 
 .game-desc {
   font-size: 15px;
-  color: black;
+  
+  width: 100%;
+  
+  height: 172px;
+  min-height: 172px;
   white-space: normal;
-  width: 250px;
   overflow: hidden;
-  max-height: 140px;
-text-overflow: ellipsis;
 }
 
 .stats-game {
@@ -240,7 +232,7 @@ text-overflow: ellipsis;
   width: 250px;
   white-space: normal;
   margin: 0 2 2px;
-  color: #0328ff;
+  color: #06c46f;
 }
 .section {
   padding: 0.19%;
@@ -292,11 +284,11 @@ hr{
     width: 100%;
   }
 
-  .games h1 {
+  .sec-header {
     font-size: 25px;
   }
 
-  .games p {
+  .sec-desc {
     font-size: 15px;
   }
 
@@ -337,7 +329,7 @@ hr{
     max-width: 150px;
     border-radius: 10px;
     border-width: 1px;
-    margin: 0;
+    
   }
 
   .game-inf-scrolling img {
@@ -361,18 +353,16 @@ hr{
   }
 
   .game-title{
-  font-size: 25px;
-  height: auto;
+  font-size: 15px;
+  height: 40px;
   min-height: 40px;
   
 }
 
   .game-desc {
-    font-size: 10px;
-    width: 100%;
-    max-width: 150px;
-    height: 100%;
-    max-height: 70px;
+    font-size: 5px;
+  height: 75px;
+  min-height: 75px;
   }
 
   .stats-game h1 {
@@ -468,161 +458,6 @@ body.dark-mode .section{
 }
 
 		/* light mode unviere*/
-		body.light-mode {
-		  background: whitesmoke;
-		}
-		body.light-mode .game-jams,
-		body.light-mode .head,
-		body.light-mode .unviere,
-		body.light-mode .test {
-  background: whitesmoke;
-}
-
-body.light-mode .games h1{
-  color: black;
-}
-body.light-mode .games p{
-  color: black;
-}
-
-
-body.light-mode .all-games{
-  background-color: #06c46f;
-  color: black;
-}
-
-body.light-mode .all-games:hover{
-  background-color: #08f78b;
-}
-
-
-body.light-mode .all-games i{
-  color: #0328ff;
-}
-
-
-
-body.light-mode .games-container:before {
-  background: linear-gradient(to left, rgba(255,255,255,0), whitesmoke);
-}
-
-body.light-mode .games-container:after {
-  background: linear-gradient(to right, rgba(255,255,255,0), whitesmoke);
-}
-
-
-body.light-mode .game-inf-scrolling a{
-  background-color: transparent;
-  
-  color: black;
-  border-color: #06c46f;
-}
-
-body.light-mode .game-inf-scrolling a:hover{
-  color: black;
-border-color: #08f78b;
-  
-}
-
-
-
-
-body.light-mode .game-info .game-title {
-  color: black;
-  
-  
-}
-
-body.light-mode .game-info .game-desc {
-  color: black;
-}
-
-
-
-body.light-mode .stats-game h1{
-  color: #0328ff;
-}
-
-body.light-mode .section{
-  background: whitesmoke;
-}
-
+		
 		/* light modern y*/
-		body.modern-light {
-		  background: whitesmoke;
-		}
-		body.modern-light .game-jams,
-		body.modern-light .head,
-		body.modern-light .unviere,
-		body.modern-light .test{
-  background: whitesmoke;
-}
-
-body.modern-light .games h1{
-  color: black;
-}
-body.modern-light .games p{
-  color: black;
-}
-
-
-body.modern-light .all-games{
-  background-color: lightgray;
-  color: black;
-}
-
-body.modern-light .all-games:hover{
-  background-color: gray;
-}
-
-
-body.modern-light .all-games i{
-  color: #0328ff;
-}
-
-
-
-body.modern-light .games-container:before {
-  background: linear-gradient(to left, rgba(255,255,255,0), whitesmoke);
-}
-
-body.modern-light .games-container:after {
-  background: linear-gradient(to right, rgba(255,255,255,0), whitesmoke);
-}
-
-
-body.modern-light .game-inf-scrolling a{
-  background-color: transparent;
-  
-  color: black;
-  border-color: #06c46f;
-}
-
-body.modern-light .game-inf-scrolling a:hover{
-  color: black;
-border-color: #08f78b;
-  
-}
-
-
-
-
-body.modern-light .game-info .game-title {
-  color: black;
-  
-  
-}
-
-body.modern-light .game-info .game-desc {
-  color: black;
-}
-
-
-
-body.modern-light .stats-game h1{
-  color: #0328ff;
-}
-
-body.modern-light .section {
-  background: whitesmoke;
-}
+		
