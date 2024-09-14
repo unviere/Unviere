@@ -211,7 +211,7 @@ background: whitesmoke;
 
 
 .game-desc {
-  font-size: 15px;
+  font-size: 20px;
   
   width: 100%;
   
@@ -360,7 +360,7 @@ hr{
 }
 
   .game-desc {
-    font-size: 5px;
+    font-size: 15px;
   height: 75px;
   min-height: 75px;
   }
