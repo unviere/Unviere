@@ -196,7 +196,7 @@ img {
   text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: 5px 5px 9px -4px grey, -5px 5px 9px -4px grey;
+  box-shadow: 1px 10px 12px -3px grey, -1px 12px 10px -3px grey;
 }
 
 .community-drop li{
@@ -231,7 +231,7 @@ img {
   text-align: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  box-shadow: 5px 5px 9px -4px grey, -5px 5px 9px -4px grey;
+  box-shadow: 1px 10px 12px -3px grey, -1px 12px 10px -3px grey;
 }
 
 .more-drop li{

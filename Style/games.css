@@ -144,8 +144,8 @@ img {
 
 .game-holder{
   display: flex;
-  flex-direction: row;
-  white-space: nowrap;
+  
+  
 }
 
 .game-inf-scrolling{
@@ -174,7 +174,7 @@ img {
   border-width: 2px;
   border-style: solid;
   overflow: hidden;
-  margin: 5px 5px 5px;
+  
   align-items: center;
   align-content: center;
   align-self: center;
@@ -197,14 +197,6 @@ border-color: #08f78b;
   margin-left: 20px;
 }
 
-.game-holder{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  margin-top: 10px;
-  padding: 10px;
-}
 
 .game-info {
   height: auto;
@@ -216,20 +208,19 @@ border-color: #08f78b;
   padding-right: 5px;
 }
 
-.game-info .game-title {
-  font-size: 25px;
+.game-title{
+  font-size: 30px;
   font-weight: 600;
-  color: black;
-  height: 100%;
-  max-height:150px;
-  width: 250px;
+  width: 100%;
+  
+  height: 60px;
+  display: block;
   white-space: normal;
-  
-  
 }
 
-.game-info .game-desc {
-  font-size: 20px;
+
+.game-desc {
+  font-size: 15px;
   color: black;
   white-space: normal;
   width: 250px;
@@ -295,139 +286,100 @@ hr{
 	
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
+  .game-jams {
+    padding: 10px 0;
+    width: 100%;
+  }
 
+  .games h1 {
+    font-size: 25px;
+  }
 
+  .games p {
+    font-size: 15px;
+  }
 
-.game-jams {
-  padding: 10px 0;
-  width: 100%;
-}
+  .game-list {
+    padding: 5px;
+  }
 
-.games h1 {
+  .all-games {
+    height: 250px;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 2px;
+    margin-top: 9px;
+  }
+
+  .all-games i {
+    font-size: 40px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+
+  .games-container {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .games-container:before,
+  .games-container:after {
+    top: 0;
+    width: 15px;
+  }
+
+  .game-inf-scrolling a {
+    height: 250px;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+    border-width: 1px;
+    margin: 0;
+  }
+
+  .game-inf-scrolling img {
+    height: auto;
+    width: 100%;
+    max-width: 100px;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+
+  .game-holder {
+    margin-top: 1px;
+    padding: 1px;
+    height: 250px;
+    width: 150px;
+  }
+
+  .game-info {
+    height: 100px;
+    width: 150px;
+  }
+
+  .game-title{
   font-size: 25px;
-}
-
-.games p {
-  font-size: 15px;
-}
-
-.game-list {
-  padding: 5px;
-}
-
-.all-games {
-  height: 250px;
-  width: 100%;
-  max-width: 150px;
-  border-radius: 10px;
-  margin: 5px;
-  padding: 2px;
-  margin-top:9px;
-}
-
-.all-games i{
-  font-size: 40px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-}
-
-.all-games:hover {
-  border-radius: 5px;
-}
-
-.all-games h1 {
-  font-size: 15px;
-  height: 15px;
-  width: 100%;
-  max-width: 350px;
-}
-
-.all-games p {
-  font-size: 12px;
-  height: 90px;
-  width: 100%;
-  max-width: 300px;
-}
-
-.games-container {
-  padding: 10px 0;
-  width: 100%;
-}
-
-.games-container:before,
-.games-container:after {
-  top: 0;
-  width: 15px;
-  height: 100%;
-}
-
-.games-container:before {
-  left: 0;
-}
-
-.games-container:after {
-  right: 0;
-}
-
-.game-inf-scrolling a {
-  height: 250px;
-  width: 100%;
-  max-width: 150px;
-  border-radius: 10px;
-  border-width: 1px;
-  margin: 0;
-  
-}
-
-.game-inf-scrolling a:hover {
-  border-radius: 5px;
-}
-
-.game-inf-scrolling img {
   height: auto;
-  width: 100%;
-  max-width: 80px;
-  border-radius: 10px;
- margin-left: 27px;
-}
-
-.game-holder {
-  margin-top: 10px;
-  padding: 10px;
-  height: 250;
-  width: 150;
-}
-
-.game-info {
-  height: auto;
-  width: 150px;
+  min-height: 40px;
   
-  padding: 0 5px 5px;
 }
 
-.game-info .game-title {
-  font-size: 10px; /* Corrected font size for visibility */
-  font-weight: 600;
-  height: 50px;
-  width: 140px;
-}
+  .game-desc {
+    font-size: 10px;
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    max-height: 70px;
+  }
 
-.game-info .game-desc {
-  font-size: 10px; /* Corrected font size for visibility */
-  width: 100%; /* Set width to 100% for responsiveness */
-  max-width: 150px;
-  height: 100%;
-  max-height: 70px;
-}
-.stats-game h1 {
-  font-size: 10px; /* Corrected font size for consistency */
-  max-height: 10px;
-  width: 100%; /* Set width to 100% for responsiveness */
-  max-width: 150px;
-  margin: 0 2px 2px;
-}
-  
+  .stats-game h1 {
+    font-size: 10px;
+    width: 100%;
+    max-width: 150px;
+  }
 }
 
 @media (max-width: 680px){
