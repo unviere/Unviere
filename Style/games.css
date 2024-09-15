@@ -360,9 +360,9 @@ hr{
 }
 
   .game-desc {
-    font-size: 15px;
-  height: 75px;
-  min-height: 75px;
+    font-size: 10px;
+  height: 72px;
+  min-height: 72px;
   }
 
   .stats-game h1 {
