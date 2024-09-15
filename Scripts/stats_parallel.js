@@ -1,6 +1,6 @@
 async function fetchAndDisplayStats() {
   try {
-    const response = await fetch(`https://games.roblox.com/v1/games?universeIds=4922186765`);
+    const response = await fetch(`https://games.roproxy.com/v1/games?universeIds=4922186765`);
     if (!response.ok) {
       throw new Error(`Failed to fetch data. Status: ${response.status} - ${response.statusText}`);
     }

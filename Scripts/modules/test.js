@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const gameClone = document.importNode(gameTemplate, true);
 
           gameClone.querySelector('.game-title').textContent = game.name || 'No title available';
-          gameClone.querySelector('.icon').src = `https://thumbnails.roproxy.com/Thumbs/Asset.ashx?width=110&height=110&assetId=${game.rootPlaceId}`;
+          gameClone.querySelector('.icon').src = `https://thumbnails.roblox.com/v1/games/icons?universeIds=${universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
           gameClone.querySelector('.game-desc').textContent = game.description || 'No description available';
           gameClone.querySelector('.active').textContent = `active: ${game.playing || 'N/A'}`;
           gameClone.querySelector('.owner').textContent = `owner: ${game.creator && game.creator.name ? game.creator.name : 'N/A'}`;
