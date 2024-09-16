@@ -47,8 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
               // Add click event listener to the game element
              gameClone.addEventListener('click', () => {
-  const customPageUrl = `../../games/game.html?gameName=${encodeURIComponent(game.name)}`;
-  window.location.href = customPageUrl;
+  console.log('Game clicked:', game.name);
+  const customPageUrl = `/games/game.html?gameName=${encodeURIComponent(game.name)}`;
+window.location.href = customPageUrl;
 });
               // Append the clone to the container
               gameContainer.appendChild(gameClone);
