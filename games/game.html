@@ -1,22 +1,84 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Details</title>
 </head>
-
 <body>
-<div class="game-details">
-  <h1 class="game-title"></h1>
-  <img class="game-icon" alt="Game Icon">
-  <p class="game-description"></p>
-  <p class="active-players"></p>
-  <p class="game-likes"></p>
-</div>
+  <h1 id="gameTitle">Game Title</h1>
+  <img id="gameIcon" src="" alt="Game Icon">
+  <p id="gameDesc">Game Description</p>
+  <p id="gameActive">Active Players</p>
+  <p id="gameOwner">Owner</p>
+  <p id="gameLikes">Likes</p>
 
- <script src = "../../games/scripts/data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const gameName = urlParams.get('gameName');
+
+      if (gameName) {
+        // Static mapping of game names to universe IDs and other details
+        const gameDetails = {
+          'Game Name 1': { universeId: '4922186765' },
+          'Another Game': { universeId: 'anotherUniverseId' },
+          'Yet Another Game': { universeId: 'anotherUniverseId2' }
+        };
+
+        const game = gameDetails[gameName];
+
+        if (game) {
+          const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
+
+          fetch(apiUrl)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+              }
+              return response.json();
+            })
+            .then(data => {
+              if (data.data && Array.isArray(data.data) && data.data.length > 0) {
+                const gameData = data.data[0];
+                document.getElementById('gameTitle').textContent = gameName || 'No title available';
+                document.getElementById('gameDesc').textContent = 'Description not needed'; // Static text
+                document.getElementById('gameActive').textContent = `Active: ${gameData.playing || 'N/A'}`;
+                document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
+                document.getElementById('gameLikes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
+
+                // Fetch and display game icon
+                const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${game.universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
+                fetch(imgUrl)
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error(`Network response was not ok: ${response.statusText}`);
+                    }
+                    return response.json();
+                  })
+                  .then(data => {
+                    if (data && data.data && data.data[0] && data.data[0].imageUrl) {
+                      const imageUrl = data.data[0].imageUrl;
+                      document.getElementById('gameIcon').src = imageUrl;
+                    } else {
+                      console.error('Invalid image data received from API');
+                    }
+                  })
+                  .catch(error => {
+                    console.error('Error fetching the thumbnail:', error);
+                  });
+              }
+            })
+            .catch(error => {
+              console.error('Error fetching the game data:', error);
+            });
+        } else {
+          console.error('Game details not found for name:', gameName);
+        }
+      } else {
+        console.error('Game name not found in URL parameters.');
+      }
+    });
+  </script>
 </body>
-
 </html>
