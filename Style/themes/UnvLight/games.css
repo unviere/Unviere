@@ -117,7 +117,9 @@ body.light-mode .game-inf-scrolling img{
 
 
 
-
+body.light-mode .owner{
+  color: #1B1F3B;
+}
 
 
 body.light-mode .stats-game h1{

@@ -60,8 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
           gameClone.querySelector('.game-title').textContent = game.name || 'No title available';
           gameClone.querySelector('.game-desc').textContent = game.description || 'No description available';
           gameClone.querySelector('.active').textContent = `active: ${game.playing || 'N/A'}`;
-          gameClone.querySelector('.owner').textContent = `owner: ${game.creator && game.creator.name ? game.creator.name : 'N/A'}`;
-          gameClone.querySelector('.likes').textContent = `likes: ${game.likes || 'N/A'}`;
+          gameClone.querySelector('.visits').textContent = `visits: ${game.visits || 'N/A'}`;
+          gameClone.querySelector('.owner').textContent = `by: ${game.creator && game.creator.name ? game.creator.name : 'N/A'}`;
+          gameClone.querySelector('.likes').textContent = ` ${game.likes || 'N/A'}`;
 
         });
       })
