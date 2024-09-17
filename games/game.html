@@ -15,10 +15,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-  const gameName = window.location.hash.substring(1); // Get game name from the fragment
-
-  
-});
+      const gameName = window.location.hash.substring(1); // Get game name from the fragment
 
       if (gameName) {
         // Static mapping of game names to universe IDs and other details
@@ -77,8 +74,10 @@
         } else {
           console.error('Game details not found for name:', gameName);
         }
-     
-    };
+      } else {
+        console.error('No game name found in the URL');
+      }
+    });
   </script>
 </body>
 </html>
