@@ -46,14 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
               }
 
               // Add click event listener to the game element
-             gameClone.addEventListener('click', () => {
-  console.log('Game clicked:', game.name);
-
-  // Correctly format the URL with the query parameter
-  const customPageUrl = `https://unviere.github.io/Unviere/games/game.html?gameName=${encodeURIComponent(game.name)}`;
-
-  // Navigate to the constructed URL
-  window.location.href = customPageUrl;
+       gameClone.addEventListener('click', () => {
+    console.log('Game clicked:', game.name);
+  
+    // Use fragment identifier instead of query parameters
+    const customPageUrl = `https://unviere.github.io/Unviere/games/game.html#${encodeURIComponent(game.name)}`;
+  
+    // Navigate to the constructed URL
+    window.location.href = customPageUrl;
+ 
 });
               // Append the clone to the container
               gameContainer.appendChild(gameClone);

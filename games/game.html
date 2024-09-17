@@ -15,8 +15,10 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const gameName = urlParams.get('gameName');
+  const gameName = window.location.hash.substring(1); // Get game name from the fragment
+
+  
+});
 
       if (gameName) {
         // Static mapping of game names to universe IDs and other details
