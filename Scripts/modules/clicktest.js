@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const fetchAndDisplayGame = (game) => {
     const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
-    
+
     fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
@@ -25,9 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         data.data.forEach(gameData => {
+          // Clone the template for each game card
           const gameClone = document.importNode(gameTemplate, true);
 
-          // Fetch game icon (image)
+          // Set the game details from the fetched data
+          gameClone.querySelector('.game-title').textContent = gameData.name || 'No title available';
+          gameClone.querySelector('.game-desc').textContent = gameData.description || 'No description available';
+
+          // Use static text for other details if needed
+          gameClone.querySelector('.active').textContent = `Active: ${gameData.playing || 'N/A'}`;
+          gameClone.querySelector('.owner').textContent = `Owner: ${gameData.creator?.name || 'N/A'}`;
+          gameClone.querySelector('.likes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
+
+          // Construct the custom URL for the game page
+          const customPageUrl = `https://unviere.github.io/Unviere/games/game#${encodeURIComponent(game.name)}`;
+          gameClone.querySelector(".game-card").href = customPageUrl;
+
+          // Fetch game icon (image) dynamically for each game
           const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${game.universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
 
           fetch(imgUrl)
@@ -37,43 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
               }
               return response.json();
             })
-            .then(data => {
-              if (data && data.data && data.data[0] && data.data[0].imageUrl) {
-                const imageUrl = data.data[0].imageUrl;
-                gameClone.querySelector('.icon').src = imageUrl;
+            .then(imageData => {
+              // Check if valid image data is returned
+              if (imageData?.data?.[0]?.imageUrl) {
+                const imageUrl = imageData.data[0].imageUrl;
+                gameClone.querySelector('.icon').src = imageUrl; // Set the image URL in the card
               } else {
                 console.error('Invalid image data received from API');
               }
 
-              // Add click event listener to the game element
-       gameClone.addEventListener('click', () => {
-    if (game && game.name) {
-        console.log('Game clicked:', game.name); // Check if game.name is correct
-        
-        // Construct the URL
-        const customPageUrl = `https://unviere.github.io/Unviere/games/game#${encodeURIComponent(game.name)}`;
-        
-        // Navigate to the constructed URL
-        window.location.href = customPageUrl;
-    } else {
-        console.error('Game object or name is not defined.');
-    }
-});
-              // Append the clone to the container
+              // Append the clone to the container after setting the icon
               gameContainer.appendChild(gameClone);
             })
             .catch(error => {
               console.error('Error fetching the thumbnail:', error);
+              // Use a fallback image if the fetch fails
+              gameClone.querySelector('.icon').src = 'path/to/placeholder-image.png';
+              gameContainer.appendChild(gameClone); // Append the clone even if image fails
             });
-
-          // Set other game details
-          gameClone.querySelector('.game-title').textContent = gameData.name || 'No title available';
-          gameClone.querySelector('.game-desc').textContent = gameData.description || 'No description available';
-
-          // Use static text for other details if needed
-          gameClone.querySelector('.active').textContent = `Active: ${gameData.playing || 'N/A'}`;
-          gameClone.querySelector('.owner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
-          gameClone.querySelector('.likes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
         });
       })
       .catch(error => {
@@ -84,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   };
 
+  // Iterate through each game and display its data
   gamesData.forEach(game => {
     fetchAndDisplayGame(game);
   });
