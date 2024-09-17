@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Static mapping of game names and universe IDs
   const gamesData = [
-    { universeId: '4922186765', name: '123456789/game-name' },
+    { universeId: '4922186765', name: 'game-name', id: '123456789' },
     { universeId: 'anotherUniverseId', name: 'Another Game' },
     { universeId: 'anotherUniverseId2', name: 'Yet Another Game' }
   ];
@@ -38,8 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
           gameClone.querySelector('.likes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
 
           // Construct the custom URL for the game page
-          const customPageUrl = `https://unviere.github.io/Unviere/games/game#${encodeURIComponent(game.name)}`;
-          gameClone.querySelector(".game-card").href = customPageUrl;
+
+const customPageUrl = `https://unviere.github.io/Unviere/games/game#${game.id}/${game.name}`;
+gameClone.querySelector(".game-card").href = customPageUrl;
 
           // Fetch game icon (image) dynamically for each game
           const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${game.universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
