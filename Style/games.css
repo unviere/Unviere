@@ -247,14 +247,16 @@ background: whitesmoke;
 .stats-game #stats-icon{
   font-size: 20px;
   color: #06c46f;
+  display: flex;
 }
 
-.stats-game #stats-icon-inner{
-  display: block;
+.stats-game #stats-icon #stats-icon-inner{
+  display: inline-block;
   position: relative;
+  z-index: 209990;
   color: whitesmoke;
-  right: 0;
-  top: 10px;
+  
+  margin-bottom: 10px;
 }
 .section {
   padding: 0.19%;
@@ -409,9 +411,12 @@ hr{
 }
 
 
-.stats-game #stats-icon-inner {
-  left: 2px;
-  top: 2px;
+.stats-game #stats-icon #stats-icon-inner {
+font-size: 1px!important;
+height: 1px!important;
+    min-height: 1px!important;
+  right: 8;
+  top:5;
 }
 
 }
