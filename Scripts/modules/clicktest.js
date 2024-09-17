@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Static mapping of game names and universe IDs
   const gamesData = [
-    { universeId: '4922186765', name: 'Game Name 1' },
+    { universeId: '4922186765', name: '123456789/game-name' },
     { universeId: 'anotherUniverseId', name: 'Another Game' },
     { universeId: 'anotherUniverseId2', name: 'Yet Another Game' }
   ];
@@ -47,14 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
               // Add click event listener to the game element
        gameClone.addEventListener('click', () => {
-    console.log('Game clicked:', game.name);
-  
-    // Use fragment identifier instead of query parameters
-    const customPageUrl = `https://unviere.github.io/Unviere/games/game.html#${encodeURIComponent(game.name)}`;
-  
-    // Navigate to the constructed URL
-    window.location.href = customPageUrl;
- 
+    if (game && game.name) {
+        console.log('Game clicked:', game.name); // Check if game.name is correct
+        
+        // Construct the URL
+        const customPageUrl = `https://unviere.github.io/Unviere/games/game#${encodeURIComponent(game.name)}`;
+        
+        // Navigate to the constructed URL
+        window.location.href = customPageUrl;
+    } else {
+        console.error('Game object or name is not defined.');
+    }
 });
               // Append the clone to the container
               gameContainer.appendChild(gameClone);
