@@ -224,7 +224,8 @@ background: whitesmoke;
 
 .game-desc {
   font-size: 18px;
-  
+  overflow-y: scroll;
+  scrollbar-width: none;
   width: 100%;
   
   height: 165px;
@@ -394,6 +395,8 @@ hr{
     font-size: 10px;
   height: 69px;
   min-height: 69px;
+  overflow-y: scroll;
+  scrollbar-width: none;
   }
   
   .owner{

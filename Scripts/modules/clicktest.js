@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
           gameClone.querySelector('.game-desc').textContent = gameData.sourceDescription || 'No description available';
 
           // Use static text for other details if needed
-          gameClone.querySelector('.active').textContent = ` ${formatNumber(gameData.playing|| 'N/A')}`;
+          gameClone.querySelector('.active').textContent = ` ${formatNumber(gameData.playing|| '0')}`;
           gameClone.querySelector('.owner').textContent = `by: ${gameData.creator?.name || 'N/A'}`;
           gameClone.querySelector('.likes').textContent = `${formatNumber(gameData.likes|| 'N/A')}`;
           gameClone.querySelector('.visits').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
