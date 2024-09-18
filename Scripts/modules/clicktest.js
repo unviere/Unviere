@@ -29,14 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
           const gameClone = document.importNode(gameTemplate, true);
 
           // Set the game details from the fetched data
-          gameClone.querySelector('.game-title').textContent = gameData.name || 'No title available';
-          gameClone.querySelector('.game-desc').textContent = gameData.description || 'No description available';
+          function formatNumber(num) {
+            if (num >= 1e9) {
+              return (num / 1e9).toFixed(1) + 'b';
+            } else if (num >= 1e6) {
+              return (num / 1e6).toFixed(1) + 'm';
+            } else if (num >= 1e3) {
+              return (num / 1e3).toFixed(1) + 'k';
+            } else {
+              return num;
+            }
+          }
+          gameClone.querySelector('.game-title').textContent = gameData.sourceName || 'No title available';
+          gameClone.querySelector('.game-desc').textContent = gameData.sourceDescription || 'No description available';
 
           // Use static text for other details if needed
-          gameClone.querySelector('.active').textContent = ` ${gameData.playing || 'N/A'}`;
+          gameClone.querySelector('.active').textContent = ` ${formatNumber(gameData.playing|| 'N/A')}`;
           gameClone.querySelector('.owner').textContent = `by: ${gameData.creator?.name || 'N/A'}`;
-          gameClone.querySelector('.likes').textContent = ` ${gameData.likes || 'N/A'}`;
-          gameClone.querySelector('.visits').textContent = ` ${gameData.visits || 'N/A'}`;
+          gameClone.querySelector('.likes').textContent = `${formatNumber(gameData.likes|| 'N/A')}`;
+          gameClone.querySelector('.visits').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
 
           // Construct the custom URL for the game page
 
