@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Static mapping of game names and universe IDs
   const gamesData = [
     { universeId: '4922186765', name: 'game-name', id: '123456789' },
-    { universeId: 'anotherUniverseId', name: 'Another Game' },
-    { universeId: 'anotherUniverseId2', name: 'Yet Another Game' }
+    { universeId: '6449806598', name: 'the-secret-of-puzle-island', id: '116463530852265' },
+    { universeId: '3721966693', name: 'happy-obbies', id: '10135698219' }
   ];
 
   const fetchAndDisplayGame = (game) => {
@@ -33,9 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
           gameClone.querySelector('.game-desc').textContent = gameData.description || 'No description available';
 
           // Use static text for other details if needed
-          gameClone.querySelector('.active').textContent = `Active: ${gameData.playing || 'N/A'}`;
-          gameClone.querySelector('.owner').textContent = `Owner: ${gameData.creator?.name || 'N/A'}`;
-          gameClone.querySelector('.likes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
+          gameClone.querySelector('.active').textContent = ` ${gameData.playing || 'N/A'}`;
+          gameClone.querySelector('.owner').textContent = `by: ${gameData.creator?.name || 'N/A'}`;
+          gameClone.querySelector('.likes').textContent = ` ${gameData.likes || 'N/A'}`;
+          gameClone.querySelector('.visits').textContent = ` ${gameData.visits || 'N/A'}`;
 
           // Construct the custom URL for the game page
 
@@ -43,33 +44,34 @@ const customPageUrl = `https://unviere.github.io/Unviere/games/game#${game.id}/$
 gameClone.querySelector(".game-card").href = customPageUrl;
 
           // Fetch game icon (image) dynamically for each game
-          const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${game.universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
+          const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${game.universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;
 
           fetch(imgUrl)
-            .then(response => {
-              if (!response.ok) {
-                throw new Error(`Network response was not ok: ${response.statusText}`);
-              }
-              return response.json();
-            })
-            .then(imageData => {
-              // Check if valid image data is returned
-              if (imageData?.data?.[0]?.imageUrl) {
-                const imageUrl = imageData.data[0].imageUrl;
-                gameClone.querySelector('.icon').src = imageUrl; // Set the image URL in the card
-              } else {
-                console.error('Invalid image data received from API');
-              }
-
-              // Append the clone to the container after setting the icon
-              gameContainer.appendChild(gameClone);
-            })
-            .catch(error => {
-              console.error('Error fetching the thumbnail:', error);
-              // Use a fallback image if the fetch fails
-              gameClone.querySelector('.icon').src = 'path/to/placeholder-image.png';
-              gameContainer.appendChild(gameClone); // Append the clone even if image fails
-            });
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            return response.json();
+          })
+          .then(imageData => {
+            // Check if valid image data is returned
+            if (imageData?.data?.[0]?.thumbnails?.[0]?.imageUrl) {
+              const imageUrl = imageData.data[0].thumbnails[0].imageUrl;
+              gameClone.querySelector('.icon').src = imageUrl; // Set the image URL in the card
+            } else {
+              console.error('Invalid image data received from API');
+              gameClone.querySelector('.icon').src = 'path/to/placeholder-image.png'; // Use a fallback image
+            }
+        
+            // Append the clone to the container after setting the icon
+            gameContainer.appendChild(gameClone);
+          })
+          .catch(error => {
+            console.error('Error fetching the thumbnail:', error);
+            // Use a fallback image if the fetch fails
+            gameClone.querySelector('.icon').src = 'https://unviere.github.io/Unviere/Img/unv_games.png';
+            gameContainer.appendChild(gameClone); // Append the clone even if image fails
+          });
         });
       })
       .catch(error => {
