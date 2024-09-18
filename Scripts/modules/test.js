@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const gameClone = document.importNode(gameTemplate, true);
 
           // Fetch game icon (image)
-          const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
+          const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;
 
           fetch(imgUrl)
             .then(response => {
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
               console.log('thumb API response data:', data);
 
-              if (data && data.data && data.data[0] && data.data[0].imageUrl) {
-                const imageUrl = data.data[0].imageUrl;
+              if (data && data.data && data.data[0] && data.data[0].thumbnails && data.data[0].thumbnails[0] && data.data[0].thumbnails[0].imageUrl) {
+      const imageUrl = data.data[0].thumbnails[0].imageUrl;
                 // Set the image source here, after fetching the image data
                 gameClone.querySelector('.icon').src = imageUrl;
               } else {

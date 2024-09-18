@@ -121,14 +121,15 @@ body.light-mode .owner{
   color: #1B1F3B;
 }
 
-body.light-mode #stats-icon{
-  font-size: 20px;
+body.light-mode .stats-game #stats-icon{
+  
   color: #1B1F3B;
+  
 }
 
-body.light-mode #stats-icon-inner{
-  
+body.light-mode .stats-game #stats-icon #stats-icon-inner{
   color: #06c46f;
+  
 }
 
 
