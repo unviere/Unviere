@@ -71,7 +71,7 @@ function formatNumber(num) {
           gameClone.querySelector('.game-desc').textContent = game.description || 'No description available';
           
           
-          gameClone.querySelector('.active').textContent = ` ${formatNumber(game.playing || 'N/A')}`;
+          gameClone.querySelector('.active').textContent = ` ${formatNumber(game.playing || '0')}`;
           gameClone.querySelector('.visits').textContent = ` ${formatNumber(game.visits || 'N/A')}`;
           gameClone.querySelector('.owner').textContent = `by: ${game.creator && game.creator.name ? game.creator.name : 'N/A'}`;
           gameClone.querySelector('.likes').textContent = `${formatNumber (game.likes || 'N/A')}`;
