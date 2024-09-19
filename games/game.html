@@ -1,17 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Details</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>game??? | unviere </title>
+  <meta name="description" content=" ">
+    <meta name="author" content="unviere ">
+    
+    
+
+  <link rel="shortcut icon" type="x-icon" href="Img/unv_games.png">
+  
+  
+  <link rel ="stylesheet" type = "text/css" href ="../games/styles/game.css">
+      <link rel ="stylesheet" type = "text/css" href ="Style/topbarv2.css">
+      
+       
+      
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="Style/images.css">
 </head>
 <body>
+   <section class ="game">
+     <div class="game-head-section">
+            <div class="game-top">
+          <div class="onrbx"> on Roblox </div>
+ 
+      <div class ="game-top-holder"><a id="top-name" name=""></a>
+      
+<div class = game-top-left>
+        <h1 id="game-title">OnlyFiftyCharactersAreAllowed [new] [update] [tag]</h1>
+
+        <p id="game-developer">by: OnlyFiftyCharactersAreAllowed GroupName (official)</p>
+        </div>
+
+        <div class="game-top-right">
+          <a href="" class="group-icon" id="developer-img"><img src="../Img/unv_games.png"></a>
+<div id="game-top-socials"> 
+<a href="" class="social" id="discord"><i class="ri-discord-fill"></i></a>
+<a href="" class="social" id="yt"><i class="ri-youtube-fill"></i></a>
+</div>
+<div id="game-top-socials-mob">
+  
+<div class="game-social-drop-parent">
+  <a><i class="ri-arrow-drop-down-line"></i></a> <!-- Just the anchor for the icon -->
+  <div class="game-social-drop" id="game-top-socials-drop"> 
+    <a href="" class="social" id="discord"><i class="ri-discord-fill"></i></a>
+    <a href="" class="social" id="yt"><i class="ri-youtube-fill"></i></a>
+  </div>
+</div>
+</div>
+        
+         
+        </div>
+      </div>
+            </div>
+      
+
+      <div class="parallel-img">
+        <img src="Img/tumb_parallel.png">
+      </div>
+
+     
+      
+     
+
+      <div class ="parallel-playbar">
+        <a class="parallel-drop-down">•••</a>
+  <ul class="game-drop-down">
+             
+          <li>
+            <a href="#groups">groups</a>
+            <a href="">games</a>
+          </li>
+        </ul> 
+       
+        <a href="" class="ctaa"><i class ="ri-play-fill"></i>play now</a>
+        <label class="instal" for="toggle-instalrbx" id="instalrbxopen">
+        <a><i class =""></i> how to install</a></label>
+        
+       
+
+      </div>
+      
+      </div>
+
+<hr>
+      
+       <div class="parallel-stats">
+        
+        <h1 id ="likes">likes:0</h1>
+        <br>
+        <h1 id ="server-size">server size:24</h1>
+        <br>
+        <h1 id ="favorites">favourite:6</h1>
+        <br>
+        <h1 id ="created-date">created 7-28-2023</h1>
+        <br>
+        <h1 id ="last-updated">last updated: <a href="https://devforum.roblox.com/t/-/2509865">see here</a></h1>
+        <br>
+        <h1>genre: sci-fi</h1>
+        <br>
+        <h1>other genres: building, survival, fighting, story</h1>
+      
+        
+      </div>
+      
+        <h6 class="parallel-stats-under"> stats may be not accurate since it not syncing with Roblox</h6>
+      
+      <hr>
+
+      <div class="parallel-buttons-bar">
+      <button class="tablinks-parallel" onclick="opentab(event, 'descriptionpar')" id="main">description</button>
+  <button class="tablinks" onclick="opentab(event, 'passespar')">Passes</button>
+      </div>
+
+
+          <div id="descriptionpar" class ="tabs-parallel">
+      
+      
+        
+      </section>
   <h1 id="gameTitle">Game Title</h1>
   <img id="gameIcon" src="" alt="Game Icon">
   <p id="gameDesc">Game Description</p>
   <p id="gameActive">Active Players</p>
   <p id="gameOwner">Owner</p>
   <p id="gameLikes">Likes</p>
+  <button>play</button>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -40,8 +159,11 @@
             .then(data => {
               if (data.data && Array.isArray(data.data) && data.data.length > 0) {
                 const gameData = data.data[0];
-                document.getElementById('gameTitle').textContent = gameName || 'No title available';
-                document.getElementById('gameDesc').textContent = 'Description not needed'; // Static text
+                document.getElementById('game-title').textContent = gameData.sourceName|| 'No title available';
+                
+                document.getElementById('gameDesc').textContent = gameData.sourceDesription|| 'No title available';
+                document.getElementById('game-developer').textContent = `by: ${gameData.creator?.name||'n/a'}`
+                 // Static text
                 document.getElementById('gameActive').textContent = `Active: ${gameData.playing || 'N/A'}`;
                 document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
                 document.getElementById('gameLikes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
