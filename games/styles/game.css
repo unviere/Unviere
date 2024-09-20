@@ -24,7 +24,7 @@
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
  margin-top: 65px;
- background: whitesmoke;
+ background: white;
 }
 
 .game {
@@ -57,7 +57,7 @@ body {
 }
 
 .game-top {
- background: #c2c2c2;
+ background: whitesmoke;
  position: relative;
  border-radius: 10px;
  display: flex;
@@ -69,6 +69,7 @@ body {
 
 .scrolled {
   position:fixed;
+  background: #c3c3c3;
   z-index:500;
   height: 35px;
   top: 65px;
@@ -77,6 +78,7 @@ body {
   border-radius: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  box-shadow: none;
 /*  box-shadow: 1px 10px 12px -3px lightgray, -1px 12px 10px -3px lightgray;*/
 }
 
@@ -86,7 +88,7 @@ body {
   font-size: 12px;
   color: black;
   margin: 0; 
-  background: whitesmoke; 
+  background: white; 
   position: absolute;
   top: -10px;
   left: 10px;
@@ -216,12 +218,14 @@ body {
 }
 
 .game-top-navinfo {
+  
   display: flex;
-  background: #c2c2c2;
+  background: whitesmoke;
   height: 35px;
   min-height: 35px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  
 }
 
 @media (max-width: 700px){
