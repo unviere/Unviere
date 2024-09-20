@@ -22,26 +22,64 @@
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
     <link rel="stylesheet" href="Style/images.css">
+    
+     <script defer type="module" src = "../Scripts/topbar new.js"></script>
 </head>
 <body>
+  <input type="checkbox" id="check">
+    
+    <label class="sidebar-toggle" for="check"><i class="ri-pushpin-line"id="unpinned"></i><i class="ri-pushpin-fill" id="pinned"></i></label>
+    <div id="header">
+      
+    </div>
    <section class ="game">
      <div class="game-head-section">
-            <div class="game-top">
           <div class="onrbx"> on Roblox </div>
+            <div class="game-top" id="game-header">
+       
  
       <div class ="game-top-holder"><a id="top-name" name=""></a>
       
 <div class = game-top-left>
         <h1 id="game-title">OnlyFiftyCharactersAreAllowed [new] [update] [tag]</h1>
-
-        <p id="game-developer">by: OnlyFiftyCharactersAreAllowed GroupName (official)</p>
+<div class="stats-top-game">
+  <p id="game-developer">by: OnlyFiftyCharactersAreAllowed GroupName (official)</p>  <i class="ri-team-fill" id="stats-icon"><i class="ri-play-fill" id="stats-icon-inner"></i></i>
+    <h1 class="desk-title-game-stats">active: </h1>
+        <h1 class="active">100k </h1>
+        <br>
+        <i class="ri-map-pin-user-fill" id="stats-icon"></i>
+         <h1 class="desk-title-game-stats">visits: </h1>
+        <h1 class="visits">100k</h1>
+        <br>
+        <i class="ri-thumb-up-fill" id="stats-icon"></i>
+         <h1 class="desk-title-game-stats">liked: </h1>
+        <h1 class="likes">100k </h1>
+</div>
+        
         </div>
 
         <div class="game-top-right">
+          <div class="game-top-right-mob">
+            <div class="game-top-info-parent"
+            <a  class="game-top-info"><i class="ri-information-line"></i></a>
+            <div class="game-top-info-drop"> <div class="game-top-info-content">
+              u
+            </div>
+            </div>
+            </div>
+            <div class="game-top-nav-parent">
+<a  class="game-top-nav" ><i class="ri-more-2-fill"></i></a>
+ <div class="game-top-nav-drop"> 
+ <div class="game-top-nav-content">
+              b
+            </div>
+            </div>
+          </div>
+          </div>
           <a href="" class="group-icon" id="developer-img"><img src="../Img/unv_games.png"></a>
 <div id="game-top-socials"> 
-<a href="" class="social" id="discord"><i class="ri-discord-fill"></i></a>
-<a href="" class="social" id="yt"><i class="ri-youtube-fill"></i></a>
+<a href="" class="social" id="discord"><i class="ri-discord-fill social-icon" ></i></a>
+<a href="" class="social" id="yt"><i class="ri-youtube-fill social-icon"></i></a>
 </div>
 <div id="game-top-socials-mob">
   
@@ -57,8 +95,9 @@
          
         </div>
       </div>
+     
             </div>
-      
+       <div class="game-top-navinfo">a</div>
 
       <div class="parallel-img">
         <img src="Img/tumb_parallel.png">
@@ -132,6 +171,35 @@
   <p id="gameLikes">Likes</p>
   <button>play</button>
 
+<script>// Get the header element
+document.addEventListener('DOMContentLoaded', function() {
+    const socials = document.querySelectorAll('.social-icon'); // Select all elements with the class "social-icon"
+    const header = document.querySelector('.game-top'); // Make sure there's a header element in your HTML
+    const title = document.querySelector('.game-top-left')
+
+
+
+    if (header && socials.length > 0) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled'); // Add the 'scrolled' class to the header
+                title.classList.add('game-top-left-sticky')
+
+                socials.forEach(function(social) {
+                    social.classList.add('sticky-socials'); // Add 'sticky-socials' class to each social icon
+                });
+            } else {
+                header.classList.remove('scrolled'); // Remove the 'scrolled' class from the header
+                title.classList.remove('game-top-left-sticky')
+
+                socials.forEach(function(social) {
+                    social.classList.remove('sticky-socials'); // Remove 'sticky-socials' class from each social icon
+                });
+            }
+        });
+    } 
+});
+</script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const gameName = window.location.hash.substring(1); // Get game name from the fragment
@@ -201,5 +269,7 @@
       }
     });
   </script>
+  
+
 </body>
 </html>

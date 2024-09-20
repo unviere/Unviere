@@ -24,7 +24,7 @@
 .up {
   display: flex;
   width: 100%;
-  height: 50%;
+  height: 30px;
   
 }
 
@@ -50,7 +50,7 @@
 }
 
 .home{
-  width: 120px;
+  width: 100px;
   height: 100%;
   overflow: hidden;
 }
@@ -62,7 +62,7 @@ header {
   top: 0;
   z-index: 1000;
   width: 100%;
-  height: 100px;
+  height: 65px;
   display: flex;
   flex-direction: row;
   background: whitesmoke;
@@ -90,7 +90,7 @@ img {
 	
   
   color: #20B2AA;
-    font-size: 35px;
+    font-size: 30px;
   cursor: pointer;
   display: flex;
 }
@@ -98,7 +98,7 @@ img {
 .navlist {
   display: flex; /* Enables flexbox */
   width: 100%; /* Full width */
-  height: 50%; /* Adjust height as needed */
+  height: 35px; /* Adjust height as needed */
   align-items: center; /* Centers items vertically */
   justify-content: center; /* Centers items horizontally */
   background: transparent; /* Background for visualization */
@@ -131,7 +131,7 @@ img {
 .navlist a {
   background: transparent; /* Background for links */
   color: black; /* Text color */
-  font-size: 15px; /* Font size */
+  font-size: 12px; /* Font size */
   font-weight: 600; /* Font weight */
   position: relative; /* Needed for positioning the pseudo-element */
   padding: 10px 0; /* Adds vertical padding to create space around the text */
@@ -163,7 +163,7 @@ img {
  
 #menu-icon {
   color: #1B1F3B;
-  font-size: 35px;
+  font-size: 30px;
   cursor: pointer;
   display: flex;
 }
@@ -172,7 +172,7 @@ img {
   display: flex;
   text-decoration: none;
   color: #1B1F3B;
-  font-size: 35;
+  font-size: 30px;
 }
 
 .community-drop li{
@@ -186,10 +186,10 @@ img {
   height: 110px;
   background: whitesmoke;
   position: absolute;
-  z-index: 100005;
+  z-index: 600005;
   display: none;
   
-  margin-top: 40px;
+  margin-top: 33px;
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
@@ -221,10 +221,10 @@ img {
   height: 110px;
   background: whitesmoke;
   position: absolute;
-  z-index: 100005;
+  z-index: 600005;
   display: none;
   
-  margin-top: 40px;
+  margin-top: 33px;
   box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
@@ -253,7 +253,7 @@ img {
   border-right-width: 2px;
   height: 100%;
   left: 0;
-  top: 100px;
+  top: 65px;
   width: 150px;
   z-index: 1000;
   background-color: whitesmoke;
@@ -467,7 +467,7 @@ display: none;
 	header {
   
   
-  height: 50px;
+  height: 35px;
 }
 
 .up {
@@ -478,7 +478,7 @@ display: none;
 .menu {
   
 
-  top: 50px;
+  top: 35px;
 }
 
 .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
