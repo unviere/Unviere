@@ -418,7 +418,7 @@ display: none;
 
 @media (max-width: 1535px){
 		header{
-			
+			height: 35px;
 			transition: .2s;
 		}
 
