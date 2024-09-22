@@ -203,7 +203,7 @@ body {
 }
 
 #discord{
-  display: flex;
+  display: none;
   color: blue;
 }
 
@@ -305,7 +305,7 @@ body {
 
 .game-top-info-content {
   display: flex;
-  top: 15px;
+  top: 10px;
   position: absolute;
   height: auto;
   width: 100%;
@@ -350,7 +350,7 @@ body {
 
 .game-top-nav-content {
   display: flex;
-  top: 15px;
+  top: 10px;
   position: absolute;
   height: auto;
   width: 100%;
