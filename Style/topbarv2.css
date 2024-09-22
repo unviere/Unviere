@@ -67,6 +67,7 @@ header {
   flex-direction: row;
   background: whitesmoke;
   box-shadow: 1px 1px 9px grey;
+  transition: .2s;
 }
 
 body {
@@ -466,7 +467,7 @@ display: none;
 
 	header {
   
-  
+  transition: .2s;
   height: 35px;
 }
 

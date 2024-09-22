@@ -63,7 +63,7 @@
             <div class="game-top-info-parent"
             <a  class="game-top-info"><i class="ri-information-line"></i></a>
             <div class="game-top-info-drop"> <div class="game-top-info-content">
-              u
+              
             </div>
             </div>
             </div>
@@ -71,7 +71,7 @@
 <a  class="game-top-nav" ><i class="ri-more-2-fill"></i></a>
  <div class="game-top-nav-drop"> 
  <div class="game-top-nav-content">
-              b
+              
             </div>
             </div>
           </div>
@@ -176,6 +176,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const socials = document.querySelectorAll('.social-icon'); // Select all elements with the class "social-icon"
     const header = document.querySelector('.game-top'); // Make sure there's a header element in your HTML
     const title = document.querySelector('.game-top-left')
+    
+    const social_drop = document.querySelector('.game-social-drop')
+    
+    const nav_drop = document.querySelector('.game-top-nav-content')
+    
+    const info_drop = document.querySelector('.game-top-info-content')
 
 
 
@@ -184,6 +190,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled'); // Add the 'scrolled' class to the header
                 title.classList.add('game-top-left-sticky')
+                
+                social_drop.classList.add('game-top-sticky')
+                
+                info_drop.classList.add('game-top-sticky')
+                
+                nav_drop.classList.add('game-top-sticky')
 
                 socials.forEach(function(social) {
                     social.classList.add('sticky-socials'); // Add 'sticky-socials' class to each social icon
@@ -191,6 +203,12 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 header.classList.remove('scrolled'); // Remove the 'scrolled' class from the header
                 title.classList.remove('game-top-left-sticky')
+                
+                social_drop.classList.remove('game-top-sticky')
+                
+                info_drop.classList.remove('game-top-sticky')
+                
+                nav_drop.classList.remove('game-top-sticky')
 
                 socials.forEach(function(social) {
                     social.classList.remove('sticky-socials'); // Remove 'sticky-socials' class from each social icon

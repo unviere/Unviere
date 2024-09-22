@@ -309,10 +309,11 @@ body {
   position: absolute;
   height: auto;
   width: 100%;
-  background: #06c46f;
+  background: whitesmoke;
     padding-bottom: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  
 }
 
 
@@ -332,6 +333,10 @@ body {
   display: block;
 }
 
+.game-top-sticky{
+  background: #c3c3c3!important;
+}
+
 
 .game-top-nav-parent {display: block;}
 .game-top-nav-drop {
@@ -349,10 +354,11 @@ body {
   position: absolute;
   height: auto;
   width: 100%;
-  background: #06c46f;
+  background: whitesmoke;
     padding-bottom: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  
 }
 
 
@@ -373,10 +379,11 @@ body {
   width: 35px;
   right: 10px;
   top: 30px;
-  background: #06c46f;
+  background: whitesmoke;
   padding-bottom: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  
 }
 .social i{
   font-size:35px;
