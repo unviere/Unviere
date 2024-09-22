@@ -203,7 +203,7 @@ body {
 }
 
 #discord{
-  display: none;
+  display: flex;
   color: blue;
 }
 
@@ -299,13 +299,13 @@ body {
   position: absolute;
   height: auto;
   min-height: 15px;
-  
+  top: 30px;
   left: 150px;
 }
 
 .game-top-info-content {
   display: flex;
-  top: 10px;
+  top: 0;
   position: absolute;
   height: auto;
   width: 100%;
@@ -331,6 +331,7 @@ body {
   position: absolute;
   z-index: 200000;
   display: block;
+  
 }
 
 .game-top-sticky{
@@ -346,11 +347,12 @@ body {
   height: auto;
   min-height: 15px;
   left: 150px;
+  top: 30px;
 }
 
 .game-top-nav-content {
   display: flex;
-  top: 10px;
+  top: 0;
   position: absolute;
   height: auto;
   width: 100%;
