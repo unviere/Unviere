@@ -132,8 +132,10 @@ body {
 .stats-top-game {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  align-content: center;
+  flex-flow: center;
+  align-items: center!important;
+  align-content: center!important;
+  vertical-align: center;
   padding: 1px;
   height: 50%;
   
