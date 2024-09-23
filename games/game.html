@@ -43,7 +43,7 @@
 <div class = game-top-left>
         <h1 id="game-title">OnlyFiftyCharactersAreAllowed [new] [update] [tag]</h1>
 <div class="stats-top-game">
-  <p id="game-developer">ow: OnlyFiftyCharactersAreAllowed GroupName (official)</p>  <i class="ri-team-fill" id="stats-icon"><i class="ri-play-fill" id="stats-icon-inner"></i></i>
+  <p id="game-developer">by: OnlyFiftyCharactersAreAllowed GroupName (official)</p>  <i class="ri-team-fill" id="stats-icon"><i class="ri-play-fill" id="stats-icon-inner"></i></i>
     <h1 class="desk-title-game-stats">active: </h1>
         <h1 class="active">100k </h1>
         <br>
@@ -269,12 +269,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const gameData = data.data[0];
                 document.getElementById('game-title').textContent = gameData.sourceName|| 'No title available';
                 
-                document.getElementsByClassName('game-title-top').textContent = gameData.sourceName|| 'No title available';
+                document.getElementById('game-title-top').textContent = gameData.sourceName|| 'No title available';
                 
                 document.getElementById('gameDesc').textContent = gameData.sourceDesription|| 'No title available';
                 document.getElementById('game-developer').textContent = `by: ${gameData.creator?.name||'n/a'}`
                 
-                document.getElementsByClassName('game-developer-top').textContent = `by: ${gameData.creator?.name||'n/a'}`
+                document.getElementById('game-developer-top').textContent = `by: ${gameData.creator?.name||'n/a'}`
                  // Static text
                 document.getElementById('gameActive').textContent = `Active: ${gameData.playing || 'N/A'}`;
                 document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
