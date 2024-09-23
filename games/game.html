@@ -182,6 +182,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav_drop = document.querySelector('.game-top-nav-content')
     
     const info_drop = document.querySelector('.game-top-info-content')
+    
+    const title-sticky = document.querySelector('game-top-navb-left')
 
 
 
@@ -196,6 +198,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 info_drop.classList.add('game-top-sticky')
                 
                 nav_drop.classList.add('game-top-sticky')
+                
+                title-sticky.classList.add('game-top-navb-left-sticky')
 
                 socials.forEach(function(social) {
                     social.classList.add('sticky-socials'); // Add 'sticky-socials' class to each social icon
@@ -209,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 info_drop.classList.remove('game-top-sticky')
                 
                 nav_drop.classList.remove('game-top-sticky')
+                title-sticky.classList.remove('game-top-navb-left-sticky')
 
                 socials.forEach(function(social) {
                     social.classList.remove('sticky-socials'); // Remove 'sticky-socials' class from each social icon

@@ -13,6 +13,37 @@
   border-style: solid
 }
 
+.game-top-navb-left{
+  display: none;
+  flex-direction: column;
+  align-items: left;
+  align-content: left;
+  width: auto;
+  height: 90%;
+}
+
+.game-top-navb-left-sticky {
+  display: flex;
+}
+
+.game-top-navb-left-content{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-bottom: 2px;
+  align-content: left;
+  width: 100%;
+  height: 90%;
+}
+
+.searchbar-open{
+  display:flex;
+}
+
+.searchbar-overlap{
+  display: none;
+}
+
 .desktop{
   display: flex;
   flex-direction: column;
@@ -29,7 +60,7 @@
 }
 
 .left{
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,7 +70,7 @@
 }
 
 .right {
-  width: 40%;
+  width: auto;
   display: flex; 
   flex-direction: row;
   align-items: center; 
