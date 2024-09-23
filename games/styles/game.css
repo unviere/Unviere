@@ -111,6 +111,7 @@ body {
   padding: 5px;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .game-top-left-sticky {
@@ -132,8 +133,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-content: center;
   padding: 1px;
   height: 50%;
+  
 }
 
 
@@ -141,8 +144,8 @@ body {
   font-size: 15px;
   color: #06c46f;
   display: flex;
-  width: 14px;
-  min-width: 14px;
+  width: 17px;
+  min-width: 17px;
 }
 
 .stats-top-game #stats-icon #stats-icon-inner{
@@ -158,6 +161,7 @@ body {
 .stats-top-game h1{
   font-size: 15px!important;
   max-height: 15px!important;
+  margin-left: 2px;
 }
 
 .desk-title-game-stats {
