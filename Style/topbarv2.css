@@ -15,15 +15,16 @@
 
 .game-top-navb-left{
   display: none;
+  
+}
+
+.game-top-navb-left-sticky {
+  display: flex;
   flex-direction: column;
   align-items: left;
   align-content: left;
   width: auto;
   height: 90%;
-}
-
-.game-top-navb-left-sticky {
-  display: flex;
 }
 
 .game-top-navb-left-content{
@@ -620,6 +621,10 @@ display: none;
 
 .mob-more-drop-parent:hover .mob-more-drop {
   display: block; /* Show the dropdown items when hovering over the parent */
+}
+
+.game-top-navb-left-sticky {
+  display: none;
 }
 }
 

@@ -234,6 +234,10 @@ body {
   
 }
 
+.game-top-navinfo-sticky{
+  display: none;
+}
+
 @media (max-width: 700px){
   #header {
     height: 35px!important;
