@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('active-nav').textContent = ` ${formatNumber(gameData.playing || '0')}`;
             document.getElementById('visits-nav').textContent = ` ${formatNumber(gameData.visits || '0')}`;
             document.getElementById('likes-nav').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
-            document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator?.name || 'N/A'}`;
+          //  document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator?.name || 'N/A'}`;
 
             // Game stats
             document.getElementById('server-size').textContent = `Server size: ${gameData.maxPlayers || 'N/A'}`;
