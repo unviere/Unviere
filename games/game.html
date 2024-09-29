@@ -135,17 +135,17 @@
       
        <div class="game-stats">
         
-        <h1 id ="server-size">server size:24</h1>
+        <h1 id ="server-size">server size:N/A</h1>
         <br>
-        <h1 id ="favorites">favourite:6</h1>
+        <h1 id ="favorites">favourite:N/A</h1>
         <br>
-        <h1 id ="created-date">created 7-28-2023</h1>
+        <h1 id ="created-date">created N/A</h1>
         <br>
-        <h1 id ="last-updated">last updated: <a href="https://devforum.roblox.com/t/-/2509865">see here</a></h1>
+        <h1 id ="last-updated">updated: <a href="https://devforum.roblox.com/t/-/2509865">update log</a></h1>
         <br>
-        <h1 id="genre">genre: sci-fi</h1>
+        <h1 id="genre">genre: N/A</h1>
         <br>
-        <h1>other genres: building, survival, fighting, story</h1>
+        <h1 id="sub-genre">err with loading game stats</h1>
       
         
       </div>
@@ -352,7 +352,7 @@ fetch(infoUrl)
       
       // Populate the div elements with the respective data
      // document.getElementById('game-title').textContent = infoData.genre || 'No title available';
-      document.getElementById('game-developer').textContent = `Developer: ${infoData.genre || 'N/A'}`;
+      document.getElementById('sub-genre').textContent = `other genres: ${infoData.genre || 'N/A'}`;
       
     } else {
       console.error('No valid data found');
