@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update DOM elements with the additional info
             document.getElementById('sub-genre').textContent = `Other genres: ${subInfoData.genres || 'N/A'}`;
             
-            if subInfoData.discord === true {
+            if (subInfoData.discord === true) {
               document.getElementById('discord').style.display = flex;
             }else {
               document.getElementById('discord').style.display = none;

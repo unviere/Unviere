@@ -3,7 +3,17 @@
     {
       "name": "parallelized engineers",
       "genres": "building, survival, fighting, story",
-      "discord": true
+      "socials-enabled": true,
+      "info-enabled": false,
+      "nav-enabled": false,
+      "dev-link": "",
+      "dev-icon": "",
+      "update-log": true,
+      "update-log-link": "",
+      "discord": true,
+      "discord-link": "",
+      "yt": true,
+      "yt-link": ""
     }
       ]
 }
