@@ -145,7 +145,7 @@
         <br>
         <h1 id="genre">genre: N/A</h1>
         <br>
-        <h1 id="sub-genre">err with loading game stats</h1>
+        <h1 id="sub-genre">error with loading game stats</h1>
       
         
       </div>
@@ -247,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const gameName = window.location.hash.substring(1); // Get game name from the fragment
+  console.log('Game Name from URL:', gameName);
 
   if (gameName) {
     // Static mapping of game names to universe IDs and other details
@@ -257,9 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const game = gameDetails[gameName];
+    console.log('Matching Game Details:', game);
 
     if (game) {
       const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
+      console.log('API URL:', apiUrl);
 
       // Fetch main game data
       fetch(apiUrl)
@@ -270,8 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
           return response.json();
         })
         .then(data => {
+          console.log('Fetched Game Data:', data);
           if (data.data && Array.isArray(data.data) && data.data.length > 0) {
             const gameData = data.data[0];
+            console.log('Parsed Game Data:', gameData);
 
             function formatNumber(num) {
               if (num >= 1e9) {
@@ -298,6 +303,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('visits-nav').textContent = ` ${formatNumber(gameData.visits || '0')}`;
             document.getElementById('likes-nav').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
             document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator?.name || 'N/A'}`;
+
+            // Game stats
             document.getElementById('server-size').textContent = `Server size: ${gameData.maxPlayers || 'N/A'}`;
             document.getElementById('favorites').textContent = `Favorite: ${gameData.favoritedCount || 'N/A'}`;
             document.getElementById('created-date').textContent = `Development started: ${gameData.created || 'N/A'}`;
@@ -315,6 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
               })
               .then(thumbnailData => {
+                console.log('Thumbnail Data:', thumbnailData);
                 if (thumbnailData && thumbnailData.data && thumbnailData.data[0] && thumbnailData.data[0].imageUrl) {
                   const imageUrl = thumbnailData.data[0].imageUrl;
                   document.getElementById('game-thumb-1').src = imageUrl;
@@ -333,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Fetch additional info (sub-genres, etc.)
       const infoUrl = `https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/game-api%3Fid%3D${game.universeId}.json`;
+      console.log('Additional Info URL:', infoUrl);
 
       fetch(infoUrl)
         .then(response => {
@@ -342,6 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return response.json();
         })
         .then(infoData => {
+          console.log('Fetched Sub-Genre Data:', infoData);
           if (infoData && infoData.data && infoData.data[0]) {
             const subInfoData = infoData.data[0];
 
