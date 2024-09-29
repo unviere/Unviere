@@ -45,15 +45,15 @@
 <div class="stats-top-game">
   <p id="game-developer">by: OnlyFiftyCharactersAreAllowed GroupName (official)</p>  <i class="ri-team-fill" id="stats-icon"><i class="ri-play-fill" id="stats-icon-inner"></i></i>
     <h1 class="desk-title-game-stats">active: </h1>
-        <h1 class="active">100k </h1>
+        <h1 class="active" id="active-top">100k </h1>
         <br>
         <i class="ri-map-pin-user-fill" id="stats-icon"></i>
          <h1 class="desk-title-game-stats">visits: </h1>
-        <h1 class="visits">100k</h1>
+        <h1 class="visits" id="visits-top">100k</h1>
         <br>
         <i class="ri-thumb-up-fill" id="stats-icon"></i>
          <h1 class="desk-title-game-stats">liked: </h1>
-        <h1 class="likes">100k </h1>
+        <h1 class="likes" id="likes-top">100k </h1>
 </div>
         
         </div>
@@ -267,6 +267,18 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
               if (data.data && Array.isArray(data.data) && data.data.length > 0) {
                 const gameData = data.data[0];
+                
+                function formatNumber(num) {
+            if (num >= 1e9) {
+              return (num / 1e9).toFixed(1) + 'b';
+            } else if (num >= 1e6) {
+              return (num / 1e6).toFixed(1) + 'm';
+            } else if (num >= 1e3) {
+              return (num / 1e3).toFixed(1) + 'k';
+            } else {
+              return num;
+            }
+          }
                 document.getElementById('game-title').textContent = gameData.sourceName|| 'No title available';
                 
                 document.getElementById('game-title-top').textContent = gameData.sourceName|| 'No title available';
@@ -276,11 +288,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 document.getElementById('game-developer-top').textContent = `by: ${gameData.creator?.name||'n/a'}`
                  // Static text
-                document.querySelectorAll('active').textContent = ` ${gameData.playing || 'N/A'}`;
+                document.querySelectorAll('.active').textContent = ` ${gameData.playing || 'N/A'}`;
                 
-                document.querySelectorAll('visits').textContent = ` ${gameData.visits || 'N/A'}`;
+                document.querySelectorAll('.visits').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
                 document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
-                document.querySelectorAll('likes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
+                document.querySelectorAll('.likes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
 
                 // Fetch and display game icon
                 const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${game.universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
