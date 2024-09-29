@@ -326,6 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (thumbnailData && thumbnailData.data && thumbnailData.data[0] && thumbnailData.data[0].imageUrl) {
                   const imageUrl = thumbnailData.data[0].imageUrl;
                   document.getElementById('game-thumb-1').src = imageUrl;
+                  
                 } else {
                   console.error('Invalid image data received from API');
                 }
@@ -347,16 +348,19 @@ document.addEventListener('DOMContentLoaded', () => {
               })
               .then(infoData => {
                 console.log('Fetched Sub-Genre Data:', infoData);
-                if (infoData && infoData.data && infoData.data[0]) {
+                if (infoData && infoData.data && infoData.data.length > 0) {
                   const subInfoData = infoData.data[0];
 
                   // Update DOM elements with the additional info
-                  document.getElementById('sub-genre').textContent = `Other genress: ${subInfoData.genres || 'N/A'}`;
-                  
+                  document.getElementById('sub-genre').textContent = `Other genres: ${subInfoData.genres || 'N/A'}`;
+
+                  // Make the Discord icon visible based on the response
+                  const discordIcon = document.getElementById('discord');
                   if (subInfoData.discord === true) {
-                    document.getElementById('discord').style.display = "flex";
+                    discordIcon.style.display = "flex";
+                    discordIcon.href = subInfoData.discordLink || '#'; // Set the Discord link if available
                   } else {
-                    document.getElementById('discord').style.display = "none";
+                    discordIcon.style.display = "none";
                   }
                 } else {
                   console.error('No valid sub-genre data found');
