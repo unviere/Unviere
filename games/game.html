@@ -334,7 +334,33 @@ document.addEventListener('DOMContentLoaded', function() {
                   })
                   .catch(error => {
                     console.error('Error fetching the thumbnail:', error);
-                  });
+                  });//end
+                  
+             const infoUrl = `https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/game-api%3Fid%3D${game.universeId}.json`;
+
+fetch(infoUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Ensure the data structure is valid
+    if (data && data.data && data.data[0]) {
+      const infoData = data.data[0];
+      
+      // Populate the div elements with the respective data
+     // document.getElementById('game-title').textContent = infoData.genre || 'No title available';
+      document.getElementById('game-developer').textContent = `Developer: ${infoData.genre || 'N/A'}`;
+      
+    } else {
+      console.error('No valid data found');
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching the game data:', error);
+  });
               }
             })
             .catch(error => {
