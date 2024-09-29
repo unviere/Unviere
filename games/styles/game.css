@@ -418,10 +418,10 @@ border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
 }
 
-.game-stats p{
+.game-stats h1{
   color: black;
   font-size: 10px!important;
-  font-weight: 600;
+  
   margin: 0 5 5px;
 }
 
@@ -789,7 +789,7 @@ border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
 }
 
-.game-stats p{
+.game-stats h1{
   
   font-size: 5px!important;
   margin: 0 5 5px;
