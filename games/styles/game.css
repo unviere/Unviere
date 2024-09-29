@@ -217,7 +217,7 @@ border-top-right-radius: 10px;
 }
 
 #discord{
-  display: flex;
+  display: none;
   color: blue;
 }
 
