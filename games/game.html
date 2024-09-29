@@ -169,7 +169,7 @@
   <p id="gameActive">Active Players</p>
   <p id="gameOwner">Owner</p>
   <p id="gameLikes">Likes</p>
-  <button>play</button>
+  <button>play now</button>
 
 <script>// Get the header element
 document.addEventListener('DOMContentLoaded', function() {
@@ -288,11 +288,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 document.getElementById('game-developer-top').textContent = `by: ${gameData.creator?.name||'n/a'}`
                  // Static text
-                document.querySelectorAll('.active').textContent = ` ${gameData.playing || 'N/A'}`;
+                document.getElementById('active-top').textContent = ` ${formatNumber(gameData.playing || 'N/A')}`;
                 
-                document.querySelectorAll('.visits').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
+                document.getElementById('visits-top').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
+                
+                document.getElementById('likes-top').textContent = `Likes: ${formatNumber(gameData.likes || 'N/A')}`;
+                
+                document.getElementById('active-nav').textContent = ` ${formatNumber(gameData.playing || 'N/A')}`;
+                
+                document.getElementById('visits-nav').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
+                
+                document.getElementById('likes-nav').textContent = `Likes: ${formatNumber(gameData.likes || 'N/A')}`;
                 document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
-                document.querySelectorAll('.likes').textContent = `Likes: ${gameData.likes || 'N/A'}`;
+                
 
                 // Fetch and display game icon
                 const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${game.universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
