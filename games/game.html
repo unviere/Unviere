@@ -143,7 +143,7 @@
         <br>
         <h1 id ="last-updated">last updated: <a href="https://devforum.roblox.com/t/-/2509865">see here</a></h1>
         <br>
-        <h1>genre: sci-fi</h1>
+        <h1 id="genre">genre: sci-fi</h1>
         <br>
         <h1>other genres: building, survival, fighting, story</h1>
       
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (gameName) {
         // Static mapping of game names to universe IDs and other details
         const gameDetails = {
-          '123456789/game-name': { universeId: '4922186765' },
+          '123456789/parallelized-engineers': { universeId: '4922186765' },
           '116463530852265/the-secret-of-puzle-island': { universeId: '6449806598' },
           '10135698219/happy-obbies': { universeId: '3721966693' }
         };
@@ -305,6 +305,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('likes-nav').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
                 document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
                 
+                document.getElementById('server-size').textContent = `Server size: ${gameData.maxPlayers||'N/A'}`
+                
+                document.getElementById('favorites').textContent = `Favorite: ${gameData.favoritedCount||'N/A'}`
+                
+                document.getElementById('created-date').textContent = `Development started: ${gameData.created||'N/A'}`
+                
+                document.getElementById('last-updated').textContent = `Updated: ${gameData.updated||'N/A'}`
+                
+                document.getElementById('genre').textContent = `genre: ${gameData.genre||'N/A'}`
 
                 // Fetch and display game icon
                 const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${game.universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;
