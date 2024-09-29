@@ -292,13 +292,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 document.getElementById('visits-top').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
                 
-                document.getElementById('likes-top').textContent = `Likes: ${formatNumber(gameData.likes || 'N/A')}`;
+                document.getElementById('likes-top').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
                 
-                document.getElementById('active-nav').textContent = ` ${formatNumber(gameData.playing || 'N/A')}`;
+                document.getElementById('active-nav').textContent = ` ${formatNumber(gameData.playing || '0')}`;
                 
-                document.getElementById('visits-nav').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
+                document.getElementById('visits-nav').textContent = ` ${formatNumber(gameData.visits|| '0')}`;
                 
-                document.getElementById('likes-nav').textContent = `Likes: ${formatNumber(gameData.likes || 'N/A')}`;
+                document.getElementById('likes-nav').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
                 document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator && gameData.creator.name ? gameData.creator.name : 'N/A'}`;
                 
 
