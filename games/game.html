@@ -99,7 +99,7 @@
             </div>
        <div class="game-top-navinfo"></div>
 
-      <div class="parallel-img">
+      <div class="game-img" id="game-thumb-1">
         <img src="Img/tumb_parallel.png">
       </div>
 
@@ -107,16 +107,20 @@
       
      
 
-      <div class ="parallel-playbar">
-        <a class="parallel-drop-down">•••</a>
+      <div class ="game-playbar">
+        <div class="game-playbar-content">
+        <a class="game-drop-down-button">•••</a>
   <ul class="game-drop-down">
              
           <li>
-            <a href="#groups">groups</a>
-            <a href="">games</a>
+            <a href="">groups</a>
+            
+            <a href="https://unviere.github.io/Unviere/games">games</a>
           </li>
         </ul> 
-       
+                   <a class="game-playbar-desk-button" href="">groups</a>
+            
+            <a class="game-playbar-desk-button" href="https://unviere.github.io/Unviere/games">games</a>
         <a href="" class="ctaa"><i class ="ri-play-fill"></i>play now</a>
         <label class="instal" for="toggle-instalrbx" id="instalrbxopen">
         <a><i class =""></i> how to install</a></label>
@@ -124,15 +128,13 @@
        
 
       </div>
-      
+</div>
       </div>
 
-<hr>
+
       
-       <div class="parallel-stats">
+       <div class="game-stats">
         
-        <h1 id ="likes">likes:0</h1>
-        <br>
         <h1 id ="server-size">server size:24</h1>
         <br>
         <h1 id ="favorites">favourite:6</h1>
@@ -148,21 +150,22 @@
         
       </div>
       
-        <h6 class="parallel-stats-under"> stats may be not accurate since it not syncing with Roblox</h6>
+        
       
-      <hr>
+      
 
-      <div class="parallel-buttons-bar">
-      <button class="tablinks-parallel" onclick="opentab(event, 'descriptionpar')" id="main">description</button>
-  <button class="tablinks" onclick="opentab(event, 'passespar')">Passes</button>
+      <div class="game-buttons-bar">
+      <button class="tablinks" onclick="opentab(event, 'description')" id="main">description</button>
+  <button class="tablinks" onclick="opentab(event, 'passes')">Passes</button>
       </div>
 
 
-          <div id="descriptionpar" class ="tabs-parallel">
+          <div id="description" class ="tabs-game-buttons-bar">lorem ipsumthis the description</div>
       
       
         
       </section>
+      <template>
   <h1 id="gameTitle">Game Title</h1>
   <img id="gameIcon" src="" alt="Game Icon">
   <p id="gameDesc">lololol hi lorem ipsum dolor sit amet dit for to be do HD so is een is een it en is een je een us en is een to us so us DJ ha en ga aan ga aan ga af ga B zo aan ga V is V ca V ga acc acc zo sa acc ca acc ga acc ga G ra acc zo dat acc zo do to to to if go if you if up to us to if up it uit up je up if up if he up to up it it up ye to get us to ye up to keep FF je je</p>
@@ -170,6 +173,7 @@
   <p id="gameOwner">Owner</p>
   <p id="gameLikes">Likes</p>
   <button>play now</button>
+  </template>
 
 <script>// Get the header element
 document.addEventListener('DOMContentLoaded', function() {
@@ -283,14 +287,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 document.getElementById('game-title-top').textContent = gameData.sourceName|| 'No title available';
                 
-                document.getElementById('gameDesc').textContent = gameData.sourceDesription|| 'No title available';
+                document.getElementById('description').textContent = gameData.sourceDesription|| 'No description available';
                 document.getElementById('game-developer').textContent = `by: ${gameData.creator?.name||'n/a'}`
                 
                 document.getElementById('game-developer-top').textContent = `by: ${gameData.creator?.name||'n/a'}`
                  // Static text
-                document.getElementById('active-top').textContent = ` ${formatNumber(gameData.playing || 'N/A')}`;
+                document.getElementById('active-top').textContent = ` ${formatNumber(gameData.playing || '0')}`;
                 
-                document.getElementById('visits-top').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
+                document.getElementById('visits-top').textContent = ` ${formatNumber(gameData.visits|| '0')}`;
                 
                 document.getElementById('likes-top').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
                 
@@ -303,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
 
                 // Fetch and display game icon
-                const imgUrl = `https://thumbnails.roproxy.com/v1/games/icons?universeIds=${game.universeId}&returnPolicy=PlaceHolder&size=256x256&format=Png&isCircular=false`;
+                const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${game.universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;
                 fetch(imgUrl)
                   .then(response => {
                     if (!response.ok) {
@@ -314,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   .then(data => {
                     if (data && data.data && data.data[0] && data.data[0].imageUrl) {
                       const imageUrl = data.data[0].imageUrl;
-                      document.getElementById('gameIcon').src = imageUrl;
+                      document.getElementById('game-thumb-1').src = imageUrl;
                     } else {
                       console.error('Invalid image data received from API');
                     }
