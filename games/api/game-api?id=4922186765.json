@@ -1,7 +1,9 @@
 {
   "data": [
     {
-      "genres": "sub genres"
+      "name": "parallelized engineers",
+      "genres": "building, survival, fighting, story",
+      "discord": true
     }
       ]
 }

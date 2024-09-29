@@ -287,21 +287,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update DOM elements with game data
             document.getElementById('game-title').textContent = gameData.name || 'No title available';
+            
             document.getElementById('game-title-top').textContent = gameData.name || 'No title available';
+            
             document.getElementById('description').textContent = gameData.description || 'No description available';
+            
             document.getElementById('game-developer').textContent = `by: ${gameData.creator?.name || 'n/a'}`;
+            
             document.getElementById('game-developer-top').textContent = `by: ${gameData.creator?.name || 'n/a'}`;
-            document.getElementById('active-top').textContent = ` ${formatNumber(gameData.playing || 0)}`;
-            document.getElementById('visits-top').textContent = ` ${formatNumber(gameData.visits || 0)}`;
+            
+            document.getElementById('active-top').textContent = ` ${formatNumber(gameData.playing || '0')}`;
+            
+            document.getElementById('visits-top').textContent = ` ${formatNumber(gameData.visits || '0')}`;
+            
             document.getElementById('likes-top').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
-            document.getElementById('active-nav').textContent = ` ${formatNumber(gameData.playing || 0)}`;
-            document.getElementById('visits-nav').textContent = ` ${formatNumber(gameData.visits || 0)}`;
+            
+            document.getElementById('active-nav').textContent = ` ${formatNumber(gameData.playing || '0')}`;
+            
+            document.getElementById('visits-nav').textContent = ` ${formatNumber(gameData.visits || '0')}`;
+            
             document.getElementById('likes-nav').textContent = ` ${formatNumber(gameData.likes || 'N/A')}`;
+            
             document.getElementById('gameOwner').textContent = `Owner: ${gameData.creator?.name || 'N/A'}`;
+            
             document.getElementById('server-size').textContent = `Server size: ${gameData.maxPlayers || 'N/A'}`;
+            
             document.getElementById('favorites').textContent = `Favorite: ${gameData.favoritedCount || 'N/A'}`;
+            
             document.getElementById('created-date').textContent = `Development started: ${gameData.created || 'N/A'}`;
+            
             document.getElementById('last-updated').textContent = `Updated: ${gameData.updated || 'N/A'}`;
+            
             document.getElementById('genre').textContent = `Genre: ${gameData.genre || 'N/A'}`;
 
             // Fetch and display game thumbnail
@@ -347,6 +363,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update DOM elements with the additional info
             document.getElementById('sub-genre').textContent = `Other genres: ${subInfoData.genres || 'N/A'}`;
+            
+            if subInfoData.discord === true {
+              document.getElementById('discord').style.display = flex;
+            }else {
+              document.getElementById('discord').style.display = none;
+            };
+            }
           } else {
             console.error('No valid sub-genre data found');
           }
