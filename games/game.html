@@ -76,7 +76,7 @@
             </div>
           </div>
           </div>
-          <a href="" class="group-icon" id="developer-img"><img src="../Img/unv_games.png"></a>
+          <a href="" class="group-icon" id="developer-img-link"><img src="../Img/unv_games.png" id="developer-img"></a>
 <div id="game-top-socials"> 
 <a href="" class="social" id="discord"><i class="ri-discord-fill social-icon" ></i></a>
 <a href="" class="social" id="yt"><i class="ri-youtube-fill social-icon"></i></a>
@@ -363,6 +363,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                   // Update DOM elements with the additional info
                   document.getElementById('sub-genre').textContent = `Other genres: ${subInfoData.genres || 'N/A'}`;
+                  
+                  document.getElementById('developer-img').src =  subInfoData.devIcon || '';
+                  
+                  document.getElementById('developer-img-link'). href =  subInfoData.devLink || '';
 
                   // Make the Discord icon visible based on the response
                   const infoIcon = document.getElementById('info-button');
@@ -394,6 +398,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     discordIcon.style.display = "flex";
                     discordMobIcon.style.display = "flex";
                     discordIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
+                    
+                    discordMobIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
                   } else {
                     discordIcon.style.display = "none";
                     discordMobIcon.style.display = "none";
@@ -406,6 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ytIcon.style.display = "flex";
                     ytMobIcon.style.display = "flex";
                     ytIcon.href = subInfoData.ytLink || ''; 
+                    ytMobIcon.href = subInfoData.ytLink || ''; 
                   } else {
                     ytIcon.style.display = "none";
                     ytMobIcon.style.display = "none";
