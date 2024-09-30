@@ -499,6 +499,8 @@ outline: none;
 
 #description{
   display: flex;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 @media (max-width: 700px){
   #header {
