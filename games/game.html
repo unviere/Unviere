@@ -325,19 +325,19 @@ fetch(imgUrl)
   })
   .then(thumbnailData => {
     console.log('Thumbnail Data:', thumbnailData);  // Log full data for inspection
-    if (thumbnailData && thumbnailData.data && thumbnailData.data[0] && thumbnailData.data[0].thumbnails && thumbnailData.data[0].thumbnails[0].imageUrl) {
-      // Use the first image URL from the thumbnails array
-      const imageUrl = thumbnailData.data[0].thumbnails[0].imageUrl;
-      console.log('Extracted Image URL:', imageUrl);  // Log the image URL for confirmation
+    if (thumbnailData && thumbnailData.data && thumbnailData.data[0] && thumbnailData.data[0].thumbnails && thumbnailData.data[0].thumbnails.length > 0) {
+      // Only get the first image URL
+      const firstImageUrl = thumbnailData.data[0].thumbnails[0].imageUrl;
+      console.log('First Image URL:', firstImageUrl);  // Log the first image URL
       const imgElement = document.querySelector('#game-thumb-1');
       
       if (imgElement) {
-        imgElement.src = imageUrl;
+        imgElement.src = firstImageUrl;  // Set the image source to the first image URL
       } else {
         console.error('Image element with id="game-thumb-1" not found in DOM');
       }
     } else {
-      console.error('Invalid image data received from API');
+      console.error('Invalid or empty thumbnail data received from API');
     }
   })
   .catch(error => {
