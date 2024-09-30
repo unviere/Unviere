@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update DOM elements with game data
             document.getElementById('game-title').textContent = gameData.name || 'No title available';
             document.getElementById('game-title-top').textContent = gameData.sourceName || 'No title available';
-            document.getElementById('description').textContent = gameData.sourceDescription || 'No description available';
+            document.getElementById('description').innerHTML = gameData.sourceDescription || 'No description available';
             document.getElementById('game-developer').textContent = `by: ${gameData.creator?.name || 'n/a'}`;
             document.getElementById('game-developer-top').textContent = `by: ${gameData.creator?.name || 'n/a'}`;
             document.getElementById('active-top').textContent = ` ${formatNumber(gameData.playing || '0')}`;
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 metaDescription.setAttribute('content', gameData.sourceDescription || 'No description available.');
             }
             // Fetch and display game thumbnail
-            const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${game.universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;
+            const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${game.universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;https://unviere.github.io/Unviere/games/game?id=10135698219/happy-obbies
 
             console.log('Constructed Image URL:', imgUrl);
 
