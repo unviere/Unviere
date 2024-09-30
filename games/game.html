@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Thumbnail Data:', thumbnailData);
                 if (thumbnailData && thumbnailData.data && thumbnailData.data[0] && thumbnailData.data[0].imageUrl) {
                   const imageUrl = thumbnailData.data[0].imageUrl;
-                  document.getElementById('game-thumb-1').src = imageUrl;
+                  document.querySelector('#game-thumb-1').src = imageUrl;
                   
                 } else {
                   console.error('Invalid image data received from API');
