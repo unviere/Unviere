@@ -432,7 +432,10 @@ border-bottom-right-radius: 10px;
   text-decoration: underline;
 }
 
-
+#upd-log{
+  display: none;
+  font-size: 10px!important;
+}
 
 .game-buttons-bar{
 	 /*position: fixed;*/
@@ -815,5 +818,8 @@ border-bottom-right-radius: 10px;
   margin: 0 5 5px;
 }
 
-
+#upd-log{
+  display: none;
+  font-size: 5px!important;
+}
 }
