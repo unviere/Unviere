@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script>document.addEventListener('DOMContentLoaded', () => {
-  const gameName = window.location.search // Get game name from the fragment
+  const gameName = window.location.search.substring(1) // Get game name from the fragment
   console.log('Game Name from URL:', gameName);
 
   if (gameName) {
