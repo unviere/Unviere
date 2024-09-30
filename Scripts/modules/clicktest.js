@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
           gameClone.querySelector('.visits').textContent = ` ${formatNumber(gameData.visits|| 'N/A')}`;
 
           // Construct the custom URL for the game page
-
-const customPageUrl = `https://unviere.github.io/Unviere/games/game#${game.id}/${game.name}`;
+const idtag = "id"
+const customPageUrl = `https://unviere.github.io/Unviere/games/game?${idtag}=${game.id}/${game.name}`;
 gameClone.querySelector(".game-card").href = customPageUrl;
 
           // Fetch game icon (image) dynamically for each game
