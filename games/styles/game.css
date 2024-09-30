@@ -222,13 +222,15 @@ border-top-right-radius: 10px;
 }
 
 #yt{
-  display: flex;
+  display: none;
   color: red;
 }
 #game-top-socials-mob{
   display: none;
   
 }
+
+#upd-log {display: none;}
 
 .game-top-navinfo {
   
@@ -686,6 +688,22 @@ outline: none;
 #game-top-socials-drop {
   display: none; /* Initially hidden */
 }
+
+#discord-mob{
+  display: none;
+  color: blue;
+}
+
+#yt-mob {
+  display: none;
+  color: red;
+}
+
+#nav-button {display: none;}
+
+#info-button {display: none;}
+
+#social-button {display: none;}
 
 .game-social-drop-parent:hover #game-top-socials-drop,
 #game-top-socials-drop:hover {

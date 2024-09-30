@@ -2,19 +2,25 @@
   "data": [
     {
       "name": "parallelized engineers",
-      "deep-link": "",
+      "deepLink": "",
       "genres": "building, survival, fighting, story",
-      "socials-enabled": true,
-      "info-enabled": false,
-      "nav-enabled": false,
-      "dev-link": "",
-      "dev-icon": "",
-      "update-log": true,
-      "update-log-link": "",
+      "socialsEnabled": true,
+      "infoEnabled": false,
+      "navEnabled": false,
+      "devLink": "https://www.roblox.com/groups/32826338/Connect-2023-Parallelism-Theme#!/about",
+      "devIcon": "https://unviere.github.io/Unviere/Img/unv_games.png",
+      "updateLog": true,
+      "updateLogLink": "https://devforum.roblox.com/t/-/2509865",
       "discord": true,
-      "discord-link": "",
+      "discordLink": "https://discord.gg/EX3BDgf8K3",
       "yt": true,
-      "yt-link": ""
+      "ytLink": "https://youtube.com/@parcle_dev?si=VYO8YglI4XewTqLF",
+      "x": false,
+      "xLink": "",
+      "guilded": false,
+      "guildedLink": "",
+      "insta": false,
+      "instaLink": ""
     }
       ]
 }

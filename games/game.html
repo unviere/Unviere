@@ -61,14 +61,14 @@
         <div class="game-top-right">
           <div class="game-top-right-mob">
             <div class="game-top-info-parent">
-            <a class="game-top-info" ><i class="ri-information-line"></i></a>
+            <a class="game-top-info" id="info-button" ><i class="ri-information-line"></i></a>
             <div class="game-top-info-drop"> <div class="game-top-info-content">
               
             </div>
             </div>
             </div>
             <div class="game-top-nav-parent">
-<a  class="game-top-nav" ><i class="ri-more-2-fill"></i></a>
+<a  class="game-top-nav" id="nav-button"><i class="ri-more-2-fill"></i></a>
  <div class="game-top-nav-drop"> 
  <div class="game-top-nav-content">
               
@@ -83,11 +83,11 @@
 </div>
 <div id="game-top-socials-mob">
   
-<div class="game-social-drop-parent">
+<div class="game-social-drop-parent" id="social-button">
   <a><i class="ri-arrow-drop-down-line"></i></a> <!-- Just the anchor for the icon -->
   <div class="game-social-drop" id="game-top-socials-drop"> 
-    <a href="" class="social" id="discord"><i class="ri-discord-fill"></i></a>
-    <a href="" class="social" id="yt"><i class="ri-youtube-fill"></i></a>
+    <a href="" class="social" id="discord-mob"><i class="ri-discord-fill"></i></a>
+    <a href="" class="social" id="yt-mob"><i class="ri-youtube-fill"></i></a>
   </div>
 </div>
 </div>
@@ -141,7 +141,9 @@
         <br>
         <h1 id ="created-date">created N/A</h1>
         <br>
-        <h1 id ="last-updated">updated: <a href="https://devforum.roblox.com/t/-/2509865">update log</a></h1>
+        <h1 id ="last-updated">updated: </h1>
+        <br>
+        <a href="" id="upd-log">update log</a>
         <br>
         <h1 id="genre">genre: N/A</h1>
         <br>
@@ -362,16 +364,83 @@ fetch(imgUrl)
                   const subInfoData = infoData.data[0];
 
                   // Update DOM elements with the additional info
-                  document.getElementById('sub-genre').textContent = `Other genre: ${subInfoData.genres || 'N/A'}`;
+                  document.getElementById('sub-genre').textContent = `Other genres: ${subInfoData.genres || 'N/A'}`;
 
                   // Make the Discord icon visible based on the response
+                  const infoIcon = document.getElementById('info-button');
+                const navIcon = document.getElementById('nav-button');
+                const socialIcon = document.getElementById('social-button');
+                
+                if (subInfoData.infoEnabled === true) {
+                   infoIcon.style.display = "flex";
+                   
+                  } else {
+                    infoIcon.style.display = "none";
+                   
+                  }
+                  
+                  //
+                  if (subInfoData.navEnabled === true) {
+                   navIcon.style.display = "flex";
+                   
+                  } else {
+                    navIcon.style.display = "none";
+                   
+                  }
+                  
+                  //
+                  if (subInfoData.socialsEnabled === true) {
+                   socialIcon.style.display = "flex";
+                   
+                  } else {
+                    socialIcon.style.display = "none";
+                   
+                  }
+                  
+                  //
                   const discordIcon = document.getElementById('discord');
+                  const discordMobIcon = document.getElementById('discord-mob');
                   if (subInfoData.discord === true) {
                     discordIcon.style.display = "flex";
-                    discordIcon.href = subInfoData.discordLink || '#'; // Set the Discord link if available
+                    discordMobIcon.style.display = "flex";
+                    discordIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
                   } else {
                     discordIcon.style.display = "none";
+                    discordMobIcon.style.display = "none";
                   }
+                } else {
+                  console.error('No valid sub-genre data found');
+                }
+                
+                //
+                const ytIcon = document.getElementById('yt');
+                
+                const ytMobIcon = document.getElementById('yt-mob');
+                if (subInfoData.yt === true) {
+                   ytIcon.style.display = "flex";
+                   ytMobIcon.style.display = "flex";
+                    ytIcon.href = subInfoData.ytLink || ''; 
+                  } else {
+                    ytIcon.style.display = "none";
+                   ytMobIcon.style.display = "none";
+                  }
+                  
+                  //
+                  
+                  const updLog = document.getElementById('upd-log');
+                  
+                  if (subInfoData.updateLog === true) {
+                   updLog.style.display = "flex";
+                   updLog.href = subInfoData.updateLogLink || '';
+                   
+                  } else {
+                    updLog.style.display = "none";
+                   
+                  }
+                  
+                  
+                  
+                  //
                 } else {
                   console.error('No valid sub-genre data found');
                 }
