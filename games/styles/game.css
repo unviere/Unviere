@@ -225,6 +225,34 @@ border-top-right-radius: 10px;
   display: none;
   color: red;
 }
+
+#x {
+  display: none;
+  color: black;
+  
+}
+
+
+#guild {
+  display: none;
+}
+
+ #insta {
+            display: flex;
+            
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AD);
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
+#tiktok {
+     display: none;
+            
+            background: linear-gradient(45deg, #25F4EE, #FE2C55); /* TikTok gradient colors */
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
 #game-top-socials-mob{
   display: none;
   
@@ -703,6 +731,34 @@ outline: none;
   display: none;
   color: red;
 }
+
+#x-mob{
+  display: none;
+  color: black;
+}
+
+#guild-mob{
+  display: none;
+}
+
+  #insta-mob {
+            display: none;
+            
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AD);
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
+
+#tiktok-mob {
+     display: none;
+            
+            background: linear-gradient(45deg, #25F4EE, #FE2C55); /* TikTok gradient colors */
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
+
 
 #nav-button {display: none;}
 
