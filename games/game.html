@@ -326,9 +326,11 @@ fetch(imgUrl)
   .then(thumbnailData => {
     console.log('Thumbnail Data:', thumbnailData);  // Log full data for inspection
     if (thumbnailData && thumbnailData.data && thumbnailData.data[0] && thumbnailData.data[0].thumbnails && thumbnailData.data[0].thumbnails.length > 0) {
-      // Only get the first image URL
+      // Get the first image URL from the thumbnails array
       const firstImageUrl = thumbnailData.data[0].thumbnails[0].imageUrl;
       console.log('First Image URL:', firstImageUrl);  // Log the first image URL
+      
+      // Select the image element
       const imgElement = document.querySelector('#game-thumb-1');
       
       if (imgElement) {
@@ -337,7 +339,7 @@ fetch(imgUrl)
         console.error('Image element with id="game-thumb-1" not found in DOM');
       }
     } else {
-      console.error('Invalid or empty thumbnail data received from API');
+      console.error('No valid thumbnails received from API');
     }
   })
   .catch(error => {
@@ -360,7 +362,7 @@ fetch(imgUrl)
                   const subInfoData = infoData.data[0];
 
                   // Update DOM elements with the additional info
-                  document.getElementById('sub-genre').textContent = `Other genres: ${subInfoData.genres || 'N/A'}`;
+                  document.getElementById('sub-genre').textContent = `Other genre: ${subInfoData.genres || 'N/A'}`;
 
                   // Make the Discord icon visible based on the response
                   const discordIcon = document.getElementById('discord');
