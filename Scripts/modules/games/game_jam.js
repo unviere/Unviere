@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Static mapping of game names and universe IDs
   const gamesData = [
     { universeId: '4922186765', name: 'parallelized-engineers', id: '14229107623' },
-    { universeId: '5574638301', name: 'Diverse-And-Unexpected?gj=02-2024', id: '16133672663' },
+    { universeId: '5574638301', name: 'Diverse-And-Unexpected/game-jam?date=02-2024', id: '16133672663' },
     { universeId: '6413156980', name: 'the-secret-of-puzzle-island/gj-08-2024', id: '18934982456' }
   ];
 

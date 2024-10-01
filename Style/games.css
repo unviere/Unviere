@@ -36,6 +36,10 @@ img {
   height: 160px;
 }
 
+.game-jams{
+  margin-top: 65px;
+}
+
 /* games*/
 
 .game-jams{
@@ -310,6 +314,7 @@ hr{
 
 @media (max-width: 700px) {
   .game-jams {
+    margin-top: 35px;
     padding: 10px 0;
     width: 100%;
   }
