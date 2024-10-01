@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Static mapping of game names and universe IDs
   const gamesData = [
-    { universeId: '4922186765', name: 'parallelized-engineers', id: '14229107623' },
+    { universeId: '4922186765', name: 'Parallelized-Engineers/game-jam?date=07-2023', id: '14229107623' },
     { universeId: '5574638301', name: 'Diverse-And-Unexpected/game-jam?date=02-2024', id: '16133672663' },
-    { universeId: '6413156980', name: 'the-secret-of-puzzle-island/gj-08-2024', id: '18934982456' }
+    { universeId: '6449806598', name: 'the-secret-of-puzzle-island/game-jam?date=08-2024', id: '116463530852265' }
   ];
 
   const fetchAndDisplayGame = (game) => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           gameClone.querySelector(".game-card").href = customPageUrl;
 
           // Use a preset thumbnail URL instead of fetching it dynamically
-          gameClone.querySelector('.icon').src = `https://unviere.github.io/Unviere/games/api/thumbs/thumbnail?id=${game.universeId}`; // Preset URL
+          gameClone.querySelector('.icon').src = `https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}`; // Preset URL
 
           // Append the clone to the container after setting the preset icon
           gameContainer.appendChild(gameClone);
