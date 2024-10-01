@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Static mapping of game names and universe IDs
   const gamesData = [
-    { universeId: '4922186765', name: 'parallelized-engineers', id: '123456789' },
+    { universeId: '4922186765', name: 'parallelized-engineers', id: '14229107623' },
     { universeId: '6449806598', name: 'the-secret-of-puzle-island', id: '116463530852265' },
     { universeId: '3721966693', name: 'happy-obbies', id: '10135698219' }
   ];
