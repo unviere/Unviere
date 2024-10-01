@@ -530,6 +530,7 @@ outline: none;
 
 #description{
   display: flex;
+  max-width: 100%;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -906,7 +907,7 @@ border-bottom-right-radius: 10px;
 }
 
 #check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game #game-developer {
-  font-size: 5px;
+  font-size: 6px;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 60px;
