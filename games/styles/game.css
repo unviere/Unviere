@@ -533,6 +533,16 @@ outline: none;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game .desk-title-game-stats {
+  display: none;
+}
+
+#check:checked ~ .game .game-head-section .game-top.scrolled {
+  margin-left: 151px!important;
+  margin-right: 0px;
+  width: 81%!important;
+}
 @media (max-width: 700px){
   #header {
     height: 35px!important;
@@ -895,10 +905,18 @@ border-bottom-right-radius: 10px;
   font-weight: 600;
 }
 
-#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game #geme-developer {
-  font-size: 4px;
-  font-weight: 600;
+#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game #game-developer {
+  font-size: 3px;
   white-space: nowrap;
   text-overflow: ellipsis;
+  max-width: 60px;
+  overflow: hidden;
 }
+
+#check:checked ~ .game .game-head-section .game-top.scrolled {
+  margin-left: 151px!important;
+  margin-right: 0px;
+  width: 61%!important;
+}
+
 }
