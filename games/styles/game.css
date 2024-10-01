@@ -238,7 +238,7 @@ border-top-right-radius: 10px;
 }
 
  #insta {
-            display: flex;
+            display: none;
             
             background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AD);
             -webkit-background-clip: text; /* For Safari */
@@ -246,7 +246,7 @@ border-top-right-radius: 10px;
             color: transparent; /* Make text transparent to see the gradient */
 }
 #tiktok {
-     display: flex;
+     display: none;
             
             background: linear-gradient(45deg, #25F4EE, #FE2C55); /* TikTok gradient colors */
             -webkit-background-clip: text; /* For Safari */

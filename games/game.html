@@ -428,19 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     discordIcon.style.display = "none";
                     discordMobIcon.style.display = "none";
                   }
-//
-    const tiktokIcon = document.getElementById('tiktok');
-                  const tiktokMobIcon = document.getElementById('tiktok-mob');
-                  if (subInfoData.tiktok === true) {
-                    tiktokIcon.style.display = "flex";
-                    tiktokMobIcon.style.display = "flex";
-                    tiktokIcon.href = subInfoData.tiktokLink || ''; // Set the Discord link if available
-                    
-                    toktokMobIcon.href = subInfoData.tiktokLink || ''; // Set the Discord link if available
-                  } else {
-                    tiktokIcon.style.display = "none";
-                    tiktokMobIcon.style.display = "none";
-                  }
+    
                   // YouTube icon handling
                   const ytIcon = document.getElementById('yt');
                   const ytMobIcon = document.getElementById('yt-mob');
@@ -453,7 +441,59 @@ document.addEventListener('DOMContentLoaded', function() {
                     ytIcon.style.display = "none";
                     ytMobIcon.style.display = "none";
                   }
-
+                  //x
+                  const xIcon = document.getElementById('x');
+                  const xMobIcon = document.getElementById('x-mob');
+                  if (subInfoData.x === true) {
+                    xIcon.style.display = "flex";
+                    xMobIcon.style.display = "flex";
+                    xIcon.href = subInfoData.xLink || ''; 
+                  
+                    xMobIcon.href = subInfoData.xLink || ''; 
+                  } else {
+                    xIcon.style.display = "none";
+                    xMobIcon.style.display = "none";
+                  }
+                  
+                                    //insta
+                  const xIcon = document.getElementById('insta');
+                  const xMobIcon = document.getElementById('insta-mob');
+                  if (subInfoData.insta === true) {
+                    instaIcon.style.display = "flex";
+                    instaMobIcon.style.display = "flex";
+                    instaIcon.href = subInfoData.instaLink || ''; 
+                  
+                    instaMobIcon.href = subInfoData.instaLink || ''; 
+                  } else {
+                    instaIcon.style.display = "none";
+                    instaMobIcon.style.display = "none";
+                  }
+                  //tiktok
+                  const tiktokIcon = document.getElementById('tiktok');
+                  const tiktokMobIcon = document.getElementById('tiktok-mob');
+                  if (subInfoData.tiktok === true) {
+                    tiktokIcon.style.display = "flex";
+                    tiktokMobIcon.style.display = "flex";
+                    tiktokIcon.href = subInfoData.tiktokLink || ''; 
+                    
+                    toktokMobIcon.href = subInfoData.tiktokLink || ''; 
+                  } else {
+                    tiktokIcon.style.display = "none";
+                    tiktokMobIcon.style.display = "none";
+                  }
+                  //guilded 
+                  const guildIcon = document.getElementById('guild');
+                  const guildMobIcon = document.getElementById('guild-mob');
+                  if (subInfoData.guilded === true) {
+                    guildIcon.style.display = "flex";
+                    guildMobIcon.style.display = "flex";
+                    guildIcon.href = subInfoData.guildedLink || ''; 
+                  
+                    guildMobIcon.href = subInfoData.guildedLink || ''; 
+                  } else {
+                    guildIcon.style.display = "none";
+                    guildMobIcon.style.display = "none";
+                  }
                   // Update log handling
                   const updLog = document.getElementById('upd-log');
                   if (subInfoData.updateLog === true) {
