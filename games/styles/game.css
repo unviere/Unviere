@@ -906,7 +906,7 @@ border-bottom-right-radius: 10px;
 }
 
 #check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game #game-developer {
-  font-size: 3px;
+  font-size: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 60px;
