@@ -428,7 +428,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     discordIcon.style.display = "none";
                     discordMobIcon.style.display = "none";
                   }
-
+//
+    const tiktokIcon = document.getElementById('discord');
+                  const tiktokMobIcon = document.getElementById('discord-mob');
+                  if (subInfoData.tiktok === true) {
+                    tiktokIcon.style.display = "flex";
+                    tiktokMobIcon.style.display = "flex";
+                    tiktokIcon.href = subInfoData.tiktokLink || ''; // Set the Discord link if available
+                    
+                    toktokMobIcon.href = subInfoData.tiktokLink || ''; // Set the Discord link if available
+                  } else {
+                    tiktokIcon.style.display = "none";
+                    tiktokMobIcon.style.display = "none";
+                  }
                   // YouTube icon handling
                   const ytIcon = document.getElementById('yt');
                   const ytMobIcon = document.getElementById('yt-mob');
