@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const fetchAndDisplayGame = (game) => {
     const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
-    const imgUrl =`https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}`;
+    const imgUrl =`https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}.png`;
 
     fetch(apiUrl)
       .then(response => {
