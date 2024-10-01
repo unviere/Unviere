@@ -531,13 +531,21 @@ outline: none;
   /*togable element*/
   display: flex;
   max-width: 98%;
+  flex-direction: row;
+  margin-left: 10px;
 }
-#description{
-  
+#description {
   display: flex;
-  max-width: 100%;
+  flex-direction: row;
+  align-items: flex-start; /* Use 'flex-start' instead of 'left' for alignment */
+  max-width: 98%; /* You may also want to use '100%' to fully fit in the parent */
   white-space: pre-wrap;
-  word-wrap: break-word;
+  word-wrap: break-word; /* This ensures long words break */
+  word-break: break-word; /* Fallback to ensure long words break */
+  overflow-wrap: break-word; /* Fallback for older browsers */
+  overflow: hidden; /* Prevent content from overflowing */
+  text-overflow: ellipsis; /* Show ellipsis (...) if content overflows */
+  flex-wrap: wrap; /* Allow wrapping when needed */
 }
 
 #check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game .desk-title-game-stats {
