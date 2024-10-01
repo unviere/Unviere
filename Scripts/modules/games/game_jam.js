@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const fetchAndDisplayGame = (game) => {
     const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
+    const imgUrl =`https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}`;
 
     fetch(apiUrl)
       .then(response => {
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           gameClone.querySelector(".game-card").href = customPageUrl;
 
           // Use a preset thumbnail URL instead of fetching it dynamically
-          gameClone.querySelector('.icon').src = `https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}`; // Preset URL
+          gameClone.querySelector('.icon').src = imgUrl; // Preset URL
 
           // Append the clone to the container after setting the preset icon
           gameContainer.appendChild(gameClone);
