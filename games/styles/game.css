@@ -527,8 +527,13 @@ outline: none;
   border-bottom-style: solid;
   border-bottom-color: #1B1F3B;
 }
-
+#desc{
+  /*togable element*/
+  display: flex;
+  max-width: 98%;
+}
 #description{
+  
   display: flex;
   max-width: 100%;
   white-space: pre-wrap;
