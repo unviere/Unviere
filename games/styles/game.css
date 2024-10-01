@@ -470,7 +470,7 @@ border-bottom-right-radius: 10px;
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 10;
   width: 98%;
   height: 50px;
   display: flex;
@@ -827,7 +827,7 @@ outline: none;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   left:10px;
-  bottom: -80px;
+  top: 30px;
  
 }
 
@@ -877,5 +877,28 @@ border-bottom-right-radius: 10px;
 #upd-log{
   display: none;
   font-size: 5px!important;
+}
+
+#instal-button {display: flex;}
+
+#instal-button-dd {display: none;}
+#check:checked ~ .game .game-head-section .game-playbar .game-playbar-content .instal #instal-button {
+  display: none;
+}
+
+#check:checked ~ .game .game-head-section .game-playbar .game-playbar-content .game-drop-down #instal-button-dd {
+  display: flex;
+}
+
+#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left #game-title {
+  font-size: 5px;
+  font-weight: 600;
+}
+
+#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game #geme-developer {
+  font-size: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 }
