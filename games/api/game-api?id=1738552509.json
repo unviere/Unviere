@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "name": "Sk Sword Fighting",
+      "thumbnail": "",
+      "deepLink": "",
+      "genres": "no other genres are set up",
+      "socialsEnabled": false,
+      "infoEnabled": false,
+      "navEnabled": false,
+      "devLink": "https://www.roblox.com/groups/2519878/SK-Sword-Killers#!/about",
+      "devIcon": "https://unviere.github.io/Unviere/Img/groups/icon/Sk.png",
+      "updateLog": false,
+      "updateLogLink": "",
+      "discord": false,
+      "discordLink": "",
+      "yt": false,
+      "ytLink": "",
+      "x": false,
+      "xLink": "",
+      "guilded": false,
+      "guildedLink": "",
+      "insta": false,
+      "instaLink": "",
+      "tiktok": false,
+      "tiktokLink": "",
+      
+      "event": {
+        "startDate": "",
+        "startTime": "",
+        "endDate": "",
+        "endTime": "",
+        "title": "",
+        "description": "",
+        "img": ""
+      }
+    }
+      ]
+}
