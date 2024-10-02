@@ -139,7 +139,7 @@
                    <a class="game-playbar-desk-button" href="">Groups</a>
             
             <a class="game-playbar-desk-button" href="https://unviere.github.io/Unviere/games">Games</a>
-        <a href="" class="ctaa"><i class ="ri-play-fill"></i>Play now</a>
+        <a href="" class="ctaa" id="play-button"><i class ="ri-play-fill"></i>Play now</a>
         <label class="instal" for="toggle-instalrbx" id="instalrbxopen">
         <a id="instal-button"><i class =""></i> How to install</a></label>
         
@@ -421,6 +421,8 @@ document.addEventListener('DOMContentLoaded', function() {
                   document.getElementById('developer-img').src =  subInfoData.devIcon || '';
                   
                   document.getElementById('developer-img-link'). href =  subInfoData.devLink || '';
+                  
+                  document.getElementById('play-button').href = subInfoData.deepLink
 
                   // Make the Discord icon visible based on the response
                   const infoIcon = document.getElementById('info-button');
