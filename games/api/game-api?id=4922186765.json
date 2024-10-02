@@ -3,7 +3,7 @@
     {
       "name": "parallelized engineers",
       "thumbnail": "",
-      "deepLink": "",
+      "deepLink": "https://ro.blox.com/Ebh5?af_dp=roblox%3A%2F%2FplaceID%3D14229107623&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2F14229107623%2F&deep_link_value=roblox%3A%2F%2FplaceID%3D14229107623",
       "genres": "building, survival, fighting, story",
       "socialsEnabled": true,
       "infoEnabled": false,
@@ -21,7 +21,17 @@
       "guilded": false,
       "guildedLink": "",
       "insta": false,
-      "instaLink": ""
+      "instaLink": "",
+      
+      "event": {
+        "startDate": "",
+        "startTime": "",
+        "endDate": "",
+        "endTime": "",
+        "title": "",
+        "description": "",
+        "img": ""
+      }
     }
       ]
 }
