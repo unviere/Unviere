@@ -302,7 +302,7 @@ img {
   z-index: 1000;
   background-color: whitesmoke;
   position: fixed;
-  display: flex;
+  display: none;
   flex-direction: column;
   box-shadow: 5px 0 5px -5px grey;
 }
