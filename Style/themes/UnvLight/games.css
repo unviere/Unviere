@@ -11,7 +11,7 @@ body.light-mode {
 
 body.light-mode .game-jams{
   
-  background: whitesmoke;
+  background: transparent;
 }
 
 body.light-mode .sec-header{
