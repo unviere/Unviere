@@ -1,0 +1,889 @@
+
+
+body.light-mode {
+ /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
+ background: red;
+}
+
+body.light-mode .game {
+  background: transparent;
+}
+
+body.light-mode .game-head-section {
+  border-style: solid;
+ border-color: #06c46f;
+ 
+  
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+body.light-mode .game-top {
+ background: #06c46f;
+ border-radius: 10px;
+ border-bottom-left-radius: 0;
+ border-bottom-right-radius: 0;
+}
+
+body.light-mode .scrolled {
+  
+  background: #049c59;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: none;
+/*  box-shadow: 1px 10px 12px -3px lightgray, -1px 12px 10px -3px lightgray;*/
+}
+
+
+
+.onrbx {
+  font-size: 12px;
+  color: black;
+  margin: 0; 
+  background: white; 
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  display: block;
+  z-index: 5;
+}
+
+.game-top-holder {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+    align-content: right;
+  justify-content: flex-end;  
+}
+
+.game-top-left{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.game-top-left-sticky {
+  display: none;
+}
+
+#game-title {
+  font-size: 16px;
+  height: 50%;
+  margin-bottom: 5px!important;
+}
+
+#game-developer {
+  font-size: 12px;
+  height: 100%;
+}
+
+.stats-top-game {
+  display: flex;
+  flex-direction: row;
+  flex-flow: center;
+  align-items: center!important;
+  align-content: center!important;
+  vertical-align: center;
+  padding: 1px;
+  height: 50%;
+  
+}
+
+
+.stats-top-game #stats-icon{
+  font-size: 15px;
+  color: #06c46f;
+  display: flex;
+  width: 17px;
+  min-width: 17px;
+}
+
+.stats-top-game #stats-icon #stats-icon-inner{
+  display: inline-block;
+  position: relative;
+
+  color: whitesmoke;
+  font-size: 7px!important;
+  right:11px;
+  top:7px;
+}
+
+.stats-top-game h1{
+  font-size: 15px!important;
+  max-height: 15px!important;
+  margin-left: 2px;
+}
+
+.desk-title-game-stats {
+  display: flex;
+}
+
+.game-top-right {
+ display: flex;
+  width: auto;
+  height: 100%;
+  align-content: right;
+  justify-content: flex-end;  
+}
+
+.game-top-right-mob {
+  display: none;
+}
+
+.group-icon img {
+  width: auto;
+  height: 100%;
+    display: block;
+  max-width: 50px;
+}
+
+#game-top-socials {
+  display: flex;
+  width: auto;
+  
+  
+}
+
+.social-icon{
+  font-size: 50px;
+  width: auto;
+  height: 100%;
+    display: block;
+  max-width: 50px;
+}
+
+.sticky-socials {
+  font-size: 35px!important;
+  max-width: 35px!important;
+    width: auto;
+  height: 100%;
+}
+
+.social {
+  text-decoration: none;
+}
+
+#discord{
+  display: none;
+  color: blue;
+}
+
+#yt{
+  display: none;
+  color: red;
+}
+
+#x {
+  display: none;
+  color: black;
+  
+}
+
+
+#guild {
+  display: none;
+}
+
+ #insta {
+            display: none;
+            
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AD);
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
+#tiktok {
+     display: none;
+            
+            background: linear-gradient(45deg, #25F4EE, #FE2C55); /* TikTok gradient colors */
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
+#game-top-socials-mob{
+  display: none;
+  
+}
+
+#upd-log {display: none;}
+
+.game-top-navinfo {
+  
+  display: flex;
+  background: whitesmoke;
+  height: 35px;
+  min-height: 35px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+
+.game-top-navinfo-sticky{
+  display: none;
+}
+
+.game-img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+.game-playbar {
+  display: flex;
+  width: 99%;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  bottom: -20px;
+  
+   z-index: 5;
+}
+.game-playbar-content {
+  display: flex;
+  width: auto!important;
+  
+  height: 40px;
+  white-space: nowrap;
+  justify-content: center;
+  
+  align-items: center;
+  align-content: center;
+  gap: 10px; /* Space between buttons */
+   /* Add some space above the buttons lol */
+  
+  
+  background: white;
+ 
+  
+  padding: 5px;
+  
+  
+}
+
+
+.game-playbar-content a {
+  
+  width: 100px;
+  height: 30px;
+  display: flex;
+  color: black;
+  background: #06c46f;
+  border: 1px solid transparent;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 7px;
+  text-transform: uppercase;
+  transition: all .55s ease;
+  text-decoration: none;
+    margin-right: 5px;
+  margin-left: 5px;
+}
+
+.game-playbar-content a:hover {
+  background: black;
+  color: white;
+  border: 1px solid transparent;
+  transform: translateX(8px);
+}
+
+.game-playbar-content .ctaa {
+  background: black;
+  border: 1px solid transparent;
+  color: white;
+}
+
+#toggle-instalrbx{
+  display:none;
+}
+
+.instalf{
+  display: none;
+  background: #06c46f;
+  position: fixed;
+  width: 97%;
+  height: auto;
+  z-index: 20;
+  margin: 0 auto;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-top: 550px;
+	max-width: 2000px;
+	margin-right: 1%;
+	margin-left: 1%;
+	border-radius: 10px;
+}
+
+
+
+.instal #instalrbxopen{
+  display: block;
+  font-size: 3650px;
+  background: red;
+  color: black;
+  border-radius: 50px;
+  z-index: 89800;
+  transition: all .5s;
+  opacity: 100;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.instalf #closeinstalrbx{
+  display: block;
+  right: 30px;
+  top: 3px;
+  font-size: 20px;
+  background: red;
+  color: black;
+  padding: 6px 6px;
+  border-radius: 50px;
+  z-index: 990;
+  margin-top: 550px;
+  position: fixed;
+  transition: all .5s ease;
+  
+}
+
+#toggle-instalrbx:checked ~ .instalf{
+  display: flex;
+}
+
+#toggle-instalrbx:checked ~ .instalf #closeinstslrbx{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ .instalf{
+  width: 75%;
+  left: 40;
+  
+}
+.game-drop-down-button{display: none!important;}
+.game-drop-down{display: none};
+
+.game-playbar .ctaa i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.game-stats{
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  bottom: 40px;
+  padding: 10px 0;
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+border-right-style: solid;
+border-right-color: #06c46f;
+padding-top: 40px;
+border-left-style: solid;
+border-left-color: #06c46f;
+border-bottom-style: solid;
+border-bottom-color: #06c46f;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+.game-stats h1{
+  color: black;
+  font-size: 10px!important;
+  
+  margin: 0 5 5px;
+}
+
+.game-stats a{
+  color: #0328ff;
+  text-decoration: underline;
+}
+
+#upd-log{
+  display: none;
+  font-size: 10px!important;
+}
+
+.game-buttons-bar{
+	 /*position: fixed;*/
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 98%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+justify-content: space-between;
+ padding: 5px 9%;
+  background: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    margin-left: 5px;
+    box-shadow: 1px 1px 9px gray;
+}
+
+.game-buttons-bar > * {
+  flex: 1; /* Ensures that children take up equal space */
+  text-align: center; /* Centers text/content within each child */
+   min-width: 100px; /* Adjust this value as needed */
+}
+
+/*
+.buttons-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: transparent;
+}*/
+
+.game-buttons-bar button{
+  background: transparent;
+  color: black;
+  margin-left: 0px;
+  font-size: 30;
+  width: auto;
+  height: auto;
+  font-weight: 600;
+/*	border-radius: 50px;*/
+  border-bottom: 2px solid transparent;
+/*  transition: all .55s ease*/
+  text-decoration: none;
+/*  padding: 5px 5px;*/
+border: none;
+outline: none;
+}
+
+.game-buttons-bar button:hover {
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #1B1F3B;
+}
+
+.game-buttons-bar button.active {
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #1B1F3B;
+}
+#desc{
+  /*togable element*/
+  display: flex;
+  max-width: 98%;
+  flex-direction: row;
+  margin-left: 10px;
+}
+#description {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Use 'flex-start' instead of 'left' for alignment */
+  max-width: 98%; /* You may also want to use '100%' to fully fit in the parent */
+  white-space: pre-wrap;
+  word-wrap: break-word; /* This ensures long words break */
+  word-break: break-word; /* Fallback to ensure long words break */
+  overflow-wrap: break-word; /* Fallback for older browsers */
+  overflow: hidden; /* Prevent content from overflowing */
+  text-overflow: ellipsis; /* Show ellipsis (...) if content overflows */
+  flex-wrap: wrap; /* Allow wrapping when needed */
+}
+
+#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game .desk-title-game-stats {
+  display: none;
+}
+
+#check:checked ~ .game .game-head-section .game-top.scrolled {
+  margin-left: 151px!important;
+  margin-right: 0px;
+  width: 81%!important;
+}
+@media (max-width: 700px){
+  #header {
+    height: 35px!important;
+    min-height: 35px;
+  }
+  .game-head-section {
+  
+  width: 96%;
+  
+}
+
+.onrbx {
+  font-size: 8px;
+  
+ 
+  top: -5px;
+  left: 8px;
+  
+  z-index: 5;
+}
+  .game-top {
+    height: 30px;
+    border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+  }
+  
+  .scrolled {
+ 
+  top: 35px;
+  
+}
+
+  .game-top-left {
+    width: 75%;
+  }
+  
+  .game-top-left-sticky {
+  display: flex;
+}
+  .game-top-right {
+    width: 25%;
+  }
+  
+  .game-top-right-mob {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+  .game-top-right-mob a{
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.game-top-info i{
+  
+  color: black;
+}
+
+.game-top-info{
+  
+  display: block;
+}
+
+
+.game-top-info-parent {display: block;}
+.game-top-info-drop {
+  display: none;
+  width: 150px;
+  position: absolute;
+  height: auto;
+  min-height: 15px;
+  top: 30px;
+  left: 150px;
+  z-index: 50;
+}
+
+.game-top-info-content {
+  display: flex;
+  top: 0;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  background: whitesmoke;
+    padding-bottom: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
+
+.game-top-info-parent:hover .game-top-info-drop,
+.game-top-info-drop:hover {
+  display: flex; /* Stay visible when hovering over the parent or the dropdown */
+}
+
+.game-top-nav i{
+  
+  color: black;
+}
+
+.game-top-nav{
+  position: absolute;
+  z-index: 200000;
+  display: block;
+  
+}
+
+.game-top-sticky{
+  background: #c3c3c3!important;
+}
+
+
+.game-top-nav-parent {display: block;}
+.game-top-nav-drop {
+  display: none;
+  width: 150px;
+  position: absolute;
+  height: auto;
+  min-height: 15px;
+  left: 150px;
+  top: 30px;
+   z-index: 50;
+}
+
+.game-top-nav-content {
+  display: flex;
+  top: 0;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  background: whitesmoke;
+    padding-bottom: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
+
+.game-top-nav-parent:hover .game-top-nav-drop,
+.game-top-nav-drop:hover {
+  display: flex; /* Stay visible when hovering over the parent or the dropdown */
+}
+#game-top-socials-mob{
+  display: flex;
+  align-items: center;
+}
+
+#game-top-socials-drop{
+   z-index: 50;
+  position: absolute;
+  height: auto;
+  flex-direction: column;
+  width: 35px;
+  right: 10px;
+  top: 30px;
+  background: whitesmoke;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+.social i{
+  font-size:35px;
+  width: auto;
+  height: 100%;
+    display: block;
+  max-width: 35px;
+}
+
+#game-top-socials{
+  display: none;
+}
+
+.game-social-drop-parent {
+  display: block;
+  
+}
+
+.game-social-drop-parent a{
+  display: block;
+  color: black;
+  text-decoration: none;
+  
+}
+#game-top-socials-drop {
+  display: none; /* Initially hidden */
+}
+
+#discord-mob{
+  display: none;
+  color: blue;
+}
+
+#yt-mob {
+  display: none;
+  color: red;
+}
+
+#x-mob{
+  display: none;
+  color: black;
+}
+
+#guild-mob{
+  display: none;
+}
+
+  #insta-mob {
+            display: none;
+            
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AD);
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
+
+#tiktok-mob {
+     display: none;
+            
+            background: linear-gradient(45deg, #25F4EE, #FE2C55); /* TikTok gradient colors */
+            -webkit-background-clip: text; /* For Safari */
+            background-clip: text; /* For other browsers */
+            color: transparent; /* Make text transparent to see the gradient */
+}
+
+
+#nav-button {display: none;}
+
+#info-button {display: none;}
+
+#social-button {display: none;}
+
+.game-social-drop-parent:hover #game-top-socials-drop,
+#game-top-socials-drop:hover {
+  display: flex; /* Stay visible when hovering over the parent or the dropdown */
+}
+.game-social-drop-parent i{
+  font-size: 35px;
+  
+  width: auto;
+  height: 35px;
+    
+  max-width: 35px;
+}
+
+#game-title {
+  font-size: 11px;
+}
+
+#game-developer {
+  font-size: 6px;
+}
+
+.stats-top-game #stats-icon{
+  font-size: 12px;
+  width: 9px;
+  min-width: 9px;
+}
+
+.stats-top-game #stats-icon #stats-icon-inner{
+  font-size: 1px!important;
+  height: 1px!important;
+    min-height: 1px!important;
+  right:9px;
+  top:4px;
+}
+
+.stats-top-game h1{
+  font-size: 6px!important;
+  max-height: 7px!important;
+}
+
+.desk-title-game-stats {display: none;}
+
+.game-top-navinfo {
+  display: none;
+  z-index: 2000;
+}
+
+.game-drop-down{
+  position: absolute;
+  width: 100px;
+  height: auto;
+  background: transparent;
+  z-index: 60;
+  white-space: space-between;
+  display: none;
+  margin-top: 10px;
+  margin-left: 5px;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  left:10px;
+  top: 30px;
+ 
+}
+
+.game-drop-down li a{
+  margin-bottom: 10px!important;
+}
+
+.game-drop-down-button{
+  display: flex!important;
+  width: 30px!important;
+  height: 30px!important;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.game-playbar-desk-button{display: none!important;}
+
+.game-drop-down:hover, .game-playbar .game-drop-down-button:hover + .game-drop-down {
+  display: flex;
+}
+
+
+.game-stats{
+  
+  margin-left: 10px;
+  margin-right: 10px;
+  bottom: 40px;
+  padding: 10px 0;
+  width: 96%;
+  
+  padding: 10px;
+  
+  margin-bottom: 10px;
+
+padding-top: 40px;
+
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+.game-stats h1{
+  
+  font-size: 5px!important;
+  margin: 0 5 5px;
+}
+
+#upd-log{
+  display: none;
+  font-size: 5px!important;
+}
+
+#instal-button {display: flex;}
+
+#instal-button-dd {display: none;}
+#check:checked ~ .game .game-head-section .game-playbar .game-playbar-content .instal #instal-button {
+  display: none;
+}
+
+#check:checked ~ .game .game-head-section .game-playbar .game-playbar-content .game-drop-down #instal-button-dd {
+  display: flex;
+}
+
+#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left #game-title {
+  font-size: 5px;
+  font-weight: 600;
+}
+
+#check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game #game-developer {
+  font-size: 6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 60px;
+  overflow: hidden;
+}
+
+#check:checked ~ .game .game-head-section .game-top.scrolled {
+  margin-left: 151px!important;
+  margin-right: 0px;
+  width: 61%!important;
+}
+
+}
