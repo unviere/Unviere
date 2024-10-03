@@ -886,7 +886,7 @@ border-bottom-right-radius: 10px;
 }
 
 #upd-log{
-  display: flex;
+  display: none;
   font-size: 5px!important;
 }
 

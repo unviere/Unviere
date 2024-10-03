@@ -123,11 +123,11 @@ body.light-mode .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
 }
 
 body.light-mode .sidebar-toggle #pinned {
-  color: #0606c4;
+  color: #06c46f;
 }
 
 body.light-mode .sidebar-toggle #unpinned {
-  color: #1B1F3B;
+  color: white;
 }
 
 
