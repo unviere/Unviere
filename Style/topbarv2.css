@@ -309,8 +309,11 @@ img {
 .sidebar-title {
   background-color: transparent;
   width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   height: 30px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   color: black;
   display: flex;

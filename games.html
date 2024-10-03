@@ -410,8 +410,22 @@ comming somewhere in August with the game jam stay tuned for more information
                
                 <script src = "Scripts/topbar/nav.js"></script>
              <script>document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('side-menu-title').textContent = "games";
-    document.getElementById('side-menu-desc').textContent = "explore here all our games";
+    setTimeout(() => {
+    const titleElement = document.getElementById('side-menu-title');
+    const descElement = document.getElementById('side-menu-desc');
+
+    if (titleElement) {
+        titleElement.textContent = "games";
+    } else {
+        console.error("Element with ID 'side-menu-title' not found.");
+    }
+
+    if (descElement) {
+        descElement.textContent = "explore here all our games";
+    } else {
+        console.error("Element with ID 'side-menu-desc' not found.");
+    }
+}, 1000); // Delay execution by 100 milliseconds
 });</script>
   </body>
         </html>
