@@ -64,7 +64,7 @@ body.dark-mode .games-container:before {
   background: linear-gradient(to left, rgba(255,255,255,0), #121212);
 }
 
-body.light-mode .games-container:after {
+body.dark-mode .games-container:after {
   background: linear-gradient(to right, rgba(255,255,255,0), #121212);
 }
 
