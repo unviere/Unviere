@@ -1,0 +1,163 @@
+
+
+
+body.dark-mode {
+ /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
+ background: #121212;
+}
+
+
+/* games*/
+
+body.dark-mode .game-jams{
+  
+  background: transparent;
+}
+
+body.dark-mode .sec-header{
+  color: whitesmoke;
+  
+  
+}
+body.dark-mode .sec-desc{
+  color: whitesmoke;
+  
+}
+
+
+body.dark-mode .all-games{
+  background-color: #024a2a;
+  
+  border-radius: 10px;
+  margin-right: 10px;
+  
+}
+
+body.dark-mode .all-games:hover{
+  background-color: #026c40;
+  border-radius: 5px;
+}
+
+
+body.dark-mode .all-games i{
+  font-size: 80px;
+  
+  color: red;
+}
+
+/*@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  
+  to{
+    transform: translateX(-100%);
+  }
+}*/
+
+body.dark-mode .games-container{
+  padding: 20px 0;
+}
+
+body.dark-mode .games-container:before {
+  
+  background: linear-gradient(to left, rgba(255,255,255,0), #121212);
+}
+
+body.light-mode .games-container:after {
+  background: linear-gradient(to right, rgba(255,255,255,0), #121212);
+}
+
+body.dark-mode .game-inf-scrolling a{
+  background-color: #024a2a;
+  
+  color: whitesmoke;
+  
+  border-color: transparent;
+  border-width: 0px;
+  border-style: none;
+  margin: 10px;
+  box-shadow: 
+  1px 1px 9px black;
+}
+
+body.dark-mode .game-inf-scrolling a:hover{
+  background-color: #026c40;
+  border-radius: 5px;
+border-color: transparent;
+  
+}
+
+body.dark-mode .game-inf-scrolling img{
+
+  border-radius: 10px;
+  
+}
+
+
+
+
+body.dark-mode .owner{
+  color: #f0b400;
+}
+
+body.dark-mode .stats-game #stats-icon{
+  
+  color: #03c8ff;
+  
+}
+
+body.dark-mode .stats-game #stats-icon #stats-icon-inner{
+  color: #024a2a;
+  
+}
+
+
+body.dark-mode .stats-game h1{
+  
+  
+  color:  lightcyan;
+}
+
+
+
+
+	@media (max-width: 1535px){
+
+	}
+
+@media (max-width: 1460px){
+	
+
+}
+
+@media (max-width: 1340px){
+
+
+}
+@media (max-width: 1195px){
+	
+
+
+	
+}
+
+@media (max-width: 700px) {
+  
+  
+
+
+  
+  body.dark-mode .game-inf-scrolling a {
+    border-radius: 10px;
+    border-width: 1px;
+    margin: 10px;
+    
+  }
+
+  body.dark-mode .game-inf-scrolling img {
+    
+    border-radius: 10px;
+  }
+
+}

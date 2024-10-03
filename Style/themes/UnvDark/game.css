@@ -1,0 +1,304 @@
+
+
+body.dark-mode {
+ /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
+ background: #121212;
+}
+
+
+
+body.light-mode .game {
+  background: transparent;
+}
+
+body.dark-mode .game-head-section {
+  border-style: solid;
+ border-color: #024a2a;
+ 
+  
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+body.dark-mode .game-top {
+ background: #024a2a;
+ border-radius: 10px;
+ border-bottom-left-radius: 0;
+ border-bottom-right-radius: 0;
+}
+
+body.dark-mode .scrolled {
+  
+  background: #026c40;
+  border-radius: 10px;
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0;
+  box-shadow: none;
+/*  box-shadow: 1px 10px 12px -3px lightgray, -1px 12px 10px -3px lightgray;*/
+}
+
+
+
+body.dark-mode .onrbx { 
+  background: #121212; 
+  color: whitesmoke;
+}
+
+body.dark-mode #game-title {
+  color: whitesmoke;
+}
+
+body.dark-mode #game-developer {
+  color: whitesmoke;
+}
+
+body.dark-mode .stats-top-game h1 {
+  color: whitesmoke;
+}
+
+body.dark-mode .stats-top-game #stats-icon{
+  
+  color: #03c8ff;
+  
+}
+
+body.dark-mode .stats-top-game #stats-icon #stats-icon-inner{
+  
+  color: #024a2a;
+}
+
+.body.dark-mode .social {
+  text-decoration: none;
+}
+
+body.dark-mode #discord{
+  color: blue;
+}
+
+body.dark-mode #yt{
+  
+  color: red;
+}
+
+body.dark-mode #x {
+  
+  color: white;
+  
+}
+
+
+
+
+body.dark-mode #insta {
+            
+            
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AD);
+}
+body.dark-mode #tiktok {
+     
+            
+            background: linear-gradient(45deg, #25F4EE, #FE2C55); 
+}
+
+
+
+
+body.dark-mode .game-top-navinfo {
+  
+  
+  background: #024a2a;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+
+
+
+body.dark-mode .game-playbar-content {
+  
+  
+  background: #121212;
+  
+  
+}
+
+
+
+
+
+
+
+
+body.dark-mode .instalf{
+  background: #024a2a;
+	border-radius: 10px;
+}
+
+
+
+body.dark-mode .instal #instalrbxopen{
+  
+  background: red;
+  color: black;
+  border-radius: 50px;
+  
+}
+
+body.dark-mode .instalf #closeinstalrbx{
+  
+  background: red;
+  color: black;
+  
+}
+
+
+body.dark-mode  .game-stats{
+  
+border-right-style: solid;
+border-right-color: #024a2a;
+
+border-left-style: solid;
+border-left-color: #024a2a;
+border-bottom-style: solid;
+border-bottom-color: #024a2a;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+body.dark-mode .game-stats h1{
+  color: whitesmoke;
+}
+
+
+
+body.dark-mode .game-buttons-bar{
+	 /*position: fixed;*/
+  
+  background: #024a2a;
+    border-radius: 5px;
+    box-shadow: 1px 1px 9px black;
+}
+
+
+
+
+
+body.dark-mode .game-buttons-bar button{
+  background: transparent;
+  color: whitesmoke;
+  
+  border-bottom: 2px solid transparent;
+/*  transition: all .55s ease*/
+border: none;
+outline: none;
+}
+
+body.dark-mode .game-buttons-bar button:hover {
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: lightcyan;
+}
+
+body.dark-mode .game-buttons-bar button.active {
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #D1D1E9;
+}
+
+body.dark-mode #description {
+  color: whitesmoke;
+}
+
+
+@media (max-width: 700px){
+  
+
+body.dark-mode .game-top-info i{
+  
+  color: whitesmoke;
+}
+
+
+
+body.dark-mode .game-top-nav i{
+  
+  color: whitesmoke;
+}
+
+
+
+body.dark-mode .game-top-sticky{
+  background: #026c40!important;
+  
+}
+
+
+
+body.dark-mode .game-top-nav-content {
+  
+  background: #024a2a;
+    
+  
+}
+
+body.dark-mode .game-top {
+  border-radius: 10px;
+}
+
+
+body.dark-mode #game-top-socials-drop{
+   
+  background: #024a2a;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
+body.dark-mode .game-social-drop-parent a{
+  color: whitesmoke;
+  text-decoration: none;
+  
+}
+
+body.dark-mode #discord-mob{
+  
+  color: blue;
+}
+
+body.dark-mode #yt-mob {
+  
+  color: red;
+}
+
+body.dark-mode #x-mob{
+  
+  color: white;
+}
+
+
+
+  body.dark-mode #insta-mob {
+            
+            
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AD);
+            
+}
+
+body.dark-mode #tiktok-mob {
+     
+            
+            background: linear-gradient(45deg, #25F4EE, #FE2C55); 
+            
+}
+
+
+
+body.dark-mode #game-title {
+  color: whitesmoke;
+}
+
+body.dark-mode #game-developer {
+  color: whitesmoke;
+}
+
+}

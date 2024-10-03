@@ -237,7 +237,9 @@ body.light-mode .game-top-nav-content {
   
 }
 
-
+body.light-mode .game-top {
+  border-radius: 10px;
+}
 
 
 body.light-mode #game-top-socials-drop{

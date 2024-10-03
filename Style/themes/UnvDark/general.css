@@ -1,0 +1,34 @@
+body.dark-mode .link {
+    color: #03c8ff;
+    text-decoration: underline;
+}
+body.dark-mode .link:hover {
+    color: #024a2a; /* Switch to your primary green on hover */
+}
+
+body.dark-mode .button-n {
+  background: #024a2a;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  color: black;
+}
+body.dark-mode .button-n:hover {
+  background: #026c40;
+  color: #1B1F3B;
+  border: 1px solid transparent;
+  transform: translateX(8px);
+}
+
+body.dark-mode .ctaa {
+  background: #f0b400;
+  border: 1px solid transparent;
+  color: #1B1F3B;
+  border-radius: 50px;
+}
+
+body.dark-mode .ctaa:hover {
+  background: #026c40;
+  border: 1px solid transparent;
+  color: #1B1F3B;
+  transform: translateX(8px);
+}

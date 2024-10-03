@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body.dark-mode #menuhr{
+
+  color: #03c8ff;
+  border-style: solid
+}
+
+body.dark-mode header {
+  background: #024a2a;
+  box-shadow: 1px 1px 9px black;
+}
+
+body.dark-mode body {
+ /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
+ background: transparent;
+}
+
+
+
+body.dark-mode .logo {
+  color: #0606c4;
+    
+}
+
+body.dark-mode #game-title-top {
+  color: whitesmoke;
+}
+
+body.dark-mode #game-developer-top {
+  color: whitesmoke;
+}
+
+
+
+
+body.dark-mode .navlist a {
+  background: transparent; /* Background for links */
+  color: whitesmoke; /* Text color */
+  
+  text-decoration: none; /* Removes underline */
+  
+}
+
+body.dark-mode .navlist a::after {
+  content: ''; /* Empty content for the pseudo-element */
+  background-color: lightcyan; /* Color of the underline */
+  border-radius: 5px; /* Rounded corners */
+  
+}
+
+
+
+ 
+body.dark-mode #menu-icon {
+  color: lightcyan;
+  
+}
+
+body.dark-mode .logos{
+  text-decoration: none;
+  color: lightcyan;
+  
+}
+
+
+
+body.dark-mode .community-drop{
+  background: #024a2a;
+  
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 1px 10px 12px -3px black, -1px 12px 10px -3px black;
+}
+
+
+
+body.dark-mode .more-drop{
+  background: #024a2a;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+box-shadow: 1px 10px 12px -3px black, -1px 12px 10px -3px black;
+}
+
+
+body.dark-mode .menu {
+  border-right-style: solid;
+  border-right-color: #03c8ff;
+  border-right-width: 2px;
+  
+  background-color: #024a2a;
+  box-shadow: 5px 0 5px -5px black;
+  
+}
+body.dark-mode .sidebar-title {
+  background-color: #03c8ff;
+  
+  
+}
+
+body.dark-mode #side-menu-title {
+  color: black; 
+  
+  
+}
+
+body.dark-mode .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
+  font-size: 17px;
+  border-radius: 50px;
+  
+  
+}
+
+body.dark-mode .sidebar-toggle #pinned {
+  color: #024a2a;
+}
+
+body.dark-mode .sidebar-toggle #unpinned {
+  color: black;
+}
+
+
+
+
+
+body.dark-mode .sidebar-header{
+    
+  color: whitesmoke;
+}
+	
+body.dark-mode .navigate {
+  background: transparent; 
+  color: whitesmoke; 
+  
+  
+  text-decoration: none; 
+  
+}
+
+body.dark-mode .navigate::after {
+  content: ''; 
+  
+  background-color:  lightcyan; 
+  border-radius: 5px; 
+}
+
+
+
+body.dark-mode .tabs-navigation {
+  
+  color: whitesmoke;
+  text-decoration: none;
+  background: transparent;
+  
+  border: none;
+  
+  
+}
+
+body.dark-mode .tabs-navigation:hover {
+  
+  border-bottom: 2px solid lightcyan;
+  
+}
+
+body.dark-mode .tabs-navigation.active {
+  
+  border-bottom: 2px solid lightcyan;
+  
+}
+
+
+	
+
+
+@media (max-width: 700px){
+/* General mobile navlist styles */
+body.dark-mode .mobile-navlist {
+  
+  background: transparent;
+  background-color: #024a2a;
+  
+  
+  
+}
+
+
+body.dark-mode #navh,
+body.dark-mode #navb {
+  background: transparent; 
+  color: whitesmoke; 
+  
+  text-decoration: none; 
+  
+
+}
+
+
+body.dark-mode #navh::after,
+body.dark-mode #navb::after {
+  content: '';
+
+  background-color:  lightcyan;
+  border-radius: 5px;
+  
+}
+
+/* Community Dropdown styles */
+body.dark-mode .mob-community-drop {
+  background: #f9f9f9; /* Light background for dropdown for better visibility */
+  border-radius: 4px; /* Rounded corners for dropdown items */
+}
+
+/* More Dropdown styles */
+body.dark-mode .mob-more-drop {
+  background: #f9f9f9; /* Light background for dropdown for better visibility */
+  border-radius: 4px; /* Rounded corners for dropdown items */
+}
+
+}
