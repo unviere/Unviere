@@ -302,17 +302,17 @@ img {
   z-index: 1000;
   background-color: whitesmoke;
   position: fixed;
-  display: none;
+  display: flex;
   flex-direction: column;
   box-shadow: 5px 0 5px -5px grey;
 }
 .sidebar-title {
   background-color: transparent;
-  width: 100%;
+  width: 80%;
+  max-width: 115px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  height: 30px;
+  height: auto;
+ max-height: 80px;
   font-size: 15px;
   font-weight: 600;
   color: black;
