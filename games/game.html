@@ -11,12 +11,14 @@
 
   <link rel="shortcut icon" type="x-icon" href="Img/unv_games.png">
   
+    <link rel ="stylesheet" type = "text/css" href ="../Style/general.css">
+     <link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvLight/general.css">
 
   
   <link rel ="stylesheet" type = "text/css" href ="../games/styles/game.css">
     <link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvLight/game.css">
-      <link rel ="stylesheet" type = "text/css" href ="Style/topbarv2.css">
-      
+      <link rel ="stylesheet" type = "text/css" href ="../Style/topbarv2.css">
+<link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvLight/topbar.css">
        
       
   <link rel="stylesheet"
@@ -127,23 +129,23 @@
 
       <div class ="game-playbar">
         <div class="game-playbar-content">
-        <a class="game-drop-down-button">•••</a>
+        <a class="game-drop-down-button button-n">•••</a>
   <ul class="game-drop-down">
              
           <li>
-            <a href="">Groups</a>
+            <a class="button-n" href="">Groups</a>
             
-            <a href="https://unviere.github.io/Unviere/games">Games</a>
+            <a class="button-n" href="https://unviere.github.io/Unviere/games">Games</a>
             
-             <a id="instal-button-dd"><i class =""></i> How to install</a></label>
+             <a class="button-n" id="instal-button-dd"><i class =""></i> How to install</a></label>
           </li>
         </ul> 
-                   <a class="game-playbar-desk-button" href="">Groups</a>
+                   <a class="game-playbar-desk-button button-n" href="">Groups</a>
             
-            <a class="game-playbar-desk-button" href="https://unviere.github.io/Unviere/games">Games</a>
+            <a class="game-playbar-desk-button button-n" href="https://unviere.github.io/Unviere/games">Games</a>
         <a href="" class="ctaa" id="play-button"><i class ="ri-play-fill"></i>Play now</a>
         <label class="instal" for="toggle-instalrbx" id="instalrbxopen">
-        <a id="instal-button"><i class =""></i> How to install</a></label>
+        <a class="button-n" id="instal-button"><i class =""></i> How to install</a></label>
         
        
 
@@ -163,7 +165,7 @@
         <br>
         <h1 id ="last-updated">updated: </h1>
         <br>
-        <a href="" id="upd-log">update log</a>
+        <a class="link" href="" id="upd-log">update log</a>
         <br>
         <h1 id="genre">genre: N/A</h1>
         <br>
@@ -199,7 +201,7 @@ it might be the case that you overloaed the api receusts to get the data
 <br> 
 <h1>it still doesn't work?</h1>
 <br>
-<p>if this not working go to <a href="https://unviere.github.io/Unviere/games">the games page</a> and click on a game so it should load correctly from this page</p>
+<p>if this not working go to <a class="link" href="https://unviere.github.io/Unviere/games">the games page</a> and click on a game so it should load correctly from this page</p>
 </div>
       
       </div>
@@ -214,6 +216,8 @@ it might be the case that you overloaed the api receusts to get the data
   <p id="gameLikes">Likes</p>
   <button>play now</button>
   </template>
+  
+   <script src = "../Scripts/settings/theme.js"></script>
 
 <script>// Get the header element
 document.addEventListener('DOMContentLoaded', function() {
@@ -347,6 +351,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Update DOM elements with game data
             document.getElementById('game-title').textContent = gameData.name || 'No title available';
+            document.getElementById('side-menu-title').textContent = gameData.name
+            document.getElementById('side-menu-desc').textContent = "one of the games from unviere or thier partners on some game pages there are more sections for that game"
             document.getElementById('game-title-top').textContent = gameData.sourceName || 'No title available';
             document.getElementById('description').innerHTML = gameData.sourceDescription || 'No description available';
             document.getElementById('game-developer').textContent = `by: ${gameData.creator?.name || 'n/a'}`;

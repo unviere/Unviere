@@ -23,8 +23,9 @@
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
  margin-top: 65px;
- background: white;
+ background: white; 
 }
+
 
 .game {
   position: relative;
@@ -320,9 +321,7 @@ border-top-right-radius: 10px;
   width: 100px;
   height: 30px;
   display: flex;
-  color: black;
-  background: #06c46f;
-  border: 1px solid transparent;
+  
   align-items: center;
   justify-content: center;
   line-height: 1.4;
@@ -336,18 +335,6 @@ border-top-right-radius: 10px;
   margin-left: 5px;
 }
 
-.game-playbar-content a:hover {
-  background: black;
-  color: white;
-  border: 1px solid transparent;
-  transform: translateX(8px);
-}
-
-.game-playbar-content .ctaa {
-  background: black;
-  border: 1px solid transparent;
-  color: white;
-}
 
 #toggle-instalrbx{
   display:none;
@@ -899,7 +886,7 @@ border-bottom-right-radius: 10px;
 }
 
 #upd-log{
-  display: none;
+  display: flex;
   font-size: 5px!important;
 }
 

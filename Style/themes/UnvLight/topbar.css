@@ -9,7 +9,7 @@ body.light-mode #menuhr{
   margin-left: 5px;
   width: 90%;
   height: 0.1px;
-  color: #20B2AA;
+  color: #0606c4;
   border-style: solid
 }
 
@@ -26,7 +26,7 @@ body.light-mode body {
 
 
 body.light-mode .logo {
-  color: #20B2AA;
+  color: #0606c4;
     
 }
 
@@ -96,7 +96,7 @@ body.light-mode .more-drop{
 
 body.light-mode .menu {
   border-right-style: solid;
-  border-right-color: #20B2AA;
+  border-right-color: #0606c4;
   border-right-width: 2px;
   width: 150px;
   background-color: #06c46f;
@@ -104,11 +104,11 @@ body.light-mode .menu {
   
 }
 body.light-mode .sidebar-title {
-  background-color: #20B2AA;
+  background-color: #0606c4;
   height: 30px;
   font-size: 20px;
   font-weight: 600;
-  color: #1B1F3B;
+  color: white; 
   
 }
 
@@ -120,7 +120,7 @@ body.light-mode .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
 }
 
 body.light-mode .sidebar-toggle #pinned {
-  color: #1B1F3B;
+  color: #0606c4;
 }
 
 body.light-mode .sidebar-toggle #unpinned {

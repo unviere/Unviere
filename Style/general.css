@@ -1,0 +1,33 @@
+.link {
+    color: #0606c4;
+    text-decoration: underline;
+}
+.link:hover {
+    color: #06c46f; /* Switch to your primary green on hover */
+}
+
+.button-n {
+  color: black;
+  background: #06c46f;
+  border: 1px solid transparent;
+  color: black;
+}
+.button-n:hover {
+  background: #c3c3c3;
+  color: black;
+  border: 1px solid transparent;
+  transform: translateX(8px);
+}
+
+.ctaa {
+  background: #f0b400;
+  border: 1px solid transparent;
+  color: #1B1F3B;
+}
+
+.ctaa:hover {
+  background: #c3c3c3;
+  border: 1px solid transparent;
+  color: #1B1F3B;
+  transform: translateX(8px);
+}

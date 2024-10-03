@@ -327,10 +327,10 @@ img {
 
 .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
   cursor: pointer;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   margin-left: 120px;
   font-size: 17px;
-  position: fixed;
+  position: absolute;
   
   border-radius: 50px;
   transition: all .5s;
@@ -526,8 +526,8 @@ display: none;
 }
 
 .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
-  
-  margin-top: 50px;
+  top:45px;
+  /*margin-top: 50px;*/
   margin-left: 120px;
   
 }
