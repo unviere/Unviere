@@ -38,7 +38,7 @@ body {
 
 #style .settings-site-styles{
   border: 1px solid #06c56f!important;
-  margin-top: 170px;
+  
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -251,10 +251,10 @@ justify-content: none;
 }
 
 .section {
-  padding: 0.19%;
+  
   width: 100%;
   position: absolute;
-  top: 30%;
+  
   transform: translateY(-10%);
   text-align: center;
   transition: all .5s;
