@@ -11,7 +11,7 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  height: 100px;
+  height: 69px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,24 +39,24 @@ img {
 .form{
   display: flex;
   flex-direction: column;
-  background: #06c46f;
+  background: whitesmoke;
   margin: 50px;
   width: 90%;
   height: auto;
   padding: 10px;
-  margin-top: 200px;
+  margin-top: 75px;
   border-radius: 5px;
 }
 
 .success{
   display: flex;
   flex-direction: column;
-  background: #06c46f;
+  background: whitesmoke;
   margin: 50px;
   width: 90%;
   height: auto;
   padding: 10px;
-  margin-top: 200px;
+  margin-top: 75px;
   border-radius: 5px;
 }
 
@@ -82,11 +82,11 @@ img {
   height: auto;
   font-size: 40px;
   margin-left: 40%;
-  background: #0328ff;
-  color: white;
+/*  background: #0328ff;*/
+/*  color: white;*/
   border: none;
   border-radius: 50px;
-  color: black;
+/*  color: black;*/
   text-decoration: none;
 }
 
@@ -143,7 +143,7 @@ label {
   margin-right: 5px;
   border-radius: 50px;
   padding: 5px;
-  border-color: #0328ff;
+  border-color: #20B2AA;
   border-style: solid;
   background: white;
   color: black;
@@ -156,7 +156,7 @@ label {
  margin-right: 15px;
   border-radius: 10px;
  padding: 5px;
-    border-color: #0328ff;
+    border-color: #20B2AA;
   border-style: solid;
   background: white;
   max-width: 100%;
@@ -189,9 +189,9 @@ data,
 select,
 input {
  
- border-color: #0328ff;
+ border-color: #20B2AA;
   outline-style: solid;
-  outline-color: #0328ff;
+  outline-color: #20B2AA;
   outline-width: 1px;
   border-width: 1px;
   caret-color: #06c46f;
@@ -202,9 +202,9 @@ data:focus,
 select:focus,
 input:focus {
  
- border-color: #0328ff;
+ border-color: #20B2AA;
   outline-style: solid;
-  outline-color: #0328ff;
+  outline-color: #20B2AA;
   outline-width: 1px;
   border-width: 1px;
 }
@@ -214,9 +214,9 @@ time:valid,
 data:valid,
 select:valid,
 input:valid {
-  border-color: #08f78b;
+  border-color: #06c46f;
   outline-style: solid;
-  outline-color: #0328ff;
+  outline-color: #06c46f;
   outline-width: 1px;
   border-width: 2px;
 }
@@ -227,7 +227,7 @@ input:valid {
   margin-right: 5px;
   border-radius: 50px;
   padding: 5px;
-  border-color: #0328ff;
+  border-color: #20B2AA;
   border-style: solid;
   background: white;
   color: black;
@@ -236,7 +236,7 @@ input:valid {
 .form-input-multiple{
   
   border-radius: 10px;
-  border-color: #0328ff;
+  border-color: #20B2AA;
   border-style: solid;
   background: white;
   color: black;
@@ -265,7 +265,7 @@ input:valid {
     width: 20px;
     height: 20px;
     border-radius: 5px;
-    border: 1px solid #0328ff;
+    border: 1px solid #20B2AA;
     background-color: white;
     margin-right: 8px;
     position: relative;
@@ -273,7 +273,7 @@ input:valid {
 }
 
 .hidden-checkbox-multiple:checked + .custom-checkmark-multiple {
-    background-color: #0328ff;
+    background-color: #06c46f;
 }
 
 .hidden-checkbox-multiple:checked + .custom-checkmark-multiple::after {
@@ -290,7 +290,7 @@ input:valid {
 .form-input-sincle{
   
   border-radius: 50px;
-  border-color: #0328ff;
+  border-color: #20B2AA;
   border-style: solid;
   background: white;
   color: black;
@@ -311,7 +311,7 @@ input:valid {
     width: 20px;
     height: 20px;
     border-radius: 50px;
-    border: 2px solid #0328ff;
+    border: 2px solid #20B2AA;
     background-color: white;
     margin-right: 8px;
     position: relative;
@@ -319,7 +319,7 @@ input:valid {
 }
 
 .hidden-checkbox:checked + .custom-checkmark {
-    background-color: #0328ff;
+    background-color: #06c46f;
 }
 
 .hidden-checkbox:checked + .custom-checkmark::after {
@@ -340,11 +340,11 @@ input:valid {
   height: auto;
   font-size: 40px;
   margin-left: 40%;
-  background: #0328ff;
-  color: white;
+  /*background: #0328ff;*/
+ /* color: white;*/
   border: none;
   border-radius: 50px;
-  color: black;
+/*  color: black;*/
   text-decoration: none;
 }
 
@@ -378,7 +378,7 @@ input:valid {
   width: 90%;
   height: auto;
   padding: 10px;
-  margin-top: 200px;
+  margin-top: 40px;
   border-radius: 5px;
 }
 
@@ -391,7 +391,7 @@ input:valid {
   width: 90%;
   height: auto;
   padding: 10px;
-  margin-top: 200px;
+  margin-top: 40px;
   border-radius: 5px;
 }
 
@@ -799,7 +799,7 @@ body.light-mode .is-invalid,
 body.light-mode .was-validated :invalid {
   border-color: red;
 }
-/*modern light*/
+/*modern light
 
 body.modern-light {
  
@@ -961,4 +961,4 @@ body.modern-light .empty-feedback {
 body.modern-light .is-invalid,
 body.modern-light .was-validated :invalid {
   border-color: red;
-}
+}*/

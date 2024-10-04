@@ -3,12 +3,32 @@
   <head>
     <title> form • feedback ui v4 | unviere</title>
       <link rel="shortcut icon" type="x-icon" href="../Img/unv_games.png">
+      
+      <!--general styles-->
+        <link rel ="stylesheet" type = "text/css" href ="../Style/general.css">
+     <link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvLight/general.css">
+      <link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvDark/general.css">
+      
+      <!--page styles-->
     <link rel="stylesheet" href="../Style/form.css">
+    
+    <!--Topbar styles-->
+      <link rel ="stylesheet" type = "text/css" href ="../Style/topbarv2.css">
+<link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvLight/topbar.css">
+<link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvDark/topbar.css">
+    
+     <script defer type="module" src = "../Scripts/topbar new.js"></script>
   </head>
+  
+  
   <body>
     
-      <div id="header"></div>
+      <input type="checkbox" id="check">
+    
+    <label class="sidebar-toggle" for="check"><i class="ri-pushpin-line"id="unpinned"></i><i class="ri-pushpin-fill" id="pinned"></i></label>
+    <div id="header"></div>
       
+      <section>
     <div class="form">
       <form action="https://api.web3forms.com/submit" method="POST"
         class="form-p" id="fpel-form" novalidate>
@@ -289,8 +309,8 @@
      <h1 class="form-input-title">have you filled in all<i class="recured">?</i></h1>
           <p class="desc-input">make sure you filled in all fields with a * if not the form will not send</p>
           <div id = "result"></div>
-     <button type="submit" class="form-submit">Submit<img src="" alt=""></button>
-     </div>
+     <button type="submit" class="form-submit ctaa">Submit<img src="" alt=""></button>
+     </div></section>
         <template>
         <!-- input type: name: placeholder:same class for input use textarea for long text field-->
         <input type="hidden" name="access_key" value="032437ac-e754-4bb5-8636-471435c3c3e3"> <!-- acces key-->
@@ -384,7 +404,7 @@
 
     
     <script src = "../Scripts/form_validate.js"> </script>
-              <script src = "../Scripts/topbar.js"></script>
+             <!-- <script src = "../Scripts/topbar.js"></script>-->
               
                  <script src = "../Scripts/settings/theme.js"></script>
 
