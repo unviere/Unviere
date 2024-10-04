@@ -1,0 +1,211 @@
+
+
+body.light-mode {
+
+ background-color: white;
+}
+
+
+
+body.light-mode .form{
+  background: #06c46f;
+}
+
+body.light-mode .success{
+  background: whitesmoke;
+}
+body.light-mode .title{
+  
+  color: black;
+}
+
+body.light-mode .content{
+  
+  color: black;
+}
+
+body.light-mode .form-title{
+  
+  color: black;
+}
+
+body.light-mode .desc-input{
+  
+  background: transparent;
+  color: black;
+}
+
+
+body.light-mode .form-input-title{
+  
+  color: black;
+}
+
+body.light-mode .recured{
+  color: red;
+}
+
+body.light-mode label {
+  color: black;
+}
+body.light-mode .form-input{
+  border-radius: 50px;
+  
+  border-color: #f0b400;
+  border-style: solid;
+  background: white;
+  color: black;
+}
+
+
+body.light-mode .long-input{
+  border-radius: 10px;
+ 
+    border-color: #f0b400;
+  border-style: solid;
+  background: white;
+}
+
+
+body.light-mode textarea,
+body.light-mode time,
+body.light-mode data,
+body.light-mode select,
+body.light-mode input {
+ 
+ border-color: #f0b400;
+  outline-style: solid;
+  outline-color: #f0b400;
+  outline-width: 1px;
+  border-width: 1px;
+  caret-color: #f0b400;
+}
+body.light-mode textarea:focus,
+body.light-mode time:focus,
+body.light-mode data:focus,
+body.light-mode select:focus,
+body.light-mode input:focus {
+ 
+ border-color: #f0b400;
+  outline-style: solid;
+  outline-color: #f0b400;
+  outline-width: 1px;
+  border-width: 1px;
+}
+
+body.light-mode textarea:valid,
+body.light-mode time:valid,
+body.light-mode data:valid,
+body.light-mode select:valid,
+body.light-mode input:valid {
+  border-color: #049c59;
+  outline-style: solid;
+  outline-color: #049c59;
+  outline-width: 1px;
+  border-width: 2px;
+}
+
+body.light-mode .form-input-drop{
+  
+  border-radius: 50px;
+  
+  border-color: #f0b400;
+  
+  background: white;
+  color: black;
+}
+
+body.light-mode .form-input-multiple{
+  
+  border-radius: 10px;
+  border-color: #f0b400;
+  border-style: solid;
+  background: white;
+  color: black;
+}
+
+/* Multiple selection checkboxes */
+body.light-mode .custom-checkmark-multiple {
+    
+    border-radius: 5px;
+    border: 1px solid #f0b400;
+    background-color: white;
+    color: white;
+}
+
+body.light-mode .hidden-checkbox-multiple:checked + body.light-mode .custom-checkmark-multiple {
+    background-color: #049c59;
+}
+
+body.light-mode .hidden-checkbox-multiple:checked + body.light-mode .custom-checkmark-multiple::after {
+    content: "";
+    
+    background-color: transparent;
+    color: white;
+}
+
+body.light-mode .form-input-sincle{
+  
+  border-radius: 50px;
+  border-color: #f0b400;
+  border-style: solid;
+  background: white;
+  color: black;
+}
+
+
+body.light-mode .custom-checkmark {
+    
+    border-radius: 50px;
+    border: 2px solid #f0b400;
+    background-color: white;
+    
+    color: white;
+}
+
+body.light-mode .hidden-checkbox:checked + body.light-mode .custom-checkmark {
+    background-color: #049c59;
+}
+
+body.light-mode .hidden-checkbox:checked + body.light-mode .custom-checkmark::after {
+    content: "";
+    
+    background-color: white;
+    border-radius: 50px;
+    
+    color: white;
+}
+
+body.light-mode .invalid-feedback,
+body.light-mode .empty-feedback {
+  
+  
+  color: red;
+}
+
+
+
+body.light-mode .is-invalid,
+body.light-mode .was-validated :invalid {
+  border-color: red;
+  border-width: 2px;
+}
+
+
+@media (max-width: 700px){  
+  
+  
+
+body.light-mode .content{
+  
+  background: transparent;
+  color: black;
+  
+}
+
+body.light-mode .desc-input{
+  
+  background: transparent;
+  color: black;
+}
+}
