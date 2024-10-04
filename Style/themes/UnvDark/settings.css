@@ -1,0 +1,64 @@
+
+body.dark-mode {
+  background: #121212!important;
+}
+
+
+body.dark-mode .settings-site{
+  
+  background: transparent;
+}
+
+
+
+body.dark-mode #style .settings-site-styles{
+  border: 1px solid #024a2a!important;
+  
+  border-radius: 10px;
+  
+}
+
+body.dark-mode #style  .buttons-styles{
+  border-radius: 10px;
+  background: #026c40;
+  
+}
+
+body.dark-mode #style .buttons-styles:hover{
+  border-radius: 20px;
+  background: #049c59;
+}
+
+body.dark-mode #style .color-dot {
+  border-radius: 50px;
+  border: 1px solid rgba(0,0,0,1);
+}
+
+body.dark-mode .color-dot::after {
+  
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+body.dark-mode #container{
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,1);
+}
+body.dark-mode .header1{
+  
+  color: whitesmoke;
+  
+}
+
+
+body.dark-mode .title{
+  
+  background: transparent; /* Ensure background is white so it cuts through the border */
+  
+}
+
+body.dark-mode .title h1{
+  
+  color: whitesmoke;
+  background: #121212; /* Ensure the heading's background is also white */
+}

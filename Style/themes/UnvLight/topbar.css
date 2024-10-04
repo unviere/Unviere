@@ -28,11 +28,11 @@ body.light-mode .logo {
     
 }
 
-#game-title-top {
+body.light-mode #game-title-top {
   color: black;
 }
 
-#game-developer-top {
+body.light-mode #game-developer-top {
   color: black;
 }
 
@@ -72,7 +72,10 @@ body.light-mode .logos{
 
 body.light-mode .community-drop{
   background: #06c46f;
-  
+  top:35px;
+  border-left: 1px solid #049c59;
+  border-right: 1px solid #049c59;
+  border-bottom: 1px solid #049c59;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: none;
@@ -82,6 +85,10 @@ body.light-mode .community-drop{
 
 body.light-mode .more-drop{
   background: #06c46f;
+  top:35px;
+  border-left: 1px solid #049c59;
+  border-right: 1px solid #049c59;
+  border-bottom: 1px solid #049c59;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: none;
@@ -157,20 +164,26 @@ body.light-mode .tabs-navigation {
   text-decoration: none;
   background: transparent;
   
-  border: none;
   
   
-}
-
-body.light-mode .tabs-navigation:hover {
-  
-  border-bottom: 2px solid #1B1F3B;
   
 }
 
-body.light-mode .tabs-navigation.active {
+body.light-mode .tabs-navigation::after {
   
-  border-bottom: 2px solid #1B1F3B;
+  content: ''; 
+  
+  background-color:  #1B1F3B; 
+  border-radius: 5px; 
+  
+}
+
+body.light-mode .tabs-navigation.active::after {
+  
+  content: ''; 
+  
+  background-color:  #1B1F3B; 
+  border-radius: 5px; 
   
 }
 

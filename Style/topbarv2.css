@@ -441,31 +441,52 @@ display: none;
 }
 
 .tabs-navigation {
-  height: 100%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-  padding-left: 40px;
-  box-sizing: border-box;
-  background: transparent;
-  font-weight: 600;
-  padding: 5px 5px;
-  border: none;
+  background: transparent; 
+  color: black; 
+  font-size: 15px; 
+  font-weight: 600; 
+  position: relative; 
+  padding: 10px 0; 
+  margin-left: 10px; 
+  transition: color 0.55s ease; 
+  text-decoration: none; 
+  text-align: left; 
+  display: block; 
+  width: 100%; 
   
   
 }
 
-.tabs-navigation:hover {
-  
-  border-bottom: 2px solid #06c46f;
-  
+.tabs-navigation::after {
+  content: ''; 
+  position: absolute; 
+  left: 1px;
+  top: 50%;
+  height: 90%;
+  width: 5px;
+  margin-left: -10px;
+  background-color:  #06c46f; 
+  border-radius: 5px; 
+  transform: translateY(-50%) scaleY(0); 
+  transition: transform 0.55s ease;
 }
 
-.tabs-navigation.active {
-  
-  border-bottom: 2px solid #06c46f;
+.tabs-navigation:hover::after {
+  transform: translateY(-50%) scaleY(1); /* Scale to full width on hover */
+}
+
+.tabs-navigation.active::after {
+  transform: translateY(-50%) scaleY(1);
+  content: ''; 
+  position: absolute; 
+  left: 1px;
+  top: 50%;
+  height: 90%;
+  width: 5px;
+  margin-left: -10px;
+  background-color:  #06c46f; 
+  border-radius: 5px; 
+  transition: transform 0.55s ease;
   
 }
 

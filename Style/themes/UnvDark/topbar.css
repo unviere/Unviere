@@ -157,20 +157,26 @@ body.dark-mode .tabs-navigation {
   text-decoration: none;
   background: transparent;
   
-  border: none;
   
   
-}
-
-body.dark-mode .tabs-navigation:hover {
-  
-  border-bottom: 2px solid lightcyan;
   
 }
 
-body.dark-mode .tabs-navigation.active {
+body.dark-mode .tabs-navigation::after {
   
-  border-bottom: 2px solid lightcyan;
+  content: ''; 
+  
+  background-color:  lightcyan; 
+  border-radius: 5px; 
+  
+}
+
+body.dark-mode .tabs-navigation.active::after {
+  
+  content: ''; 
+  
+  background-color:  lightcyan; 
+  border-radius: 5px; 
   
 }
 

@@ -1,0 +1,64 @@
+
+body.light-mode {
+  background: white;
+}
+
+
+body.light-mode .settings-site{
+  
+  background: transparent;
+}
+
+
+
+body.light-mode #style .settings-site-styles{
+  border: 1px solid #06c46f!important;
+  
+  border-radius: 10px;
+  
+}
+
+body.light-mode #style  .buttons-styles{
+  border-radius: 10px;
+  background: #06c46f;
+  
+}
+
+body.light-mode #style .buttons-styles:hover{
+  border-radius: 20px;
+  background: #049c59;
+}
+
+body.light-mode #style .color-dot {
+  border-radius: 50px;
+  border: 1px solid rgba(0,0,0,1);
+}
+
+body.light-mode .color-dot::after {
+  
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+body.light-mode #container{
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,1);
+}
+body.light-mode .header1{
+  
+  color: black;
+  
+}
+
+
+body.light-mode .title{
+  
+  background: transparent; /* Ensure background is white so it cuts through the border */
+  
+}
+
+body.light-mode .title h1{
+  
+  color: black;
+  background: white; /* Ensure the heading's background is also white */
+}

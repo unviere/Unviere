@@ -48,6 +48,7 @@ img {
 /*margin-top: 69px;*/
 padding: 10px;
   border-radius: 5px;
+  box-shadow: 1px 1px 9px gray;
 }
 
 .success{
@@ -108,19 +109,26 @@ padding: 10px;
   padding-bottom: 5px;
   font-size: 15px;
 }
-
-.form-split{
+.form-split {
   width: 100%;
   display: flex;
   flex-direction: row;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.split{
-  width: 100%;
-padding-right: 2px;
-padding-left: 2px;
+.split {
+  flex: 1 1 auto; /* Allows the item to grow and shrink */
+  min-width: 150px; /* Set a reasonable minimum width */
+  max-width: 100%; /* Ensure it doesn't exceed the parent container */
+  display: flex;
+  flex-direction: column;
+  padding-right: 2px;
+  padding-left: 2px;
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
+
 
 .form-input-title{
   width: 100%;
@@ -272,6 +280,10 @@ input:valid {
     margin-right: 8px;
     position: relative;
     color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 .hidden-checkbox-multiple:checked + .custom-checkmark-multiple {
@@ -377,7 +389,7 @@ input:valid {
   
   #check:checked ~ section .form {
   margin: 2px!important;
-  width: 230px!important;
+  width: 215px!important;
   height: auto;
 padding: 10px;
   border-radius: 5px;
@@ -412,6 +424,7 @@ padding: 10px;
 .title{
   width: 100%;
 }
+ 
 
 .content{
   width: 100%;
@@ -452,6 +465,7 @@ padding: 10px;
   width: 100%;
 padding-right: 2px;
 padding-left: 2px;
+flex-basis: 100%; /* On small screens, force items to take full width */
 }
 
 .form-input-title{
@@ -509,170 +523,6 @@ padding-left: 2px;
 
 /*un dark*/
 
-body.dark-mode {
-  background-color: #1a1a1a;
-}
-
-
-
-body.dark-mode .form{
-  background: #024a2a;
-  border-radius: 5px;
-}
-
-body.dark-mode .success{
-  background: #024a2a;
-  border-radius: 5px;
-}
-
-body.dark-mode .title{
-  color: white;
-}
-
-body.dark-mode .content{
-  background: transparent;
-  color: white;
-}
-
-body.dark-mode .desc-input{
-  background: transparent;
-  color: white;
-}
-body.dark-mode .button{
-  background: #03c8ff;
-  color: black;
-  border-radius: 50px;
-}
-
-body.dark-mode .form-title{
-  color: white;
-}
-
-
-
-
-body.dark-mode .form-input-title{
-  color: white;
-}
-
-body.dark-mode .recured{
-  color: orangered;
-}
-
-body.dark-mode label{
-  color: white;
-}
-body.dark-mode .form-input{
-  border-radius: 50px;
-  border-color: #03c8ff;
-  background: #0d0d0d;
-  color: white;
-}
-
-body.dark-mode textarea,
-body.dark-mode time,
-body.dark-mode data,
-body.dark-mode select,
-body.dark-mode input {
- 
- border-color: #03c8ff;
-  outline-color: #03c8ff;
-  caret-color: #024a2a;
-}
-body.dark-mode textarea:focus,
-body.dark-mode time:focus,
-body.dark-mode data:focus,
-body.dark-mode select:focus,
-body.dark-mode input:focus {
- 
- border-color: #03c8ff;
-  outline-color: #03c8ff;
-}
-
-body.dark-mode textarea:valid,
-body.dark-mode time:valid,
-body.dark-mode data:valid,
-body.dark-mode select:valid,
-body.dark-mode input:valid {
-  border-color: green;
-  outline-color: #03c8ff;
-}
-
-body.dark-mode .form-input-drop{
-  border-radius: 50px;
-  border-color: #03c8ff;
-  background: #0d0d0d;
-  color: white;
-}
-
-body.dark-mode .form-input-multiple{
-  border-color: #03c8ff;
-  background: #0d0d0d;
-  color: white;
-}
-
-body.dark-mode .form-input-sincle{
-  border-color: #03c8ff;
-  background: #0d0d0d;
-  color: white;
-}
-
-
-
-body.dark-mode .custom-checkmark {
-    border: 2px solid #03c8ff;
-    background-color: #0d0d0d;
-}
-
-body.dark-mode .hidden-checkbox:checked + .custom-checkmark {
-    background-color: #03c8ff;
-}
-
-body.dark-mode .hidden-checkbox:checked + .custom-checkmark::after {
-    
-    background-color: #0d0d0d;
- 
-}
-
-body.dark-mode .custom-checkmark-multiple {
-    border: 1px solid #03c8ff;
-    background-color: #0d0d0d;
-    color: #0d0d0d;
-}
-
-body.dark-mode .hidden-checkbox-multiple:checked + .custom-checkmark-multiple {
-    background-color: #03c8ff;
-}
-
-body.dark-mode .hidden-checkbox-multiple:checked + .custom-checkmark-multiple::after {
-    background-color: transparent;
-    color: white;
-}
-
-body.dark-mode .long-input{
-  border-radius: 10px;
-    border-color: #03c8ff;
-  background: #0d0d0d;
-  color: white;
-}
-
-body.dark-mode .form-submit{
-  background: #03c8ff;
-  color: black;
-  border-radius: 50px;
-}
-
-body.dark-mode .invalid-feedback,
-body.dark-mode .empty-feedback {
-  color: orangered;
-}
-
-
-
-body.dark-mode .is-invalid,
-body.dark-mode .was-validated :invalid {
-  border-color: orangered;
-}
 
 /*un light*/
 

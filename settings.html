@@ -8,41 +8,51 @@
   <link rel="shortcut icon" type="x-icon" href="Img/unv_games.png">
   
   
-  <link rel ="stylesheet" type = "text/css" href ="Style/styles.css">
-  <link rel ="stylesheet" type = "text/css" href ="Style/settings.css">
-      <link rel ="stylesheet" type = "text/css" href ="Style/topbar.css">
-      <link rel ="stylesheet" type = "text/css" href ="Style/sidebar.css">
-  <link rel="stylesheet"
+       <!--general styles-->
+        <link rel="stylesheet" type="text/css" href="../Style/general.css">
+        <link rel="stylesheet" type="text/css" href="../Style/themes/UnvLight/general.css">
+        <link rel="stylesheet" type="text/css" href="../Style/themes/UnvDark/general.css">
+  
+        <!--page styles-->
+        <link rel="stylesheet" href="../Style/settings.css">
+        <link rel="stylesheet" type="text/css" href="../Style/themes/UnvLight/settings.css">
+        <link rel="stylesheet" type="text/css" href="../Style/themes/UnvDark/settings.css">
+  
+        <!--Topbar styles-->
+        <link rel="stylesheet" type="text/css" href="../Style/topbarv2.css">
+        <link rel="stylesheet" type="text/css" href="../Style/themes/UnvLight/topbar.css">
+        <link rel="stylesheet" type="text/css" href="../Style/themes/UnvDark/topbar.css">
+  
+          <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
     
+    <script defer type="module" src="../Scripts/topbar new.js"></script>
 </head>
 
 <body>
-  
+   <input type="checkbox" id="check">
+    
+    <label class="sidebar-toggle" for="check"><i class="ri-pushpin-line"id="unpinned"></i><i class="ri-pushpin-fill" id="pinned"></i></label>
    <div id="header"></div>
    
-   <input type="checkbox" id="check">
-    <label class="sidebar-toggle" for="check"><i class="ri-menu-line" id="btn"></i>
-    <i class="ri-close-line" id="cancel"></i>
-    </label>
-   
-    <div class="sidebar">
+   <template id="nav">
+   <!-- <div class="sidebar">-->
       <div class="sidebar-header">on this page</div>
-      <div class="sidebar-scroll">
-      <ul>
+      
+      
                 <li><a class="tabs-navigation" onclick="opentab(event, 'style')" id="styles">styles</a></li>
-        <li><a class="navigate" onclick="opentab(event, 'acc')" id="account">coming soon</a></li>
+        <li><a class="tabs-navigation" onclick="opentab(event, 'acc')" id="account">coming soon</a></li>
          
-      </ul>
-      <h1>also checkout</h1>
-        <ul>
+      <hr id="menuhr">
+         <div class="sidebar-header">also check out</div>
+        
         <li><a class="navigate" href="#">games</a></li>
-      </ul>
-      </div>
-    </div>
-
+       <hr id="menuhr">
+      
+   <!-- </div>-->
+</template>
     <section class ="settings-site">
       
      <div id="style" class ="tabs-settings">
@@ -51,16 +61,45 @@
         <div class="title"><h1>site theme</h1></div>
         <div class="styles-list">
           
+            <a class="buttons-styles" id="modern-light">
+          <h1>defould light</h1>
+          <div class="palate">
+            <div class="color-dot" id="modern-light-green" data-tooltip="borders, buttons, icons, links hovers, navbars hovers| #06c46f"></div>
+            
+             <div class="color-dot" id="modern-light-bleu" data-tooltip="cta, some borders , some titles | #0328ff"></div>
+            
+            <div class="color-dot" id="modern-light-smoke" data-tooltip="headers, objects | #f5f5f5"></div>
+            
+            <div class="color-dot" id="modern-light-white" data-tooltip="background |  #ffffff"></div>
+            
+             <div class="color-dot" id="modern-light-lightgray" data-tooltip="some item, sub navigation, button hover efect| #c3c3c3"></div>
+             
+             <div class="color-dot" id="modern-dark-bleu" data-tooltip="links | #0606c4"></div>
+             
+               <div class="color-dot" id="modern-dark-gray" data-tooltip="navbar buttons | #1B1F3B"></div>
+            
+               <div class="color-dot" id="modern-dark-black" data-tooltip="text #000000"></div>
+            
+             
+
+          </div>
+          
+          </a>
+          
           <a class="buttons-styles" id="unviere-light">
           <h1>unviere light</h1>
           <div class="palate">
-            <div class="color-dot" id="unviere-light-green" data-tooltip="headers, buttons #06c46f"></div>
-             <div class="color-dot" id="unviere-light-green-hover" data-tooltip="hover over button #08f78b"></div>
-             <div class="color-dot" id="unviere-light-blue" data-tooltip="links, extra text like stats, selected underline,sub menu headers #0328ff"></div>
+            <div class="color-dot" id="unviere-light-green" data-tooltip="headers, buttons, borders | #06c46f"></div>
+             <div class="color-dot" id="unviere-light-green-dark" data-tooltip="hover over button, secondary navbar | #049c59"></div>
              
-            <div class="color-dot" id="unviere-light-white" data-tooltip="background #ffffff"></div>
+              <div class="color-dot" id="unviere-light-yellow" data-tooltip="ctaa, some borders | #f0b400"></div>
+              
+             <div class="color-dot" id="unviere-light-blue" data-tooltip="links, some text, icons, some borders | #0606c4"></div>
+             
+            <div class="color-dot" id="unviere-light-white" data-tooltip="background | #ffffff"></div>
            
-            <div class="color-dot" id="unviere-light-gray" data-tooltip="second background #f5f5f5"></div>
+            <div class="color-dot" id="unviere-light-gray" data-tooltip="navbars hovers, navbar icons #1B1F3B"></div>
+            
              <div class="color-dot" id="unviere-light-black" data-tooltip="text #000000"></div>
 
           </div>
@@ -70,46 +109,25 @@
             <a class="buttons-styles" id="unviere-dark">
           <h1>unviere dark</h1>
           <div class="palate">
-            <div class="color-dot" id="unviere-dark-green" data-tooltip="headers, buttons #024a2a"></div>
+            <div class="color-dot" id="unviere-dark-green" data-tooltip="headers, buttons, borders | #024a2a"></div>
             
-             <div class="color-dot" id="unviere-dark-green-hover" data-tooltip="hover over button #02311c"></div>
+             <div class="color-dot" id="unviere-dark-green-hover" data-tooltip="hover over button, secondary navbar |#026c40"></div>
              
-             <div class="color-dot" id="unviere-dark-blue" data-tooltip="links, extra text like stats, selected underline,sub menu headers #03c8ff"></div>
+              <div class="color-dot" id="unviere-dark-yellow" data-tooltip="ctaa, some text, some borders |#f0b400"></div>
              
-            <div class="color-dot" id="unviere-dark-white" data-tooltip="background #000000"></div>
+             <div class="color-dot" id="unviere-dark-blue" data-tooltip="links, icons |  #03c8ff"></div>
+             
+            <div class="color-dot" id="unviere-dark-white" data-tooltip="text | #ffffff"></div>
            
-            <div class="color-dot" id="unviere-dark-gray" data-tooltip="second background #0d0d0d"></div>
+            <div class="color-dot" id="unviere-dark-bleu-light" data-tooltip="navbars hovers, buttons navbar |#EOFFFF"></div>
             
-             <div class="color-dot" id="unviere-dark-black" data-tooltip="text #ffffff"></div>
+             <div class="color-dot" id="unviere-dark-black" data-tooltip="background | #121212"></div>
 
           </div>
           
           </a>
           
-            <a class="buttons-styles" id="modern-light">
-          <h1>modern light</h1>
-          <div class="palate">
-            <div class="color-dot" id="modern-light-green" data-tooltip="sub menu,s, buttons #06c46f"></div>
-            
-             <div class="color-dot" id="modern-light-bleu" data-tooltip="links, buttons, some items like stats #0328ff"></div>
-            
-            <div class="color-dot" id="modern-light-smoke" data-tooltip="headers, buttons #f5f5f5"></div>
-            
-            <div class="color-dot" id="modern-light-white" data-tooltip="background  #ffffff"></div>
-            
-             <div class="color-dot" id="modern-light-lightgray" data-tooltip="some item, sub navigation #cccccc"></div>
-             
-             <div class="color-dot" id="modern-light-gray" data-tooltip="hovers #808080"></div>
-             
-               <div class="color-dot" id="modern-dark-gray" data-tooltip="sub menu #333333"></div>
-            
-             
-            
-             
-
-          </div>
           
-          </a>
           
           
         </div>

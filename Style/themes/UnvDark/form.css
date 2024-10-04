@@ -1,0 +1,212 @@
+
+
+body.dark-mode {
+
+ background-color: #121212;
+}
+
+
+
+body.dark-mode .form{
+  background: #024a2a;
+  box-shadow: 1px 1px 9px black;
+}
+
+body.dark-mode .success{
+  background: #024a2a;
+}
+body.dark-mode .title{
+  
+  color: whitesmoke;
+}
+
+body.dark-mode .content{
+  
+  color: whitesmoke;
+}
+
+body.dark-mode .form-title{
+  
+  color: whitesmoke;
+}
+
+body.dark-mode .desc-input{
+  
+  background: transparent;
+  color: whitesmoke;
+}
+
+
+body.dark-mode .form-input-title{
+  
+  color: whitesmoke;
+}
+
+body.dark-mode .recured{
+  color: orangered;
+}
+
+body.dark-mode label {
+  color: whitesmoke;
+}
+body.dark-mode .form-input{
+  border-radius: 50px;
+  
+  border-color: #f0b400;
+  border-style: solid;
+  background: black;
+  color: whitesmoke;
+}
+
+
+body.dark-mode .long-input{
+  border-radius: 10px;
+ 
+    border-color: #f0b400;
+  border-style: solid;
+  background: black;
+}
+
+
+body.dark-mode textarea,
+body.dark-mode time,
+body.dark-mode data,
+body.dark-mode select,
+body.dark-mode input {
+ 
+ border-color: #f0b400;
+  outline-style: solid;
+  outline-color: #f0b400;
+  outline-width: 1px;
+  border-width: 1px;
+  caret-color: #f0b400;
+}
+body.dark-mode textarea:focus,
+body.dark-mode time:focus,
+body.dark-mode data:focus,
+body.dark-mode select:focus,
+body.dark-mode input:focus {
+ 
+ border-color: #f0b400;
+  outline-style: solid;
+  outline-color: #f0b400;
+  outline-width: 1px;
+  border-width: 1px;
+}
+
+body.dark-mode textarea:valid,
+body.dark-mode time:valid,
+body.dark-mode data:valid,
+body.dark-mode select:valid,
+body.dark-mode input:valid {
+  border-color: #026c40;
+  outline-style: solid;
+  outline-color: #026c40;
+  outline-width: 1px;
+  border-width: 2px;
+}
+
+body.dark-mode .form-input-drop{
+  
+  border-radius: 50px;
+  
+  border-color: #f0b400;
+  
+  background: black;
+  color: black;
+}
+
+body.dark-mode .form-input-multiple{
+  
+  border-radius: 10px;
+  border-color: #f0b400;
+  border-style: solid;
+  background: black;
+  color: whitesmoke;
+}
+
+/* Multiple selection checkboxes */
+body.dark-mode .custom-checkmark-multiple {
+    
+    border-radius: 5px;
+    border: 1px solid #f0b400;
+    background-color: black;
+    color: black;
+}
+
+body.dark-mode .hidden-checkbox-multiple:checked + .custom-checkmark-multiple {
+    background-color: #026c40;
+}
+
+body.dark-mode .hidden-checkbox-multiple:checked + body.dark-mode .custom-checkmark-multiple::after {
+    content: "";
+    
+    background-color: transparent;
+    color: black;
+}
+
+body.dark-mode .form-input-sincle{
+  
+  border-radius: 50px;
+  border-color: #f0b400;
+  border-style: solid;
+  background: black;
+  color: black;
+}
+
+
+body.dark-mode .custom-checkmark {
+    
+    border-radius: 50px;
+    border: 2px solid #f0b400;
+    background-color: black;
+    
+    color: black;
+}
+
+body.dark-mode .hidden-checkbox:checked +  .custom-checkmark {
+    background-color: #026c40;
+}
+
+body.dark-mode .hidden-checkbox:checked +  .custom-checkmark::after {
+    content: "";
+    
+    background-color: black;
+    border-radius: 50px;
+    
+    color: black;
+}
+
+body.dark-mode .invalid-feedback,
+body.dark-mode .empty-feedback {
+  
+  
+  color: orangered;
+}
+
+
+
+body.dark-mode .is-invalid,
+body.dark-mode .was-validated :invalid {
+  border-color: orangered;
+  border-width: 2px;
+}
+
+
+@media (max-width: 700px){  
+  
+  
+
+body.dark-mode .content{
+  
+  background: transparent;
+  color: whitesmoke;
+  
+}
+
+body.dark-mode-mode .desc-input{
+  
+  background: transparent;
+  color: whitesmoke;
+}
+}

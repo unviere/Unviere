@@ -9,10 +9,11 @@ body.light-mode {
 
 body.light-mode .form{
   background: #06c46f;
+  box-shadow: 1px 1px 9px gray;
 }
 
 body.light-mode .success{
-  background: whitesmoke;
+  background: #06c46f;
 }
 body.light-mode .title{
   
@@ -133,7 +134,7 @@ body.light-mode .custom-checkmark-multiple {
     color: white;
 }
 
-body.light-mode .hidden-checkbox-multiple:checked + body.light-mode .custom-checkmark-multiple {
+body.light-mode .hidden-checkbox-multiple:checked +  .custom-checkmark-multiple {
     background-color: #049c59;
 }
 
@@ -163,7 +164,7 @@ body.light-mode .custom-checkmark {
     color: white;
 }
 
-body.light-mode .hidden-checkbox:checked + body.light-mode .custom-checkmark {
+body.light-mode .hidden-checkbox:checked + .custom-checkmark {
     background-color: #049c59;
 }
 

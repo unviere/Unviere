@@ -5,20 +5,10 @@
   list-style: none;
 }
 
-
-#header{
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 33px 9%;
-  overflow: hidden;
+body {
+  background: white!important;
 }
+
 
 .settings-site{
   width: 100%;
@@ -47,7 +37,7 @@
 }
 
 #style .settings-site-styles{
-  border: 1px solid rgba(0,0,0,1);
+  border: 1px solid #06c56f!important;
   margin-top: 170px;
   border-radius: 10px;
   margin-left: 10px;
@@ -74,13 +64,13 @@
   border-radius: 10px;
   height: 100px;
   width: auto;
-  background: #06c46f;
+  background: whitesmoke;
   margin: 10px;
 }
 
 #style .buttons-styles:hover{
   border-radius: 20px;
-  background: #08f78b;
+  background: #c3c3c3;
   margin: 5px;
 }
 
@@ -99,8 +89,8 @@
 }
 
 #style .color-dot {
-  border-radius: 50%;
-  font-size: 50px;
+  border-radius: 10px;
+  font-size: 10px;
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -112,8 +102,16 @@
   background: #06c46f;
 }
 
+#unviere-light-green-dark {
+  background: #049c59;
+}
+
+#unviere-light-yellow {
+  background: #f0b400;
+}
+
 #unviere-light-blue {
-  background: #0328ff;
+  background: #0606c4;
 }
 
 #unviere-light-white {
@@ -125,19 +123,26 @@
 }
 
 #unviere-light-gray {
-  background: whitesmoke;
+  background: #1B1F3B;
 }
 
 #unviere-light-green-hover {
   background: #08f78b;
 }
 
+
+
 #unviere-dark-green{
   background: #024a2a;
 }
 
+
 #unviere-dark-green-hover{
-  background: #02311c;
+  background: #026c40;
+}
+
+#unviere-dark-yellow {
+  background: #f0b400;
 }
 
 #unviere-dark-blue{
@@ -145,15 +150,15 @@
 }
 
 #unviere-dark-white{
-  background: black;
+  background: whitesmoke;
 }
 
-#unviere-dark-gray{
-  background: #0d0d0d;
+#unviere-dark-bleu-light{
+  background: lightcyan;
 }
 
 #unviere-dark-black{
-  background: white;
+  background: black;
 }
 
 #modern-light-green{
@@ -161,7 +166,7 @@
 }
 
 #modern-light-bleu{
-  background: #0238ff;
+  background: #20B2AA;
 }
 
 #modern-light-smoke{
@@ -173,15 +178,19 @@
 }
 
 #modern-light-lightgray{
-  background: lightgray;
+  background: #c3c3c3;
 }
 
-#modern-light-gray{
-  background: gray;
+#modern-dark-bleu{
+  background: #0606c4;
 }
 
 #modern-dark-gray{
-  background: darkgray;
+  background: #1B1F3B;
+}
+
+#modern-dark-black{
+  background: black;
 }
 
 .color-dot::after {
@@ -267,7 +276,7 @@ justify-content: none;
 }
 }
 
-/* unviere dark*/
+/* unviere dark
 body.dark-mode #style .settings-site-styles{
   border: 1px solid rgba(255,255,255,1);
 }
@@ -302,79 +311,4 @@ body.dark-mode .header1{
 
 body.dark-mode .title h1{
   background: #1a1a1a; /* Ensure the heading's background is also white */
-  color: white;
-}
-
-/* unviere light*/
-body.light-mode #style .settings-site-styles{
-  border: 1px solid rgba(0,0,0,1);
-}
-
-body.light-mode #style .buttons-styles{
-  background: #06c46f;
-}
-
-body.light-mode #style .buttons-styles:hover{
-  background: #08f78b;
-}
-
-
-body.light-mode #style .color-dot {
-  border: 1px solid rgba(0,0,0,1);
-}
-
-
-
-body.light-mode .color-dot::after {
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
-}
-
-body.light-mode #container{
-  border: 1px solid rgba(0,0,0,1);
-}
-body.light-mode .header1{
-  color: black;
-}
-
-
-body.light-mode .title h1{
-  background: white; /* Ensure the heading's background is also white */
-}
-
-/* modern light*/
-body.modern-light #style .settings-site-styles{
-  border: 1px solid rgba(0,0,0,1);
-}
-
-body.modern-light #style .buttons-styles{
-  background: lightgray;
-}
-
-body.modern-light #style .buttons-styles:hover{
-  background: gray;
-}
-
-
-body.modern-light #style .color-dot {
-  border: 1px solid rgba(0,0,0,1);
-}
-
-
-
-body.modern-light .color-dot::after {
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
-}
-
-body.modern-light #container{
-  border: 1px solid rgba(0,0,0,1);
-}
-body.modern-light .header1{
-  color: black;
-}
-
-
-body.modern-light .title h1{
-  background: whitesmoke; /* Ensure the heading's background is also white */
-}
+  
