@@ -5,7 +5,7 @@
   list-style: none;
 }
 
-#header{
+/*#header{
   position: sticky;
   right: 0;
   top: 0;
@@ -16,13 +16,13 @@
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-}
+}*/
 
 
 
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
- margin-top: 65px;
+/* margin-top: 65px;*/
  background: white; 
 }
 

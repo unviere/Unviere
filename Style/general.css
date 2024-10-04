@@ -1,3 +1,22 @@
+#header {
+  position: absolute!important;
+  top: -400px!important;
+  position: sticky;
+  height: 0px!important;
+  width: 100%;
+  display: flex;
+  
+   
+}
+
+#check {display: none;}
+
+#label {display: none;}
+
+body {
+  margin-top: 100px;
+}
+
 .link {
     color: #0606c4;
     text-decoration: underline;
@@ -30,4 +49,10 @@
   border: 1px solid transparent;
   color: #1B1F3B;
   transform: translateX(8px);
+}
+
+@media (max-width: 700px){
+  body {
+  margin-top: 50px;
+}
 }
