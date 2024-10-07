@@ -15,8 +15,7 @@
   z-index: -2;
 }
 
-#label {
-  display: none;
+#label {display: none;
   position: sticky;
   z-index: -2;
 }

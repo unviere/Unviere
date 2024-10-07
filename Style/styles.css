@@ -8,7 +8,7 @@
 
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
- background: #ffffff;
+ background: white;
  margin-top:0px;
 }
 
@@ -48,12 +48,12 @@ img {
 .hero-text h4 {
   font-size: 25px;
   font-weight: 400;
-  color: white;
+  color: whitesmoke;
   
 }
 
 .hero-text p {
-  color: white;
+  color: whitesmoke;
   font-size: 27px;
   line-height: 1.9;
   
@@ -62,7 +62,7 @@ img {
 .hero-text h1 {
   font-size: 40px;
   line-height: 1;
-  color: white;
+  color: whitesmoke;
   
 }
 
@@ -134,6 +134,7 @@ img {
 	overflow: hidden;
 	box-sizing: border-box;
 	margin-bottom: 0px;
+	box-shadow: 1px 1px 9px gray;
 }
 
 .title{
@@ -168,7 +169,7 @@ img {
 }
 
 .tip{
-  border: 2px solid rgba(6,196,111,1);
+  border: 2px solid #06c46f;
   margin-top: 10px;
   border-radius: 10px;
   margin-left: 10px;
@@ -185,6 +186,7 @@ img {
 .content-masages{
   padding: 10px;
   margin: 10px;
+ 
 }
 
 .content-masages p{
@@ -194,7 +196,7 @@ img {
 
 .content-masages a{
   font-size: 20px;
-  color: #0328ff;
+  
 }
 /*parallel section*/
 
@@ -239,6 +241,7 @@ img {
   padding: 10px 0;
   width: 100%;
   background: white;
+  box-shadow: 1px 1px 9px gray;
 }
 
 .groups-partners{
@@ -312,7 +315,7 @@ img {
 }
 
 .partners-inf-scrolling a{
-  background-color: #06c46f;
+  background-color: whitesmoke;
   height: 200px;
   width: 500px;
   color: black;
@@ -320,11 +323,12 @@ img {
   border-radius: 10px;
   display: inline-block;
   margin-right: 10px;
+  box-shadow: 1px 1px 9px gray;
   
 }
 
 .partners-inf-scrolling a:hover{
-  background-color: #08f78b;
+  background-color: #c3c3c3;
   height: 200px;
   width: 500px;
   color: black;
@@ -357,7 +361,7 @@ img {
 
 .partner-info h1 {
   font-size: 25px;
-  color: black;
+  color: #20B2AA;
 }
 
 .partner-info p{
@@ -381,10 +385,10 @@ text-overflow: ellipsis;
   width: 300px;
   white-space: normal;
   margin: 0 2 2px;
-  color: #0328ff;
+  color: #06c46f;
 }
 
-/* games*/
+/* games
 
 .game-jams{
   display: inline-block;
@@ -451,7 +455,7 @@ hr{
 
 .scroll-down i:hover{
 	transform: translateY(-5%)
-}
+}*/
 
 	@media (max-width: 1535px){
 	/*	header{
@@ -606,160 +610,6 @@ hr{
   margin: 0 0 7px;
 		}
 		
-		.parallel-playbar {
-  margin-top: 0px; /* Add some space above the buttons */
-  margin-bottom: 10px;
-  bottom: -30;
-  z-index: 20;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding: 5px;
-  left: 5;
-}
-
-.onrbx{
-  font-size: 15px;
-  margin: 0; /* Remove any default margin */
-  padding: 0 10px; /* Adjust padding as needed */
-  top:-10;
-}
-
-
-
-
-.instalf{
-  display: none;
-  background: #06c46f;
-  position: fixed;
-  width: 97%;
-  height: auto;
-  z-index: 20;
-  margin: 0 auto;
-	overflow: hidden;
-	box-sizing: border-box;
-	margin-top: 190px;
-	max-width: 2000px;
-	margin-right: 1%;
-	margin-left: 1%;
-	border-radius: 10px;
-}
-
-.instalf #closeinstalrbx{
-  right: 30px;
-  top: 3px;
-  font-size: 20px;
-  padding: 6px 6px;
-  z-index: 990;
-  margin-top: 200px;
-}
-
-
-#check:checked ~ .instalf{
-  width: 50%;
-  left: 40;
-  
-}
-		
-		.game-drop-down{
-  width: 100px;
-  height: auto;
-  margin-top: 10px;
-  margin-left: 5px;
-  left:-20;
-  bottom: 70;
-}
-
-			.parallel-stats h1{
-  font-size: 7px;
-  margin: 0 3 3px;
-	
-}
-
-.parallel-stats-under {
-  font-size: 2px;
-}
-
-.parallel-top{
-  width:100%;
-	margin-bottom: 5px;
-}
-
-.parallel-top h1{
-	font-size: 17px;
-	margin: 10px;
-}
-
-.parallel-top h2{
-	font-size:12px;
-	margin: 10px;
-}
-
-
-.dev-icon img{
-	width: 40px;
-	height: auto;
-}
-.parallel-dev h4{
-	font-size: 15px;
-  font-weight: 400;
-  margin-bottom: 7px;
-}
-
-
-.parallel-playbar a {
-  border: 1px solid transparent;
-  padding: 6px 7px;
-  line-height: 1.2;
-  font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: all .55s ease;
-  text-decoration: none;
-}
-
-.parallel-buttons-bar{
-	 /*position: fixed;*/
-  height: 20px;
- padding: 5px 9%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-
-
-.parallel-buttons-bar button{
-  margin-left: 0px;
-  font-size: 10;
-  font-weight: 600;
-}
-
-.parallel-buttons-bar button:hover {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-}
-
-.parallel-buttons-bar button.active {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-}
-
-#descriptionpar h4 {
-  color: black;
-  font-size: 15px;
-}
-
-#descriptionpar p {
-  color: black;
-  font-size: 7px;
-  padding: 10px;
-}
-
-#descriptionpar .links{
-  color: #0328ff;
-  font-size:7px;
-  text-decoration: underline;
-  margin-left: 12px;
-}
 
 .groups-partners h1{
   font-size: 25px;
@@ -813,7 +663,6 @@ hr{
   width: 200px;
   white-space: normal;
   margin: 0 2 2px;
-  color: #0328ff;
 }
 .game-jams {
   padding: 10px 0;
@@ -898,39 +747,6 @@ hr{
   text-align: left;  
 }*/
 
-.parallel-stats h1 {
-  font-size: 7px; /* Corrected the font-size syntax */
-}
-
-.parallel-stats-under {
-  font-size: 5px;
-}
-
-.parallel-top{
-  width:100%;
-	margin-bottom: 5px;
-}
-
-.parallel-top h1{
-	font-size: 17px;
-	margin: 10px;
-}
-
-.parallel-top h2{
-	font-size:12px;
-	margin: 10px;
-}
-
-
-.dev-icon img{
-	width: 35px;
-	height: auto;
-}
-.parallel-dev h4{
-	font-size: 7px;
-  font-weight: 400;
-  margin-bottom: 7px;
-}
 
 .groups-partners h1{
   font-size: 25px;
@@ -984,7 +800,6 @@ hr{
   width: 200px;
   white-space: normal;
   margin: 0 2 2px;
-  color: #0328ff;
 }
 
 
@@ -1097,30 +912,26 @@ body.dark-mode .stats-group h1{
 	
 	
 		  body.light-mode {
-  background: #ffffff;
+  background: white;
 }
 		
 		
 
-body.light-mode .masages{
-  
-  background-color: #ffffff;
-}
 
 
 
 
 body.light-mode .title h1{
   color: black;
-  background: #ffffff; 
+  background: white; 
 }
 
 body.light-mode .dissmiss{
-  background: #ffffff;
+  background: white;
 }
 
 body.light-mode .tip{
-  border: 1px solid rgba(6,196,111,1);
+  border: 1px solid #06c46f;
 }
 
 
@@ -1131,7 +942,6 @@ body.light-mode .content-masages p{
 
 body.light-mode .content-masages a{
   font-size: 20px;
-  color: #0328ff;
 }
 
 
@@ -1148,9 +958,13 @@ body.light-mode .groups-partners p{
   color: black;
 }
 	
-body.light-mode .partners-container:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255,255,255,0), white);
+body.light-mode .partners-container {
+  
+  background:  white;
+} 
+body.light-mode .partners-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
 }
 
 body.light-mode .partners-container:after {
@@ -1164,7 +978,7 @@ body.light-mode .partners-inf-scrolling a{
 }
 
 body.light-mode .partners-inf-scrolling a:hover{
-  background-color: #08f78b;
+  background-color: #049c59;
   color: black;
   
 }
@@ -1172,7 +986,7 @@ body.light-mode .partners-inf-scrolling a:hover{
 
 
 body.light-mode .partner-info h1 {
-  color: black;
+  color: #f0b400;
 }
 
 body.light-mode .partner-info p{
@@ -1182,98 +996,6 @@ body.light-mode .partner-info p{
 
 
 body.light-mode .stats-group h1{
-  color: #0328ff;
+  color: #0606c4;
 }
 
-/* modern light*/
-
-body.modern-light {
-  background: white;
-}
-
-
-		
-		
-
-body.modern-light .masages{
-  
-  background-color: #ffffff;
-}
-
-
-
-
-body.modern-light .title h1{
-  color: black;
-  background: #ffffff;  
-}
-
-body.modern-light .dissmiss{
-  background: #ffffff;
-}
-
-body.modern-light .tip{
-  border: 1px solid rgba(6,196,111,1);
-}
-
-
-body.modern-light .content-masages p{
-  font-size: 20px;
-  color: black;
-}
-
-body.modern-light .content-masages a{
-  font-size: 20px;
-  color: #0328ff;
-}
-
-
-	
-	body.modern-light .groups{
-	  background: white;
-	}
-	
-body.modern-light .groups-partners h1{
-  color: black;
-  
-}
-body.modern-light .groups-partners p{
-  color: black;
-}
-	
-body.modern-light .partners-container:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255,255,255,0), white);
-}
-
-body.modern-light .partners-container:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0), white);
-}
-	
-body.modern-light .partners-inf-scrolling a{
-  background-color: lightgray;
-  color: black;
-}
-
-body.modern-light .partners-inf-scrolling a:hover{
-  background-color: gray;
-  color: black;
-  
-}
-
-
-
-body.modern-light .partner-info h1 {
-  color: black;
-}
-
-body.modern-light .partner-info p{
-  color: black;
-}
-
-
-
-body.modern-light .stats-group h1{
-  color: #0328ff;
-}
