@@ -61,11 +61,11 @@ body.light-mode .games-container{
 
 body.light-mode .games-container:before {
   
-  background: linear-gradient(to left, rgba(255,255,255,0), whitesmoke);
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
 }
 
 body.light-mode .games-container:after {
-  background: linear-gradient(to right, rgba(255,255,255,0), whitesmoke);
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
 }
 
 body.light-mode .game-inf-scrolling a{
