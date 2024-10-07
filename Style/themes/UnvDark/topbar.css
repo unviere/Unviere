@@ -109,6 +109,9 @@ body.dark-mode #side-menu-title {
   
 }
 
+body.dark-mode #side-menu-desc {
+  color: white;
+}
 body.dark-mode .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
   font-size: 17px;
   border-radius: 50px;

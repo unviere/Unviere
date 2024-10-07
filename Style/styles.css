@@ -5,162 +5,11 @@
   list-style: none;
 }
 
-#header{
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 33px 9%;
-  overflow: hidden;
-}
-
-/*.sidebar{
-  position: fixed;
-  left: -700;
-  width:250px;
-  height: 100%;
-  background: #06c46f;
-  margin-top: 100px;
-  z-index: 900;
-  display: flex;
-  flex-direction: column;
-  transition: all .5s ease;
-}
-
-.sidebar-scroll{
-  width:250px;
-  height: 100%;
-  max-height: 100%;
-  background: #06c46f;
-  margin-top: 22px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  transition: all .5s ease;
-  overflow-y: auto;
-}
-
-.sidebar .sidebar-header{
-  font-size: 22px;
-  color: white;
-  text-align: center;
-  line-height: 70px;
-  background: #0328ff;
-  user-select: none;
-  border-bottom: 1px solid rgba(255,255,255,1);
-}
-.sidebar .navigate {
-  height: 100%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-  padding-left: 40px;
-  box-sizing: border-box;
-  background: transparent;
-  font-weight: 600;
-  padding: 5px 5px;
-  
-  
-}
-
-.sidebar .navigate:hover {
-  
-  border-bottom: 5px solid #0328ff;
-  
-  
-}
-
-.sidebar h1{
-  font-size: 22px;
-  background: #0328ff;
-  color: white;
-  border-top: 1px solid rgba(255,255,255,1);
-  border-bottom: 1px solid rgba(255,255,255,1);
-}
-
-#check {
-  display: none;
-}
-
-.sidebar-toggle #btn,sidebar-toggle #cancel{
-  position: fixed;
-  cursor: pointer;
-  margin-top: 100px;
-}
-
-.sidebar-toggle #btn{
-  left: 40px;
-  top:25px;
-  font-size: 30px;
-  background: #06c46f;
-  color: black;
-  padding: 6px 6px;
-  border-radius: 50px;
-  z-index: 800;
-  transition: all .5s;
-  opacity: 100;
-  
-}
-
-.sidebar-toggle #cancel{
-  left: -395px;
-  top: 17px;
-  font-size: 20px;
-  background: #06c46f;
-  color: black;
-  padding: 6px 6px;
-  border-radius: 50px;
-  z-index: 990;
-  margin-top: 100px;
-  position: fixed;
-  transition: all .5s ease;
-  
-}
-
-#check:checked ~ .sidebar{
-  left: 0;
-}
-
-#check:checked ~ .sidebar-toggle #btn{
-  left: 250px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-#check:checked ~ .sidebar-toggle #cancel{
-  left: 195px;
-}
-
-#check:checked ~ section{
-  margin-left: 250px;
-  
-}*/
-
-
-/*header {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 33px 9%;
-  background: #06c46f;
-}*/
 
 body {
  /* background: linear-gradient(245.95deg, #0328ff 0%, #06c46f 28.53%, #57d8ff 75.25%);*/
  background: #ffffff;
+ margin-top:0px;
 }
 
 img {
@@ -169,83 +18,23 @@ img {
   height: auto;
 }
 
-/*.logo {
-	z-index: 200000;
-	transition: all .55s ease;
-	  margin-left: 5px;
-  font-size: 15px;
-	font-height: 100px;
-	font-width: 100px;
-	height: 100px;
-	width:100px;
-  font-weight: 60;
-  color: #0328ff;
-  display: flex;
-  align-items: center;
-	padding: 5px 5px;
-}
-
-.navlist {
-  display: flex;
-  align-items: center;
-  background: #06c46f;
-}
-
-.navlist a {
-  background: transparent;
-  color: black;
-  margin-left: 5px;
-  font-size: 15px;
-  font-weight: 600;
-  border-bottom: 2px solid transparent;
-  transition: all .55s ease;
-  text-decoration: none;
-  padding: 5px 5px;
-}
-
-
-
-.navlist a:hover {
-  border-bottom: 5px solid #03c8ff;
-}
-
- #dark-mode-toggle{
-  background: white;
-  color: black;
-  margin-left: 5px;
-  font-size: 15px;
-  font-weight: 600;
-border-radius: 50px;
-  border-bottom: 2px solid transparent;
-  transition: all .55s ease;
-  text-decoration: none;
-  padding: 5px 5px;
-  border: none;
-outline: none;
- }
-  
-#menu-icon {
-  color: #0328ff;
-  font-size: 35px;
-  cursor: pointer;
-  display: none;
-}*/
 
 .hero {
-  height: 100vh;
+  height: 100vh!important;
   width: 100%;
+  top:0px!important;
   max-width: 2000px;
   margin: 0 auto;
   background-image: url(../Img/Stars.png);
   background-size: cover;
   background-position: center;
-  z-index: 1;
-  position: relative;
+  z-index: 10;
+  position: static;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 5px;
 }
 
 .hero-text {
@@ -260,21 +49,21 @@ outline: none;
   font-size: 25px;
   font-weight: 400;
   color: white;
-  margin-bottom: 27px;
+  
 }
 
 .hero-text p {
   color: white;
   font-size: 27px;
   line-height: 1.9;
-  margin-bottom: 27px;
+  
 }
 
 .hero-text h1 {
   font-size: 40px;
   line-height: 1;
   color: white;
-  margin: 0 0 27px;
+  
 }
 
 .hero-img {
@@ -296,35 +85,29 @@ outline: none;
   display: flex;
   justify-content: center;
   gap: 10px; /* Space between buttons */
-  margin-top: 20px; /* Add some space above the buttons */
+  
 }
 
 .hero-buttons a {
   display: inline-block;
-  color: #0328ff;
-  background: #06c46f;
-  border: 1px solid transparent;
-  padding: 12px 30px;
+  
+  padding: 12px 12px;
   line-height: 1.4;
   font-size: 14px;
   font-weight: 500;
-  border-radius: 50px;
+  
   text-transform: uppercase;
   transition: all .55s ease;
   text-decoration: none;
 }
 
 .hero-buttons a:hover {
-  background: transparent;
-  border: 1px solid #06c46f;
+  
+  
   transform: translateX(8px);
 }
 
-.hero-buttons .ctaa {
-  background: transparent;
-  color: white;
-  border: 1px solid #06c46f;
-}
+
 
 .hero-buttons .ctaa i {
   vertical-align: middle;
@@ -415,439 +198,15 @@ outline: none;
 }
 /*parallel section*/
 
-.parallel {
-  height: auto;
-  width: 100%;
-	max-width: 2000px;
-	margin: 0 auto;
-  /*background-image: url(../Img/Stars.png);*/
-  background-color: whitesmoke;
-  background-size: cover;
-	background-position: center;
-	z-index: 1;
-  position: relative;
-  display: flex;
-	flex-direction: column;
-  align-items: center;
-  justify-content: center;
-	overflow: hidden;
-	box-sizing: border-box;
-	margin-bottom: 10px;
-}
 
-.front-parallel{
-  border: 2px solid rgba(6,196,111,1);
-  margin-top: 10px;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 30px;
-  margin-top: 10px;
-  width: 98%;
-  height: auto;
-  position: relative;
-  padding: 5px;
-  right: 0;
-  left: -2;
-}
-
-.parallel-top{
-  width:100%;
-	display: flex;
-	flex-direction: row;
-  justify-content: center;
-	align-items: center;
-	margin-bottom: 10px;
-}
-
-.parallel-top h1{
-	font-size: 50px;
-	color: black;
-	margin: 10px;
-}
-
-.parallel-top h2{
-	font-size: 40px;
-	color: black;
-	margin: 10px;
-}
-
-.parallel-dev{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.dev-icon img{
-	width: 50px;
-	height: auto;
-}
-.parallel-dev h4{
-	font-size: 10px;
-  font-weight: 400;
-  color: black;
-  margin-bottom: 7px;
-}
-
-.parallel-img img{
-  width: 100%;
-  height: auto;
-}
-
-.parallel-playbar {
-  display: flex;
-  white-space: nowrap;
-  justify-content: center;
-  position: absolute;
-  align-items: center;
-  align-content: center;
-  gap: 10px; /* Space between buttons */
-  margin-top: 20px; /* Add some space above the buttons */
-  margin-bottom: 10px;
-  bottom: -40;
-  background: whitesmoke;
-  z-index: 20;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding: 15px;
-  left: 100;
-}
-
-.onrbx{
-  font-size: 20px;
-  color: black;
-  margin: 0; /* Remove any default margin */
-  padding: 0 10px; /* Adjust padding as needed */
-  background: whitesmoke; /* Ensure the heading's background is also white */
-  position: absolute;
-  top:-10;
-}
-
-.parallel-playbar a {
-  display: inline-block;
-  color: #0328ff;
-  background: #06c46f;
-  border: 1px solid transparent;
-  padding: 12px 30px;
-  line-height: 1.4;
-  font-size: 25px;
-  font-weight: 500;
-  border-radius: 50px;
-  text-transform: uppercase;
-  transition: all .55s ease;
-  text-decoration: none;
-    margin-right: 5px;
-  margin-left: 5px;
-}
-
-.parallel-playbar a:hover {
-  background: transparent;
-  border: 1px solid #06c46f;
-  transform: translateX(8px);
-}
-
-.parallel-playbar .ctaa {
-  background: transparent;
-  color: black;
-  border: 1px solid #06c46f;
-}
-
-#toggle-instalrbx{
-  display:none;
-}
-
-.instalf{
-  display: none;
-  background: #06c46f;
-  position: fixed;
-  width: 97%;
-  height: auto;
-  z-index: 20;
-  margin: 0 auto;
-	overflow: hidden;
-	box-sizing: border-box;
-	margin-top: 550px;
-	max-width: 2000px;
-	margin-right: 1%;
-	margin-left: 1%;
-	border-radius: 10px;
-}
-
-
-
-.instal #instalrbxopen{
-  display: block;
-  font-size: 3650px;
-  background: red;
-  color: black;
-  border-radius: 50px;
-  z-index: 89800;
-  transition: all .5s;
-  opacity: 100;
-  height: 100%;
-  width: 100%;
+.game-stats{
+  
+  margin-left: 8px!important;
+  margin-right: 8px!important;
   
 }
 
-.instalf #closeinstalrbx{
-  display: block;
-  right: 30px;
-  top: 3px;
-  font-size: 20px;
-  background: red;
-  color: black;
-  padding: 6px 6px;
-  border-radius: 50px;
-  z-index: 990;
-  margin-top: 550px;
-  position: fixed;
-  transition: all .5s ease;
-  
-}
 
-#toggle-instalrbx:checked ~ .instalf{
-  display: flex;
-}
-
-#toggle-instalrbx:checked ~ .instalf #closeinstslrbx{
-  left: 250px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-#check:checked ~ .instalf{
-  width: 75%;
-  left: 40;
-  
-}
-
-.game-drop-down{
-  position: absolute;
-  width: 100px;
-  height: auto;
-  background: transparent;
-  z-index: 60;
-  white-space: nowrap;
-  display: none;
-  margin-top: 10px;
-  margin-left: 5px;
-  text-align: center;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  left:-20;
-  bottom: 90;
-}
-
-.parallel-drop-down{
-  cursor: pointer;
-}
-
-
-.game-drop-down.game-drop-down:hover, .parallel-playbar .parallel-drop-down:hover + .game-drop-down {
-  display: block;
-}
-
-.parallel-playbar .ctaa i {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.parallel-stats{
-  width:100%;
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.parallel-stats h1{
-  color: black;
-  font-size: 15px;
-  margin: 0 5 5px;
-}
-
-.parallel-stats a{
-  color: #0328ff;
-  text-decoration: underline;
-}
-
-.parallel-stats-under{
-  color: black ;
-	font-size: 5px;
-  margin-bottom: 4px;
-}
-
-.parallel-buttons-bar{
-	 /*position: fixed;*/
-  right: 0;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-justify-content: space-between;
- padding: 5px 9%;
-  background: #06c46f;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.parallel-buttons-bar > * {
-  flex: 1; /* Ensures that children take up equal space */
-  text-align: center; /* Centers text/content within each child */
-   min-width: 100px; /* Adjust this value as needed */
-}
-
-/*
-.buttons-bar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: transparent;
-}*/
-
-.parallel-buttons-bar button{
-  background: transparent;
-  color: black;
-  margin-left: 0px;
-  font-size: 30;
-  width: auto;
-  height: auto;
-  font-weight: 600;
-/*	border-radius: 50px;*/
-  border-bottom: 2px solid transparent;
-/*  transition: all .55s ease*/
-  text-decoration: none;
-/*  padding: 5px 5px;*/
-border: none;
-outline: none;
-}
-
-.parallel-buttons-bar button:hover {
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: #0328ff;
-}
-
-.parallel-buttons-bar button.active {
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: #0328ff;
-}
-
-.tabs-parallel{
-  display: none;
-}
-
-#descriptionpar {
-  display: blocks;
-}
-
-#descriptionpar h4 {
-  color: black;
-  font-size: 30px;
-}
-
-#descriptionpar p {
-  color: black;
-  font-size: 27px;
-  padding: 10px;
-}
-
-#descriptionpar .links{
-  color: #0328ff;
-  font-size:27px;
-  text-decoration: underline;
-}
-
-.parallel-text {
-  padding: 5px;
-}
-
-.parallel-text h4 {
-  font-size: 15px;
-  font-weight: 400;
-  color: white;
-  margin-bottom: 7px;
-}
-
-.parallel-text p {
-	padding: 7px;
-  color: white;
-  font-size: 7px;
-  line-height: 1.9;
-  margin-bottom: 7px;
-}
-
-.parallel-text h1 {
-  font-size: 20px;
-  line-height: 1;
-  color: white;
-  margin: 0 0 7px;
-}
-
-.parallel-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.parallel-img img {
-  width: 100%;
-  height: auto;
-
-  gap: 2rem;
-  padding: 100px 2%; /* Adjusted padding */
-  overflow: hidden; /* Prevent overflow */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-.parallel-text a {
-display: inline-block;
-  /*flex-direction: column;
-  gap: 10px;*/
-  color: white;
-  background: #06c46f;
-  border: 1px solid transparent;
-  padding: 12px 30px;
-  line-height: 1.4;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 50px;
-  text-transform: uppercase;
-  transition: all .55s ease;
-  text-decoration: none;
-  margin-right: 5px;
-}
-
-.parallel-text a:hover {
-  background: transparent;
-  border: 1px solid #06c46f;
-  transform: translateX(8px);
-}
-
-.parallel-text a.ctaa {
-  background: transparent;
-  border: 1px solid #06c46f;
-  margin-left: 20px;
-}
-
-.parallel-text a.ctaa i {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.parallel-text a.links {
-	padding: 10px;
-  color: blue;
-  font-size: 10px;
-  line-height: 1.9;
-  margin-bottom: 10px;
-	text-decoration: underline;
-} 
 
 /* groups*/
 
@@ -1111,17 +470,17 @@ hr{
 
 	.hero-text h1{
 		font-size: 20px;
-		margin: 0 0 25;
+		margin: 0 0 12px;
 	}
 
 	.hero-text h4{
 	  font-size: 15;
-		margin-bottom: 25px;
+		margin-bottom: 10px;
 	}
 	
 	.hero-text p{
 	  font-size: 10px;
-	  margin-bottom: 25px;
+	  margin-bottom: 10px;
 	}
 /*	#menu-icon{
 		display: none;
@@ -1140,7 +499,7 @@ hr{
 	}
 
 	.hero-text{
-		padding-top: 115px;
+		padding-top: 50px;
 		
 	}
 
@@ -1177,6 +536,7 @@ hr{
 @media (max-width: 700px){
 
 	.hero{
+	  
 		flex-direction: column;
 	}
 	
@@ -1621,45 +981,6 @@ hr{
   background: #1a1a1a;
 }
 
-/*body.dark-mode header{
-  background: #024a2a;
-}
-
-body.dark-mode .navlist{
-  background: #024a2a;
-}
-
-body.dark-mode .navlist a {
-  color: white;
-}
-
-body.dark-mode #dark-mode-toggle{
-  background: black;
-  color: white;
-}
-
-.navlist a:hover {
-  border-bottom: 2px solid #0328ff;
-}*/
-		
-		body.dark-mode .hero-buttons a{
-		  background: #024a2a;
-		  color: white;
-		  border-radius: 50px;
-		  
-		}
-		
-		body.dark-mode .hero-buttons a:hover {
-  background: transparent;
-  color: white;
-  border: 1px solid #024a2a;
-		}
-		
-		body.dark-mode .hero-buttons .ctaa {
-  background: transparent;
-  border: 1px solid #024a2a;
-  
-}
 
 body.dark-mode .masages{
   
@@ -1671,7 +992,7 @@ body.dark-mode .masages{
 
 body.dark-mode .title h1{
   color: white;
-  background: #1a1a1a; /* Ensure the heading's background is also white */
+  background: #1a1a1a; 
 }
 
 body.dark-mode .dissmiss{
@@ -1693,98 +1014,7 @@ body.dark-mode .content-masages a{
   color: #03c8ff;
 }
 
-body.dark-mode .parallel {
-  background: #0d0d0d;
-}
 
-body.dark-mode .front-parallel{
-  border: 2px solid rgba(2,74,42,1);
-}
-
-body.dark-mode .parallel-playbar {
-  background: #0d0d0d;
-}
-
-body.dark-mode .onrbx{
-  color: white;
-  background: #0d0d0d;
-}
-
-body.dark-mode .instalf{
-  background: #024a2a;
-}
-
-body.dark-mode .parallel-top h1{
-	color: white;
-}
-
-body.dark-mode .parallel-top h2{
-	color: white;
-}
-
-body.dark-mode .parallel-dev h4{
-  color: white;
-}
-
-body.dark-mode .parallel-stats h1{
-  color: white;
-}
-
-body.dark-mode .parallel-stats a{
-  color: #03c8ff;
-}
-
-body.dark-mode .parallel-playbar a {
-  color: white;
-  background: #024a2a;
-  border-radius: 50px;
-}
-
-body.dark-mode .parallel-playbar a:hover {
-  background: transparent;
-  color: white;
-  border: 1px solid #024a2a;
-}
-
-body.dark-mode .parallel-playbar .ctaa {
-  background: transparent;
-  border: 1px solid #024a2a;
-}
-
-body.dark-mode .parallel-buttons-bar{
-  background: #024a2a;
-}
-
-
-body.dark-mode .parallel-buttons-bar button{
-  background: transparent;
-  color: white;
-}
-
-body.dark-mode .parallel-buttons-bar button:hover {
-border-bottom-color: #03c8ff;
-}
-
-body.dark-mode .parallel-buttons-bar button.active {
-  border-bottom-color: #03c8ff;
-}
-
-body.dark-mode #descriptionpar h4 {
-  color: white;
-}
-
-body.dark-mode #descriptionpar p {
-  color: white;
-}
-
-body.dark-mode #descriptionpar .links{
-  color: #03c8ff;
-}
-
-body.dark-mode .parallel-stats-under{
-  color: white;
-	}
-	
 	body.dark-mode .groups{
 	  background: #1a1a1a;
 	}
@@ -1841,30 +1071,14 @@ body.dark-mode .stats-group h1{
   color: #03c8ff;
 }
 
-	/*	unviere light mode properties*/
+	/*	unviere light mode */
 	
 	
 		  body.light-mode {
   background: #ffffff;
 }
 		
-		body.light-mode .hero-buttons a{
-		  background: #06c46f;
-		  color: #0328ff;
-		  border-radius: 50px;
-		}
 		
-		body.light-mode .hero-buttons a:hover {
-  background: transparent;
-  color: white;
-  border: 1px solid #06c46f;
-		}
-		
-		body.light-mode .hero-buttons .ctaa {
-  background: transparent;
-  border: 1px solid #06c46f;
-  color: white;
-}
 
 body.light-mode .masages{
   
@@ -1876,7 +1090,7 @@ body.light-mode .masages{
 
 body.light-mode .title h1{
   color: black;
-  background: #ffffff; /* Ensure the heading's background is also white */
+  background: #ffffff; 
 }
 
 body.light-mode .dissmiss{
@@ -1898,97 +1112,7 @@ body.light-mode .content-masages a{
   color: #0328ff;
 }
 
-body.light-mode .parallel {
-  background: whitesmoke;
-}
-body.light-mode .front-parallel{
-  border: 2px solid rgba(6,196,111,1);
-}
 
-body.light-mode .parallel-playbar {
-  background: whitesmoke;
-}
-
-body.light-mode .onrbx{
-  color: black;
-  background: whitesmoke;
-}
-
-body.light-mode .instalf{
-  background: #06c46f;
-}
-
-body.light-mode .parallel-top h1{
-	color: black;
-}
-
-body.light-mode .parallel-top h2{
-	color: black;
-}
-
-body.light-mode .parallel-dev h4{
-  color: black;
-}
-
-body.light-mode .parallel-stats h1{
-  color: black;
-}
-
-body.light-mode .parallel-stats a{
-  color: #0328ff;
-}
-
-body.light-mode .parallel-playbar a {
-  color: black;
-  background: #06c46f;
-}
-
-body.light-mode .parallel-playbar a:hover {
-  background: transparent;
-  color: black;
-  border: 1px solid #06c46f;
-  border-radius: 50px;
-}
-
-body.light-mode .parallel-playbar .ctaa {
-  background: transparent;
-  border: 1px solid #06c46f;
-  color: black;
-}
-
-body.light-mode .parallel-buttons-bar{
-  background: #06c46f;
-}
-
-
-body.light-mode .parallel-buttons-bar button{
-  background: transparent;
-  color: black;
-}
-
-body.light-mode .parallel-buttons-bar button:hover {
-  border-bottom-color: #0328ff;
-}
-
-body.light-mode .parallel-buttons-bar button.active {
-  border-bottom-color: #0328ff;
-}
-
-body.light-mode #descriptionpar h4 {
-  color: black;
-}
-
-body.light-mode #descriptionpar p {
-  color: black;
-}
-
-body.light-mode #descriptionpar .links{
-  color: #0328ff;
-}
-
-body.light-mode .parallel-stats-under{
-  color: black;
-	}
 	
 	body.light-mode .groups{
 	  background: white;
@@ -2047,23 +1171,7 @@ body.modern-light {
 
 
 		
-		body.modern-light .hero-buttons a{
-		  background: whitesmoke;
-		  color: #0328ff;
-		  border-radius: 10px;
-		  }
-		  
-		  body.modern-light .hero-buttons a:hover {
-  background: #06c46f;
-  color: black;
-  border: 1px solid transparent;
-		}
 		
-		body.modern-light .hero-buttons .ctaa {
-  background: #06c46f;
-  border: 1px solid transparent;
-  color: black;
-}
 
 body.modern-light .masages{
   
@@ -2075,7 +1183,7 @@ body.modern-light .masages{
 
 body.modern-light .title h1{
   color: black;
-  background: #ffffff; /* Ensure the heading's background is also white */
+  background: #ffffff;  
 }
 
 body.modern-light .dissmiss{
@@ -2097,97 +1205,7 @@ body.modern-light .content-masages a{
   color: #0328ff;
 }
 
-body.modern-light .parallel {
-  background: whitesmoke;
-}
 
-body.modern-light .front-parallel{
-  border: 2px solid rgba(6,196,111,1);
-}
-
-body.modern-light .parallel-playbar {
-  background: whitesmoke;
-}
-
-body.modern-light .onrbx{
-  color: black;
-  background: whitesmoke;
-}
-
-body.modern-light .instalf{
-  background: #06c46f;
-}
-body.modern-light .parallel-top h1{
-	color: black;
-}
-
-body.modern-light .parallel-top h2{
-	color: black;
-}
-
-body.modern-light .parallel-dev h4{
-  color: black;
-}
-
-body.modern-light .parallel-stats h1{
-  color: black;
-}
-
-body.modern-light .parallel-stats a{
-  color: #0328ff;
-}
-
-body.modern-light .parallel-playbar a {
-  background: #06c46f;
-  color: black;
-  border-radius: 7px;
-}
-
-body.modern-light .parallel-playbar a:hover {
-  background: black;
-  color: white;
-  border: 1px solid transparent;
-}
-
-body.modern-light .parallel-playbar .ctaa {
-  background: black;
-  border: 1px solid transparent;
-  color: white;
-}
-
-body.modern-light .parallel-buttons-bar{
-  background: lightgray;
-}
-
-
-body.modern-light .parallel-buttons-bar button{
-  background: transparent;
-  color: black;
-}
-
-body.modern-light .parallel-buttons-bar button:hover {
-  border-bottom-color: #0328ff;
-}
-
-body.modern-light .parallel-buttons-bar button.active {
-  border-bottom-color: #0328ff;
-}
-
-body.modern-light #descriptionpar h4 {
-  color: black;
-}
-
-body.modern-light #descriptionpar p {
-  color: black;
-}
-
-body.modern-light #descriptionpar .links{
-  color: #0328ff;
-}
-
-body.modern-light .parallel-stats-under{
-  color: black;
-	}
 	
 	body.modern-light .groups{
 	  background: white;

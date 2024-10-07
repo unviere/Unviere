@@ -116,6 +116,10 @@ body.light-mode #side-menu-title {
   
 }
 
+body.light-mode #side-menu-desc {
+  color: black;
+}
+
 body.light-mode .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
   font-size: 17px;
   border-radius: 50px;

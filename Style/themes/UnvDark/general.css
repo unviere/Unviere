@@ -6,6 +6,14 @@ body.dark-mode .link:hover {
     color: #024a2a; /* Switch to your primary green on hover */
 }
 
+body.dark-mode .link-d {
+    color: #03c8ff;
+    text-decoration: none;
+}
+body.dark-mode .link-d:hover {
+    color: #024a2a; /* Switch to your primary green on hover */
+}
+
 body.dark-mode .button-n {
   background: #024a2a;
   border: 1px solid transparent;

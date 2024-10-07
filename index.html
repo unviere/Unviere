@@ -9,60 +9,71 @@
 
   <link rel="shortcut icon" type="x-icon" href="Img/unv_games.png">
   
+    <!--Topbar styles-->
+        <link rel="stylesheet" type="text/css" href="Style/topbarv2.css">
+        <link rel="stylesheet" type="text/css" href="Style/themes/UnvLight/topbar.css">
+        <link rel="stylesheet" type="text/css" href="Style/themes/UnvDark/topbar.css">
+        
+     <!--general styles-->
+        <link rel="stylesheet" type="text/css" href="Style/general.css">
+        <link rel="stylesheet" type="text/css" href="Style/themes/UnvLight/general.css">
+        <link rel="stylesheet" type="text/css" href="Style/themes/UnvDark/general.css">
+  
   
   <link rel ="stylesheet" type = "text/css" href ="Style/styles.css">
-    <link rel ="stylesheet" type = "text/css" href ="Style/games.css">
-      <link rel ="stylesheet" type = "text/css" href ="Style/topbar.css">
-      <link rel ="stylesheet" type = "text/css" href ="Style/sidebar.css">
+  
+  <!-- games page styles-->
+   <link rel ="stylesheet" type = "text/css" href ="Style/games.css">
+     <link rel ="stylesheet" type = "text/css" href ="Style/themes/UnvLight/games.css">
+          <link rel ="stylesheet" type = "text/css" href ="Style/themes/UnvDark/games.css">
+    
+    <!--game info -->
+      <link rel ="stylesheet" type = "text/css" href ="games/styles/game.css">
+    <link rel ="stylesheet" type = "text/css" href ="Style/themes/UnvLight/game.css">
+      <link rel ="stylesheet" type = "text/css" href ="Style/themes/UnvDark/game.css">
+    
+      
+      
+      
+     <!-- <link rel ="stylesheet" type = "text/css" href ="Style/sidebar.css"-->
   <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
     <link rel="stylesheet" href="Style/images.css">
+    
+      <script defer type="module" src="Scripts/topbar new.js"></script>
 </head>
   <body>
-   <!-- <header>
-      <a href="index.html" class="logo"><img src="Img/unviere.png"></a>
 
-      <ul class ="navlist">
-        <li><a href="#paralleized engineers">parallelized engineers</a></li>
-        <li><a href="#game jams">game jams</a></li>
-        <li><a href="https://coolegaming.wixsite.com/unviere/be-a-beta-tester">beta</a></li>
-        <li><a href="https://coolegaming.wixsite.com/unviere/store">shop</a></li>
-        <li><a href="https://coolegaming.wixsite.com/unviere/suport">support</a></li>
-         <li><button id="dark-mode-toggle">dark mode (toggle)</button></li>
-        
-      </ul>
-      <div class="bx bx-menu" id="menu-icon"></div>
-    </header>-->
     
    <!-- index.html -->
-    <div id="header"></div>
+      <input type="checkbox" id="check">
     
-    <input type="checkbox" id="check">
-    <label class="sidebar-toggle" for="check"><i class="ri-menu-line" id="btn"></i>
+    <label class="sidebar-toggle" for="check"><i class="ri-pushpin-line"id="unpinned"></i><i class="ri-pushpin-fill" id="pinned"></i></label>
+    
+    <div id="header"></div>
     
 
  
-    <i class="ri-close-line" id="cancel"></i>
-    </label>
+   <!-- <i class="ri-close-line" id="cancel"></i>
+    </label>-->
     
 
-    <div class="sidebar">
-      <div class="sidebar-header">on this page</div>
-      <div class="sidebar-scroll">
-      <ul>
+   <template id="nav">
+      <h1 class="sidebar-header">on this page</h1>
+      
                 <li><a class="navigate" href="#landing">landings page</a></a></li>
         <li><a class="navigate" href="#paralleized engineers">Parallelized engineers</a></li>
          <li><a class="navigate" href="#groups">groups</a></li>
-      </ul>
-      <h1>also checkout</h1>
-        <ul>
+    
+    <hr id="menuhr">
+      <h1 class="sidebar-header">also checkout</h1>
+        
         <li><a class="navigate" href="games.html">games</a></li>
         <li><a class="navigate" href="settings.html">settings</a></li>
-      </ul>
-      </div>
-    </div>
+        <div class="scroll-padding"></div>
+   </template>
     
     <input type="checkbox" id="toggle-instalrbx">
    
@@ -86,7 +97,7 @@
         also join our group on roblox for feturre perks</p>
         
 <div class="hero-buttons">
-        <a href="https://coolegaming.wixsite.com/unviere">full site</a>
+        <a href="https://coolegaming.wixsite.com/unviere" class="button-n">full site</a>
         <a href="#groups" class="ctaa">our groups</a>
       </div>
       </div>
@@ -103,7 +114,12 @@
           <div class="title"><h1>our themes get a revamp + new navbar </h1></div>
           <div class="dissmiss" id="theme-revamp-msg"><i class="ri-close-circle-fill"></i></div>
           <div class="content-masages">
-          <p>hi there im bussy with revamp all themes modern light will be the defould and there come a dark mode the modern theme will look more modern and you see things change with this changes i also revamp the topbar you will see changes on some pages <br><br> <h1>the following pages are getting updated</h1><br> <a href="https://unviere.github.io/Unviere/games">games </a></p>
+          <p>hi there im bussy with revamp all themes modern light will be the defould and there come a dark mode the modern theme will look more modern and you see things change with this changes i also revamp the topbar you will see changes on some pages <br><br> <h1>the following pages are getting updated</h1><br> <a href="https://unviere.github.io/Unviere/games" class="link">games </a>
+          <br> <a href="https://unviere.github.io/Unviere" class="link">home </a>
+          <br> <a href="https://unviere.github.io/Unviere/settings"class="link">settings </a><br> <a class="link-d">all game pages</a>
+          <br> <a class="link-d">all form pages </a>
+          
+          </p>
           </div>
         </div>
       </div>
@@ -112,7 +128,7 @@
           <div class="title"><h1>did you know </h1></div>
           <div class="dissmiss" id="theme-zwitch-msg"><i class="ri-close-circle-fill"></i></div>
           <div class="content-masages">
-          <p>dear user nice that you found my (will be our(my and my team)),s website. <br> <br> note: this site is in development not everything is working fine <br> <br>i will say look around and did you know you can change the theme in <a href="https://unviere.github.io/Unviere/settings">settings </a> its in development so not all themes apply on new stuff or maybe overlap if it used the old style sheets but is updated</p>
+          <p>dear user nice that you found my (will be our(my and my team)),s website. <br> <br> note: this site is in development not everything is working fine <br> <br>i will say look around and did you know you can change the theme in <a href="https://unviere.github.io/Unviere/settings" class="link">settings </a> its in development so not all themes apply on new stuff or maybe overlap if it used the old style sheets but is updated</p>
           </div>
         </div>
       </div>
@@ -123,120 +139,182 @@
           <div class="title"><h1>did you know </h1></div>
           <div class="dissmiss" id="theme-zwitch-msg"><i class="ri-close-circle-fill"></i></div>
           <div class="content-masages">
-          <p>hi there did you know that you can change this sites theme in the <a href="settings.html">settings </a></p>
+          <p>hi there did you know that you can change this sites theme in the <a href="settings.html"class="link">settings </a></p>
           </div>
         </div>
       </div> 
 </template>
     </section>
 
-    <section class ="parallel">
-      <div class="front-parallel">
+    <section class ="game">
+     <div class="game-head-section">
           <div class="onrbx"> on Roblox </div>
-      <div class ="parallel-top"><a name="paralleized engineers"></a>
+            <div class="game-top" id="game-header">
+       
+ 
+      <div class ="game-top-holder"><a id="top-name" name=""></a>
       
+<div class = game-top-left>
+        <h1 id="game-title">OnlyFiftyCharactersAreAllowed [new] [update] [tag]</h1>
+<div class="stats-top-game">
+  <p id="game-developer">by: OnlyFiftyCharactersAreAllowed GroupName (official)</p>  <i class="ri-team-fill" id="stats-icon"><i class="ri-play-fill" id="stats-icon-inner"></i></i>
+    <h1 class="desk-title-game-stats">active: </h1>
+        <h1 class="active" id="active-top">100k </h1>
+        <br>
+        <i class="ri-map-pin-user-fill" id="stats-icon"></i>
+         <h1 class="desk-title-game-stats">visits: </h1>
+        <h1 class="visits" id="visits-top">100k</h1>
+        <br>
+        <i class="ri-thumb-up-fill" id="stats-icon"></i>
+         <h1 class="desk-title-game-stats">liked: </h1>
+        <h1 class="likes" id="likes-top">100k </h1>
+</div>
+        
+        </div>
 
-        <h1>Parallelized engineers</h1>
-
-        <h2>developer:</h2>
-
-        <div class="parallel-dev">
-
-        <a href="" class="dev-icon"><img src="Img/unv_games.png"></a>
-          <h4>unviere games</h4>
+        <div class="game-top-right">
+          <div class="game-top-right-mob">
+            <div class="game-top-info-parent">
+            <a class="game-top-info" id="info-button" ><i class="ri-information-line"></i></a>
+            <div class="game-top-info-drop"> <div class="game-top-info-content">
+              
+            </div>
+            </div>
+            </div>
+            <div class="game-top-nav-parent">
+<a  class="game-top-nav" id="nav-button"><i class="ri-more-2-fill"></i></a>
+ <div class="game-top-nav-drop"> 
+ <div class="game-top-nav-content">
+              
+            </div>
+            </div>
+          </div>
+          </div>
+          <a href="" class="group-icon" id="developer-img-link"><img src="" id="developer-img"></a>
+<div id="game-top-socials"> 
+<a href="" class="social" id="discord"><i class="ri-discord-fill social-icon" ></i></a>
+<a href="" class="social" id="yt"><i class="ri-youtube-fill social-icon"></i></a>
+ <a href="" class="social" id="x"><i class="ri-twitter-x-fill social-icon" ></i></a>
+  <a href="" class="social" id="insta"><i class="ri-instagram-fill social-icon"></i></a>
+  
+    <a href="" class="social" id="tiktok"><i class="ri-tiktok-fill social-icon"></i></a>
+ <a href="" class="social" id="guild"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Guildeding-Logo--Streamline-Logos" height="35" width="35">
+        <desc>Guildeding Logo Streamline Icon: https://streamlinehq.com</desc>
+        <path fill="#ffd700" d="M0.24 1.8436H23.76C23.76 3.6397 23.6296 5.2818 23.3954 6.785H5.8399V7.8829C5.8399 11.675 8.8259 14.9197 11.9989 16.8633C13.4486 15.9727 14.7337 14.8555 15.714 13.5021H11.7648C10.5086 12.2716 9.5646 10.7117 9.2866 8.9798H22.9582C20.3079 19.83 12 22.1564 12 22.1564S0.24 17.7645 0.24 1.8436Z" stroke-width="1"></path>
+    </svg></a>
+</div>
+<div id="game-top-socials-mob">
+  
+<div class="game-social-drop-parent" id="social-button">
+  <a><i class="ri-arrow-drop-down-line"></i></a> <!-- Just the anchor for the icon -->
+  <div class="game-social-drop" id="game-top-socials-drop"> 
+    <a href="" class="social" id="discord-mob"><i class="ri-discord-fill"></i></a>
+    <a href="" class="social" id="yt-mob"><i class="ri-youtube-fill"></i></a>
+    <a href="" class="social" id="x-mob"><i class="ri-twitter-x-fill"></i></a>
+      <a href="" class="social" id="insta-mob"><i class="ri-instagram-fill"></i></a>
+      
+          <a href="" class="social" id="tiktok-mob"><i class="ri-tiktok-fill"></i></a>
+    <a href="" class="social" id="guild-mob"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Guildeding-Logo--Streamline-Logos" height="35" width="35">
+        <desc>Guildeding Logo Streamline Icon: https://streamlinehq.com</desc>
+        <path fill="#ffd700" d="M0.24 1.8436H23.76C23.76 3.6397 23.6296 5.2818 23.3954 6.785H5.8399V7.8829C5.8399 11.675 8.8259 14.9197 11.9989 16.8633C13.4486 15.9727 14.7337 14.8555 15.714 13.5021H11.7648C10.5086 12.2716 9.5646 10.7117 9.2866 8.9798H22.9582C20.3079 19.83 12 22.1564 12 22.1564S0.24 17.7645 0.24 1.8436Z" stroke-width="1"></path>
+    </svg></a>
+  </div>
+</div>
+</div>
+        
+         
         </div>
       </div>
-      
-        
-      
+     
+            </div>
+       <div class="game-top-navinfo"></div>
 
-      <div class="parallel-img">
-        <img src="Img/tumb_parallel.png">
+      <div class="game-img" >
+        <img id="game-thumb-1" src="Img/tumb_parallel.png">
       </div>
 
      
       
      
 
-      <div class ="parallel-playbar">
-        <a class="parallel-drop-down">•••</a>
+      <div class ="game-playbar">
+        <div class="game-playbar-content">
+        <a class="game-drop-down-button button-n">•••</a>
   <ul class="game-drop-down">
              
           <li>
-            <a href="#groups">groups</a>
-            <a href="">games</a>
+            <a class="button-n" href="">Groups</a>
+            
+            <a class="button-n" href="https://unviere.github.io/Unviere/games">Games</a>
+            
+             <a class="button-n" id="instal-button-dd"><i class =""></i> How to install</a></label>
           </li>
         </ul> 
-       
-        <a href="" class="ctaa"><i class ="ri-play-fill"></i>play now</a>
+                   <a class="game-playbar-desk-button button-n" href="">Groups</a>
+            
+            <a class="game-playbar-desk-button button-n" href="https://unviere.github.io/Unviere/games">Games</a>
+        <a href="" class="ctaa" id="play-button"><i class ="ri-play-fill"></i>Play now</a>
         <label class="instal" for="toggle-instalrbx" id="instalrbxopen">
-        <a><i class =""></i> how to install</a></label>
+        <a class="button-n" id="instal-button"><i class =""></i> How to install</a></label>
         
        
 
       </div>
-      
-      
 </div>
-<hr>
+      </div>
+
+
       
-       <div class="parallel-stats">
+       <div class="game-stats">
         
-        <h1 id ="likes">likes:0</h1>
+        <h1 id ="server-size">server size:N/A</h1>
         <br>
-        <h1 id ="server-size">server size:24</h1>
+        <h1 id ="favorites">favourite:N/A</h1>
         <br>
-        <h1 id ="favorites">favourite:6</h1>
+        <h1 id ="created-date">created N/A</h1>
         <br>
-        <h1 id ="created-date">created 7-28-2023</h1>
+        <h1 id ="last-updated">updated: </h1>
         <br>
-        <h1 id ="last-updated">last updated: <a href="https://devforum.roblox.com/t/-/2509865">see here</a></h1>
+        <a class="link" href="" id="upd-log">update log</a>
         <br>
-        <h1>genre: sci-fi</h1>
+        <h1 id="genre">genre: N/A</h1>
         <br>
-        <h1>other genres: building, survival, fighting, story</h1>
+        <h1 id="sub-genre">error with loading game stats</h1>
       
         
       </div>
       
-        <h6 class="parallel-stats-under"> stats may be not accurate since it not syncing with Roblox</h6>
+        
       
-      <hr>
+      
 
-      <div class="parallel-buttons-bar">
-      <button class="tablinks-parallel" onclick="opentab(event, 'descriptionpar')" id="main">description</button>
-  <button class="tablinks" onclick="opentab(event, 'passespar')">Passes</button>
+      <div class="game-buttons-bar">
+      <button class="tablinks" onclick="opentab(event, 'description')" id="main">Description</button>
+  <button class="tablinks" onclick="opentab(event, 'passes')">Passes</button>
       </div>
 
-
-          <div id="descriptionpar" class ="tabs-parallel">
+<div id="desc">
+          <div id="description" class ="tabs-game-buttons-bar">failed to load description <br> 
+          the link need contain the correct data in order to load the game details
+          <br>
+          <h1>what to do to fix</h1>
+          <br>
+          • check the link 
+          make sure the link contains the correct id and name
+          it should be something like https://unviere.github.io/Unviere/games/game?id=1234567/game-name
+          or https://unviere.github.io/Unviere/games/game?id=1234567/game-name/info?extra-info
+            <br>
+            • check your internet 
+<br>
+• did you reload the page to much
+it might be the case that you overloaed the api receusts to get the data
+<br> 
+<h1>it still doesn't work?</h1>
+<br>
+<p>if this not working go to <a class="link" href="https://unviere.github.io/Unviere/games">the games page</a> and click on a game so it should load correctly from this page</p>
+</div>
       
-        <h4>Parallelized Engineers: Sci-Fi Building Adventure</h4>
-
-<p>Original Concept: Created for Connect 23 Game Jam with, theme 'parallelism' by Unviere.</p>
-        
-  <p> - 📝 story mode: Prof Unviere is lost after creating a portal. Explore the Great Plain, interact with residents, and uncover her disappearance. Discover she’s been kidnapped by one of the residents.
-      <br>
-      - ⚔️ Fight Mode: Travel dangerous dimensions, build forts to survive against creatures,and trust no one.
-      <br>
- - 🎨 Creative Mode: Build and explore with no limits
- <br>
-  - 💀 Hardcore Mode: Survive with one live<br>
-  - party: connect with friends or others to build together<br>
- - 🌌 Sci-Fi Theme: Use futuristic tools from Prof.  </p>
-
-<p>Alpha Version: Playable for testing; some systems may not be fully functional.
-Open Beta test one soon </p>
-
-<a class="links" href="https://devforum.roblox.com/t/-/2509865">update log</a>
-     <a class="links" href="https://devforum.roblox.com/t/-/2511693">feedback</a>   
-
-
-<p> also join a party you can join 1 owned party some pass acces if a owner have a pass 
-          everyone in the party can use them you can join 2 partys and 
-          1 unviere party it is a group owned by out staff buy Thier merce to get paras or
-          maybe another valeuta special this </p>
-<p>© Unviere </p>
+      </div>
         
       </section>
       
@@ -460,7 +538,7 @@ comming somewhere in August with the game jam stay tuned for more information
 
         </section>-->
         <!--make sure you include this to load the topbar-->
-          <script src = "Scripts/topbar.js"></script>
+       
 
    <!-- <script src ="Scripts/Hamburger.js"></script>-->
     
@@ -474,6 +552,24 @@ comming somewhere in August with the game jam stay tuned for more information
                
                <script src = "Scripts/masages/style_msg.js"></script>
                
+                <script>document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+    const titleElement = document.getElementById('side-menu-title');
+    const descElement = document.getElementById('side-menu-desc');
+
+    if (titleElement) {
+        titleElement.textContent = "home";
+    } else {
+        console.error("Element with ID 'side-menu-title' not found.");
+    }
+
+    if (descElement) {
+        descElement.textContent = "unveire is a game/software studio making Games mainly on Roblox";
+    } else {
+        console.error("Element with ID 'side-menu-desc' not found.");
+    }
+}, 1000); // Delay execution by 100 milliseconds
+});</script>
                
       
        <!--<script src ="Scripts/truncate_groupdesc.js"></script>-->

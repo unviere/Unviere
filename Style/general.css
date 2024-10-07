@@ -9,9 +9,17 @@
    
 }
 
-#check {display: none;}
+#check {
+  display: none;
+  position: sticky;
+  z-index: -2;
+}
 
-#label {display: none;}
+#label {
+  display: none;
+  position: sticky;
+  z-index: -2;
+}
 
 body {
   margin-top: 100px;
@@ -25,6 +33,13 @@ body {
     color: #06c46f; /* Switch to your primary green on hover */
 }
 
+.link-d {
+    color: #0606c4;
+    text-decoration: none;
+}
+.link-d:hover {
+    color: #06c46f; /* Switch to your primary green on hover */
+}
 .button-n {
   color: black;
   background: #06c46f;

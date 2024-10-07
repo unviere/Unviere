@@ -6,6 +6,14 @@ body.light-mode .link:hover {
     color: #06c46f; /* Switch to your primary green on hover */
 }
 
+body.light-mode .link-d {
+    color: #0606c4;
+    text-decoration: none;
+}
+body.light-mode .link-d:hover {
+    color: #06c46f; /* Switch to your primary green on hover */
+}
+
 body.light-mode .button-n {
   background: #06c46f;
   border: 1px solid transparent;
