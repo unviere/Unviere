@@ -206,7 +206,29 @@ img {
   
 }
 
+.sec-header-right {
 
+  text-decoration: underline;
+}
+
+.sec-header {
+  display: flex;
+}
+
+.all-games-b {
+  position: absolute;
+  right: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+}
+
+.all-games-arrow {
+  
+  color: #20B2AA;
+  text-decoration: none!important;
+  
+}
 
 /* groups*/
 
