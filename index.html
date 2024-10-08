@@ -147,7 +147,7 @@
 
     <section class ="game"><a name="game"></a>
     
-    <div class="game-top-desc-etc"><h1 class="sec-header">Random game <a href="https://unviere.github.io/Unviere/#game" class="link-d all-games-b"><p class="sec-header-right">Reroll </p> <i class="ri-reset-left-line reload-game"></i></a></h1>
+    <div class="game-top-desc-etc"><h1 class="sec-header">Random game <a href="javascript:void(0);" onclick="reloadAndScroll()"  class="link-d all-games-b"><p class="sec-header-right">Reroll </p> <i class="ri-reset-left-line reload-game"></i></a></h1>
   <p> We make games with game jams, as I said. But we also make normal games. Our system picked one random game for you. What you might like. I will say check it out.</p></div>
      <div class="game-head-section">
           <div class="onrbx"> On Roblox </div>
@@ -157,19 +157,19 @@
       <div class ="game-top-holder"><a id="top-name" name=""></a>
       
 <div class = game-top-left>
-        <h1 id="game-title">OnlyFiftyCharactersAreAllowed [new] [update] [tag]</h1>
+        <h1 id="game-title">loading game title pls wait a moment...</h1>
 <div class="stats-top-game">
-  <p id="game-developer">by: OnlyFiftyCharactersAreAllowed GroupName (official)</p>  <i class="ri-team-fill" id="stats-icon"><i class="ri-play-fill" id="stats-icon-inner"></i></i>
+  <p id="game-developer">loading game studio info pls wait a moment...</p>  <i class="ri-team-fill" id="stats-icon"><i class="ri-play-fill" id="stats-icon-inner"></i></i>
     <h1 class="desk-title-game-stats">Active: </h1>
-        <h1 class="active" id="active-top">100k </h1>
+        <h1 class="active" id="active-top">••• </h1>
         <br>
         <i class="ri-map-pin-user-fill" id="stats-icon"></i>
          <h1 class="desk-title-game-stats">Visits: </h1>
-        <h1 class="visits" id="visits-top">100k</h1>
+        <h1 class="visits" id="visits-top">•••</h1>
         <br>
         <i class="ri-thumb-up-fill" id="stats-icon"></i>
          <h1 class="desk-title-game-stats">Liked: </h1>
-        <h1 class="likes" id="likes-top">100k </h1>
+        <h1 class="likes" id="likes-top">•••</h1>
 </div>
         
         </div>
@@ -281,7 +281,7 @@
         <br>
         <h1 id="genre">Genre: N/A</h1>
         <br>
-        <h1 id="sub-genre">Error with loading game stats!!</h1>
+        <h1 id="sub-genre">pls wait... loading game stats!!</h1>
       
         
       </div>
@@ -296,10 +296,10 @@
       </div>
 
 <div id="desc">
-          <div id="description" class ="tabs-game-buttons-bar">Failed to load description. <br> 
-          We couldn't load a random game.
+          <div id="description" class ="tabs-game-buttons-bar">game info loading...  <br> 
+          
           <br>
-          <h1>What to do to fix.</h1>
+          <h1>if it not load within 1 minute? </h1>
           <br>
           
             • Check your internet 
@@ -446,7 +446,16 @@ parcle games have the folow games
   </div>
  
   </div>
-  
+  <script>
+        function reloadAndScroll() {
+            // Get the current URL
+            const currentUrl = window.location.href.split('#')[0]; // Remove any existing hash
+            // Append the hash to the URL
+            window.location.href = currentUrl + '#game';
+            // Reload the page
+            window.location.reload();
+        }
+    </script>
     <script>
           var copy = document.querySelector(".partners-content").cloneNode(true);
           document.querySelector(".partners-inf-scrolling").appendChild(copy);
