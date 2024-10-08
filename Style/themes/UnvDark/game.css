@@ -202,7 +202,7 @@ body.dark-mode .game-buttons-bar button:hover {
 body.dark-mode .game-buttons-bar button.active {
   border-bottom-width: 5px;
   border-bottom-style: solid;
-  border-bottom-color: #D1D1E9;
+  border-bottom-color: lightcyan;
 }
 
 body.dark-mode #description {

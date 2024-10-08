@@ -146,45 +146,93 @@ document.addEventListener('DOMContentLoaded', () => {
               } else {
                 socialIcon.style.display = "none";
               }
-
-              // Discord handling
-              const discordIcon = document.getElementById('discord');
-              const discordMobIcon = document.getElementById('discord-mob');
-              if (subInfoData.discord === true) {
-                discordIcon.style.display = "flex";
-                discordMobIcon.style.display = "flex";
-                discordIcon.href = subInfoData.discordLink || '';
-                discordMobIcon.href = subInfoData.discordLink || '';
-              } else {
-                discordIcon.style.display = "none";
-                discordMobIcon.style.display = "none";
-              }
-
-              // YouTube handling
-              const ytIcon = document.getElementById('yt');
-              const ytMobIcon = document.getElementById('yt-mob');
-              if (subInfoData.yt === true) {
-                ytIcon.style.display = "flex";
-                ytMobIcon.style.display = "flex";
-                ytIcon.href = subInfoData.ytLink || '';
-                ytMobIcon.href = subInfoData.ytLink || '';
-              } else {
-                ytIcon.style.display = "none";
-                ytMobIcon.style.display = "none";
-              }
-
-              // X (Twitter) handling
-              const twitterIcon = document.getElementById('x');
-              const twitterMobIcon = document.getElementById('x-mob');
-              if (subInfoData.x === true) {
-                twitterIcon.style.display = "flex";
-                twitterMobIcon.style.display = "flex";
-                twitterIcon.href = subInfoData.xLink || '';
-                twitterMobIcon.href = subInfoData.xLink || '';
-              } else {
-                twitterIcon.style.display = "none";
-                twitterMobIcon.style.display = "none";
-              }
+  // Discord icon handling
+                  const discordIcon = document.getElementById('discord');
+                  const discordMobIcon = document.getElementById('discord-mob');
+                  if (subInfoData.discord === true) {
+                    discordIcon.style.display = "flex";
+                    discordMobIcon.style.display = "flex";
+                    discordIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
+                    
+                    discordMobIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
+                  } else {
+                    discordIcon.style.display = "none";
+                    discordMobIcon.style.display = "none";
+                  }
+    
+                  // YouTube icon handling
+                  const ytIcon = document.getElementById('yt');
+                  const ytMobIcon = document.getElementById('yt-mob');
+                  if (subInfoData.yt === true) {
+                    ytIcon.style.display = "flex";
+                    ytMobIcon.style.display = "flex";
+                    ytIcon.href = subInfoData.ytLink || ''; 
+                    ytMobIcon.href = subInfoData.ytLink || ''; 
+                  } else {
+                    ytIcon.style.display = "none";
+                    ytMobIcon.style.display = "none";
+                  }
+                  //x
+                  const twitterIcon = document.getElementById('x');
+                  const twitterMobIcon = document.getElementById('x-mob');
+                  if (subInfoData.x === true) {
+                    twitterIcon.style.display = "flex";
+                    twitterMobIcon.style.display = "flex";
+                    twitterIcon.href = subInfoData.xLink || ''; 
+                  
+                    twitterMobIcon.href = subInfoData.xLink || ''; 
+                  } else {
+                    twitterIcon.style.display = "none";
+                    twitterMobIcon.style.display = "none";
+                  }
+                  
+                                    //insta
+                  const instaIcon = document.getElementById('insta');
+                  const instaMobIcon = document.getElementById('insta-mob');
+                  if (subInfoData.insta === true) {
+                    instaIcon.style.display = "flex";
+                    instaMobIcon.style.display = "flex";
+                    instaIcon.href = subInfoData.instaLink || ''; 
+                  
+                    instaMobIcon.href = subInfoData.instaLink || ''; 
+                  } else {
+                    instaIcon.style.display = "none";
+                    instaMobIcon.style.display = "none";
+                  }
+                  //tiktok
+                  const tiktokIcon = document.getElementById('tiktok');
+                  const tiktokMobIcon = document.getElementById('tiktok-mob');
+                  if (subInfoData.tiktok === true) {
+                    tiktokIcon.style.display = "flex";
+                    tiktokMobIcon.style.display = "flex";
+                    tiktokIcon.href = subInfoData.tiktokLink || ''; 
+                    
+                    toktokMobIcon.href = subInfoData.tiktokLink || ''; 
+                  } else {
+                    tiktokIcon.style.display = "none";
+                    tiktokMobIcon.style.display = "none";
+                  }
+                  //guilded 
+                  const guildIcon = document.getElementById('guild');
+                  const guildMobIcon = document.getElementById('guild-mob');
+                  if (subInfoData.guilded === true) {
+                    guildIcon.style.display = "flex";
+                    guildMobIcon.style.display = "flex";
+                    guildIcon.href = subInfoData.guildedLink || ''; 
+                  
+                    guildMobIcon.href = subInfoData.guildedLink || ''; 
+                  } else {
+                    guildIcon.style.display = "none";
+                    guildMobIcon.style.display = "none";
+                  }
+                  // Update log handling
+                  const updLog = document.getElementById('upd-log');
+                  if (subInfoData.updateLog === true) {
+                    updLog.style.display = "flex";
+                    updLog.href = subInfoData.updateLogLink || '';
+                  } else {
+                    updLog.style.display = "none";
+                  }
 
             } else {
               console.error('No additional info found for game');
@@ -202,38 +250,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   // Scroll to section functionality
-  const playButton = document.querySelector('#play-button');
-  const scrollSection = document.querySelector('#scroll-to-section');
+//  const playButton = document.querySelector('#play-button');
+//  const scrollSection = document.querySelector('#scroll-to-section');
 
-  if (playButton && scrollSection) {
-    playButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      scrollSection.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
+//  if (playButton && scrollSection) {
+//playButton.addEventListener('click', (e) => {
+   //   e.preventDefault();
+     // scrollSection.scrollIntoView({ behavior: 'smooth' });
+   // });
+  //}
 
   // Mobile menu toggle functionality
-  const hamburgerMenu = document.querySelector('#hamburger-menu');
-  const mobileNav = document.querySelector('#mobile-nav');
+ // const hamburgerMenu = document.querySelector('#hamburger-menu');
+  //const mobileNav = document.querySelector('#mobile-nav');
 
-  if (hamburgerMenu && mobileNav) {
-    hamburgerMenu.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-    });
-  }
+  //if (hamburgerMenu && mobileNav) {
+//    hamburgerMenu.addEventListener('click', () => {
+     //mobileNav.classList.toggle('open');
+  //  });
+//  }
 
   // Side menu toggle functionality
-  const sideMenuOpenButton = document.querySelector('#side-menu-open');
-  const sideMenu = document.querySelector('#side-menu');
-  const sideMenuCloseButton = document.querySelector('#side-menu-close');
+//  const sideMenuOpenButton = document.querySelector('#side-menu-open');
+//  const sideMenu = document.querySelector('#side-menu');
+ // const sideMenuCloseButton = document.querySelector('#side-menu-close');
 
-  if (sideMenuOpenButton && sideMenuCloseButton && sideMenu) {
-    sideMenuOpenButton.addEventListener('click', () => {
-      sideMenu.classList.add('open');
-    });
+ // if (sideMenuOpenButton && sideMenuCloseButton && sideMenu) {
+ //   sideMenuOpenButton.addEventListener('click', () => {
+     // sideMenu.classList.add('open');
+//   });
 
-    sideMenuCloseButton.addEventListener('click', () => {
-      sideMenu.classList.remove('open');
-    });
-  }
+   // sideMenuCloseButton.addEventListener('click', () => {
+   //   sideMenu.classList.remove('open');
+    //});
+//  }
 });

@@ -264,7 +264,7 @@ img {
   }
   
   to{
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 
@@ -815,79 +815,88 @@ hr{
 	
 	
 		  body.dark-mode {
-  background: #1a1a1a;
+  background: #121212;
 }
 
 
 body.dark-mode .masages{
-  
-  background-color: #1a1a1a;
+  box-shadow: 1px 1px 9px black;
+  background-color: #121212;
 }
 
 
 
 
 body.dark-mode .title h1{
-  color: white;
-  background: #1a1a1a; 
+  color: whitesmoke;
+  background: #121212; 
 }
 
 body.dark-mode .dissmiss{
-  background: #1a1a1a;
+  background: #121212;
 }
 
 body.dark-mode .tip{
-  border: 1px solid rgba(2,74,42,1);
+  border: 1px solid #024a2a;
 }
 
 
 body.dark-mode .content-masages p{
   font-size: 20px;
-  color: white;
+  color: whitesmoke;
 }
 
 body.dark-mode .content-masages a{
   font-size: 20px;
-  color: #03c8ff;
+  
 }
 
+body.dark-mode .content-masages h1{
+  font-size: 20px;
+  color: whitesmoke;
+}
 
+body.dark-mode .game-top-desc-etc{
+  color: whitesmoke;
+}
 	body.dark-mode .groups{
-	  background: #1a1a1a;
+	  background: #121212;
+	  box-shadow: 1px 1px 9px black;
 	}
 	
 	body.dark-mode .groups-partners{
-	  background: #1a1a1a;
+	  background: #121212;
 	}
 body.dark-mode .groups-partners h1{
-  color: white;
+  color: whitesmoke;
   
 }
 body.dark-mode .groups-partners p{
-  color: white;
+  color: whitesmoke;
 }
 
 body.dark-mode .partners-container{
-  background: #1a1a1a;
+  background: #121212;
 }
 	
 body.dark-mode .partners-container:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255,255,255,0), #1a1a1a);
+  background: linear-gradient(to left, rgba(255,255,255,0), #121212);
 }
 
 body.dark-mode .partners-container:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0), #1a1a1a);
+  background: linear-gradient(to right, rgba(255,255,255,0), #121212);
 }
 	
 body.dark-mode .partners-inf-scrolling a{
   background-color: #024a2a;
   color: black;
+  box-shadow: 1px 1px 9px black;
 }
 
 body.dark-mode .partners-inf-scrolling a:hover{
-  background-color: #02311c;
+  background-color: #03c8ff;
   color: black;
   
 }
@@ -895,11 +904,11 @@ body.dark-mode .partners-inf-scrolling a:hover{
 
 
 body.dark-mode .partner-info h1 {
-  color: white;
+  color: #f0b400;
 }
 
 body.dark-mode .partner-info p{
-  color: white;
+  color: whitesmoke;
 }
 
 
