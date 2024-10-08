@@ -863,13 +863,13 @@ body.dark-mode .content-masages h1{
 
 body.dark-mode .all-games-arrow {
   
-  color: lightcyan;
+  color: #f0b400;
   
   
 }
 
 body.dark-mode .reload-game {
-  color: lightcyan;
+  color: #f0b400;
   
 }
 body.dark-mode .game-top-desc-etc{
@@ -973,13 +973,13 @@ body.light-mode .content-masages a{
 
 body.light-mode .all-games-arrow {
   
-  color: #1B1F3B;
+  color: #f0b400;
   
   
 }
 
 body.light-mode .reload-game {
-  color: #1B1F3B;
+  color: #f0b400;
   
 }
 	
