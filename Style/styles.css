@@ -232,6 +232,11 @@ img {
   
 }
 
+.reload-game {
+  color: #20B2AA;
+  text-decoration: none!important;
+}
+
 /* groups*/
 
 .groups{
@@ -856,9 +861,22 @@ body.dark-mode .content-masages h1{
   color: whitesmoke;
 }
 
+body.dark-mode .all-games-arrow {
+  
+  color: lightcyan;
+  
+  
+}
+
+body.dark-mode .reload-game {
+  color: lightcyan;
+  
+}
 body.dark-mode .game-top-desc-etc{
   color: whitesmoke;
 }
+
+
 	body.dark-mode .groups{
 	  background: #121212;
 	  box-shadow: 1px 1px 9px black;
@@ -896,7 +914,7 @@ body.dark-mode .partners-inf-scrolling a{
 }
 
 body.dark-mode .partners-inf-scrolling a:hover{
-  background-color: #03c8ff;
+  background-color: #026c40;
   color: black;
   
 }
@@ -953,7 +971,17 @@ body.light-mode .content-masages a{
   font-size: 20px;
 }
 
+body.light-mode .all-games-arrow {
+  
+  color: #1B1F3B;
+  
+  
+}
 
+body.light-mode .reload-game {
+  color: #1B1F3B;
+  
+}
 	
 	body.light-mode .groups{
 	  background: white;
