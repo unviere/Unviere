@@ -264,7 +264,7 @@ img {
   }
   
   to{
-    transform: translateX(-200%);
+    transform: translateX(-400%);
   }
 }
 
@@ -304,7 +304,7 @@ img {
 
 .partners-inf-scrolling{
   display: flex;
-  animation: 35s slide infinite linear;
+  animation: 50s slide infinite linear;
   width: 100%;
   
 }
