@@ -243,7 +243,7 @@ background: whitesmoke;
 }
 
 .stats-game h1{
-  font-size:15px!important;
+  font-size:15px;
   max-height: 40px;
   width: 250px;
   white-space: normal;
@@ -428,7 +428,7 @@ hr{
   }
   
   .stats-game #stats-icon{
-  font-size: 15px!important;
+  font-size: 15px;
   height: 20px;
     min-height: 20px;
     width: 15px;
@@ -445,11 +445,11 @@ height: 1px!important;
 }
 
 .stats-game .active {
-  right: 11!important;
+  right: 11;
 }
 
 .info-gj {
-  font-size: 5px!important;
+  font-size: 9px!important;
   min-width: 10px!important;
   
   max-width: 70px!important;
