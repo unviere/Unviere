@@ -243,7 +243,7 @@ background: whitesmoke;
 }
 
 .stats-game h1{
-  font-size:15px;
+  font-size:15px!important;
   max-height: 40px;
   width: 250px;
   white-space: normal;
@@ -449,7 +449,7 @@ height: 1px!important;
 }
 
 .info-gj {
-  font-size: 9px!important;
+  font-size: 7px!important;
   min-width: 10px!important;
   
   max-width: 60px!important;
