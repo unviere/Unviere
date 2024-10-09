@@ -134,16 +134,65 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form'); // Adjust if your form has a different selector
     const checkboxGroup = document.querySelector('.checkbox');
     const errorMessage = document.querySelector('.checkbox-error-message');
-
+    
     form.addEventListener('submit', function(event) {
-        const checkboxes = checkboxGroup.querySelectorAll('input[type="checkbox"]');
-        let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-
-        if (!isChecked) {
-            event.preventDefault(); // Prevent form submission
-            errorMessage.style.display = 'block'; // Show error message
-        } else {
-            errorMessage.style.display = 'none'; // Hide error message
-        }
+      const checkboxes = checkboxGroup.querySelectorAll('input[type="checkbox"]');
+      let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    
+      if (!isChecked) {
+        event.preventDefault(); // Prevent form submission
+        errorMessage.style.display = 'block'; // Show error message
+      } else {
+        errorMessage.style.display = 'none'; // Hide error message
+      }
     });
+    
+    
+    const checkboxGroup2 = document.querySelector('.checkbox2');
+    const errorMessage2 = document.querySelector('.checkbox-error-message2');
+    
+    form.addEventListener('submit', function(event) {
+      const checkboxes = checkboxGroup2.querySelectorAll('input[type="checkbox"]');
+      let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    
+      if (!isChecked) {
+        event.preventDefault(); // Prevent form submission
+        errorMessage2.style.display = 'block'; // Show error message
+      } else {
+        errorMessage2.style.display = 'none'; // Hide error message
+      }
+    });
+    
+    const checkboxGroup3 = document.querySelector('.checkbox3');
+    const errorMessage3 = document.querySelector('.checkbox-error-message3');
+    
+    form.addEventListener('submit', function(event) {
+      const checkboxes = checkboxGroup3.querySelectorAll('input[type="checkbox"]');
+      let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    
+      if (!isChecked) {
+        event.preventDefault(); // Prevent form submission
+        errorMessage3.style.display = 'block'; // Show error message
+      } else {
+        errorMessage3.style.display = 'none'; // Hide error message
+      }
+    });
+    
+    const checkboxGroup4 = document.querySelector('.checkbox4');
+    const errorMessage4 = document.querySelector('.checkbox-error-message4');
+    
+    form.addEventListener('submit', function(event) {
+      const checkboxes = checkboxGroup4.querySelectorAll('input[type="checkbox"]');
+      let isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+    
+      if (!isChecked) {
+        event.preventDefault(); // Prevent form submission
+        errorMessage4.style.display = 'block'; // Show error message
+      } else {
+        errorMessage4.style.display = 'none'; // Hide error message
+      }
+    });
+    
+
+    
 });
