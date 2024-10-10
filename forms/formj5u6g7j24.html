@@ -2,9 +2,9 @@
 <html>
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Form • feedback ui v4 | Unviere</title>
+    <title> Form • apply for unite 24| Unviere</title>
       <link rel="shortcut icon" type="x-icon" href="../Img/unv_games.png">
-      
+       
       <!--general styles-->
         <link rel ="stylesheet" type = "text/css" href ="../Style/general.css">
      <link rel ="stylesheet" type = "text/css" href ="../Style/themes/UnvLight/general.css">
@@ -38,15 +38,15 @@
       <form action="https://api.web3forms.com/submit" method="POST"
         class="form-p" id="fpel-form" novalidate>
     <div class="form-title">
-      <h2>Join Unite 24 game jam with us</h2>
+      <h2>Join Unite 24 game jam with us.</h2>
       <hr>
-      <p>Hi there you want to join us "team unviere" with the Unite game jam. do you have the skills to complete a game in 15 days. then you can join our team are you based on Europe then we looking for you however if not doesn't care either on things if will be fun.</p>
+      <p>Hi there you want to join us "team Unviere" with the Unite game jam. Do you have the skills to complete a game in 15 days. Then you can join our team are you based on Europe then we looking for you however if not doesn't care either. One thing it will be fun.</p>
         </div>
         <input type="hidden" name="access_key" value="032437ac-e754-4bb5-8636-471435c3c3e3"> 
         <input type="hidden" name="redirect" value="https://unviere.github.io/Unviere/forms/formj5u6g7j24/success"><!--important-->
         
           <h1 class="form-input-title"> Your username<i class="recured">*</i></h1>
-         <p class="desc-input">May only contains: 1-0, a-z, A-Z, _ (1)</p>
+         <p class="desc-input">May only contain: 1-0, a-z, A-Z, _ (1)</p>
         <input type="text" name="username" placeholder="Your Roblox username" class="form-input" required pattern="^[a-zA-Z0-9_]{1,20}$">
         <div class="empty-feedback">
           Pls fill in this field. 
@@ -55,7 +55,7 @@
           Username may only contain 20 characters. _ May be used once and no spaces.
         </div>
         <h1 class="form-input-title">Email<i class="recured">*</i></h1>
-        <p class="desc-input">Receured for contact. if you prefer not use email i can contact you trough: discord, guilded, roblox(until 29 oct) or dev forum. just fill in your username and then @ + contact method as mentioned</p>
+        <p class="desc-input">Receured for contact. if you prefer not use email i can contact you trough: discord, guilded, roblox(until 29 oct) or dev forum. Just fill in your username and then @ + contact method as mentioned</p>
         <input type="email" name="email" placeholder="Your Email (prefer use another than your private email)" class="form-input" required>
             <div class="empty-feedback">
           Pls fill in this field.
@@ -66,14 +66,14 @@
         
         
           <h1 class="form-input-title">Data<i class="recured"></i></h1>
-          <p class="desc-input">Fill in the data when you filed in this form.</p>
+          <p class="desc-input">How much time you have, and what is your timezone.</p>
           <div class="form-split">
           
             <div class="split">
               <h1 class="form-input-title">Time to develop<i class="recured">*</i></h1>
-              <input  type="text" class="form-input" placeholder="ex 3-4 hours" required >
+              <input  type="text" name="Time to develop" class="form-input" placeholder="ex 3-4 hours" required >
               <p class="empty-feedback">
-                how many hours you can develop each day.
+                How many hours you can develop each day.
               </p>
               <p class="invalid-feedback">
                 ex 2-6 hours.
@@ -81,7 +81,7 @@
             </div>
             <div class="split">
               <h1 class="form-input-title">UTC time<i class="recured">*</i></h1>
-              <input type="text" class="form-input" placeholder="UTC + 2" required  pattern="^(UTC|GMT)[+-](0[0-9]|1[0-2])$">
+              <input type="text" name="Timezone" class="form-input" placeholder="UTC + 2" required  pattern="^(UTC|GMT)[+-](0[0-9]|1[0-2])$">
               <p class="empty-feedback">
                 Your timezone is receured search Google if you don't know.
               </p>
@@ -89,51 +89,61 @@
                 Only use UTC, GMT and +,-
               </p>
             </div>
+               <div class="split">
+                 <h1 class="form-input-title">Country.<i class="recured">*</i></h1>
+                 <input type="text" name="Country" class="form-input" placeholder="ex Spain" required>
+                 <p class="empty-feedback">
+                   
+                 </p>
+                 <p class="invalid-feedback">
+                   
+                 </p>
+               </div>
           </div>
         
         <h1 class="form-input-title">What are your skills.<i class="recured">*</i></h1>
-        <p class="desc-input">what are your best skills you could use in the game jam</p>
+        <p class="desc-input">What are your best skills you could use in the game jam?</p>
         <div class="checkbox">
           <label class="custom-checkbox-multiple">
-            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="pro ui">
+            <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="pro ui">
             <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Pro UI Designer
           </label>
           <label class="custom-checkbox-multiple">
-            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="ui">
+            <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="ui">
             <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> UI Designer
           </label>
           
             <label class="custom-checkbox-multiple">
-              <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="design">
-              <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> graphic designer 
+              <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="design">
+              <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Graphic designer 
             </label>
             
           <label class="custom-checkbox-multiple">
-            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="scripter">
+            <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="scripter">
             <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Scripter
           </label>
             <label class="custom-checkbox-multiple">
-            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="programmer">
-            <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> programmer 
+            <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="programmer">
+            <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Programmer 
           </label>
           
           <label class="custom-checkbox-multiple">
-            <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="builder">
+            <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="builder">
             <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Builder
           </label>
           
             <label class="custom-checkbox-multiple">
-              <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="pro modeler">
+              <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="pro modeler">
               <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Modeler (blender pro)
             </label>
             
               <label class="custom-checkbox-multiple">
-                <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="modeler">
-                <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> modeler (blender)
+                <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="modeler">
+                <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> Modeler (blender)
               </label>
               
                 <label class="custom-checkbox-multiple">
-                  <input type="checkbox" name="multi-checkbox" class="hidden-checkbox-multiple" value="music">
+                  <input type="checkbox" name="skills" class="hidden-checkbox-multiple" value="music">
                   <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> music/sounds etc
                 </label>
         </div>
@@ -142,7 +152,7 @@
         
           <h1 class="form-input-title"> prefered team<i class="recured">*</i></h1>
           <p class="desc-input">may we need to split us into two teams</p>
-          <select id="drop" name="dropdown" class="form-input-drop" required>
+          <select id="drop" name="team" class="form-input-drop" required>
             <option value="" disabled selected>team</option>
             <option value="parcle">team parcle</option>
             <option value="unviere">team unviere</option>
@@ -150,27 +160,27 @@
         
           </select>
           <div class="empty-feedback">
-            Pls select a prefered team 
+            Pls select a prefered team.
           </div>
           <div class="invalid-feedback">
         
           </div>
           
-           <h1 class="form-input-title">what is your age.<i class="recured">*</i></h1>
+           <h1 class="form-input-title">What is your age.<i class="recured">*</i></h1>
            <p class="desc-input">age classes may too like 13+ or 16+ or 18+</p>
-           <input type="text" name="improvments" placeholder="ex 18+" class="form-input" required>
+           <input type="text" name="age" placeholder="ex 18+" class="form-input" required>
            <div class="empty-feedback">
-             pls fill in your age
+             Pls fill in your age.
            </div>
            <div class="invalid-feedback">
           
            </div>
           
           
-           <h1 class="form-input-title">way you should join our team.<i class="recured">*</i></h1>
-           <p class="desc-input">describe in your own words way you should join our team.</p>
-           <textarea name="message" placeholder="Your Message" class="long-input" required></textarea>
-           <div class="empty-feedback">why you should join our team</div>
+           <h1 class="form-input-title">Way you should join our team.<i class="recured">*</i></h1>
+           <p class="desc-input">Describe in your own words way you should join our team.</p>
+           <textarea name="description way join" placeholder="Your Message" class="long-input" required></textarea>
+           <div class="empty-feedback">Why you should join our team</div>
            <div class="invalid-feedback">
              
            </div>
@@ -195,22 +205,22 @@
         
           <div class="checkbox2">
           <label class="custom-checkbox-multiple">
-            <input type="checkbox" name="dmca-checkbox" class="hidden-checkbox-multiple" value="✅ dmca raveneu ">
+            <input type="checkbox" name="Dmca acces" class="hidden-checkbox-multiple" value="✅ dmca raveneu ">
             <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> I understand that if I left the team, may the game earn. I get some raveneu share for the assets I made but, what is only a little (you still free to use your assets yourself).<i class="recured">*</i> 
           </label>
          <br>
         </div>
-        <div class="checkbox-error-message2" style="display: none; color: red;">you need agree with it to join our team to prevent DMCA problems in the future.</div>
+        <div class="checkbox-error-message2" style="display: none; color: red;">You need agree with it to join our team to prevent DMCA problems in the future.</div>
         <br>
           <div class="checkbox3">
             <label class="custom-checkbox-multiple">
-              <input type="checkbox" name="time-checkbox" class="hidden-checkbox-multiple" value="✅ time enough " >
-              <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> i will focus and use my time as much as i can with the game jam so we can complete the game <i class="recured">*</i>
+              <input type="checkbox" name="time to develop agreement" class="hidden-checkbox-multiple" value="✅ time enough " >
+              <span class="custom-checkmark-multiple"><i class="ri-check-line"></i></span> I will focus and use my time as much as i can with the game jam so we can complete the game <i class="recured">*</i>
             </label>
         
         <br>
           </div>
-          <div class="checkbox-error-message3" style="display: none; color: red;">if you don't want to give your time or not having time then you Cannot join.</div>
+          <div class="checkbox-error-message3" style="display: none; color: red;">If you don't want to give your time or not having time then you Cannot join.</div>
         <br>
         <template>
          <div class="checkbox4">
