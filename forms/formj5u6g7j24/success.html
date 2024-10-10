@@ -3,21 +3,35 @@
   <head>
     <title>forms/success | unviere</title>
       <link rel="shortcut icon" type="x-icon" href="../../Img/unv_games.png">
-    <link rel="stylesheet" href="../../Style/form.css">
-    
-      <link rel ="stylesheet" type = "text/css" href ="../../Style/topbar.css">
-  </head>
+        <!--general styles-->
+      <link rel="stylesheet" type="text/css" href="../../Style/general.css">
+      <link rel="stylesheet" type="text/css" href="../../Style/themes/UnvLight/general.css">
+      <link rel="stylesheet" type="text/css" href="../../Style/themes/UnvDark/general.css">
+
+      <!--page styles-->
+      <link rel="stylesheet" href="../../Style/form.css">
+      <link rel="stylesheet" type="text/css" href="../../Style/themes/UnvLight/form.css">
+      <link rel="stylesheet" type="text/css" href="../../Style/themes/UnvDark/form.css">
+
+      <!--Topbar styles-->
+      <link rel="stylesheet" type="text/css" href="../../Style/topbarv2.css">
+      <link rel="stylesheet" type="text/css" href="../../Style/themes/UnvLight/topbar.css">
+      <link rel="stylesheet" type="text/css" href="../../Style/themes/UnvDark/topbar.css">
+
+      <script defer type="module" src="../../Scripts/topbar new.js"></script>  </head>
   <body>
+      <input type="checkbox" id="check">
     
+    <label class="sidebar-toggle" for="check"><i class="ri-pushpin-line"id="unpinned"></i><i class="ri-pushpin-fill" id="pinned"></i></label>
       <div id="header"></div>
-      
+      <section>
     <div class="success">
       <h1 class="title">your application is sended</h1>
       <hr>
       <p class="content"> we will review it and send you a mail soon</p>
-<a href="../../index.html" class="button">ok (home) </a>
+<a href="../../index.html" class="button ctaa">ok (home) </a>
     </div>
-              <script src = "../../Scripts/topbar.js"></script>
+           </section>   
               
                  <script src = "../../Scripts/settings/theme.js"></script>
   </body>
