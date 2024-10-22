@@ -37,6 +37,18 @@ img {
   height: auto;
 }
 
+.banner {
+  position: fixed;
+  background-color: red;
+  opacity: 90%;
+  z-index: 300;
+  
+}
+
+body.dark-mode .banner {
+  background-color: orangered;
+}
+
 .form{
   display: flex;
   flex-direction: column;
