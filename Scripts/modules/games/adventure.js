@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Static mapping of game names and universe IDs
   const gamesData = [
     { universeId: '3721966693', name: 'happy-obbies', id: '10135698219' },
-   // { universeId: '6663022834', name: 'comming-soon', id: '107169670237182' }
+   // { universeId: '6663022834', name: 'a-historical-trip', id: '107169670237182' }
   ];
 
   const fetchAndDisplayGame = (game) => {

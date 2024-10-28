@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "name": "parallelized engineers",
+      "thumbnail": "",
+      "deepLink": "https://ro.blox.com/Ebh5?af_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D6663022834&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D6663022834&deep_link_value=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D6663022834",
+      "genres": "historische, adventure, exploring, ",
+      "socialsEnabled": true,
+      "infoEnabled": false,
+      "navEnabled": false,
+      "devLink": "https://www.roblox.com/groups/32826338/Connect-2023-Parallelism-Theme#!/about",
+      "devIcon": "https://unviere.github.io/Unviere/Img/unv_games.png",
+      "updateLog": false,
+      "updateLogLink": "",
+      "discord": true,
+      "discordLink": "https://discord.gg/EX3BDgf8K3",
+      "yt": true,
+      "ytLink": "https://youtube.com/@parcle_dev?si=VYO8YglI4XewTqLF",
+      "x": false,
+      "xLink": "",
+      "guilded": false,
+      "guildedLink": "",
+      "insta": false,
+      "instaLink": "",
+      
+      "event": {
+        "startDate": "",
+        "startTime": "",
+        "endDate": "",
+        "endTime": "",
+        "title": "",
+        "description": "",
+        "img": ""
+      }
+    }
+      ]
+}

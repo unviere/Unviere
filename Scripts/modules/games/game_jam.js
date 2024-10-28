@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const gamesData = [
     { universeId: '4922186765', name: 'Parallelized-Engineers/game-jam?date=07-2023', id: '14229107623' },
     { universeId: '5574638301', name: 'Diverse-And-Unexpected/game-jam?date=02-2024', id: '16133672663' },
-    { universeId: '6449806598', name: 'the-secret-of-puzzle-island/game-jam?date=08-2024', id: '116463530852265' }
+    { universeId: '6449806598', name: 'the-secret-of-puzzle-island/game-jam?date=08-2024', id: '116463530852265' },
+      { universeId: '6663022834', name: 'a-historical-trip/game-jam?date=10-2024', id: '107169670237182' }
   ];
 
   const fetchAndDisplayGame = (game) => {
