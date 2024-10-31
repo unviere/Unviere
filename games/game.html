@@ -301,6 +301,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load the JSON file (using fetch for the browser or fs for Node.js)
 fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/games.json')
+// Load the JSON file (replace with your actual file path)
+
+  .then(response => response.json())
+  .then(data => {
+    // Iterate over the games object to get each game
+    const games = data.games;
+    Object.keys(games).forEach(gameName => {
+      // Access the game's universe ID
+      const universeId = games[gameName].universeId;
+
+     
+  .catch(error => {
+    console.error('Error fetching the game details JSON:', error);
+  });
+
+
+//
   .then(response => response.json())
   .then(data => {
     // Assume gameName is the key you want to access
@@ -313,7 +330,7 @@ fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/a
     console.error('Error fetching the JSON:', error);
   });
     // Static mapping of game names to universe IDs and other details
-  //  const gameDetails = {
+    const gameDetails = {
       //unviere 
      // 'id=14229107623/parallelized-engineers': { universeId: '4922186765' },
       // parcle
