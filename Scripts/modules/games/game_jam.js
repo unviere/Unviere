@@ -2,17 +2,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const gameTemplate = document.getElementById('game-card').content;
   const gameContainer = document.querySelector('.game-jams-content');
 
-  // Static mapping of game names and universe IDs
-  const gamesData = [
-    { universeId: '4922186765', name: 'Parallelized-Engineers/game-jam?date=07-2023', id: '14229107623' },
-    { universeId: '5574638301', name: 'Diverse-And-Unexpected/game-jam?date=02-2024', id: '16133672663' },
-    { universeId: '6449806598', name: 'the-secret-of-puzzle-island/game-jam?date=08-2024', id: '116463530852265' },
-      { universeId: '6663022834', name: 'a-historical-trip/game-jam?date=10-2024', id: '107169670237182' }
-  ];
+  const targetGenres = ['game-jam']; // 1. Define the genres we want to check against
+
+  // 2. Fetch game data from the JSON file instead of using a static array
+  fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/games.json')
+  
+  //fetch('../../games/api/games.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(gamesData => {
+      // 3. Iterate through each game in the data array and display its data using the fetchAndDisplayGame function
+      gamesData.genres.forEach(game => { // Access the genres array directly
+        fetchAndDisplayGame(game);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching the game data:', error);
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent = 'Error fetching the game data. Please try again later.';
+      gameContainer.appendChild(errorMessage);
+    });
 
   const fetchAndDisplayGame = (game) => {
     const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
-    const imgUrl =`https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}.png`;
+    const imgUrl = `https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}.png`;
+
+    // 4. Check if the game has a genre that matches our target genres
+    const hasMatchingGenre = game.genres.some(genre => targetGenres.includes(genre)); // Check for genre match
+    if (!hasMatchingGenre) return; // Skip displaying this game if it doesn't match
 
     fetch(apiUrl)
       .then(response => {
@@ -42,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
               return num;
             }
           }
+
           gameClone.querySelector('.game-title').textContent = gameData.sourceName || 'No title available';
           gameClone.querySelector('.game-desc').textContent = gameData.sourceDescription || 'No description available';
 
@@ -70,9 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
         gameContainer.appendChild(errorMessage);
       });
   };
-
-  // Iterate through each game and display its data
-  gamesData.forEach(game => {
-    fetchAndDisplayGame(game);
-  });
 });

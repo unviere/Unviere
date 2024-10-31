@@ -8,9 +8,36 @@ document.addEventListener('DOMContentLoaded', () => {
     { universeId: '6449806598', name: 'the-secret-of-puzzle-island', id: '116463530852265' }
   ];
 
+  const targetGenres = ['parcle']; // 1. Define the genres we want to check against
+
+  // 2. Fetch game data from the JSON file instead of using a static array
+   fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/games.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(gamesData => {
+      // 3. Iterate through each game in the data array and display its data using the fetchAndDisplayGame function
+      gamesData.genres.forEach(game => { // Access the genres array directly
+        fetchAndDisplayGame(game);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching the game data:', error);
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent = 'Error fetching the game data. Please try again later.';
+      gameContainer.appendChild(errorMessage);
+    });
+
   const fetchAndDisplayGame = (game) => {
     const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
-    const imgUrl =`https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}.png`;
+    const imgUrl = `https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}.png`;
+
+    // 4. Check if the game has a genre that matches our target genres
+    const hasMatchingGenre = game.genres.some(genre => targetGenres.includes(genre)); // Check for genre match
+    if (!hasMatchingGenre) return; // Skip displaying this game if it doesn't match
 
     fetch(apiUrl)
       .then(response => {
@@ -40,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
               return num;
             }
           }
+
           gameClone.querySelector('.game-title').textContent = gameData.sourceName || 'No title available';
           gameClone.querySelector('.game-desc').textContent = gameData.sourceDescription || 'No description available';
 
@@ -68,9 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
         gameContainer.appendChild(errorMessage);
       });
   };
-
-  // Iterate through each game and display its data
-  gamesData.forEach(game => {
-    fetchAndDisplayGame(game);
-  });
 });
