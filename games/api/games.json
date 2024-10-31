@@ -66,6 +66,19 @@
     "name": "the-secret-of-puzzle-island",
     "id": "116463530852265",
     "genres": ["parcle"]
+},
+
+ {
+   "universeId": "4922186765",
+    "name": "parallelized-engineers",
+    "id": "14229107623",
+    "genres": ["unviere", "fighting"]
+},
+ {
+   "universeId": "1738552509",
+    "name": "Sk-Sword-Fighting",
+    "id": "5032972341",
+    "genres": ["fighting"]
 }
 ]
 }

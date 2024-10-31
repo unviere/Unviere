@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const gameContainer = document.querySelector('.parcle-content');
 
   // Static mapping of game names and universe IDs
-  const gamesData = [
-    { universeId: '3721966693', name: 'happy-obbies', id: '10135698219' },
-    { universeId: '6449806598', name: 'the-secret-of-puzzle-island', id: '116463530852265' }
-  ];
+  //const gamesData = [
+   // { universeId: '3721966693', name: 'happy-obbies', id: '10135698219' },
+   // { universeId: '6449806598', name: 'the-secret-of-puzzle-island', id: '116463530852265' }
+ // ];
 
   const targetGenres = ['parcle']; // 1. Define the genres we want to check against
 
