@@ -1,6 +1,6 @@
 {
   
-  "description": "list of game info to use in the Roblox apis",
+  "description": "list of game info to use in the Roblox apis games are the info for the games page genres is the info for the page with all games",
   "games": {
     "id=14229107623/parallelized-engineers": {
       "universeId": "4922186765"
@@ -59,7 +59,7 @@
    "universeId": "3721966693",
     "name": "happy-obbies",
     "id": "10135698219",
-    "genres": ["adventure", "parcle"]
+    "genres": ["adventure", "parcle", "selected"]
 },
  {
    "universeId": "6449806598",
@@ -72,13 +72,20 @@
    "universeId": "4922186765",
     "name": "parallelized-engineers",
     "id": "14229107623",
-    "genres": ["unviere", "fighting"]
+    "genres": ["unviere", "fighting", "selected"]
 },
  {
    "universeId": "1738552509",
     "name": "Sk-Sword-Fighting",
     "id": "5032972341",
-    "genres": ["fighting"]
-}
+    "genres": ["fighting", "selected"]
+},
+
+{
+    "universeId": "6663022834",
+    "name": "a-historical-trip",
+    "id": "107169670237182",
+    "genres": ["adventure", "fighting", "unviere", "selected"]
+  }
 ]
 }
