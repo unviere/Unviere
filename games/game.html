@@ -298,31 +298,45 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Game Name from URL:', gameName);
 
   if (gameName) {
+    
+    // Load the JSON file (using fetch for the browser or fs for Node.js)
+fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/games.json')
+  .then(response => response.json())
+  .then(data => {
+    // Assume gameName is the key you want to access
+    
+    const game = data.games[gameName]; // Access the game details
+
+    
+  })
+  .catch(error => {
+    console.error('Error fetching the JSON:', error);
+  });
     // Static mapping of game names to universe IDs and other details
-    const gameDetails = {
+  //  const gameDetails = {
       //unviere 
-      'id=14229107623/parallelized-engineers': { universeId: '4922186765' },
+     // 'id=14229107623/parallelized-engineers': { universeId: '4922186765' },
       // parcle
-       'id=10135698219/happy-obbies': { universeId: '3721966693' },
+     //  'id=10135698219/happy-obbies': { universeId: '3721966693' },
        //
      
-      'id=116463530852265/the-secret-of-puzzle-island': { universeId: '6449806598' },
+     // 'id=116463530852265/the-secret-of-puzzle-island': { universeId: '6449806598' },
       
       //game jams
       
-       'id=14229107623/Parallelized-Engineers/game-jam?date=07-2023': { universeId: '4922186765' },
+     //  'id=14229107623/Parallelized-Engineers/game-jam?date=07-2023': { universeId: '4922186765' },
        //
-        'id=16133672663/Diverse-And-Unexpected/game-jam?date=02-2024': { universeId: '5574638301' },
+       // 'id=16133672663/Diverse-And-Unexpected/game-jam?date=02-2024': { universeId: '5574638301' },
         //
-          'id=116463530852265/the-secret-of-puzzle-island/game-jam?date=08-2024': { universeId: '6449806598' },
+         // 'id=116463530852265/the-secret-of-puzzle-island/game-jam?date=08-2024': { universeId: '6449806598' },
           //
-           'id=107169670237182/a-historical-trip/game-jam?date=10-2024': { universeId: '6663022834' },
+          // 'id=107169670237182/a-historical-trip/game-jam?date=10-2024': { universeId: '6663022834' },
            //
           //fighting 
-            'id=5032972341/Sk-Sword-Fighting': { universeId: '1738552509' },
-    };
+          //  'id=5032972341/Sk-Sword-Fighting': { universeId: '1738552509' },
+    //};
 
-    const game = gameDetails[gameName];
+    //const game = gameDetails[gameName];
     console.log('Matching Game Details:', game);
 
     if (game) {
@@ -385,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 metaDescription.setAttribute('content', gameData.sourceDescription || 'No description available.');
             }
             // Fetch and display game thumbnail
-            const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${game.universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;https://unviere.github.io/Unviere/games/game?id=10135698219/happy-obbies
+            const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${game.universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;//https://unviere.github.io/Unviere/games/game?id=10135698219/happy-obbies
 
             console.log('Constructed Image URL:', imgUrl);
 
