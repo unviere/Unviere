@@ -318,11 +318,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const error = document.getElementById('error-sec');
     const game = document.getElementById('game-sec');
     
-    const gameNavBar = document.getElementById('game-navb-content');
+    
     
     error.style.display = "none";
     game.style.display = "flex";
-    gameNavBar.style.display = "flex";
+    
     
     // Load the JSON file from the specified URL
     fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/games.json')
@@ -394,6 +394,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('genre').textContent = `Genre: ${gameData.genre || 'N/A'}`;
 
                 document.title = `${gameData.sourceName || 'Game'} | Unviere`;
+                
+                const gameNavBar = document.getElementById('game-navb-content');
+                
+                gameNavBar.style.display = "flex";
+                
                 const metaDescription = document.querySelector('meta[name="description"]');
                 if (metaDescription) {
                   metaDescription.setAttribute('content', gameData.sourceDescription || 'No description available.');
