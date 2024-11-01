@@ -33,11 +33,11 @@ body {
 }
 
 .link-d {
-    color: #0606c4;
+    color: #0606c4!important;
     text-decoration: none;
 }
 .link-d:hover {
-    color: #06c46f; /* Switch to your primary green on hover */
+    color: #06c46f!important; /* Switch to your primary green on hover */
 }
 .button-n {
   color: black;
@@ -64,6 +64,54 @@ body {
   border: 1px solid transparent;
   color: #1B1F3B;
   transform: translateX(8px);
+}
+
+#error-sec {
+  display: flex;
+  height: 100%;
+  background: transparent;
+}
+
+.error-main {
+  background: whitesmoke;
+  box-shadow: 1px 1px 9px gray;
+  
+  position: relative;
+  display: flex;
+  flex-direction: column!important;
+  left: 10%!important;
+  width: 80%!important;
+  height: auto!important;
+}
+
+.error-title {
+  color: red;
+  
+  position: relative;
+  display: flex;
+  width: 100%!important;
+  text-align: center!important;
+  align-items: center!important;
+  align-content: center!important;
+  justify-content: center;
+  
+}
+
+.error-desc {
+  
+  color: black;
+  
+  white-space: pre-wrap;
+  word-wrap: break-word; /* This ensures long words break */
+  word-break: break-word; /* Fallback to ensure long words break */
+  overflow-wrap: break-word; /* Fallback for older browsers */
+  
+  position: relative;
+  display: flex;
+  width: 90%!important;
+  min-width: 90%;
+  left: 5%!important;
+  height: auto!important;
 }
 
 @media (max-width: 700px){

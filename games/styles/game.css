@@ -29,7 +29,7 @@ body {
 
 .game {
   position: relative;
-  display: flex;
+  display: none;
 	flex-direction: column;
   overflow: hidden;
   padding: 10px 0;

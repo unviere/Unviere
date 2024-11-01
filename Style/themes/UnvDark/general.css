@@ -3,11 +3,11 @@ body.dark-mode .link {
     text-decoration: underline;
 }
 body.dark-mode .link:hover {
-    color: #024a2a; /* Switch to your primary green on hover */
+    color: #026c40!important; /* Switch to your primary green on hover */
 }
 
 body.dark-mode .link-d {
-    color: #03c8ff;
+    color: #03c8ff!important;
     text-decoration: none;
 }
 body.dark-mode .link-d:hover {
@@ -39,4 +39,19 @@ body.dark-mode .ctaa:hover {
   border: 1px solid transparent;
   color: #1B1F3B;
   transform: translateX(8px);
+}
+
+body.dark-mode .error-main {
+  background: #024a2a;
+  box-shadow: 1px 1px 9px black;
+}
+
+body.dark-mode .error-title {
+  color: orangered;
+  
+}
+
+body.dark-mode .error-desc {
+  
+  color: white;
 }

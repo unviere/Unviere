@@ -40,7 +40,23 @@
     <div id="header">
       
     </div>
-   <section class ="game">
+    
+    <section class="error" id="error-sec">
+      
+      <div class="error-main">
+        <h1 class="error-title">error 404</h1>
+        <br>
+        <p class="error-desc">we looked for a wide ranch but couldn't find the page you are looking for this can come due the following reasons<br>• the link isnt valid
+             it might be the case that the link doesn't contain the correct information it needs to be something like </p> <a class="link-d error-desc"> https://unviere.github.io/Unviere/games/game?id=12346/game-name</a><p class="error-desc">or</p> <a class="link-d error-desc"> https://unviere.github.io/Unviere/games/game?id=124653/game-name/?info=info</a> <p class="error-desc"> if it contains extra information<br>
+             • you have rejected JavaScript in your browser settings 
+the page need to run JavaScript to load the game page<br>
+• check your internet 
+the game page need internet to load</p> <br>
+        
+      </div>
+      
+    </section>
+   <section class ="game" id="game-sec">
      <div class="game-head-section">
           <div class="onrbx"> on Roblox </div>
             <div class="game-top" id="game-header">
@@ -299,6 +315,15 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Game Name from URL:', gameName);
 
   if (gameName) {
+    const error = document.getElementById('error-sec');
+    const game = document.getElementById('game-sec');
+    
+    const gameNavBar = document.getElementById('game-navb-content');
+    
+    error.style.display = "none";
+    game.style.display = "flex";
+    gameNavBar.style.display = "flex";
+    
     // Load the JSON file from the specified URL
     fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/games.json')
       .then(response => {

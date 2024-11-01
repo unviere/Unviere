@@ -37,6 +37,10 @@
   height: 90%;
 }
 
+#game-navb-content {
+  display: none;
+}
+
 #game-title-top {
   font-size: 16px;
   height: 50%;
