@@ -315,13 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Game Name from URL:', gameName);
 
   if (gameName) {
-    const error = document.getElementById('error-sec');
-    const game = document.getElementById('game-sec');
     
-    
-    
-    error.style.display = "none";
-    game.style.display = "flex";
     
     
     // Load the JSON file from the specified URL
@@ -372,7 +366,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     return num;
                   }
                 }
-
+const error = document.getElementById('error-sec');
+    const game = document.getElementById('game-sec');
+    
+    
+    
+    error.style.display = "none";
+    game.style.display = "flex";
                 // Update DOM elements with game data
                 document.getElementById('game-title').textContent = gameData.name || 'No title available';
                 document.getElementById('side-menu-title').textContent = gameData.name;
