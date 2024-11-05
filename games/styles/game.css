@@ -26,10 +26,13 @@ body {
  background: white; 
 }
 
+#game-sec{
+  display:none!important;
+}
 
 .game {
   position: relative;
-  display: none;
+  display: flex;
 	flex-direction: column;
   overflow: hidden;
   padding: 10px 0;
