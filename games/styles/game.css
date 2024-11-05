@@ -27,7 +27,7 @@ body {
 }
 
 #game-sec{
-  display:none!important;
+  display:none;
 }
 
 .game {
