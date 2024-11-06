@@ -23,7 +23,15 @@
       "insta": false,
       "instaLink": "",
       
+      "tabs": {
+        "enabled": true,
+        "badges": true,
+        "passes": false,
+        "videos": false
+      },
+      
       "event": {
+        "enabled": false,
         "startDate": "",
         "startTime": "",
         "endDate": "",
