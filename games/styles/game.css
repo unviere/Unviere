@@ -466,12 +466,13 @@ border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
-justify-content: space-between;
- padding: 5px 9%;
+/*justify-content: space-between;*/
+ padding: 2px 2%;
   background: whitesmoke;
     border-radius: 5px;
     margin-bottom: 40px;
     margin-left: 5px;
+    overflow-x: scroll;
     box-shadow: 1px 1px 9px gray;
 }
 
@@ -896,6 +897,12 @@ border-bottom-right-radius: 10px;
 #instal-button {display: flex;}
 
 #instal-button-dd {display: none;}
+
+.game-buttons-bar > * {
+  flex: 1; /* Ensures that children take up equal space */
+  text-align: center; /* Centers text/content within each child */
+   min-width: 90px; /* Adjust this value as needed */
+}
 #check:checked ~ .game .game-head-section .game-playbar .game-playbar-content .instal #instal-button {
   display: none;
 }
