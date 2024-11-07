@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       // check if nav bar be used
                       
                       
-                      const navbarForGame = document.getElementById('game-buttons-bar');
+                      const navbarForGame = document.getElementById('game-buttons-bar-id');
                       
                       if (subInfoData.tabs.enabled === true) {
                         navbarForGame.style.display = "flex";
