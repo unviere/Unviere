@@ -246,7 +246,7 @@ const error = document.getElementById('error-sec');
                   //tiktok
                   const tiktokIcon = document.getElementById('tiktok');
                   const tiktokMobIcon = document.getElementById('tiktok-mob');
-                  if (subInfoData.tiktok? === true) {
+                  if (subInfoData.tiktok === true) {
                     tiktokIcon.style.display = "flex";
                     tiktokMobIcon.style.display = "flex";
                     tiktokIcon.href = subInfoData.tiktokLink || ''; 
