@@ -3,7 +3,7 @@ function opentab(evt, tabName) {
   var i, tabcontent, tablinks;
 
   // Get all elements with class="tabs-parallel" and hide them
-  tabcontent = document.getElementsByClassName("game-buttons-bar");
+  tabcontent = document.getElementsByClassName("game-tabs");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
@@ -15,7 +15,7 @@ function opentab(evt, tabName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
+  document.getElementById(tabName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
 
