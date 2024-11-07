@@ -353,6 +353,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // Now you can use the game's universeId or any other details
           const universeId = game.universeId;
+          
+          
+const gameID = gameName.match(/Id=(\d+)/i)[1];
+console.log(gameID); // Output will be "1257"
 
           const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${universeId}`;
           console.log('API URL:', apiUrl);
@@ -477,7 +481,9 @@ const error = document.getElementById('error-sec');
                       document.getElementById('sub-genre').textContent = `Other genres: ${subInfoData.genres || 'N/A'}`;
                       document.getElementById('developer-img').src = subInfoData.devIcon || '';
                       document.getElementById('developer-img-link').href = subInfoData.devLink || '';
-                      document.getElementById('play-button').href = subInfoData.deepLink;
+                      
+                      
+                      document.getElementById('play-button').href = `https://ro.blox.com/Ebh5?af_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D${gameID}&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D${gameID}&deep_link_value=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D${gameID}`
 
                      // Make the Discord icon visible based on the response
                   const infoIcon = document.getElementById('info-button');
