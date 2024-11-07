@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Get game name from the URL
-  const gameName = window.location.search.substring(1);
+  function getUrlWithoutHash() {
+  const baseUrl = window.location.search;
+  return baseUrl;
+}
+
+// Example usage
+const urlWithoutHash = getUrlWithoutHash();
+console.log(urlWithoutHash); // Logs the URL without the # part
+      currentUrl = urlWithoutHash
+  const gameName = urlWithoutHash //window.location.search.substring(1);
   console.log('Game Name from URL:', gameName);
 
   if (gameName) {
