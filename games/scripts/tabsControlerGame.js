@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       
                       const storeB = document.getElementById('storeB');
                       
-                      if (subInfoData.tabs.store === true) {
+                      if (subInfoData.tabs?.store === true) {
                         storeB.style.display = "flex";
                         
                       } else {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       
                       const badgeB = document.getElementById('badgeB');
                       
-                      if (subInfoData.tabs.badges === true) {
+                      if (subInfoData.tabs?.badges === true) {
                         badgeB.style.display = "flex";
                         
                       } else {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       
                       const videoB = document.getElementById('vidB');
                       
-                      if (subInfoData.tabs.videos === true) {
+                      if (subInfoData.tabs?.videos === true) {
                         videoB.style.display = "flex";
                         
                       } else {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       
                                               const serversB = document.getElementById('serverB');
                       
-                                              if (subInfoData.tabs.servers === true) {
+                                              if (subInfoData.tabs?.servers === true) {
                                                 serversB.style.display = "flex";
                       
                                               } else {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       
                       const navbarForGame = document.getElementById('game-buttons-bar-id');
                       
-                      if (subInfoData.tabs.enabled === true) {
+                      if (subInfoData.tabs?.enabled === true) {
                         navbarForGame.style.display = "flex";
                         
                       } else {
