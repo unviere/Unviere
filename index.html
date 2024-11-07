@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="Style/images.css">
     
       <script defer type="module" src="Scripts/topbar new.js"></script>
+         <script src ="games/scripts/homeUrlChange.js"></script>
 </head>
   <body>
 
@@ -63,7 +64,7 @@
    <template id="nav">
       <h1 class="sidebar-header">On this page.</h1>
       
-                <li><a class="navigate" href="#landing">Landings page</a></a></li>
+                <li><a class="navigate" href="#landing" id="landingA">Landings page</a></a></li>
         <li><a class="navigate" href="#game">Random game</a></li>
          <li><a class="navigate" href="#groups">Groups</a></li>
     
@@ -290,9 +291,13 @@
       
       
 
-      <div class="game-buttons-bar">
-      <button class="tablinks" onclick="opentab(event, 'description')" id="main">Description</button>
-  <button class="tablinks" onclick="opentab(event, 'passes')">Passes</button>
+      <div class="game-buttons-bar" id="game-buttons-bar-id">
+      <button class="tablinks" onclick="opentab(event, 'desc')" id="descB">Description</button>
+  <button class="tablinks" onclick="opentab(event, 'store')" id="storeB">store</button>
+   <button class="tablinks" onclick="opentab(event, 'badges')" id="badgeB">badges</button>
+   
+    <button class="tablinks" onclick="opentab(event, 'videos')" id="vidB">game trailers</button>
+     <button class="tablinks" onclick="opentab(event, 'servers')" id="serverB">servers</button>
       </div>
 
 <div id="desc">
@@ -472,14 +477,61 @@ parcle games have the folow games
       <script defer type="module" src ="Scripts/modules/games/selected.js"></script>
       
       <script src ="Scripts/parallel_tabs.js"></script>
+    
+      
       
       <!--<script src ="Scripts/dark_mode.js"></script>-->
        
-        <script src ="Scripts/stats_parallel.js"></script>
+        <script src ="games/scripts/data.js"></script>
+        
+         <script src ="games/scripts/tabsControlerGame.js"></script>
+         
+           <script src ="games/scripts/tabs.js"></script>
+        
         
                <script src = "Scripts/settings/theme.js"></script>
                
                <script src = "Scripts/masages/style_msg.js"></script>
+               
+               <script>
+                 // Script 2: Listen for changes in the URL and get the updated URL as a string
+
+// Function to listen for URL changes
+function listenForUrlChange() {
+  let currentUrl = window.location.href; // Store the current URL
+
+  // Set an interval to check for URL changes
+  setInterval(() => {
+    // If the URL has changed (compare with the stored URL)
+    if (window.location.href !== currentUrl) {
+      
+      // Function to get the URL without the hash part
+function getUrlWithoutHash() {
+  const baseUrl = window.location.origin + window.location.pathname + window.location.search;
+  return baseUrl;
+}
+
+// Example usage
+const urlWithoutHash = getUrlWithoutHash();
+console.log(urlWithoutHash); // Logs the URL without the # part
+      currentUrl = urlWithoutHash//window.location.href; // Update the stored URL to the new one
+
+      // Get the current URL as a string
+      const updatedUrl = currentUrl;
+
+      // Now you can use the updated URL string however you need
+      console.log('Updated URL:', updatedUrl);
+      
+      const landing = document.getElementById('landingA')
+      
+      landing.href = `${updatedUrl}#landing`
+    }
+  }, 100); // Check every 100ms for URL changes
+}
+
+// Start listening for URL changes
+listenForUrlChange();
+               </script>
                
                 <script>document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
