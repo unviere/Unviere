@@ -199,13 +199,13 @@ the game page need internet to load</p> <br>
       
       
 
-      <div class="game-buttons-bar">
-      <button class="tablinks" onclick="opentab(event, 'description')" id="main">Description</button>
-  <button class="tablinks" onclick="opentab(event, 'stote')">store</button>
-   <button class="tablinks" onclick="opentab(event, 'badges')">badges</button>
+      <div class="game-buttons-bar" id="game-buttons-bar">
+      <button class="tablinks" onclick="opentab(event, 'desc')" id="descB">Description</button>
+  <button class="tablinks" onclick="opentab(event, 'store')" id="storeB">store</button>
+   <button class="tablinks" onclick="opentab(event, 'badges')" id="badgeB">badges</button>
    
-    <button class="tablinks" onclick="opentab(event, 'videos')">game trailers</button>
-     <button class="tablinks" onclick="opentab(event, 'servers')">servers</button>
+    <button class="tablinks" onclick="opentab(event, 'videos')" id="vidB">game trailers</button>
+     <button class="tablinks" onclick="opentab(event, 'servers')" id="serverB">servers</button>
       </div>
 
 <div id="desc">
@@ -230,6 +230,9 @@ It might be the case that you overloaed the api reqeusts to get the data.
 </div>
       
       </div>
+      
+      <div id="badges">lol badges page coming soon</div>
+
         
       </section>
       <template>
@@ -243,6 +246,11 @@ It might be the case that you overloaed the api reqeusts to get the data.
   </template>
   
    <script src = "../Scripts/settings/theme.js"></script>
+   
+     <script src = "../games/scripts/tabs.js"></script>
+     
+      <script src = "../games/scripts/tabsControlerGame.js"></script>
+
 
 <script>// Get the header element
 document.addEventListener('DOMContentLoaded', function() {

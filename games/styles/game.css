@@ -463,7 +463,7 @@ border-bottom-right-radius: 10px;
   z-index: 10;
   width: 98%;
   height: 50px;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
 /*justify-content: space-between;*/
@@ -537,6 +537,13 @@ outline: none;
   overflow: hidden; /* Prevent content from overflowing */
   text-overflow: ellipsis; /* Show ellipsis (...) if content overflows */
   flex-wrap: wrap; /* Allow wrapping when needed */
+}
+
+#badges {
+  display: none;
+  max-width: 98%;
+  flex-direction: row;
+  margin-left: 10px;
 }
 
 #check:checked ~ .game .game-head-section .game-top .game-top-holder .game-top-left .stats-top-game .desk-title-game-stats {

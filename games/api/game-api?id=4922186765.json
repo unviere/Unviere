@@ -26,8 +26,9 @@
       "tabs": {
         "enabled": true,
         "badges": true,
-        "passes": false,
-        "videos": false
+        "store": false,
+        "videos": false,
+        "servers":false
       },
       
       "event": {
