@@ -20,8 +20,12 @@ function opentab(evt, tabName) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  
+ // document.getElementById("storeB").click();
+//  document.getElementById("badgeB").click();
+//  document.getElementById("vidB").click();
+ // document.getElementById("serverB").click();
   document.getElementById("descB").click();
-  document.getElementById("badgeB").click();
 });
 
 
