@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Example usage
 var urlWithoutHash = getUrlWithoutHash();
 console.log(urlWithoutHash); // Logs the URL without the # part
-     var currentUrl = urlWithoutHash
+    // var currentUrl = urlWithoutHash
   var gameName = urlWithoutHash //window.location.search.substring(1);
   console.log('Game Name from URL:', gameName);
 
