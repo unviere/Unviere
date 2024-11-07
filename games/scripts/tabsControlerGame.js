@@ -69,6 +69,44 @@ document.addEventListener('DOMContentLoaded', () => {
                         storeB.style.display = "none";
                         
                       }
+                      
+                        // check if  badges be used
+                      
+                      
+                      const badgeB = document.getElementById('badgesB');
+                      
+                      if (subInfoData.tabs.store) {
+                        badgeB.style.display = "flex";
+                        
+                      } else {
+                        badgeB.style.display = "none";
+                        
+                      }
+                                              // check if  trailers be used
+                      
+                      
+                      const videoB = document.getElementById('vidB');
+                      
+                      if (subInfoData.tabs.store) {
+                        videoB.style.display = "flex";
+                        
+                      } else {
+                        videoB.style.display = "none";
+                        
+                      }
+                      
+                                              // check if  servers be used
+                      
+                      
+                                              const serversB = document.getElementById('serverB');
+                      
+                                              if (subInfoData.tabs.store) {
+                                                serversB.style.display = "flex";
+                      
+                                              } else {
+                                                serversB.style.display = "none";
+                      
+                                              }
                       // check if nav bar be used
                       
                       
