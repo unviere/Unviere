@@ -479,40 +479,117 @@ const error = document.getElementById('error-sec');
                       document.getElementById('developer-img-link').href = subInfoData.devLink || '';
                       document.getElementById('play-button').href = subInfoData.deepLink;
 
-                      // Make the Discord icon visible based on the response
-                      const infoIcon = document.getElementById('info-button');
-                      const navIcon = document.getElementById('nav-button');
-                      const socialIcon = document.getElementById('social-button');
+                     // Make the Discord icon visible based on the response
+                  const infoIcon = document.getElementById('info-button');
+                  const navIcon = document.getElementById('nav-button');
+                  const socialIcon = document.getElementById('social-button');
+                
+                  if (subInfoData.infoEnabled === true) {
+                    infoIcon.style.display = "flex";
+                  } else {
+                    infoIcon.style.display = "none";
+                  }
+                  
+                  if (subInfoData.navEnabled === true) {
+                    navIcon.style.display = "flex";
+                  } else {
+                    navIcon.style.display = "none";
+                  }
+                  
+                  if (subInfoData.socialsEnabled === true) {
+                    socialIcon.style.display = "flex";
+                  } else {
+                    socialIcon.style.display = "none";
+                  }
 
-                      infoIcon.style.display = subInfoData.infoEnabled ? "flex" : "none";
-                      navIcon.style.display = subInfoData.navEnabled ? "flex" : "none";
-                      socialIcon.style.display = subInfoData.socialsEnabled ? "flex" : "none";
-
-                      // Discord icon handling
-                      const discordIcon = document.getElementById('discord');
-                      const discordMobIcon = document.getElementById('discord-mob');
-                      if (subInfoData.discord) {
-                        discordIcon.style.display = "flex";
-                        discordMobIcon.style.display = "flex";
-                        discordIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
-                        discordMobIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
-                      } else {
-                        discordIcon.style.display = "none";
-                        discordMobIcon.style.display = "none";
-                      }
-
-                      // YouTube icon handling
-                      const ytIcon = document.getElementById('yt');
-                      const ytMobIcon = document.getElementById('yt-mob');
-                      if (subInfoData.yt) {
-                        ytIcon.style.display = "flex";
-                        ytMobIcon.style.display = "flex";
-                        ytIcon.href = subInfoData.ytLink || '';
-                        ytMobIcon.href = subInfoData.ytLink || '';
-                      } else {
-                        ytIcon.style.display = "none";
-                        ytMobIcon.style.display = "none";
-                      }
+                  // Discord icon handling
+                  const discordIcon = document.getElementById('discord');
+                  const discordMobIcon = document.getElementById('discord-mob');
+                  if (subInfoData.discord === true) {
+                    discordIcon.style.display = "flex";
+                    discordMobIcon.style.display = "flex";
+                    discordIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
+                    
+                    discordMobIcon.href = subInfoData.discordLink || ''; // Set the Discord link if available
+                  } else {
+                    discordIcon.style.display = "none";
+                    discordMobIcon.style.display = "none";
+                  }
+    
+                  // YouTube icon handling
+                  const ytIcon = document.getElementById('yt');
+                  const ytMobIcon = document.getElementById('yt-mob');
+                  if (subInfoData.yt === true) {
+                    ytIcon.style.display = "flex";
+                    ytMobIcon.style.display = "flex";
+                    ytIcon.href = subInfoData.ytLink || ''; 
+                    ytMobIcon.href = subInfoData.ytLink || ''; 
+                  } else {
+                    ytIcon.style.display = "none";
+                    ytMobIcon.style.display = "none";
+                  }
+                  //x
+                  const twitterIcon = document.getElementById('x');
+                  const twitterMobIcon = document.getElementById('x-mob');
+                  if (subInfoData.x === true) {
+                    twitterIcon.style.display = "flex";
+                    twitterMobIcon.style.display = "flex";
+                    twitterIcon.href = subInfoData.xLink || ''; 
+                  
+                    twitterMobIcon.href = subInfoData.xLink || ''; 
+                  } else {
+                    twitterIcon.style.display = "none";
+                    twitterMobIcon.style.display = "none";
+                  }
+                  
+                                    //insta
+                  const instaIcon = document.getElementById('insta');
+                  const instaMobIcon = document.getElementById('insta-mob');
+                  if (subInfoData.insta === true) {
+                    instaIcon.style.display = "flex";
+                    instaMobIcon.style.display = "flex";
+                    instaIcon.href = subInfoData.instaLink || ''; 
+                  
+                    instaMobIcon.href = subInfoData.instaLink || ''; 
+                  } else {
+                    instaIcon.style.display = "none";
+                    instaMobIcon.style.display = "none";
+                  }
+                  //tiktok
+                  const tiktokIcon = document.getElementById('tiktok');
+                  const tiktokMobIcon = document.getElementById('tiktok-mob');
+                  if (subInfoData.tiktok === true) {
+                    tiktokIcon.style.display = "flex";
+                    tiktokMobIcon.style.display = "flex";
+                    tiktokIcon.href = subInfoData.tiktokLink || ''; 
+                    
+                    toktokMobIcon.href = subInfoData.tiktokLink || ''; 
+                  } else {
+                    tiktokIcon.style.display = "none";
+                    tiktokMobIcon.style.display = "none";
+                  }
+                  //guilded 
+                  const guildIcon = document.getElementById('guild');
+                  const guildMobIcon = document.getElementById('guild-mob');
+                  if (subInfoData.guilded === true) {
+                    guildIcon.style.display = "flex";
+                    guildMobIcon.style.display = "flex";
+                    guildIcon.href = subInfoData.guildedLink || ''; 
+                  
+                    guildMobIcon.href = subInfoData.guildedLink || ''; 
+                  } else {
+                    guildIcon.style.display = "none";
+                    guildMobIcon.style.display = "none";
+                  }
+                  // Update log handling
+                  const updLog = document.getElementById('upd-log');
+                  if (subInfoData.updateLog === true) {
+                    updLog.style.display = "flex";
+                    updLog.href = subInfoData.updateLogLink || '';
+                  } else {
+                    updLog.style.display = "none";
+                  }
+                  
                     } else {
                       console.error('No additional info received for the game.');
                     }
