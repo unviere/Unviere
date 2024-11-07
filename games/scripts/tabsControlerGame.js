@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // check if  badges be used
                       
                       
-                      const badgeB = document.getElementById('badgesB');
+                      const badgeB = document.getElementById('badgeB');
                       
                       if (subInfoData.tabs.badges === true) {
                         badgeB.style.display = "flex";
