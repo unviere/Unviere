@@ -507,17 +507,17 @@ function listenForUrlChange() {
       
       // Function to get the URL without the hash part
 function getUrlWithoutHash() {
-  const baseUrl = window.location.origin + window.location.pathname + window.location.search;
+  var baseUrl = window.location.origin + window.location.pathname + window.location.search;
   return baseUrl;
 }
 
 // Example usage
-const urlWithoutHash = getUrlWithoutHash();
+var urlWithoutHash = getUrlWithoutHash();
 console.log(urlWithoutHash); // Logs the URL without the # part
       currentUrl = urlWithoutHash//window.location.href; // Update the stored URL to the new one
 
       // Get the current URL as a string
-      const updatedUrl = currentUrl;
+      var updatedUrl = currentUrl;
 
       // Now you can use the updated URL string however you need
       console.log('Updated URL:', updatedUrl);
