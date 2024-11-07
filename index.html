@@ -148,9 +148,9 @@
 
     <section class ="game"><a name="game"></a>
     
-    <div class="game-top-desc-etc"><h1 class="sec-header">Random game <a href="javascript:void(0);" onclick="reloadAndScroll()"  class="link-d all-games-b"><p class="sec-header-right">Reroll </p> <i class="ri-reset-left-line reload-game"></i></a></h1>
+    <div class="game-top-desc-etc" ><h1 class="sec-header">Random game <a href="javascript:void(0);" onclick="reloadAndScroll()"  class="link-d all-games-b"><p class="sec-header-right">Reroll </p> <i class="ri-reset-left-line reload-game"></i></a></h1>
   <p> We make games with game jams, as I said. But we also make normal games. Our system picked one random game for you. What you might like. I will say check it out.</p></div>
-     <div class="game-head-section">
+     <div class="game-head-section" id="game-sec">
           <div class="onrbx"> On Roblox </div>
             <div class="game-top" id="game-header">
        
@@ -268,7 +268,7 @@
 
 
       
-       <div class="game-stats">
+       <div class="game-stats" id="game-stats-t">
         
         <h1 id ="server-size">Server size:N/A</h1>
         <br>
@@ -301,22 +301,20 @@
       </div>
 
 <div id="desc">
-          <div id="description" class ="tabs-game-buttons-bar">game info loading...  <br> 
-          
-          <br>
-          <h1>if it not load within 1 minute? </h1>
-          <br>
-          
-            • Check your internet 
-<br>
-• Did you reload the page to much?
-It might be the case that you overloaed the api reqeusts. To get the data.
-<br> 
+          <div id="description" class ="tabs-game-buttons-bar">
 
       
       </div>
 </div>
       </section>
+      
+       <section class="error" id="error-sec">   <div class="error-main">
+        <h1 class="error-title">error loading random game</h1>
+        <br>
+        <p class="error-desc"> we couldn't generate a random game id pls try again later</p>
+      </div>
+      
+    </section>
        <template id="game-card"><a class="game-card" href="">
            <div class="game-holder">
       

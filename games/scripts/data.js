@@ -71,10 +71,13 @@ console.log(gameID); // Output will be "1257"
 const error = document.getElementById('error-sec');
     const game = document.getElementById('game-sec');
     
+    const stats = document.getElementById('game-stats-t')
+    
     
     
     error.style.display = "none";
     game.style.display = "flex";
+    stats.style.display = "flex";
                 // Update DOM elements with game data
                 document.getElementById('game-title').textContent = gameData.name || 'No title available';
                 document.getElementById('side-menu-title').textContent = gameData.name;
@@ -98,6 +101,7 @@ const error = document.getElementById('error-sec');
                 document.title = `${gameData.sourceName || 'Game'} | Unviere`;
                 
                 game.style.display = "flex";
+                stats.style.display = "flex";
                 
                 const gameNavBar = document.getElementById('game-navb-content');
                 

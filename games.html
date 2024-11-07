@@ -267,5 +267,24 @@
     }
 }, 1000); // Delay execution by 100 milliseconds
 });</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    var hostName = window.location.origin;
+    console.log(baseUrl)
+    
+    function GetHostPath() {
+    if (window.location.hostname === 'localhost') {
+    // Code for localhost
+    console.log("Running on localhost");
+    return 'hostName'
+} else {
+    // Code for production or other environments
+    console.log("Running on production or another domain");
+    return 'hostName'+'/Unviere'
+}
+    }
+  });
+</script>
   </body>
         </html>

@@ -44,7 +44,8 @@ body {
 .game-head-section {
   border-style: solid;
  border-color: #06c46f;
- 
+ display: none;
+ flex-direction: column;
   margin-top: 10px;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
@@ -422,7 +423,7 @@ border-top-right-radius: 10px;
   bottom: 40px;
   padding: 10px 0;
   width: 98%;
-  display: flex;
+  display: none;
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
@@ -463,7 +464,7 @@ border-bottom-right-radius: 10px;
   z-index: 10;
   width: 98%;
   height: 50px;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
 /*justify-content: space-between;*/
