@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.location.hostname === 'localhost') {
     // Code for localhost
     console.log("Running on localhost");
-    return hostname + '/' + path + '.html'
+    return hostName + '/' + path + '.html'
     
 } else {
     // Code for production or other environments
@@ -95,7 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // Construct the custom URL for the game page
           const idtag = "id";
-         // var HostPath = GetHostPath()
+          
+          
+         //var HostPath = GetHostPath()
+         
+        
           const customPageUrl = `${GetHostPath('games/game')}?${idtag}=${game.id}/${game.name}`;
           
           console.log(customPageUrl)
