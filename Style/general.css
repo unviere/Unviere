@@ -116,6 +116,9 @@ body {
   min-height: 5px;
 }
 
+#disabled {
+  display: none!important;
+}
 @media (max-width: 700px){
   body {
   margin-top: 50px;
