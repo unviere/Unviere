@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function GetHostPath(path) {
     if (window.location.hostname === 'localhost') {
     // Code for localhost
-    console.log("Running on localhost");
+   // console.log("Running on localhost");
     return hostName + '/' + path + '.html'
     
 } else {
     // Code for production or other environments
-    console.log("Running on production or another domain");
+    //console.log("Running on production or another domain");
     return hostName +'/Unviere/' + path
 }
     }

@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
+  var hostName = window.location.origin;
+    console.log(hostName)
+    
+    function GetHostPath(path) {
+    if (window.location.hostname === 'localhost') {
+    // Code for localhost
+   // console.log("Running on localhost");
+    return hostName + '/' + path + '.html'
+    
+} else {
+    // Code for production or other environments
+    //console.log("Running on production or another domain");
+    return hostName +'/Unviere/' + path
+}
+    }
   const gameTemplate = document.getElementById('game-card').content;
   const gameContainer = document.querySelector('.game-jams-content');
 
@@ -75,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // Construct the custom URL for the game page
           const idtag = "id";
-          const customPageUrl = `https://unviere.github.io/Unviere/games/game?${idtag}=${game.id}/${game.name}`;
+          const customPageUrl = `${GetHostPath('games/game')}?${idtag}=${game.id}/${game.name}`;
           gameClone.querySelector(".game-card").href = customPageUrl;
 
           // Use a preset thumbnail URL instead of fetching it dynamically
