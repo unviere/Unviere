@@ -3,15 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   var hostName = window.location.origin;
     console.log(hostName)
     
-    function GetHostPath() {
+    function GetHostPath(path) {
     if (window.location.hostname === 'localhost') {
     // Code for localhost
     console.log("Running on localhost");
-    return hostName
+    return hostname + '/' + path + '.html'
+    
 } else {
     // Code for production or other environments
     console.log("Running on production or another domain");
-    return hostName +'/Unviere'
+    return hostName +'/Unviere/' + path
 }
     }
   const gameTemplate = document.getElementById('game-card').content;
@@ -95,7 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
           // Construct the custom URL for the game page
           const idtag = "id";
          // var HostPath = GetHostPath()
-          const customPageUrl = `${GetHostPath()}/games/game?${idtag}=${game.id}/${game.name}`;
+          const customPageUrl = `${GetHostPath('games/game')}?${idtag}=${game.id}/${game.name}`;
+          
+          console.log(customPageUrl)
           gameClone.querySelector(".game-card").href = customPageUrl;
 
           // Use a preset thumbnail URL instead of fetching it dynamically
