@@ -193,7 +193,10 @@ border: none;
 outline: none;
 }
 
-body.dark-mode .game-buttons-bar button:hover {
+body.dark-mode .game-buttons-bar .tablinks:after {
+  background-color: lightcyan;
+}
+/*body.dark-mode .game-buttons-bar button:hover {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: lightcyan;
@@ -203,7 +206,7 @@ body.dark-mode .game-buttons-bar button.active {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: lightcyan;
-}
+}*/
 
 body.dark-mode #description {
   color: whitesmoke;

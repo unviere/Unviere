@@ -180,7 +180,7 @@ body.light-mode .game-buttons-bar{
 
 
 
-body.light-mode .game-buttons-bar button{
+body.light-mode .game-buttons-bar .tablinks{
   background: transparent;
   color: black;
   
@@ -190,7 +190,11 @@ border: none;
 outline: none;
 }
 
-body.light-mode .game-buttons-bar button:hover {
+body.light-mode .game-buttons-bar .tablinks:after {
+  background-color: #1B1F3B;
+}
+
+/*body.light-mode .game-buttons-bar button:hover {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: #1B1F3B;
@@ -200,7 +204,7 @@ body.light-mode .game-buttons-bar button.active {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: #1B1F3B;
-}
+}*/
 
 body.light-mode #description {
   color: black;

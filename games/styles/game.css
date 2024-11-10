@@ -464,9 +464,10 @@ border-bottom-right-radius: 10px;
   z-index: 10;
   width: 98%;
   height: 50px;
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
 /*justify-content: space-between;*/
  padding: 2px 2%;
   background: whitesmoke;
@@ -506,19 +507,57 @@ border-bottom-right-radius: 10px;
 /*  padding: 5px 5px;*/
 border: none;
 outline: none;
+position: relative; /* Needed for positioning the pseudo-element */
+  
+  margin: 0; /* Removes margin around the anchor */
+  transition: color 0.55s ease; /* Smooth transition for text color */
+  
+  text-align: center!important; /* Centers text within each item */
+  
+  
 }
 
-.game-buttons-bar tablinks:hover {
+.game-buttons-bar button:after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: relative; /* Position it relative to the parent */
+  left: 0px; /* Align to the bottom of the parent */
+  bottom: -20px; /* Center it horizontally */
+  width: 100%; /* Width of the underline */
+  height: 5px; /* Height of the underline */
+  background-color: #1B1F3B; /* Color of the underline */
+  border-radius: 5px; /* Rounded corners */
+  transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
+  transition: transform 0.55s ease; /* Smooth transition for hover effect */
+  display: flex;
+}
+
+.game-buttons-bar button:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Scale to full width on hover */
+}
+
+
+/*.game-buttons-bar tablinks:hover {
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: #1B1F3B;
+}*/
+
+.game-buttons-bar button.active:after {
+  /*border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #1B1F3B;*/
+  content: '';
+  position: relative; /* Position it relative to the parent */
+  left: 0px; /* Align to the bottom of the parent */
+  bottom: -20px; /* Center it horizontally */
+  width: 100%; /* Width of the underline */
+  height: 5px;
+  transform: translateX(-50%) scaleX(1)!important; /* Scale to full width on hover */
+  border-radius: 5px;
+  display: flex;
 }
 
-.game-buttons-bar tablinks.active {
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: #1B1F3B;
-}
+#descB {display: flex;}
 #desc{
   /*togable element*/
   display: flex;
