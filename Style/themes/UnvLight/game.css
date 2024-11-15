@@ -186,11 +186,10 @@ body.light-mode .game-buttons-bar .tablinks{
   
   border-bottom: 2px solid transparent;
 /*  transition: all .55s ease*/
-border: none;
-outline: none;
+
 }
 
-body.light-mode .game-buttons-bar .tablinks:after {
+body.light-mode .tablinks-gb::after {
   background-color: #1B1F3B;
 }
 

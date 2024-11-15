@@ -193,7 +193,7 @@ border: none;
 outline: none;
 }
 
-body.dark-mode .game-buttons-bar .tablinks:after {
+body.dark-mode .tablinks-gb::after {
   background-color: lightcyan;
 }
 /*body.dark-mode .game-buttons-bar button:hover {

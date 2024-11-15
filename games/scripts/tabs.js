@@ -3,20 +3,25 @@ function opentab(evt, tabName) {
   var i, tabcontent, tablinks;
 
   // Get all elements with class="tabs-parallel" and hide them
-  tabcontent = document.getElementsByClassName("game-tabs");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+  tabcontent = document.querySelectorAll(".game-tabs");
+  tabcontent.forEach(tab => {
+      tab.style.display = "none"
+      console.warn(tab)
+  }) 
 
   // Get all elements with class="tablinks-parallel" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+  tablinks = document.querySelectorAll(".tablinks-gb");
+  tablinks.forEach(tabB => {
+      tabB.classList.remove("active-tab");
+      console.warn(tabB)
+  }) 
+  
+
+
 
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "flex";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.classList.add("active-tab");
 }
 
 document.addEventListener('DOMContentLoaded', function() {

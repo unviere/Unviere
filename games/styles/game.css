@@ -456,8 +456,8 @@ border-bottom-right-radius: 10px;
   font-size: 10px!important;
 }
 
-.game-buttons-bar{
-	 /*position: fixed;*/
+/**.game-buttons-bar{
+	 
   right: 0;
   top: 0;
   bottom: 0;
@@ -467,22 +467,52 @@ border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  text-align: center;
-/*justify-content: space-between;*/
- padding: 2px 2%;
+  
+/*justify-content: space-between;
+/* padding: 2px 2%;
   background: whitesmoke;
     border-radius: 5px;
     margin-bottom: 40px;
-    margin-left: 5px;
+  /*  margin-left: 5px;
     overflow-x: scroll;
     box-shadow: 1px 1px 9px gray;
+    
 }
 
 .game-buttons-bar > * {
-  flex: 1; /* Ensures that children take up equal space */
-  text-align: center; /* Centers text/content within each child */
-   min-width: 100px; /* Adjust this value as needed */
+    border: none;
+  outline: none;
+  display: flex;
+  
+  flex: 2;
+  background: transparent;
+  font-size: 30;
+  color: black;
+  
+  
+  width: auto;
+  height: auto;
+  font-weight: 600;
+  display: flex;
+  
+  
+  
+  
+/*	border-radius: 50px;
+  border-bottom: 2px solid transparent;
+/*  transition: all .55s ease
+  text-decoration: none;
+/*  padding: 5px 5px;
+
+position: relative; /* Needed for positioning the pseudo-element 
+  
+  
+  transition: color 0.55s ease; /* Smooth transition for text color 
+  
+  text-align: center!important; /* Centers text within each item 
 }
+
+
 
 /*
 .buttons-bar {
@@ -490,49 +520,28 @@ border-bottom-right-radius: 10px;
   flex-direction: row;
   align-items: center;
   background: transparent;
-}*/
+}*
 
-.game-buttons-bar button{
-  background: transparent;
-  color: black;
-  margin-left: 0px;
-  font-size: 30;
-  width: auto;
-  height: auto;
-  font-weight: 600;
-/*	border-radius: 50px;*/
-  border-bottom: 2px solid transparent;
-/*  transition: all .55s ease*/
-  text-decoration: none;
-/*  padding: 5px 5px;*/
-border: none;
-outline: none;
-position: relative; /* Needed for positioning the pseudo-element */
-  
-  margin: 0; /* Removes margin around the anchor */
-  transition: color 0.55s ease; /* Smooth transition for text color */
-  
-  text-align: center!important; /* Centers text within each item */
-  
-  
-}
 
-.game-buttons-bar button:after {
-  content: ''; /* Empty content for the pseudo-element */
-  position: relative; /* Position it relative to the parent */
-  left: 0px; /* Align to the bottom of the parent */
-  bottom: -20px; /* Center it horizontally */
-  width: 100%; /* Width of the underline */
-  height: 5px; /* Height of the underline */
-  background-color: #1B1F3B; /* Color of the underline */
-  border-radius: 5px; /* Rounded corners */
-  transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
-  transition: transform 0.55s ease; /* Smooth transition for hover effect */
+
+
+.game-buttons-bar > *:after {
+  content: ''; /* Empty content for the pseudo-element 
+  position: relative; /* Position it relative to the parentl
+  left: 0px; /* Align to the bottom of the parent 
+  bottom: 0px; /* Center it horizontally /
+  width: 100%; /* Width of the underline 
+  height: 5px; /* Height of the underline 
+  background-color: #1B1F3B; /* Color of the underline 
+  border-radius: 5px; /* Rounded corners /
+  transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling *
+  transition: transform 0.55s ease; / Smooth transition for hover effect *
   display: flex;
+  
 }
 
-.game-buttons-bar button:hover::after {
-  transform: translateX(-50%) scaleX(1); /* Scale to full width on hover */
+.game-buttons-bar > *:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Scale to full width on hover *
 }
 
 
@@ -540,24 +549,80 @@ position: relative; /* Needed for positioning the pseudo-element */
   border-bottom-width: 5px;
   border-bottom-style: solid;
   border-bottom-color: #1B1F3B;
-}*/
-
-.game-buttons-bar button.active:after {
-  /*border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: #1B1F3B;*/
-  content: '';
-  position: relative; /* Position it relative to the parent */
-  left: 0px; /* Align to the bottom of the parent */
-  bottom: -20px; /* Center it horizontally */
-  width: 100%; /* Width of the underline */
-  height: 5px;
-  transform: translateX(-50%) scaleX(1)!important; /* Scale to full width on hover */
-  border-radius: 5px;
+}*
+.active {
   display: flex;
 }
+.active:after {
 
-#descB {display: flex;}
+  /*border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #1B1F3B;*
+  content: '';
+  position: relative; /* Position it relative to the parent *
+  left: 0px; /* Align to the bottom of the parent *
+  bottom: -20px; /* Center it horizontally *
+  width: 100%; /* Width of the underline 
+  height: 5px;
+  transform: translateX(-50%) scaleX(1)!important; /* Scale to full width on hover *
+  border-radius: 5px;
+  display: flex;
+}*/
+.game-buttons-bar {
+  position: relative;
+  background: whitesmoke;
+    width: 98%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   margin-left: 5px;
+      overflow-x: scroll;
+    box-shadow: 1px 1px 9px gray;
+    border-radius: 10px;
+}
+
+.tablinks-gb {
+  position: relative!important;
+  background: transparent!important;
+  border: none!important;
+  outline: none!important;
+  display: flex; /* Flexbox container */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  flex: 1;
+  min-width: 200px;
+  max-width: 100%;
+  text-align: center!important; /* This ensures the text aligns center if wrapping occurs */
+  font-size: 20px;
+  font-weight: 600;
+  height: 100%;
+}
+
+
+
+.tablinks-gb::after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute; /* Position it relative to the parent */
+  bottom: 0; /* Align to the bottom of the parent */
+  left: 50%; /* Center it horizontally */
+  width: 100%; /* Width of the underline */
+  height: 5px; /* Height of the underline */
+  background-color: #1B1F3B; /* Color of the underline */
+  border-radius: 5px; /* Rounded corners */
+  transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
+  transition: transform 0.55s ease; /* Smooth transition for hover effect */
+}
+
+.tablinks-gb:hover::after{
+  transform: translateX(-50%) scaleX(1);
+}
+
+.active-tab::after {
+  
+  transform: translateX(-50%) scaleX(1);
+}
+
 #desc{
   /*togable element*/
   display: flex;
@@ -957,6 +1022,15 @@ border-bottom-right-radius: 10px;
   margin: 0 5 5px;
 }
 
+.tablinks-gb {
+  text-align: center!important;
+  font-size: 10px;
+  flex: 1;
+  min-width: 90px;
+  max-width: 100%;
+  
+}
+
 #upd-log{
   display: none;
   font-size: 5px!important;
@@ -966,11 +1040,7 @@ border-bottom-right-radius: 10px;
 
 #instal-button-dd {display: none;}
 
-.game-buttons-bar > * {
-  flex: 1; /* Ensures that children take up equal space */
-  text-align: center; /* Centers text/content within each child */
-   min-width: 90px; /* Adjust this value as needed */
-}
+
 #check:checked ~ .game .game-head-section .game-playbar .game-playbar-content .instal #instal-button {
   display: none;
 }
