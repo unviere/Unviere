@@ -578,7 +578,7 @@ position: relative; /* Needed for positioning the pseudo-element
   align-items: center;
    margin: 5px;
       overflow-x: scroll;
-      -webkit-overflow-scrolling: none;
+      scrollbar-width: none;
       overflow-y: hidden;
     box-shadow: 1px 1px 9px gray;
     border-radius: 10px;
