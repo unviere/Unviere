@@ -573,16 +573,17 @@ position: relative; /* Needed for positioning the pseudo-element
   background: whitesmoke;
     width: 98%;
   height: 50px;
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
-   margin-left: 5px;
+   margin: 5px;
       overflow-x: scroll;
     box-shadow: 1px 1px 9px gray;
     border-radius: 10px;
 }
 
 .tablinks-gb {
+  margin: 5px;
   position: relative!important;
   background: transparent!important;
   border: none!important;
@@ -604,22 +605,24 @@ position: relative; /* Needed for positioning the pseudo-element
 .tablinks-gb::after {
   content: ''; /* Empty content for the pseudo-element */
   position: absolute; /* Position it relative to the parent */
-  bottom: 0; /* Align to the bottom of the parent */
+  bottom: 5px; /* Align to the bottom of the parent */
   left: 50%; /* Center it horizontally */
   width: 100%; /* Width of the underline */
   height: 5px; /* Height of the underline */
-  background-color: #1B1F3B; /* Color of the underline */
+  background-color: #06c46f; /* Color of the underline */
   border-radius: 5px; /* Rounded corners */
+  opacity: 100%;
   transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
   transition: transform 0.55s ease; /* Smooth transition for hover effect */
 }
 
 .tablinks-gb:hover::after{
   transform: translateX(-50%) scaleX(1);
+  opacity: 50%;
 }
 
 .active-tab::after {
-  
+  opacity: 100%!important;
   transform: translateX(-50%) scaleX(1);
 }
 
@@ -1025,6 +1028,7 @@ border-bottom-right-radius: 10px;
 .tablinks-gb {
   text-align: center!important;
   font-size: 10px;
+  font-weight: 700;
   flex: 1;
   min-width: 90px;
   max-width: 100%;
