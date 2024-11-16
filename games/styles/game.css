@@ -573,7 +573,7 @@ position: relative; /* Needed for positioning the pseudo-element
   background: whitesmoke;
     width: 98%;
   height: 50px;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
    margin: 5px;
