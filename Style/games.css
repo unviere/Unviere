@@ -213,6 +213,133 @@ background: whitesmoke;
   white-space: normal;
 }
 
+.events-sec{display: none;}
+
+.events-container{
+  background: transparent;
+  padding: 2px;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.events-container:before,
+.events-container:after {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.events-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
+}
+
+.events-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), white);
+}
+.event-inf-scrolling{
+  display: flex;
+/*  animation: 35s slide infinite linear;*/
+  width: 100%;
+  overflow-x: auto;
+  
+}
+
+.event-inf-scrolling:hover{
+  animation-play-state: paused;
+  
+}
+
+.event-inf-scrolling a{
+  background-color: whitesmoke;
+  height: 250px;
+  width: 95%;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  
+  border-color: transparent;
+  border-width: 0px;
+  border-style: none;
+  padding: 5px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+    
+  box-shadow: 1px 1px 9px gray;
+}
+
+.event-inf-scrolling a:hover{
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+background: whitesmoke;
+  
+}
+
+.event-icon{
+  height:100%;
+  width: 50%;
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  
+}
+
+.event-list{
+  display:flex;
+  flex-direction: row;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.event-content {
+  background: pink;
+  width: 100%;
+}
+
+.event-holder{
+  background: yellow;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  overflow: hidden;
+  padding: 2px;
+  
+}
+
+.event-info {
+  background: yellow;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  overflow: hidden;
+  padding: 2px;
+  
+}
+
+.event-info-left {
+  background: orange;
+  width: 30%;
+  height: 100%;
+}
+
+.event-info-right {
+  background: orangered;
+  width: 70%;
+  height: 100%;
+}
+
 .owner {
   font-size: 17px;
     width: 240px;
