@@ -215,6 +215,7 @@ background: whitesmoke;
 
 .events-sec{display: none;}
 
+
 .events-container{
   background: transparent;
   padding: 2px;
@@ -247,7 +248,7 @@ background: whitesmoke;
 /*  animation: 35s slide infinite linear;*/
   width: 100%;
   overflow-x: auto;
-  
+  padding-left: 70px;
 }
 
 .event-inf-scrolling:hover{
@@ -256,7 +257,7 @@ background: whitesmoke;
 }
 
 .event-inf-scrolling a{
-  background-color: whitesmoke;
+  background-color: black;
   height: 250px;
   width: 95%;
   color: black;
@@ -284,24 +285,33 @@ background: whitesmoke;
 }
 
 .event-icon{
-  height:100%;
-  width: 50%;
+  height:auto;
+  width: 100%;
   position: relative;
   display: block;
   border-radius: 10px;
   
 }
 
-.event-list{
-  display:flex;
+.event-list {
+  display: flex;
   flex-direction: row;
-  white-space: nowrap;
+  white-space: nowrap; /* Use nowrap to prevent wrapping */
   padding: 10px;
+  background: hotpink;
+  max-width: 100vw; /* Limit width to the viewport */
+  position: relative !important;
+  overflow-x: auto; /* Use auto to enable scroll when needed */
+  box-sizing: border-box; /* Include padding in the element's width */
 }
 
 .event-content {
-  background: pink;
-  width: 100%;
+  display: flex;
+  position: relative;
+  background: blue;
+  padding: 5px;
+  width: 200px; /* Set a fixed width for each item */
+  flex-shrink: 0; /* Prevent the items from shrinking when space is limited */
 }
 
 .event-holder{
@@ -316,6 +326,88 @@ background: whitesmoke;
   
 }
 
+.events-scroller {
+  background: pink;
+  width: 100vw; /* Restrict to the width of the viewport or parent */
+  max-width: 100vw; /* Prevent growing beyond the viewport */
+  height: auto;
+  display: flex; /* Flexbox layout for horizontal alignment */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrollbars */
+  padding: 5px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.event-card {
+  background: red;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Prevent shrinking of cards */
+  width: calc(90%); /* Occupy 90% of the container, leaving space for the peek */
+  height: 200px;
+  padding: 5px !important;
+  margin-right: 10px; /* Add spacing between cards */
+}
+
+.event-buttons-bar {
+  position: relative;
+  
+    width: 98%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   
+      overflow-x: scroll;
+      scrollbar-width: none;
+      overflow-y: hidden;
+
+}
+
+.tablinks-event {
+  
+  position: relative!important;
+  background: transparent!important;
+  border: none!important;
+  outline: none!important;
+  display: flex; /* Flexbox container */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  flex: 1;
+ 
+  text-align: center!important; /* This ensures the text aligns center if wrapping occurs */
+  font-size: 20px;
+  font-weight: 600;
+  height: 100%;
+}
+
+
+
+.tablinks-event::after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute; /* Position it relative to the parent */
+  bottom: 5px; /* Align to the bottom of the parent */
+  left: 50%; /* Center it horizontally */
+  width: 100%; /* Width of the underline */
+  height: 5px; /* Height of the underline */
+  background-color: #06c46f; /* Color of the underline */
+  border-radius: 5px; /* Rounded corners */
+  opacity: 100%;
+  transform: translateX(-50%) scaleX(0); /* Initially hidden by scaling */
+  transition: transform 0.55s ease; /* Smooth transition for hover effect */
+}
+
+.tablinks-event:hover::after{
+  transform: translateX(-50%) scaleX(1);
+  opacity: 50%;
+}
+
+.active-tab::after {
+  opacity: 100%!important;
+  transform: translateX(-50%) scaleX(1);
+}
+
 .event-info {
   background: yellow;
   height: 100%;
@@ -323,20 +415,60 @@ background: whitesmoke;
   display: flex;
   flex-direction: column;
   align-content: center;
-  overflow: hidden;
+  
   padding: 2px;
   
 }
 
+.event-top {
+  position: relative;
+  display: flex;
+  flex-direction: row; 
+  background: blue;
+  height: 50px;
+}
+
+.event-middle {
+  position: relative;
+  display: flex;
+  flex-direction: row; 
+  height: 85%;
+}
+
+.event-bottom {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 15%;
+}
+
+.event-bottom .stats-game #stats-icon {
+  width: 2%!important;
+}
+
+.event-bottom .stats-game #stat {
+  width: 15%;
+}
+
+#date {
+  width: 100px;
+  font-size: 12px!important;
+}
+
 .event-info-left {
   background: orange;
-  width: 30%;
+  width: 25%!important;
   height: 100%;
+}
+
+.stats-event {
+  display: flex;
+  flex-direction: row;
 }
 
 .event-info-right {
   background: orangered;
-  width: 70%;
+  width: 75%!important;
   height: 100%;
 }
 
@@ -420,26 +552,40 @@ hr{
 
 
 
-	@media (max-width: 1535px){
 
+	@media (min-width: 1400px) {
+	  .event-info-left {
+	    
+	    width: 20%;
+	    height: 100%;
+	  }
+	
+	  .event-inf-scrolling a {
+	    height: 400px;
+	    width: 95%;
+	
+	  }
 	}
 
 @media (max-width: 1460px){
-	section{
-		padding: 0 12%;
-		transition: all .5s;
-		
-	}
+    section{
+        /* padding: 0 12%; */
+        transition: all .5s;
+    }
 
 }
 
-@media (max-width: 1340px){
-
-
+@media (min-width: 1111px){
+.event-icon{
+  height: 150px;
+  width: 80%;
+  position: relative;
+  display: block;
+  border-radius: 10px;
 }
 @media (max-width: 1195px){
 	section{
-		padding: 0 3%;
+		
 		transition: all .5s;
 	}
 
@@ -448,6 +594,7 @@ hr{
 }
 
 @media (max-width: 700px) {
+
   .game-jams {
     margin-top: 35px;
     padding: 10px 0;
@@ -538,6 +685,19 @@ hr{
   scrollbar-width: none;
   }
   
+  .event-icon{
+  height: 20px!important;
+  width: 100%!important;
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  
+  }
+  
+  .event-inf-scrolling{
+  
+  padding-left: 20px!important;
+}
   .owner{
     font-size: 10px;
     height: 22px;
@@ -582,9 +742,32 @@ height: 1px!important;
   max-width: 70px!important;
 }
 
+.event-bottom .stats-game > :last-child {
+
+  font-size: 5px!important;
+  width: 50px!important;
+}
+  .event-card {
+    height: 250px;
+  }
+  
+  .tablinks-event {
+  text-align: center!important;
+  font-size: 10px;
+  font-weight: 700;
+  flex: 1;
+  
+  
+}
+
 }
 
 @media (max-width: 680px){
-
+  .event-bottom .stats-game #stat {
+  width: 15%;
 }
-		
+  #date {
+  font-size: 5px!important;
+  width: 50px!important;
+}
+}
