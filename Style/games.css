@@ -285,7 +285,7 @@ background: whitesmoke;
 }
 
 .event-icon{
-  height:auto;
+  height:100px;
   width: 100%;
   position: relative;
   display: block;
@@ -293,6 +293,23 @@ background: whitesmoke;
   
 }
 
+.event-info-left .event-title {
+  height: 40px!important;
+  font-size: 20px!important;
+  overflow: hidden!important;
+ 
+  -webkit-box-orient: vertical!important;
+  
+  width: 92%!important;
+  max-width: 100%!important;
+}
+
+.event-info-left .owner {
+  font-size: 15px!important;
+  max-width: 90%!important;
+  width: 90%;
+  min-width: 85%
+}
 .event-list {
   display: flex;
   flex-direction: row;
@@ -583,6 +600,7 @@ hr{
   display: block;
   border-radius: 10px;
 }
+}
 @media (max-width: 1195px){
 	section{
 		
@@ -686,7 +704,7 @@ hr{
   }
   
   .event-icon{
-  height: 20px!important;
+  height: 50px!important;
   width: 100%!important;
   position: relative;
   display: block;
@@ -747,16 +765,36 @@ height: 1px!important;
   font-size: 5px!important;
   width: 50px!important;
 }
+
+.event-top {
+  height: 30px;
+}
+
+.event-buttons-bar{
+  height: 100%;
+}
   .event-card {
-    height: 250px;
+    height: 150px;
   }
   
   .tablinks-event {
+    height: 30px;
   text-align: center!important;
   font-size: 10px;
   font-weight: 700;
   flex: 1;
   
+  
+}
+
+.event-info-left .event-title {
+  
+  font-size: 10px!important;
+  
+}
+
+.event-info-left .owner {
+  font-size: 10px!important;
   
 }
 
