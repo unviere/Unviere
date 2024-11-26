@@ -119,6 +119,37 @@ body {
 #disabled {
   display: none!important;
 }
+
+.tag {
+  border-radius: 2px;
+  font-size: 5px!important;
+  text-align: center!important;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-black{
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 2px!important;
+}
+
+.green-l {
+  background: greenyellow;
+  color: black;
+}
+
+.red {
+  background: red!important;
+  color: whitesmoke!important;
+}
+
+.white-s {
+  background: whitesmoke;
+  color: black;
+}
 @media (max-width: 700px){
   body {
   margin-top: 50px;
