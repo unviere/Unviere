@@ -141,9 +141,19 @@ body {
   color: black;
 }
 
+.orange {
+  background: orange;
+  color: black;
+}
+
 .red {
   background: red!important;
   color: whitesmoke!important;
+}
+
+.yellow {
+  background: yellow;
+  color: black;
 }
 
 .white-s {

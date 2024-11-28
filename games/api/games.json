@@ -120,5 +120,16 @@
     "id": "107169670237182",
     "genres": ["adventure", "fighting", "unviere", "selected"]
   }
-]
+],
+
+ "events": [
+  {
+    "universeId": "",
+    "name": "/event?start=01-12-2024&end=07-01-2025",
+    "id": "124946394662414",
+    "genres": ["event"],
+    "start": "26-11-2024",
+    "end": "15-01-2025"
+  }
+  ]
 }
