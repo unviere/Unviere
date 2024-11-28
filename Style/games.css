@@ -213,7 +213,7 @@ background: whitesmoke;
   white-space: normal;
 }
 
-.events-sec{display: none;}
+.events-sec{display: flex;}
 
 
 .events-container{
@@ -315,7 +315,7 @@ background: whitesmoke;
   flex-direction: row;
   white-space: nowrap; /* Use nowrap to prevent wrapping */
   padding: 10px;
-  background: hotpink;
+  
   max-width: 100vw; /* Limit width to the viewport */
   position: relative !important;
   overflow-x: auto; /* Use auto to enable scroll when needed */
@@ -325,14 +325,14 @@ background: whitesmoke;
 .event-content {
   display: flex;
   position: relative;
-  background: blue;
+  
   padding: 5px;
   width: 200px; /* Set a fixed width for each item */
   flex-shrink: 0; /* Prevent the items from shrinking when space is limited */
 }
 
 .event-holder{
-  background: yellow;
+  
   height: 100%;
   width: 100%;
   display: flex;
@@ -344,7 +344,7 @@ background: whitesmoke;
 }
 
 .events-scroller {
-  background: pink;
+  
   width: 100vw; /* Restrict to the width of the viewport or parent */
   max-width: 100vw; /* Prevent growing beyond the viewport */
   height: auto;
@@ -357,7 +357,7 @@ background: whitesmoke;
 }
 
 .event-card {
-  background: red;
+  background: whitesmoke;
   display: flex;
   flex-direction: column;
   flex-shrink: 0; /* Prevent shrinking of cards */
@@ -365,6 +365,8 @@ background: whitesmoke;
   height: 200px;
   padding: 5px !important;
   margin-right: 10px; /* Add spacing between cards */
+  border-radius: 10px;
+  box-shadow: 1px 1px 9px gray;
 }
 
 .event-buttons-bar {
@@ -420,13 +422,13 @@ background: whitesmoke;
   opacity: 50%;
 }
 
-.active-tab::after {
+.active-tab-ev::after {
   opacity: 100%!important;
   transform: translateX(-50%) scaleX(1);
 }
 
 .event-info {
-  background: yellow;
+  
   height: 100%;
   width: 100%;
   display: flex;
@@ -441,7 +443,7 @@ background: whitesmoke;
   position: relative;
   display: flex;
   flex-direction: row; 
-  background: blue;
+  
   height: 50px;
 }
 
@@ -473,7 +475,7 @@ background: whitesmoke;
 }
 
 .event-info-left {
-  background: orange;
+  
   width: 25%!important;
   height: 100%;
 }
@@ -484,51 +486,56 @@ background: whitesmoke;
 }
 
 .event-info-right {
-  background: orangered;
+  
   width: 75%!important;
   height: 100%;
 }
 
 .event-tabs-content {
-  background: papayawhip;
+  
   width: 100%;
   height: 100%;
   max-height: 110px;
-  overflow: scroll;
+  overflow: none;
 }
 
 #desc-ev {
-  background: yellow;
+  
   display: none;
-  width: 100%!important;
-  height: auto;
+  flex-direction: column;
+  
+  width: 100% !important;
+  height: 100%!important; /* Ensure the height is properly set (or use a fixed height like '500px') */
   position: relative;
+  
 }
 
-#desc-ev p {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start; /* Use 'flex-start' instead of 'left' for alignment */
+#desc-ev div {
+  display: block;
+  width: 100% !important;
+  height: 100%!important;
+}
+
+#desc-ev div p {
+  display: block; /* Change from flex to block so the paragraphs behave normally */
   width: 100%;
-  white-space: pre-wrap;
-  word-wrap: break-word; /* This ensures long words break */
-  word-break: break-word; /* Fallback to ensure long words break */
+  white-space: pre-wrap; /* Ensure text wraps and long words break */
+  word-wrap: break-word; /* Break long words */
+  word-break: break-word; /* Fallback for breaking long words */
   overflow-wrap: break-word; /* Fallback for older browsers */
-  overflow: hidden; /* Prevent content from overflowing */
-  text-overflow: ellipsis; /* Show ellipsis (...) if content overflows */
-  flex-wrap: wrap; /* Allow wrapping when needed */
+  overflow: hidden; /* Prevent any overflowing content */
+  text-overflow: ellipsis; /* Show ellipsis when content overflows (useful if there's a fixed width) */
 }
-
 #info {
-  background: yellowgreen;
-  display: flex!important;
+  
+  display: none!important;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
 
 .tabs-info-top {
-  background: pink;
+  
   width: 100%!important;
   height: 80%!important;
   overflow-y: scroll;
@@ -551,7 +558,7 @@ background: whitesmoke;
 .tabs-info-bottom {
   display: flex;
   width: 100%!important;
-  background: hotpink;
+  
   height: 20%!important;
 }
 
@@ -572,7 +579,7 @@ background: whitesmoke;
 }
 
 .tabs-info-bottom i {
-  background: yellow;
+  
   color: black;
   border-radius: 2px;
   font-size: 20px!important;
@@ -590,26 +597,70 @@ background: whitesmoke;
 
 
 #reward {
-  background: greenyellow;
-  display: none;
+  
+  display: flex;
+  flex-direction: column;
+  width: 100%!important;
+  height: 100%!important;
+  overflow: hidden!important;
 }
 
-.tabs-reward-top {
-  background: blue;
+/*.tabs-reward-top {
+  
+}*/
+.tabs-reward-top p {
+  max-height: 20px;
 }
 
 .tabs-reward-bottom {
-  background: skyblue;
+  
+  display: flex;
+  flex-direction: row;
+  height: 80%;
 }
 
 .tabs-reward-left {
-  background: green;
+  
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.reward-img{
+  height: 80%!important;
+  width: 99%!important;
+  max-width: 100%!important;
+  max-height: 70%!important;
+}
+
+.tabs-reward-left p {
+  font-size: 9px;
+  white-space: pre-wrap;
+  word-wrap: break-word; 
 }
 
 .tabs-reward-right {
-  background: goldenrod;
+  
+  display: block;
+  width: 70%;
+  height: 100%;
+  overflow-y: auto;
 }
 
+.tabs-reward-right p {
+display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Use 'flex-start' instead of 'left' for alignment */
+  width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word; /* This ensures long words break */
+  word-break: break-word; /* Fallback to ensure long words break */
+  overflow-wrap: break-word; /* Fallback for older browsers */
+  overflow: hidden; /* Prevent content from overflowing */
+  text-overflow: ellipsis; /* Show ellipsis (...) if content overflows */
+  flex-wrap: wrap; /* Allow wrapping when needed */
+
+}
 .owner {
   font-size: 17px;
     width: 240px;
@@ -920,7 +971,7 @@ height: 1px!important;
 }
 
 .event-tabs-content {
-  background: papayawhip;
+  
   width: 100%;
   height: 100%;
   max-height: 90px;

@@ -56,6 +56,10 @@
       "universeId": "1738552509"
     },
     
+    "?id=124946394662414/Christmas-obby/event?start=01-12-2024&end=07-01-2025": {
+      "universeId": "1738552509"
+    },
+    
     "?gameID=5032972341":{
       "universeId": "1738552509"
     }
@@ -124,8 +128,8 @@
 
  "events": [
   {
-    "universeId": "6663022834",
-    "name": "/event?start=01-12-2024&end=07-01-2025",
+    "universeId": "6519358648",
+    "name": "Christmas-obby/event?start=01-12-2024&end=07-01-2025",
     "id": "124946394662414",
     "genres": ["event"],
     "start": "26-11-2024",

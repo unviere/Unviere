@@ -103,7 +103,7 @@
   <p class="sec-desc"> curent events will show here</p>
   
   <div class="events-scroller">
-    <a class="event-card">
+    <template id="event-temp"><a class="event-card" id="events-card">
    
       <div class="event-middle">
         <div class="event-info-left">
@@ -116,7 +116,7 @@
      <div class="event-info-right">
           <div class="event-top">
           <div class="event-buttons-bar" id="event-buttons-bar-id">
-      <button class="tablinks-event" onclick="opentab(event, 'desc')" id="descB">Description</button>
+      <button class="tablinks-event" onclick="opentab(event, 'desc-ev')" id="descB">Description</button>
       <button class="tablinks-event" onclick="opentab(event, 'info')" id="infoB">more info</button>
   <button class="tablinks-event" onclick="opentab(event, 'reward')" id="rewardB">reward</button>
    
@@ -125,13 +125,15 @@
       </div>
       
       <div class="event-tabs-content">
-        <div id="desc-ev">
+        <div class="event-tabs-c" id="desc-ev">
+          <div>
           <p> in diezelfde periode van de tijdmachine in the future of niet meer dan een beetje bij beetje naar beneden naar t rood do he do is fill us to he week
           <br>
           te to te week uw to us to it to us to ye to ye to cl is een do is well us to us to us to it to our do te to do us do to top it up te to two te l he to us to je to he to ye to ye to do is up to do to RL do do to do do to to do so to do go functions functions diff discuss egg egg stuff too stuff still full reel diff SNCC cool will will egg will add 🙈 still recommend soon still RCC small diff will</p>
         </div>
+        </div>
         
-        <div id="info">
+        <div class="event-tabs-c" id="info">
           <div class="tabs-info-top">
            <p>focust tijdrit endroit theekp to us to it so it to us so it to it to us to us to
            <br>
@@ -168,20 +170,24 @@
             <p id="utc-ev">
               UTC + 10
             </p>
-            <i class="ri-reset-left-line reload-game" title="event is repeating each year" id="repeat-ev"></i>
+            <i class="ri-reset-left-line reload-game" title="event is repeating each year" id="repeat-ev" style="display:none;"></i>
           </div>
         </div>
         
-          <div id="reward">
+          <div class="event-tabs-c" id="reward">
           <div class="tabs-reward-top">
-            
+            <p>title here dual did do HQ do it so</p>
           </div>
           <div class="tabs-reward-bottom">
             <div class="tabs-reward-left">
-              
+              <img class="reward-img" src="../Img/universe.png" alt="placeholders event reward example will be shown here">
+              <p>type:afewcharacters</p>
             </div>
             <div class="tabs-reward-right">
               
+              <p>Gmail for to HD DJ it so he egg or DJ HD so it's so he do us DJ he DJ is to je DJ
+              <br>
+              je een do en do en go do to do so do to do en do en zo een so en do en do to if an vs do en zo is een zo een do is an CA all us do is</p>
             </div>
             
           </div>
@@ -210,8 +216,8 @@
       
      </div>
     </a>
-       <a class="event-card"></a>
-          <a class="event-card"></a>
+    </template>
+       
   </div>
   
           
@@ -377,6 +383,8 @@
   <script defer type="module" src ="Scripts/modules/games/adventure.js"></script>
   
    <script defer type="module" src ="Scripts/modules/games/events.js"></script>
+   
+   <script src="games/scripts/events/tabsev.js"></script>
         
                <script src = "Scripts/settings/theme.js"></script>
                
