@@ -146,56 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
               //  var currentDate = new Date();
 
               // Get start and end dates from the data
-              const currentDate = new Date();
-              var startDDate = convertToDate(game.start);
-              var endDDate = convertToDate(game.end);
-              var startDate = convertToDate(data.info.StartDate);
-              var endDate = convertToDate(data.info.EndDate);
 
-              console.log("Current Date:", currentDate);
-              console.log("ev Start Date:", startDate);
-              console.log("ev End Date:", endDate);
-
-              // Calculate 5 days before startDate
-              const preStartDate = new Date(startDate);
-              preStartDate.setDate(startDate.getDate() - 5);
-
-              const preEndDate = new Date(startDate);
-              preEndDate.setDate(startDate.getDate() - 5);
-
-              // Assuming gameClone is already defined elsewhere in your code
-              if (currentDate >= startDate && currentDate <= endDate) {
-
-                gameClone.querySelector('#running').style.display = "flex";
-
-              } else if (currentDate >= preStartDate && currentDate < startDate) {
-
-                gameClone.querySelector('#soon').style.display = "flex";
-
-              } else if (currentDate >= preEndDate && currentDate < endDate) {
-
-                gameClone.querySelector('#ends-soon').style.display = "flex";
-
-              } else if (currentDate >= endDate) {
-
-                gameClone.querySelector('#last').style.display = "flex";
-
-              } else {
-
-                gameClone.querySelector('#running').style.display = "none";
-                gameClone.querySelector('#soon').style.display = "none";
-                gameClone.querySelector('#ends-soon').style.display = "none";
-                gameClone.querySelector('#last').style.display = "none";
-              }
-
-              //reward tag
-              if (data.info.Reward.Enabled == true) {
-                gameClone.querySelector('#reward-on').style.display = "flex";
-                
-              } else {
-                gameClone.querySelector('#reward-on').style.display = "none";
-                
-              }
 
               //datas
               gameClone.querySelector('#start-date-ev').textContent = `from: ${data.info.StartDate} ${data.info.StartTime}`
@@ -204,24 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
               gameClone.querySelector('#utc-ev').textContent = `UTC ${data.info.TimeZone} ${data.info.UTC}`
 
-              //repeating
-              if (data.info.repeating == true) {
-                gameClone.querySelector('#repeat-ev').style.display = "flex"
-              } else {
-                gameClone.querySelector('#repeat-ev').style.display = "none"
-              }
+
 
               //event description 
               gameClone.querySelector('.tabs-info-top').querySelector('p').textContent = data.Description
 
               //Reward
-              if (data.info.Reward.Enabled == true) {
-                gameClone.querySelector('#rewardB').style.display = "block";
 
-              } else {
-                gameClone.querySelector('#rewardB').style.display = "none";
-
-              }
 
               gameClone.querySelector('.reward-img').src = data.info.Reward.Icon;
 
@@ -245,20 +185,82 @@ document.addEventListener('DOMContentLoaded', () => {
               errorMessage.style.color = "red"
               gameContainer.appendChild(errorMessage);
             });
-          idd += 1
-          gameClone.id = `event${idd}`
+       
           gameContainer.appendChild(gameClone);
 
+          const currentDate = new Date();
+          var startDDate = convertToDate(game.start);
+          var endDDate = convertToDate(game.end);
+          var startDate = convertToDate(data.info.StartDate);
+          var endDate = convertToDate(data.info.EndDate);
+
+          console.log("hi ", gameClone)
+          // Calculate 5 days before startDate
+          const preStartDate = new Date(startDate);
+          preStartDate.setDate(startDate.getDate() - 5);
+
+          const preEndDate = new Date(startDate);
+          preEndDate.setDate(startDate.getDate() - 5);
+
+          // Assuming gameClone is already defined elsewhere in your code
+
+          //repeating
+          if (data.info.repeating == true) {
+            gameClone.querySelector('#repeat-ev').style.display = "flex"
+          } else {
+            gameClone.querySelector('#repeat-ev').style.display = "none"
+          }
+
+          if (data.info.Reward.Enabled == true) {
+            gameClone.querySelector('#rewardB').style.display = "block";
+
+          } else {
+            gameClone.querySelector('#rewardB').style.display = "none";
+
+          }
+          if (currentDate >= startDate && currentDate <= endDate) {
+            console.log("runn")
+            gameClone.querySelector('#running').style.display = "flex";
+            console.log(gameClone)
+          } else if (currentDate >= preStartDate && currentDate < startDate) {
+            console.log("soon")
+            console.log(gameClone)
+            gameClone.querySelector('#soon').style.display = "flex";
+
+          } else if (currentDate >= preEndDate && currentDate < endDate) {
+
+            gameClone.querySelector('#ends-soon').style.display = "flex";
+
+          } else if (currentDate >= endDate) {
+
+            gameClone.querySelector('#last').style.display = "flex";
+
+          } else {
+
+            gameClone.querySelector('#running').style.display = "none";
+            gameClone.querySelector('#soon').style.display = "none";
+            gameClone.querySelector('#ends-soon').style.display = "none";
+            gameClone.querySelector('#last').style.display = "none";
+          }
+
+          //reward tag
+          if (data.info.Reward.Enabled == true) {
+            gameClone.querySelector('#reward-on').style.display = "flex";
+
+          } else {
+            gameClone.querySelector('#reward-on').style.display = "none";
+
+          }
           if (currentDate >= startDDate && currentDate <= endDDate) {
             console.log("running")
 
 
-            document.querySelector(`#event${idd}`).style.display = "flex";
+            gameClone.style.display = "flex";
 
           } else if (currentDate < startDDate) {
-            document.querySelector(`#event${idd}`).style.display = "none";
+            gameClone.style.display = "none";
           } else {
-            document.querySelector(`#event${idd}`).style.display = "none";
+            gameClone.style.display = "none";
           }
         });
       })
