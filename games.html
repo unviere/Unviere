@@ -103,7 +103,7 @@
   <p class="sec-desc"> curent events will show here</p>
   
   <div class="events-scroller">
-    <template id="event-temp"><div class="event-card" id="events-card">
+    <div class="event-card" id="co-card">
    
       <div class="event-middle">
         <div class="event-info-left">
@@ -116,9 +116,9 @@
      <div class="event-info-right">
           <div class="event-top">
           <div class="event-buttons-bar" id="event-buttons-bar-id">
-      <button class="tablinks-event" onclick="opentab(event, 'desc-ev')" id="descB">Description</button>
-      <button class="tablinks-event" onclick="opentab(event, 'info')" id="infoB">more info</button>
-  <button class="tablinks-event" onclick="opentab(event, 'reward')" id="rewardB">reward</button>
+      <button class="tablinks-event" onclick="opentab(event, '#desc-ev')" id="descB">Description</button>
+      <button class="tablinks-event" onclick="opentab(event, '#info')" id="infoB">more info</button>
+  <button class="tablinks-event" onclick="opentab(event, '#reward')" id="rewardB">reward</button>
    
       </div>
 
@@ -127,17 +127,32 @@
       <div class="event-tabs-content">
         <div class="event-tabs-c" id="desc-ev">
           <div>
-          <p> in diezelfde periode van de tijdmachine in the future of niet meer dan een beetje bij beetje naar beneden naar t rood do he do is fill us to he week
-          <br>
-          te to te week uw to us to it to us to ye to ye to cl is een do is well us to us to us to it to our do te to do us do to top it up te to two te l he to us to je to he to ye to ye to do is up to do to RL do do to do do to to do so to do go functions functions diff discuss egg egg stuff too stuff still full reel diff SNCC cool will will egg will add 🙈 still recommend soon still RCC small diff will</p>
+          <p> </p>
         </div>
+        </div>
+        
+        
+        
+          <div class="event-tabs-c" id="reward">
+          <div class="tabs-reward-top">
+            <p>decoration for parallelized engineers</p>
+          </div>
+          <div class="tabs-reward-bottom">
+            <div class="tabs-reward-left">
+              <img class="reward-img" src="../Img/universe.png" alt="placeholders event reward example will be shown here">
+              <p>type: decoration</p>
+            </div>
+            <div class="tabs-reward-right">
+              
+              <p>you get each year for amount of coins a decoration for paralleized from 3 badges you get one random</p>
+            </div>
+            
+          </div>
         </div>
         
         <div class="event-tabs-c" id="info">
           <div class="tabs-info-top">
-           <p>focust tijdrit endroit theekp to us to it so it to us so it to it to us to us to
-           <br>
-           url to JD to us do us full if to go te to te to it do it so it to our full ye to if to it to us to ye en to do te week to go to to to to us to HDD do HDD go to us to if do if go to go to HDD to go to</p>
+           <p>event christmass obby as running each year this year with new UI and a double jump and roll ability.</p>
           </div>
           <div class="tabs-info-bottom">
              <div class="tag orange" id="ends-soon" style="display:none;">
@@ -150,46 +165,27 @@
              <div class="tag green-l" id="running" style="display:none;">
                running 
              </div>
-              <div class="tag yellow" id="soon" style="display:none;">
+              <div class="tag yellow" id="soon" style="display:flex;">
                soon
              </div>
-            <div class="tag white-s border-black" id="reward-on" style="display:none;">
+            <div class="tag white-s border-black" id="reward-on" style="display:flex;">
               reward included
             </div>
              <div class="tag white-s border-black" id="reward-off" style="display:none;">
             no reward
             </div>
             <p id="start-date-ev">
-              from: 11-20-2022 12-50
+              from: 01-12-2024 00:00
             </p>
            <hr> 
              <p id="end-date-ev">
-              to: 11-20-2022 12-50
+              to: 15-01-2025 00:00
             </p>
              <hr>
             <p id="utc-ev">
-              UTC + 10
+              UTC + 1
             </p>
-            <i class="ri-reset-left-line reload-game" title="event is repeating each year" id="repeat-ev" style="display:none;"></i>
-          </div>
-        </div>
-        
-          <div class="event-tabs-c" id="reward">
-          <div class="tabs-reward-top">
-            <p>title here dual did do HQ do it so</p>
-          </div>
-          <div class="tabs-reward-bottom">
-            <div class="tabs-reward-left">
-              <img class="reward-img" src="../Img/universe.png" alt="placeholders event reward example will be shown here">
-              <p>type:afewcharacters</p>
-            </div>
-            <div class="tabs-reward-right">
-              
-              <p>Gmail for to HD DJ it so he egg or DJ HD so it's so he do us DJ he DJ is to je DJ
-              <br>
-              je een do en do en go do to do so do to do en do en zo een so en do en do to if an vs do en zo is een zo een do is an CA all us do is</p>
-            </div>
-            
+            <i class="ri-reset-left-line reload-game" title="event is repeating each year" id="repeat-ev" style="display:flex;"></i>
           </div>
         </div>
       </div>
@@ -209,15 +205,15 @@
         <h1 class="likes" id="stat"> 100k</h1>
           <br>
           <i class="ri-calendar-event-fill" id="stats-icon"></i>
-          <h1 class="info-gj" id="date">11-10-2024/12-16-2025</h1>
+          <h1 class="info-gj" id="date">01-12-2024/15-01-2025</h1>
           <br>
-          <a class="more-info" href="">go to event page</a>
+          <a class="more-info" href=""> event page</a>
           
       </div>
       
      </div>
     </div>
-    </template>
+    
        
   </div>
   
@@ -383,9 +379,9 @@
  
   <script defer type="module" src ="Scripts/modules/games/adventure.js"></script>
   
-   <script defer type="module" src ="Scripts/modules/games/events.js"></script>
+   <script defer type="module" src ="Scripts/modules/games/events/co.js"></script>
    
-   <script src="games/scripts/events/tabsev.js"></script>
+   <script src="Scripts/modules/games/events/coTabs.js"></script>
         
                <script src = "Scripts/settings/theme.js"></script>
                

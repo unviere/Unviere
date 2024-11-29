@@ -1,154 +1,152 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hostName = window.location.origin;
-  console.log(hostName);
-
-  function GetHostPath(path) {
-    if (window.location.hostname === 'localhost') {
-      // Code for localhost
-      // console.log("Running on localhost");
-      return hostName + '/' + path + '.html'
-  
-    } else {
-      // Code for production or other environments
-      //console.log("Running on production or another domain");
-      return hostName + '/Unviere/' + path
-    }
-  }
-
   const gameTemplate = document.querySelector('#event-temp');
   const gameContainer = document.querySelector('.events-scroller');
-  const targetGenres = ['event'];
 
-  // Fetching the main games JSON
+  // Helper function to build the path to a page based on environment
+  function GetHostPath(path) {
+    return window.location.hostname === 'localhost'
+      ? `${hostName}/${path}.html`
+      : `${hostName}/Unviere/${path}`;
+  }
+
+  // Fetch game data
   fetch('https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/games.json')
     .then(response => response.json())
     .then(gamesData => {
-      if (!gamesData.events) throw new Error("No events found.");
-      fetchWithDelay(gamesData.events);
+      console.log("Games data fetched:", gamesData); // Debugging output
+      if (gamesData.events) {
+        gamesData.events.forEach(fetchAndDisplayGame);
+      } else {
+        console.log('No events found in game data.');
+      }
     })
-    .catch(error => {
-      console.error('Error fetching games data:', error);
-      displayError('Error loading events. Please try again later.');
-    });
+    .catch(() => displayError('Failed to load game data.'));
 
-  // Fetch and display game data with a delay
-  async function fetchWithDelay(events) {
-    for (const event of events) {
-      await fetchAndDisplayGame(event);
-      await delay(200); // 200ms delay between requests
-    }
-  }
-
-  // Fetch and display game details
-  async function fetchAndDisplayGame(game) {
+  // Function to fetch and display a game
+  function fetchAndDisplayGame(game) {
+    console.log(game)
     const apiUrl = `https://games.roproxy.com/v1/games?universeIds=${game.universeId}`;
     const infoUrl = `https://raw.githubusercontent.com/unviere/Unviereapis/refs/heads/main/Events/eventInfo${game.id}.json`;
-    const imgUrl = `https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}.png`;
 
-    try {
-      const [gameApiResponse, infoData] = await Promise.all([
-        fetch(apiUrl).then(res => res.json()),
-        fetch(infoUrl).then(res => res.json())
-      ]);
+    console.log(`Fetching data for game: ${game.name}`); // Debugging output
 
-      if (!gameApiResponse.data || !Array.isArray(gameApiResponse.data) || !infoData.info) {
-        throw new Error("Invalid API data format");
-      }
+    // Fetch both game data and event info data concurrently
+    Promise.all([fetch(apiUrl).then(res => res.json()), fetch(infoUrl).then(res => res.json())])
+      .then(([robloxData, eventData]) => {
+        console.log("Roblox data:", robloxData); // Debugging output
+        console.log("Event data:", eventData); // Debugging output
 
-      const gameData = gameApiResponse.data[0];
-      const gameClone = document.importNode(gameTemplate.content, true);
-      const currentDate = new Date();
-      const startDate = convertToDate(infoData.info.StartDate);
-      const endDate = convertToDate(infoData.info.EndDate);
+        if (!robloxData || !robloxData.data || !robloxData.data[0]) {
+          console.log('No valid Roblox game data found.');
+          return;
+        }
 
-      setGameStatus(gameClone, currentDate, startDate, endDate);
+        const gameData = robloxData.data[0];
+        const gameClone = document.importNode(gameTemplate.content, true);
 
-      // Populate game details
-      gameClone.querySelector('.event-title').textContent = gameData.name || 'No title available';
-      gameClone.querySelector('#desc-ev p').textContent = gameData.description || 'No description available';
-      gameClone.querySelector('.active').textContent = formatNumber(gameData.playing);
-      gameClone.querySelector('.owner').textContent = `by: ${gameData.creator.name || 'N/A'}`;
-      gameClone.querySelector('.likes').textContent = formatNumber(gameData.likes);
-      gameClone.querySelector('.visits').textContent = formatNumber(gameData.visits);
-      gameClone.querySelector(".event-card").href = `${GetHostPath('games/game')}?id=${game.id}/${game.name}`;
-      gameClone.querySelector('.event-icon').src = imgUrl;
+        // Event details
+        gameClone.querySelector('.event-title').textContent = gameData.sourceName || 'No title available';
+        gameClone.querySelector('#desc-ev div p').textContent = gameData.sourceDescription || 'No description available';
+        gameClone.querySelector('.active').textContent = ` ${formatNumber(gameData.playing || 0)}`;
+        gameClone.querySelector('.owner').textContent = `by: ${gameData.creator?.name || 'N/A'}`;
+        gameClone.querySelector('.likes').textContent = `${formatNumber(gameData.likes || 0)}`;
+        gameClone.querySelector('.visits').textContent = ` ${formatNumber(gameData.visits || 0)}`;
+        gameClone.querySelector('.more-info').href = `${GetHostPath('games/game')}?id=${game.id}/${game.name}`;
+        gameClone.querySelector('.event-icon').src = `https://unviere.github.io/Unviere/games/api/thumbs/thumbnail${game.universeId}.png`;
 
-      // Populate event information
-      gameClone.querySelector('#start-date-ev').textContent = `from: ${infoData.info.StartDate} ${infoData.info.StartTime}`;
-      gameClone.querySelector('#end-date-ev').textContent = `to: ${infoData.info.EndDate} ${infoData.info.EndTime}`;
-      gameClone.querySelector('#utc-ev').textContent = `UTC ${infoData.info.TimeZone} ${infoData.info.UTC}`;
+        // Event Status Handling
+        const currentDate = new Date();
+        const startDate = new Date(eventData.info.StartDate);
+        const endDate = new Date(eventData.info.EndDate);
+        const gameStartDate = new Date(game.start);  // Assuming this is from the game API
+        console.log("game: ", game.start)
+        const gameEndDate = new Date(game.end);      // Assuming this is from the game API
 
-      // Show or hide reward tag
-      if (infoData.info.Reward.Enabled) {
-        gameClone.querySelector('#reward-on').style.display = "flex";
-      } else {
-        gameClone.querySelector('#reward-off').style.display = "flex";
-      }
+        console.log("Current Date:", currentDate); // Debugging output
+        console.log("Event Start Date:", startDate, "Event End Date:", endDate); // Debugging output
+        console.log("Game Start Date:", gameStartDate, "Game End Date:", gameEndDate); // Debugging output
 
-      // Event description and reward details
-      gameClone.querySelector('.tabs-info-top p').textContent = infoData.Description || 'No event description available';
-      if (infoData.info.Reward.Enabled) {
-        gameClone.querySelector('#rewardB').style.display = "block";
-        gameClone.querySelector('.reward-img').src = infoData.info.Reward.Icon;
-        gameClone.querySelector('.reward-img').alt = infoData.info.Reward.IconAlt;
-        gameClone.querySelector('.tabs-reward-top p').textContent = infoData.info.Reward.Title;
-      }
+        // Only display the event if both event and game are within their respective active periods
+        if (shouldDisplayEvent(currentDate, startDate, endDate, gameStartDate, gameEndDate)) {
+          console.log('Displaying event:', gameData.sourceName); // Debugging output
+          setEventStatus(gameClone, getStatus(currentDate, startDate, endDate));
+          populateEventDetails(gameClone, eventData);
+          gameContainer.appendChild(gameClone);
+        } else {
+          console.log('Event is not within the active date range.');
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching game or event data:', error);
+        displayError('Failed to load specific game details.');
+      });
+  }
 
-      gameContainer.appendChild(gameClone);
-    } catch (error) {
-      console.error('Error fetching or displaying game data:', error);
-      displayError('Error loading game data. Please try again later.');
+  // Helper function to determine if the event should be displayed
+  function shouldDisplayEvent(currentDate, eventStartDate, eventEndDate, gameStartDate, gameEndDate) {
+    // Check if the current date is within both the event and game date ranges
+    return currentDate >= eventStartDate && currentDate <= eventEndDate && 
+           currentDate >= gameStartDate && currentDate <= gameEndDate;
+  }
+
+  // Function to get the status of the event (running, soon, ends soon, or last)
+  function getStatus(current, start, end) {
+    if (current >= start && current <= end) return 'running';
+    if (current < start) return 'soon';
+    if (current > end) return 'last';
+    return '';
+  }
+
+  // Function to set the event status visibility
+  function setEventStatus(clone, status) {
+    clone.querySelector('#running').style.display = 'none';
+    clone.querySelector('#soon').style.display = 'none';
+    clone.querySelector('#ends-soon').style.display = 'none';
+    clone.querySelector('#last').style.display = 'none';
+
+    if (status === 'running') {
+      clone.querySelector('#running').style.display = 'flex';
+    } else if (status === 'soon') {
+      clone.querySelector('#soon').style.display = 'flex';
+    } else if (status === 'ends-soon') {
+      clone.querySelector('#ends-soon').style.display = 'flex';
+    } else if (status === 'last') {
+      clone.querySelector('#last').style.display = 'flex';
     }
   }
 
-  // Set game status based on current date
-  function setGameStatus(gameClone, currentDate, startDate, endDate) {
-    const fiveDaysBeforeStart = new Date(startDate);
-    fiveDaysBeforeStart.setDate(startDate.getDate() - 5);
-    const fiveDaysBeforeEnd = new Date(endDate);
-    fiveDaysBeforeEnd.setDate(endDate.getDate() - 5);
+  // Function to populate event details
+  function populateEventDetails(clone, eventData) {
+    clone.querySelector('.tabs-info-top p').textContent = eventData.Description || 'No description available';
+    clone.querySelector('#start-date-ev').textContent = `from: ${eventData.info.StartDate} ${eventData.info.StartTime}`;
+    clone.querySelector('#end-date-ev').textContent = `to: ${eventData.info.EndDate} ${eventData.info.EndTime}`;
+    clone.querySelector('#utc-ev').textContent = `UTC ${eventData.info.TimeZone} ${eventData.info.UTC}`;
+    clone.querySelector('.reward-img').src = eventData.info.Reward.Icon;
+    clone.querySelector('.reward-img').alt = eventData.info.Reward.IconAlt;
+    clone.querySelector('.tabs-reward-top p').textContent = eventData.info.Reward.Title;
+    clone.querySelector('.tabs-reward-left p').textContent = eventData.info.Reward.Type;
+    clone.querySelector('.tabs-reward-right p').textContent = eventData.info.Reward.Description;
+  }
 
-    if (currentDate >= startDate && currentDate <= endDate) {
-      gameClone.querySelector('#running').style.display = "flex";
-    } else if (currentDate >= fiveDaysBeforeStart && currentDate < startDate) {
-      gameClone.querySelector('#soon').style.display = "flex";
-    } else if (currentDate >= fiveDaysBeforeEnd && currentDate < endDate) {
-      gameClone.querySelector('#ends-soon').style.display = "flex";
-    } else if (currentDate > endDate) {
-      gameClone.querySelector('#last').style.display = "flex";
+  // Function to format numbers with suffixes
+  function formatNumber(num) {
+    if (num >= 1e9) {
+      return (num / 1e9).toFixed(1) + 'b';
+    } else if (num >= 1e6) {
+      return (num / 1e6).toFixed(1) + 'm';
+    } else if (num >= 1e3) {
+      return (num / 1e3).toFixed(1) + 'k';
     } else {
-      hideStatusTags(gameClone);
+      return num;
     }
   }
 
-  // Hide all status tags
-  function hideStatusTags(gameClone) {
-    ['#running', '#soon', '#ends-soon', '#last'].forEach(tag => {
-      gameClone.querySelector(tag).style.display = "none";
-    });
-  }
-
-  // Utility functions
+  // Function to handle errors by displaying a message
   function displayError(message) {
     const errorMessage = document.createElement('p');
     errorMessage.textContent = message;
     errorMessage.style.color = 'red';
     gameContainer.appendChild(errorMessage);
-  }
-
-  function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  function formatNumber(num) {
-    if (num >= 1e9) return (num / 1e9).toFixed(1) + 'b';
-    if (num >= 1e6) return (num / 1e6).toFixed(1) + 'm';
-    if (num >= 1e3) return (num / 1e3).toFixed(1) + 'k';
-    return num;
-  }
-
-  function convertToDate(dateStr) {
-    const [day, month, year] = dateStr.split("-");
-    return new Date(`${year}-${month}-${day}`);
   }
 });
