@@ -73,55 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Template not found: #event-temp");
           }
 
-          function formatNumber(num) {
-            if (num >= 1e9) {
-              return (num / 1e9).toFixed(1) + 'b';
-            } else if (num >= 1e6) {
-              return (num / 1e6).toFixed(1) + 'm';
-            } else if (num >= 1e3) {
-              return (num / 1e3).toFixed(1) + 'k';
-            } else {
-              return num;
-            }
-          }
+
 
 
 
           // Convert "DD-MM-YYYY" to "YYYY-MM-DD"
-          function convertToDate(dateStr) {
-            const [day, month, year] = dateStr.split("-");
-            return new Date(`${year}-${month}-${day}`);
-          }
 
+          var idd = 1
           const gameClone = document.importNode(gameTemplate.content, true);
           console.log(gameClone)
 
           // Only logs the number of child elements
           // Set the game details from the fetched data
 
-          const currentDate = new Date();
-          var startDDate = convertToDate(game.start);
-          var endDDate = convertToDate(game.end);
 
-          console.log("Current Date:", currentDate);
-          console.log("Start Date:", startDDate);
-          console.log("End Date:", endDDate);
-          console.log(gameClone)
-          console.dir(gameClone); // Interactive object tree
+
+
+          // Interactive object tree
           // Only logs the number of child elements
           // Check if current date is within the range
-          if (currentDate >= startDDate && currentDate <= endDDate) {
-            console.log("running")
-            console.warn(gameClone)
-            if (gameClone.style.display !== "flex") {
-              gameClone.style.display = "flex";
-            }
-          } else if (currentDate < startDDate) {
-            gameClone.style.display = "none";
-          } else {
-            gameClone.style.display = "none";
-          }
-          console.warn(gameClone)
+
+
           //info
 
           //extra info
@@ -140,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Construct the custom URL for the game page
           const idtag = "id";
           const customPageUrl = `${GetHostPath('games/game')}?${idtag}=${game.id}/${game.name}`;
-          gameClone.querySelector(".event-card").href = customPageUrl;
+          gameClone.querySelector(".more-info").href = customPageUrl;
 
           // Use a preset thumbnail URL instead of fetching it dynamically
           gameClone.querySelector('.event-icon').src = imgUrl; // Preset URL
@@ -162,17 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
               }
 
               // Define the formatNumber function
-              function formatNumber(num) {
-                if (num >= 1e9) {
-                  return (num / 1e9).toFixed(1) + 'b';
-                } else if (num >= 1e6) {
-                  return (num / 1e6).toFixed(1) + 'm';
-                } else if (num >= 1e3) {
-                  return (num / 1e3).toFixed(1) + 'k';
-                } else {
-                  return num;
-                }
-              }
+
 
               // Convert "DD-MM-YYYY" to "YYYY-MM-DD"
               function convertToDate(dateStr) {
@@ -184,6 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
               //  var currentDate = new Date();
 
               // Get start and end dates from the data
+              const currentDate = new Date();
+              var startDDate = convertToDate(game.start);
+              var endDDate = convertToDate(game.end);
               var startDate = convertToDate(data.info.StartDate);
               var endDate = convertToDate(data.info.EndDate);
 
@@ -226,10 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
               //reward tag
               if (data.info.Reward.Enabled == true) {
                 gameClone.querySelector('#reward-on').style.display = "flex";
-                gameClone.querySelector('#reward-off').style.display = "none";
+                
               } else {
                 gameClone.querySelector('#reward-on').style.display = "none";
-                gameClone.querySelector('#reward-off').style.display = "flex";
+                
               }
 
               //datas
@@ -280,7 +245,21 @@ document.addEventListener('DOMContentLoaded', () => {
               errorMessage.style.color = "red"
               gameContainer.appendChild(errorMessage);
             });
+          idd += 1
+          gameClone.id = `event${idd}`
           gameContainer.appendChild(gameClone);
+
+          if (currentDate >= startDDate && currentDate <= endDDate) {
+            console.log("running")
+
+
+            document.querySelector(`#event${idd}`).style.display = "flex";
+
+          } else if (currentDate < startDDate) {
+            document.querySelector(`#event${idd}`).style.display = "none";
+          } else {
+            document.querySelector(`#event${idd}`).style.display = "none";
+          }
         });
       })
       .catch(error => {
@@ -291,7 +270,17 @@ document.addEventListener('DOMContentLoaded', () => {
         gameContainer.appendChild(errorMessage);
       });
 
-
+    function formatNumber(num) {
+      if (num >= 1e9) {
+        return (num / 1e9).toFixed(1) + 'b';
+      } else if (num >= 1e6) {
+        return (num / 1e6).toFixed(1) + 'm';
+      } else if (num >= 1e3) {
+        return (num / 1e3).toFixed(1) + 'k';
+      } else {
+        return num;
+      }
+    }
 
   };
 });
