@@ -111,7 +111,7 @@ game.style.display = "flex";
                 
                 
                 
-                const metaDescription = document.querySelector('#meta-desc');
+                const metaDescription = document.getElementById('meta-desc');
                 
                 if (metaDescription) {
                   console.log("dynamically writing seo")
@@ -120,7 +120,13 @@ game.style.display = "flex";
                   document.title = `unviere | ${gameData.sourceName || 'Game'}`;
                   
                   console.log(metaDescription)
-                }
+                  
+                 } else {
+                    document.title = `unviere | home`;
+                    
+                    console.log(document.title)
+                  }
+                
 
                 // Fetch and display game thumbnail
                 const imgUrl = `https://thumbnails.roproxy.com/v1/games/multiget/thumbnails?universeIds=${universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`;
