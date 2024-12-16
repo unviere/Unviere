@@ -97,19 +97,29 @@ const error = document.getElementById('error-sec');
                 document.getElementById('created-date').textContent = `Development started: ${new Date(gameData.created).toLocaleDateString() || 'N/A'}`;
                 document.getElementById('last-updated').textContent = `Updated: ${new Date(gameData.updated).toLocaleDateString() || 'N/A'}`;
                 document.getElementById('genre').textContent = `Genre: ${gameData.genre || 'N/A'}`;
-
-                document.title = `${gameData.sourceName || 'Game'} | Unviere`;
                 
-                game.style.display = "flex";
+game.style.display = "flex";
                 stats.style.display = "flex";
+
+                
+                
                 
                 const gameNavBar = document.getElementById('game-navb-content');
                 
                 gameNavBar.style.display = "flex";
                 
-                const metaDescription = document.querySelector('meta[name="description"]');
+                
+                
+                
+                const metaDescription = document.querySelector('#meta-desc');
+                
                 if (metaDescription) {
-                  metaDescription.setAttribute('content', gameData.sourceDescription || 'No description available.');
+                  console.log("dynamically writing seo")
+                  metaDescription.setAttribute('content', `${gameData.sourceName} is one of the few games from unviere, parcle or partners of unviere come join now ${gameData.sourceDescription || 'No description available.'}`);
+                  
+                  document.title = `unviere | ${gameData.sourceName || 'Game'}`;
+                  
+                  console.log(metaDescription)
                 }
 
                 // Fetch and display game thumbnail
