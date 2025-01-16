@@ -1,0 +1,179 @@
+:root {
+  --BG:#f9f9f9;
+  --SecBG:#f1f1f1;
+  --SecBG2:#e6f7f0;
+  --Secondary:#055a4a;
+  
+  --TextColor1: #333333;
+  
+  --InputFieldCorner: 6px;
+}
+
+/*elements*/
+body {
+  background-color: var(--BG);
+}
+
+p {
+  color: var(--TextColor1);
+}
+
+h1 {
+  color: var(--TextColor1);
+}
+
+h2 {
+  color: var(--TextColor1);
+}
+
+/* second styles element (give them a specific class like div-secbg)*/
+
+/*form*/
+
+.form {
+  display: flex;
+  width: 90%;
+  margin: 5%;
+  flex-direction: column;
+  background-color: var(--SecBG);
+  border-radius: var(--InputFieldCorner);
+}
+
+fieldset {
+  border: 2px solid var(--Secondary);
+  border-radius: var(--InputFieldCorner);
+  margin: 5px;
+  background-color: var(--BG);
+  overflow: hidden;
+}
+
+.head-field {
+  background-color: var(--SecBG2);
+  border: none;
+  border-radius: var(--InputFieldCorner);
+}
+
+legend {
+  color: var(--TextColor1);
+  background-color: var(--BG);
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: var(--InputFieldCorner);
+}
+
+
+input {
+  width: 100%;
+ border: none;
+  outline: none;
+  border-radius: 0!important;
+  border-bottom: solid;
+  height: 20px;
+  background-color: transparent;
+  color: var(--TextColor1);
+  padding-left: 5px;
+}
+
+label {
+  color: var(--TextColor1)
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+ border: none;
+  outline: none;
+  border-radius: 0!important;
+  border-bottom: solid;
+  border-bottom-width: 2px;
+  min-height: 100px;
+  background-color: transparent;
+  color: var(--TextColor1);
+  padding-left: 5px;
+resize: vertical;
+  
+}
+
+datalist {
+  width: 100%;
+ border: none;
+  outline: none;
+  border-radius: 0!important;
+  border-bottom: solid;
+  height: 200000000000000px;
+  background-color: red;
+  color: var(--TextColor1);
+  padding-left: 5px;
+}
+
+.multi-field {
+  display: flex;
+  flex-direction: column;
+  border-color: var(--TextColor1);
+  background-color: var(--SecBG2)
+}
+
+
+
+.multi-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Ensures equal spacing between items */
+  align-items: center; /* Aligns items vertically */
+  gap: 1rem; /* Adds uniform spacing between items */
+}
+
+.err-multi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Ensures equal spacing between error messages */
+  align-items: center; /* Aligns items vertically */
+  gap: 1rem; /* Adds uniform spacing between items */
+}
+
+.input-date, .input-time, .input-num {
+  flex: 1; /* Ensures all fields take up equal space */
+}
+
+.error {
+  flex: 1; /* Ensures all error messages take up equal space */
+  text-align: center; /* Centers the text */
+}
+
+.input-checkb,
+.input-radio {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping when the container gets too narrow */
+  gap: 20px; /* Space between radio button sets horizontally */
+  align-items: flex-start; /* Align all items to the top */
+}
+
+.form-checkb,
+.form-radio {
+  display: flex;
+  align-items: center; /* Vertically center the label and radio button */
+}
+
+.form-checkb label,
+.form-radio label {
+  margin-right: 10px; /* Space between the label and the radio button */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0; /* Reset default margin of radio buttons */
+}
+
+input[type="submit"] {
+  margin-left:40%; /* Reset default margin of radio buttons */
+  width: 20%;
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+.err-validate {
+  height: 1px;
+  background-color: var(--TextColor1);
+}

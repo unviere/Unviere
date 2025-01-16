@@ -1,0 +1,52 @@
+:root {
+  --err: red;
+  --cta: #06c46f;
+  --ctaText: #333333;
+  
+  --ButtonBorder: 10px;
+}
+
+
+#header {
+  position: absolute!important;
+  top: -400px!important;
+  position: sticky;
+  height: 0px!important;
+  width: 100%;
+  display: flex;
+  
+   
+}
+
+#check {
+  display: none;
+  position: sticky;
+  z-index: -2;
+}
+
+#label {display: none;
+  position: sticky;
+  z-index: -2;
+}
+
+body {
+  margin-top: 100px;
+}
+
+.error {
+  color: var(--err);
+}
+
+.cta {
+  background-color: var(--cta);
+  color: var(--ctaText);
+  border-radius: var(--ButtonBorder)!important;
+  font-size: 20px;
+}
+
+
+@media (max-width: 700px){
+  body {
+  margin-top: 50px;
+}
+}
