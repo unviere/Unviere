@@ -47,7 +47,10 @@
       "universeId": "6663022834"
     },
     
-     
+    "?id=107169670237182/a-breakable-mission/game-jam?date=02-2025": {
+      "universeId": "7212385486"
+    },
+    
     "?gameID=107169670237182":{
       "universeId": "6663022834"
     },
@@ -89,6 +92,12 @@
     "universeId": "6663022834",
     "name": "a-historical-trip/game-jam?date=10-2024",
     "id": "107169670237182",
+    "genres": ["game-jam"]
+  },
+  {
+    "universeId": "7212385486",
+    "name": "a-breakable-mission/game-jam?date=02-2025",
+    "id": "108067592050237",
     "genres": ["game-jam"]
   },
   
