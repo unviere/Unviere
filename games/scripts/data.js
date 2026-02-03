@@ -164,7 +164,7 @@ game.style.display = "flex";
                   });
 
                 // Fetch additional info (sub-genres, etc.)
-                const infoUrl = `https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/game-api%3Fid%3D${universeId}.json`;
+                const infoUrl = `https://raw.githubusercontent.com/unviere/Unviere/refs/heads/main/games/api/${universeId}.json`;
                 console.log('Additional Info URL:', infoUrl);
 
                 fetch(infoUrl)
